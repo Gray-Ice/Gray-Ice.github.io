@@ -385,6 +385,99 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/10/05/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6/">
+        C语言实现删除字符串中指定字符
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>今天跟着K&amp;R继续学习C语言，其中有这么一段代码让我感觉很妙:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">chars_process</span><span class="params">(<span class="keyword">char</span> fire[], <span class="keyword">char</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;   </span><br><span class="line">    <span class="keyword">int</span> g, f;</span><br><span class="line">    <span class="keyword">for</span> (g = f = <span class="number">0</span>; fire[g] != <span class="string">&#x27;\0&#x27;</span>; g++)</span><br><span class="line">        <span class="keyword">if</span> (fire[g] != c)</span><br><span class="line">            fire[f++] = fire[g];</span><br><span class="line">    fire[f] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这是一段删除字符串中指定字符的代码。如果您觉得这段代码没什么，那么这篇博客下面的内容就不需要看了。如果您对它感兴趣，请继续看我分析。
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-10-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/C/">C</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/10/05/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/09/21/life3/">
+        18岁生日，随便写写
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>emmm，今天18岁了，来随便写写。</p>
+<p>这几天我更新博客的速度显著下降，完全没有了一个月前一天一篇的劲头。其实不是我不想更新，而是我最近在学C语言，我自认为学的效果还算不错，但是没有什么我认为是需要记下来的，所以这几天就停了更新。</p>
+<p>最近练车，教练天天数落我，说我理解能力差，后来上升到了人身攻击，说我智商有问题，哈哈，他不知道我根本就没用心学，我的热情都给了计算机，对驾驶汽车这一技术根本谈不上喜欢，因为我认为驾驶汽车上路是很危险的一件事，可能遇到各种各样的突发事件，况且不学汽车也没什么问题。</p>
+<p>现在我也当上了现充的人(这词的意思是现实生活充实而不是现场充钱)，其实我也不想这样的，实在是因为<del>破事太多</del> 生活所迫。
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-09-21</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/life/">life</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/09/21/life3/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/09/12/%E5%88%9D%E6%AC%A1%E4%BD%BF%E7%94%A8zsh/">
         初次使用zsh
       </a>
@@ -752,98 +845,6 @@ Char类型char类型用于存储字符(如，字母或标点符号)，但是从�
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/08/06/Linux%E4%B8%8B%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E6%88%AA%E5%9B%BE/">
-        Linux下如何优雅的截图
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        之前我一直使用scrot截图，将其设置成快捷键后截图十分的方便，但是最近想要截图放在免费图床上的时候，发现它有一点不好: 截图后的文件体积太大了，尽管有牺牲图片质量来降低文件体积的选项，但是就算质量调成1文件也有1MB多，而如果拉满到100,居然有5MB多。。。我看了看，截出来的图还是蛮清晰的，说实话我认为这点不是缺点，作为一个追求最好的人，图片的质量理所应当也应该是最好；但是如果用在网页上...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-08-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/08/06/Linux%E4%B8%8B%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E6%88%AA%E5%9B%BE/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/08/06/pyqt5%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F/">
-        PyQt5创建一个基本的程序
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>最近在Boss直聘上找工作，看到很多的爬虫工作上都有”能够一键爬虫”这一要求，我觉得有这个要求可能是考虑到用户的水平吧，既然如此，我想用户也不一定能看得习惯命令行，还是给用户一个方便的UI界面比较好。虽然因为种种原因没有去实际工作(这里感谢提供给我机会的喵房科技的范毓魁经理)，不过要学习GUI这事我却记下了。之前曾有想法，想要直接使用HTML页面来控制程序，这样不但方便，也省下学习GUI花费的时间了。</p>
-<p>然而想法是美好的，HTML也可以让用户在本地访问，但是你都打开浏览器了，那网页不弄得美观点有点说不过去吧？但是鉴于本人的前端技术实在太烂，终于还是选择了学习Gui编程。</p>
-<p>这里使用的是PyQt5，见网上有人说这个性能高，于是就打算学这个了。那么闲聊到此结束，下面先来一道基本程序。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-08-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/PyQt5/">PyQt5</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/08/06/pyqt5%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -969,7 +970,7 @@ Char类型char类型用于存储字符(如，字母或标点符号)，但是从�
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(125)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(126)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1034,7 +1035,7 @@ Char类型char类型用于存储字符(如，字母或标点符号)，但是从�
           <li><a class="flat-box child"
             title="/categories/blog/vim/" href="/categories/blog/vim/"
             id="categoriesblogvim"
-            ><div class='name'>vim</div><div class='badge'>(3)</div></a></li>
+            ><div class='name'>vim</div><div class='badge'>(4)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/vue/" href="/categories/blog/vue/"
@@ -1059,7 +1060,7 @@ Char类型char类型用于存储字符(如，字母或标点符号)，但是从�
           <li><a class="flat-box"
             title="/categories/life/" href="/categories/life/"
             id="categorieslife"
-            ><div class='name'>life</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>life</div><div class='badge'>(5)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/resume/" href="/categories/resume/"
@@ -1093,7 +1094,7 @@ Char类型char类型用于存储字符(如，字母或标点符号)，但是从�
 
 
     <div class='content'>
-      <a href="/tags/30days/" style="font-size: 15.25px; color: #919191">30days</a> <a href="/tags/Anaconda/" style="font-size: 14px; color: #999">Anaconda</a> <a href="/tags/Arch/" style="font-size: 24px; color: #555">Arch</a> <a href="/tags/Deepin/" style="font-size: 16.5px; color: #888">Deepin</a> <a href="/tags/Django/" style="font-size: 21.5px; color: #666">Django</a> <a href="/tags/Docker/" style="font-size: 15.25px; color: #919191">Docker</a> <a href="/tags/Flask/" style="font-size: 15.25px; color: #919191">Flask</a> <a href="/tags/Linux%E5%91%BD%E4%BB%A4/" style="font-size: 16.5px; color: #888">Linux命令</a> <a href="/tags/PIL/" style="font-size: 17.75px; color: #808080">PIL</a> <a href="/tags/PyQt5/" style="font-size: 14px; color: #999">PyQt5</a> <a href="/tags/Vue/" style="font-size: 22.75px; color: #5e5e5e">Vue</a> <a href="/tags/Wine/" style="font-size: 14px; color: #999">Wine</a> <a href="/tags/bluetooth/" style="font-size: 14px; color: #999">bluetooth</a> <a href="/tags/cv2/" style="font-size: 14px; color: #999">cv2</a> <a href="/tags/git/" style="font-size: 19px; color: #777">git</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/hugo/" style="font-size: 15.25px; color: #919191">hugo</a> <a href="/tags/jwt/" style="font-size: 16.5px; color: #888">jwt</a> <a href="/tags/matplotlib/" style="font-size: 15.25px; color: #919191">matplotlib</a> <a href="/tags/nask/" style="font-size: 14px; color: #999">nask</a> <a href="/tags/pip/" style="font-size: 14px; color: #999">pip</a> <a href="/tags/redis/" style="font-size: 14px; color: #999">redis</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/ventoy/" style="font-size: 14px; color: #999">ventoy</a> <a href="/tags/vim/" style="font-size: 20.25px; color: #6f6f6f">vim</a> <a href="/tags/zsh/" style="font-size: 14px; color: #999">zsh</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/" style="font-size: 14px; color: #999">上传文件</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E6%9D%A1/" style="font-size: 14px; color: #999">上传进度条</a> <a href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/" style="font-size: 14px; color: #999">中间件</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 15.25px; color: #919191">代理</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/" style="font-size: 14px; color: #999">关键字查询</a> <a href="/tags/%E5%88%86%E9%A1%B5/" style="font-size: 14px; color: #999">分页</a> <a href="/tags/%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/" style="font-size: 14px; color: #999">压缩图片</a> <a href="/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/" style="font-size: 14px; color: #999">又拍云</a> <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/" style="font-size: 15.25px; color: #919191">双系统</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E7%9B%98/" style="font-size: 14px; color: #999">启动盘</a> <a href="/tags/%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/" style="font-size: 14px; color: #999">商品评论</a> <a href="/tags/%E5%9B%BD%E9%99%85%E5%8C%96/" style="font-size: 14px; color: #999">国际化</a> <a href="/tags/%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90/" style="font-size: 14px; color: #999">图片合成</a> <a href="/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" style="font-size: 15.25px; color: #919191">对象存储</a> <a href="/tags/%E5%BE%AE%E5%8D%9A%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">微博第三方登录</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">性能检测工具</a> <a href="/tags/%E6%8A%98%E7%BA%BF%E5%9B%BE/" style="font-size: 14px; color: #999">折线图</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 15.25px; color: #919191">服务器</a> <a href="/tags/%E6%B0%B4%E5%8D%B0/" style="font-size: 14px; color: #999">水印</a> <a href="/tags/%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81/" style="font-size: 15.25px; color: #919191">滑块验证</a> <a href="/tags/%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81/" style="font-size: 14px; color: #999">生成图片验证码</a> <a href="/tags/%E7%94%BB%E4%B8%AD%E7%94%BB/" style="font-size: 14px; color: #999">画中画</a> <a href="/tags/%E7%99%BD%E5%A4%A9%E9%BB%91%E5%A4%9C%E6%A8%A1%E5%BC%8F/" style="font-size: 14px; color: #999">白天黑夜模式</a> <a href="/tags/%E7%99%BE%E5%BA%A6%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">百度文字识别</a> <a href="/tags/%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/" style="font-size: 14px; color: #999">评论频率</a> <a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 20.25px; color: #6f6f6f">踩坑</a> <a href="/tags/%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">钉钉第三方登录</a>
+      <a href="/tags/30days/" style="font-size: 15.11px; color: #919191">30days</a> <a href="/tags/Anaconda/" style="font-size: 14px; color: #999">Anaconda</a> <a href="/tags/Arch/" style="font-size: 24px; color: #555">Arch</a> <a href="/tags/Deepin/" style="font-size: 16.22px; color: #8a8a8a">Deepin</a> <a href="/tags/Django/" style="font-size: 21.78px; color: #646464">Django</a> <a href="/tags/Docker/" style="font-size: 15.11px; color: #919191">Docker</a> <a href="/tags/Flask/" style="font-size: 15.11px; color: #919191">Flask</a> <a href="/tags/Linux%E5%91%BD%E4%BB%A4/" style="font-size: 16.22px; color: #8a8a8a">Linux命令</a> <a href="/tags/PIL/" style="font-size: 17.33px; color: #828282">PIL</a> <a href="/tags/PyQt5/" style="font-size: 14px; color: #999">PyQt5</a> <a href="/tags/Vue/" style="font-size: 22.89px; color: #5d5d5d">Vue</a> <a href="/tags/Wine/" style="font-size: 14px; color: #999">Wine</a> <a href="/tags/bluetooth/" style="font-size: 14px; color: #999">bluetooth</a> <a href="/tags/cv2/" style="font-size: 14px; color: #999">cv2</a> <a href="/tags/git/" style="font-size: 18.44px; color: #7b7b7b">git</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/hugo/" style="font-size: 15.11px; color: #919191">hugo</a> <a href="/tags/jwt/" style="font-size: 16.22px; color: #8a8a8a">jwt</a> <a href="/tags/matplotlib/" style="font-size: 15.11px; color: #919191">matplotlib</a> <a href="/tags/nask/" style="font-size: 14px; color: #999">nask</a> <a href="/tags/pip/" style="font-size: 14px; color: #999">pip</a> <a href="/tags/redis/" style="font-size: 14px; color: #999">redis</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/ventoy/" style="font-size: 14px; color: #999">ventoy</a> <a href="/tags/vim/" style="font-size: 20.67px; color: #6c6c6c">vim</a> <a href="/tags/zsh/" style="font-size: 14px; color: #999">zsh</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/" style="font-size: 14px; color: #999">上传文件</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E6%9D%A1/" style="font-size: 14px; color: #999">上传进度条</a> <a href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/" style="font-size: 14px; color: #999">中间件</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 15.11px; color: #919191">代理</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/" style="font-size: 14px; color: #999">关键字查询</a> <a href="/tags/%E5%88%86%E9%A1%B5/" style="font-size: 14px; color: #999">分页</a> <a href="/tags/%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/" style="font-size: 14px; color: #999">压缩图片</a> <a href="/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/" style="font-size: 14px; color: #999">又拍云</a> <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/" style="font-size: 15.11px; color: #919191">双系统</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E7%9B%98/" style="font-size: 14px; color: #999">启动盘</a> <a href="/tags/%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/" style="font-size: 14px; color: #999">商品评论</a> <a href="/tags/%E5%9B%BD%E9%99%85%E5%8C%96/" style="font-size: 14px; color: #999">国际化</a> <a href="/tags/%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90/" style="font-size: 14px; color: #999">图片合成</a> <a href="/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" style="font-size: 15.11px; color: #919191">对象存储</a> <a href="/tags/%E5%BE%AE%E5%8D%9A%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">微博第三方登录</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">性能检测工具</a> <a href="/tags/%E6%8A%98%E7%BA%BF%E5%9B%BE/" style="font-size: 14px; color: #999">折线图</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 15.11px; color: #919191">服务器</a> <a href="/tags/%E6%B0%B4%E5%8D%B0/" style="font-size: 14px; color: #999">水印</a> <a href="/tags/%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81/" style="font-size: 15.11px; color: #919191">滑块验证</a> <a href="/tags/%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81/" style="font-size: 14px; color: #999">生成图片验证码</a> <a href="/tags/%E7%94%BB%E4%B8%AD%E7%94%BB/" style="font-size: 14px; color: #999">画中画</a> <a href="/tags/%E7%99%BD%E5%A4%A9%E9%BB%91%E5%A4%9C%E6%A8%A1%E5%BC%8F/" style="font-size: 14px; color: #999">白天黑夜模式</a> <a href="/tags/%E7%99%BE%E5%BA%A6%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">百度文字识别</a> <a href="/tags/%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/" style="font-size: 14px; color: #999">评论频率</a> <a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 19.56px; color: #737373">踩坑</a> <a href="/tags/%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">钉钉第三方登录</a>
     </div>
   </section>
 
