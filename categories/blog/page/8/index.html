@@ -386,6 +386,101 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/20/%E8%A7%A3%E5%86%B3make%E6%97%B6%E7%BC%BA%E5%B0%91build%E7%9B%AE%E5%BD%95/">
+        解决make时提示缺少“/lib/modules/5.9.14-arch1-1/build”
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        昨天使用make安装无线网卡驱动的时候提示not found file or directory /lib/modules/5.9.14-arch1-1/build。于是我上Arch Linux CN TG群问了问，得知出现这个问题的原因是少了一个包，arch linux使用以下命令安装:
+1pacman -S linux-headers
+安装完这个包再make就不会提示缺少build目录了...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-20</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/20/%E8%A7%A3%E5%86%B3make%E6%97%B6%E7%BC%BA%E5%B0%91build%E7%9B%AE%E5%BD%95/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/18/vim%E4%BB%A5%E6%8C%87%E5%AE%9A%E7%BC%96%E7%A0%81%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/">
+        vim以指定编码打开文件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        今天用vim打开文件时遇到了些问题，我从淘宝上买的网卡对应的电子文档用vim打开乱码了，我看到文件名是.txt，盲猜该文件是用windows的记事本编辑的，那么既然乱码的话，其编码应该是GBK。于是百度一番，找到了vim用指定编码打开文件的命令，这里先放上我借鉴的博客的链接: VIM如何以指定编码打开或加载文件。
+那么下面是两种设置编码的方式(其实用到的命令都是同一条)。在用vim打开文件后...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/18/vim%E4%BB%A5%E6%8C%87%E5%AE%9A%E7%BC%96%E7%A0%81%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/11/nvim%E5%AE%89%E8%A3%85c++%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8/">
         coc_nvim安装c++代码补全
       </a>
@@ -756,100 +851,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/09/09/%E6%88%91%E7%9A%84vim%E6%8F%92%E4%BB%B6/">
-        我的vim配置
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        本篇的目的是为了 记录我现在使用的vim插件。为什么要记录呢？我怕之后系统挂了需要重装的时候忘了都配置了什么了。(ps.博主是vim新手，如果想要一份强大的vim配置文件不要看此文章)
-插件管理器: vim-plug    Github地址:https://github.com/junegunn/vim-plug
-代码补全插件: coc.nvim  实测这个插件在vim上也能使用，而且该插件...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/09/09/%E6%88%91%E7%9A%84vim%E6%8F%92%E4%BB%B6/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/09/04/scp%E8%87%AA%E5%8A%A8%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81/">
-        scp自动输入密码
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-          今天刚刚考完科一，心情十分的舒畅。就在我快乐的学习CSS3的时候，一个朋友问我如何在Linux服务器上和Windows之间传递数据。我一开始想到的是开一个端口，但是很显然，这个方法有点愚蠢，容易把自己暴露在外，何况朋友也没有那个权限。那么怎么做呢？那么就使用scp命令传输文件吧！不过使用scp命令的时候需要输入密码，这就有点不灵活了。于是google了一番，找到了一个不用手动输入密码的方...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-04</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/09/04/scp%E8%87%AA%E5%8A%A8%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -977,7 +978,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(126)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(128)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1002,7 +1003,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/Linux/" href="/categories/blog/Linux/"
             id="categoriesblogLinux"
-            ><div class='name'>Linux</div><div class='badge'>(15)</div></a></li>
+            ><div class='name'>Linux</div><div class='badge'>(16)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/" href="/categories/blog/Python/"
@@ -1027,7 +1028,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(31)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(32)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/git/" href="/categories/blog/git/"
@@ -1042,7 +1043,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/vim/" href="/categories/blog/vim/"
             id="categoriesblogvim"
-            ><div class='name'>vim</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>vim</div><div class='badge'>(5)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/vue/" href="/categories/blog/vue/"

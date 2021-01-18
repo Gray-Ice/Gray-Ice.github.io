@@ -4,6 +4,89 @@
   
     
     <entry>
+      <title>Linux使用QQ音乐</title>
+      <link href="2021/01/18/%E4%BD%BF%E7%94%A8qq%E9%9F%B3%E4%B9%90/"/>
+      <url>2021/01/18/%E4%BD%BF%E7%94%A8qq%E9%9F%B3%E4%B9%90/</url>
+      
+        <content type="html"><![CDATA[<p>现在QQ音乐也出了Linux版(总感觉自己之前好像已经写过了), 目前更新下来还不错，已经有了歌词功能了，声音也没之前那么折磨耳朵了(可能之前是因为我没有QQ音乐会员的原因)，总之，现在单纯听听音乐还是可以的，而且也已经提供了歌词功能，不过使用KDE平铺脚本的要小心歌词功能，它会打乱你目前的布局。<br>那么我就来写一下Arch Linux下如何安装它吧:</p><a id="more"></a><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -s qqmusic-bin</span><br></pre></td></tr></table></figure><p>使用yay安装即可。若是没有yay，则用pacman安装yay。<br>那么其他操作系统的朋友肯定在等我给网址吧，不好意思，，我没找到网址。。。这点就很奇妙，Google了半个小时愣是没找到在哪下载。不过确实是有途径可以下载的，我之前用的折磨耳朵版本就是就下载的Appimage，现在是忘了在哪下的了。。。<br>不过没关系，我在这里贴上QQ音乐 for Linux的QQ群群号: 1046496784。<br>里面管理很活跃，找他们要链接就好。<br>那么本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> arch </category>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Arch </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用uos微信</title>
+      <link href="2021/01/02/%E4%BD%BF%E7%94%A8uos%E5%BE%AE%E4%BF%A1/"/>
+      <url>2021/01/02/%E4%BD%BF%E7%94%A8uos%E5%BE%AE%E4%BF%A1/</url>
+      
+        <content type="html"><![CDATA[<p>其实我安装uos微信本来是想要激活网页版微信的，结果发现并不好使。。。但是uos微信也是能用的。</p><p>那么直接安装吧:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S wechat-uos</span><br></pre></td></tr></table></figure><p>安装完成之后终端输入wechat-uos启动。<br>由于我的KDE Connect出了点问题，就不发截图了。<br>那么，本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> arch </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Arch </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决vim无法复制内容到系统剪切板</title>
+      <link href="2021/01/02/%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%A4%8D%E5%88%B6%E5%86%85%E5%AE%B9%E5%88%B0%E7%B3%BB%E7%BB%9F%E5%89%AA%E5%88%87%E6%9D%BF/"/>
+      <url>2021/01/02/%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%A4%8D%E5%88%B6%E5%86%85%E5%AE%B9%E5%88%B0%E7%B3%BB%E7%BB%9F%E5%89%AA%E5%88%87%E6%9D%BF/</url>
+      
+        <content type="html"><![CDATA[<p>使用vim的时候用v选中字符串后发现无法用”+y复制到系统剪切板，百度一番后，得到了以下答案:<br>1.重新编译vim,并且在编译之前还需要先编辑一下某些内容。<br>2.安装gvim。<br>我一开始是想重新编译的，但是就在我下好了vim的源码时，发现那篇博客找不着了。。。于是我决定使用gvim。<br>在使用gvim的时候我是有些担心的，怕Vundle的插件还得再重新安装一遍，因为安装gvim需要先删除掉vim。但是我发现多虑了，拆卸vim安装gvim后Vundle的插件依然可以正常使用。<br>使用以下命令安装gvim:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S gvim</span><br></pre></td></tr></table></figure><p>如果提示与vim冲突，是否删除vim,选择是。<br>然后就可以复制到系统剪切板里了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> vim </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>元旦了随便说点</title>
       <link href="2021/01/01/life5/"/>
       <url>2021/01/01/life5/</url>
@@ -158,33 +241,6 @@
         <tags>
             
             <tag> Linux命令 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>解决vim无法复制内容到系统剪切板</title>
-      <link href="2020/12/31/%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%A4%8D%E5%88%B6%E5%86%85%E5%AE%B9%E5%88%B0%E7%B3%BB%E7%BB%9F%E5%89%AA%E5%88%87%E6%9D%BF/"/>
-      <url>2020/12/31/%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%A4%8D%E5%88%B6%E5%86%85%E5%AE%B9%E5%88%B0%E7%B3%BB%E7%BB%9F%E5%89%AA%E5%88%87%E6%9D%BF/</url>
-      
-        <content type="html"><![CDATA[<p>使用vim的时候用v选中字符串后发现无法用”+y复制到系统剪切板，百度一番后，得到了以下答案:<br>1.重新编译vim,并且在编译之前还需要先编辑一下某些内容。<br>2.安装gvim。<br>我一开始是想重新编译的，但是就在我下好了vim的源码时，发现那篇博客找不着了。。。于是我决定使用gvim。<br>在使用gvim的时候我是有些担心的，怕Vundle的插件还得再重新安装一遍，因为安装gvim需要先删除掉vim。但是我发现多虑了，拆卸vim安装gvim后Vundle的插件依然可以正常使用。<br>使用以下命令安装gvim:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S gvim</span><br></pre></td></tr></table></figure><p>如果提示与vim冲突，是否删除vim,选择是。<br>然后就可以复制到系统剪切板里了。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> blog </category>
-          
-          <category> arch </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> vim </tag>
             
         </tags>
       

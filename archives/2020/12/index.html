@@ -591,52 +591,6 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/12/31/%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%A4%8D%E5%88%B6%E5%86%85%E5%AE%B9%E5%88%B0%E7%B3%BB%E7%BB%9F%E5%89%AA%E5%88%87%E6%9D%BF/">
-        解决vim无法复制内容到系统剪切板
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        使用vim的时候用v选中字符串后发现无法用”+y复制到系统剪切板，百度一番后，得到了以下答案:1.重新编译vim,并且在编译之前还需要先编辑一下某些内容。2.安装gvim。我一开始是想重新编译的，但是就在我下好了vim的源码时，发现那篇博客找不着了。。。于是我决定使用gvim。在使用gvim的时候我是有些担心的，怕Vundle的插件还得再重新安装一遍，因为安装gvim需要先删除掉vim。但是...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%A4%8D%E5%88%B6%E5%86%85%E5%AE%B9%E5%88%B0%E7%B3%BB%E7%BB%9F%E5%89%AA%E5%88%87%E6%9D%BF/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
       <a href="/2020/12/31/%E8%AE%BE%E7%BD%AE%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/">
         设置商品评论频率
       </a>
@@ -861,6 +815,54 @@
           </div>
         
       
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/">
+        多关键字查询
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>这里说的关键字查询，是要实现输入 fire water这两个词，然后后台将这两个词进行模糊查询。</p>
+<p>Vue部分，用户在搜索框输入需要查询的内容后，前端将用户输入的内容进行判断，如果有空格，那么根据空格将字符串分开；如果没有空格，那么无需分开。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// indexOF方法找到目标返回1，找不到目标返回-1, text是用户输入的数据</span></span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">this</span>.text.indexOf(<span class="string">&#x27; &#x27;</span>) !== -<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="comment">// 将数据分开, 此方法返回的是一个对象而不是列表</span></span><br><span class="line">        <span class="built_in">this</span>.text = <span class="built_in">this</span>.text.split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    <span class="comment">// 将数据转化，转化之后数据形如:[&quot;1&quot;, &quot;2&quot;]</span></span><br><span class="line">        <span class="built_in">this</span>.text = <span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.text)</span><br><span class="line">      &#125;</span><br><span class="line"><span class="comment">// 获取后台数据</span></span><br><span class="line">      <span class="built_in">this</span>.get_goods();</span><br></pre></td></tr></table></figure>
+<p>前端的处理就这么简单，那么到后台了:</p>
+<p>首先，获取参数:
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
     
   </section>
   
@@ -981,7 +983,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(126)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(128)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1006,7 +1008,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/Linux/" href="/categories/blog/Linux/"
             id="categoriesblogLinux"
-            ><div class='name'>Linux</div><div class='badge'>(15)</div></a></li>
+            ><div class='name'>Linux</div><div class='badge'>(16)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/" href="/categories/blog/Python/"
@@ -1031,7 +1033,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(31)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(32)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/git/" href="/categories/blog/git/"
@@ -1046,7 +1048,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/vim/" href="/categories/blog/vim/"
             id="categoriesblogvim"
-            ><div class='name'>vim</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>vim</div><div class='badge'>(5)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/vue/" href="/categories/blog/vue/"
