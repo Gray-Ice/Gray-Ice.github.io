@@ -385,6 +385,108 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/ArchLinux%E8%AE%BE%E7%BD%AEsudo/">
+        ArchLinux使用sudo
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Arch Linux刚安装好的时候是没有sudo命令的，需要自行安装，首先输入su命令以获取root权限，然后安装sudo:
+1pacman -S sudo
+想要查看具体的操作可以查看官方Wiki: Sudo。这里我只写下给用户添加sudo使用权限。安装了sudo之后，终端输入:
+1EDITOR=vim visudo
+这句话的意思是使用vim编辑sudo文件。这么做的原因是因为我输入visu...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/ArchLinux%E8%AE%BE%E7%BD%AEsudo/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/Arch%E4%B8%8B%E4%BD%BF%E7%94%A8deb%E5%8C%85/">
+        arch使用deb包
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        先安装debtap包，然后执行:
+1sudo debtap -u
+如果你的网不好，执行这条命令会很费劲，而且有很大几率会失败。不过多尝试几次(博主失败了四五次才装上)似乎就会成功。安装好之后在含有.deb文件的目录下输入:
+1debtap package
+来转换包，转换的时候会有选项，记得选。转换好之后输入:
+1sudo pacman -U package
+之后就安装好啦。那么如何运行文件呢...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Arch%E4%B8%8B%E4%BD%BF%E7%94%A8deb%E5%8C%85/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/Arch%E5%AE%89%E8%A3%85pip/">
         Arch 安装pip及pip3
       </a>
@@ -769,105 +871,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/ArchKeepTime/">
-        Arch Linux同步时间
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        由于我是Arch Linux + Windows双系统，所以在从arch切换到windows的时候或者从windows切换到arch的时候会造成时间不同步。有的时候明明是白天，时间面板上却显示22:00，虽然我也不太在意但是想看时间就要拿起手机确实不方便。于是我参照了Arch Wiki设置了一个开机自动同步时间。
-首先安装ntp软件包。
-1pacman -S ntp
-然后更改配置文件 /et...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/ArchKeepTime/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/archInstallMusicPlayer/">
-        arch安装audacious音乐播放器
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        安装音乐播放器:
-1pacman -S audacious
-这样就安装好了，右击桌面(我使用的xfce),然后选择Create Lanucher，在第一行输入:audacious，会出现一个提示，点击提示就会自动补充下面几行。然后选择Create就创建好桌面打开方式了。然后可以安装一个歌词插件:
-1pacman -S osdlyrics
-安装完成之后可以在桌面创建快捷方式，创建方式同auda...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/archInstallMusicPlayer/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -993,7 +996,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(128)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(130)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1009,6 +1012,11 @@
             title="/categories/blog/C/" href="/categories/blog/C/"
             id="categoriesblogC"
             ><div class='name'>C</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
+            id="categoriesblogCpp"
+            ><div class='name'>Cpp</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"

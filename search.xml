@@ -4,6 +4,48 @@
   
     
     <entry>
+      <title>Cpp中逐个读取ifstream中的字符</title>
+      <link href="2021/01/25/cpp%E4%B8%AD%E9%80%90%E4%B8%AA%E8%AF%BB%E5%8F%96ifstream%E5%AD%97%E7%AC%A6/"/>
+      <url>2021/01/25/cpp%E4%B8%AD%E9%80%90%E4%B8%AA%E8%AF%BB%E5%8F%96ifstream%E5%AD%97%E7%AC%A6/</url>
+      
+        <content type="html"><![CDATA[<p>因为这个问题太容易了，所以直接上代码吧。</p><a id="more"></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">ifstream <span class="title">ifs</span><span class="params">(<span class="string">&quot;./c1.txt&quot;</span>)</span></span>;</span><br><span class="line">    <span class="keyword">char</span> ch;</span><br><span class="line">    ifs &gt;&gt; ch;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ch &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>输出结果就不展示了，反正就是这么一回事。<br>这么容易的事我却没想到。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Cpp </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Cpp中查找字符串的子字符串</title>
+      <link href="2021/01/25/cpp%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <url>2021/01/25/cpp%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+      
+        <content type="html"><![CDATA[<p>直接使用string对象的find()方法，如果find()找到了目标返回目标的下标，如果没有找到返回string对象.npos。</p><p>下面是代码:</p><a id="more"></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">text</span><span class="params">(<span class="string">&quot; Fire f&quot;</span>)</span></span>;</span><br><span class="line">    <span class="keyword">auto</span> pos = text.find(<span class="string">&quot;Fire&quot;</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; pos &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    pos = text.find(<span class="string">&quot;Water&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(pos == text.npos)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Not Found&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>下面是输出:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">╭─fire@butterfly ~/codeSet/CPPCode  </span><br><span class="line">╰─➤  ./a.out                              </span><br><span class="line">1</span><br><span class="line">Not Found</span><br></pre></td></tr></table></figure><p>本来是不想写基础操作的博客的，但是最近老是忘，于是就写了，到时候再忘了也方便自己查找。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Cpp </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux使用QQ音乐</title>
       <link href="2021/01/18/%E4%BD%BF%E7%94%A8qq%E9%9F%B3%E4%B9%90/"/>
       <url>2021/01/18/%E4%BD%BF%E7%94%A8qq%E9%9F%B3%E4%B9%90/</url>
