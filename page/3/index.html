@@ -385,6 +385,57 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/win10+archlinux/">
+        win10+arch+BIOS+MBR双系统安装
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>本篇博客来讲win10 + arch linux双系统安装。这里博主用的是legacy，磁盘为MBR。</p>
+<p>本来本篇博客应该在昨天就发出来的，但是我装好arch的时候发现自己一不小心把win10的引导项覆盖了。。。刚弄好引导项我就来发博客了。</p>
+<p>那么首先，你当然得有一个镜像啦，这里是arch官网的<a target="_blank" rel="noopener" href="https://www.archlinux.org/download/">download页面</a>。下载好镜像后，需要制作镜像，这里我使用的是ventoy(就是之前我博客里提到过的超好用的工具)制作的U盘。然后在磁盘上弄出一块未分配空间，建议大于50G，我分出来了150G。</p>
+<p>那么安装教程看这里: <a href="[https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)](https://wiki.archlinux.org/index.php/Installation_guide_(简体中文))">Installation guide</a>。这个是官方的教程，讲的挺好的，本篇博客为一些没有经验的朋友来讲一下部分需要英文阅读的地方以及一些令人疑惑的地方，您应当主要参考官方文档，在部分感到疑惑的地方来看本篇博客。</p>
+<h1 id="1-live-CD连接无线网络"><a href="#1-live-CD连接无线网络" class="headerlink" title="1.live CD连接无线网络"></a>1.live CD连接无线网络</h1><p>由于我是使用的无线网络，所以在进入Live CD后突然发现: 不对啊，我没有联网！那么怎么解决呢？</p>
+<p>输入:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wifi-menu</span><br></pre></td></tr></table></figure>
+<p>会弹出无线网络选择页面，在这里选择网络名以及
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/win10+archlinux/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/wineTim%E8%AE%BE%E7%BD%AE%E4%B8%AD%E6%96%87/">
         wine TIM Wechat输入中文
       </a>
@@ -791,56 +842,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Python%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-        python五大排序算法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>转载自<a target="_blank" rel="noopener" href="https://v3u.cn/">v3u.cn</a></p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>插入排序：插入排序的基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序；首先将第一个作为已经排好序的，然后每次从后的取出插入到前面并排序；</p>
-<p>时间复杂度：O(n²)</p>
-<p>空间复杂度：O(1)</p>
-<p>稳定性：稳定</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">insert_sort</span>(<span class="params">ilist</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(ilist)):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i):</span><br><span class="line">            <span class="keyword">if</span> ilist[i] &lt; ilist[j]:</span><br><span class="line">                ilist.insert(j, ilist.pop(i))</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> ilist</span><br></pre></td></tr></table></figure>
-<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Python%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -855,7 +856,7 @@
           </a>
         
         <p class="current">
-          3 / 14
+          3 / 15
         </p>
         
           <a class="next" rel="next" href="/page/4/">
@@ -966,7 +967,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(130)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(131)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1046,7 +1047,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
             id="categoriesblogE4B9B1E4B883E585ABE7B39F"
-            ><div class='name'>乱七八糟</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>乱七八糟</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"
