@@ -1,0 +1,3341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Gray-Ice</title>
+  
+  <subtitle>Gray-Ice website</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-01-30T11:23:52.096Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Gray Ice</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>做一个QQ机器人</title>
+    <link href="http://example.com/2021/01/30/%E5%81%9A%E4%B8%80%E4%B8%AAQQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    <id>http://example.com/2021/01/30/%E5%81%9A%E4%B8%80%E4%B8%AAQQ%E6%9C%BA%E5%99%A8%E4%BA%BA/</id>
+    <published>2021-01-30T10:01:00.000Z</published>
+    <updated>2021-01-30T11:23:52.096Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="乱七八糟" scheme="http://example.com/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Cpp中逐个读取ifstream中的字符</title>
+    <link href="http://example.com/2021/01/25/cpp%E4%B8%AD%E9%80%90%E4%B8%AA%E8%AF%BB%E5%8F%96ifstream%E5%AD%97%E7%AC%A6/"/>
+    <id>http://example.com/2021/01/25/cpp%E4%B8%AD%E9%80%90%E4%B8%AA%E8%AF%BB%E5%8F%96ifstream%E5%AD%97%E7%AC%A6/</id>
+    <published>2021-01-25T03:05:00.000Z</published>
+    <updated>2021-01-25T03:10:16.649Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;因为这个问题太容易了，所以直接上代码吧。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Cpp中查找字符串的子字符串</title>
+    <link href="http://example.com/2021/01/25/cpp%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://example.com/2021/01/25/cpp%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
+    <published>2021-01-25T03:01:00.000Z</published>
+    <updated>2021-01-25T03:03:38.731Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;直接使用string对象的find()方法，如果find()找到了目标返回目标的下标，如果没有找到返回string对象.npos。&lt;/p&gt;
+&lt;p&gt;下面是代码:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux使用QQ音乐</title>
+    <link href="http://example.com/2021/01/18/%E4%BD%BF%E7%94%A8qq%E9%9F%B3%E4%B9%90/"/>
+    <id>http://example.com/2021/01/18/%E4%BD%BF%E7%94%A8qq%E9%9F%B3%E4%B9%90/</id>
+    <published>2021-01-18T08:23:00.000Z</published>
+    <updated>2021-01-18T08:36:47.787Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;现在QQ音乐也出了Linux版(总感觉自己之前好像已经写过了), 目前更新下来还不错，已经有了歌词功能了，声音也没之前那么折磨耳朵了(可能之前是因为我没有QQ音乐会员的原因)，总之，现在单纯听听音乐还是可以的，而且也已经提供了歌词功能，不过使用KDE平铺脚本的要小心歌词功能，它会打乱你目前的布局。&lt;br&gt;那么我就来写一下Arch Linux下如何安装它吧:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用uos微信</title>
+    <link href="http://example.com/2021/01/02/%E4%BD%BF%E7%94%A8uos%E5%BE%AE%E4%BF%A1/"/>
+    <id>http://example.com/2021/01/02/%E4%BD%BF%E7%94%A8uos%E5%BE%AE%E4%BF%A1/</id>
+    <published>2021-01-02T01:46:00.000Z</published>
+    <updated>2021-01-02T01:54:19.719Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决vim无法复制内容到系统剪切板</title>
+    <link href="http://example.com/2021/01/02/%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%A4%8D%E5%88%B6%E5%86%85%E5%AE%B9%E5%88%B0%E7%B3%BB%E7%BB%9F%E5%89%AA%E5%88%87%E6%9D%BF/"/>
+    <id>http://example.com/2021/01/02/%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E5%A4%8D%E5%88%B6%E5%86%85%E5%AE%B9%E5%88%B0%E7%B3%BB%E7%BB%9F%E5%89%AA%E5%88%87%E6%9D%BF/</id>
+    <published>2021-01-02T01:35:58.389Z</published>
+    <updated>2021-01-02T01:35:58.389Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vim" scheme="http://example.com/categories/blog/vim/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>元旦了随便说点</title>
+    <link href="http://example.com/2021/01/01/life5/"/>
+    <id>http://example.com/2021/01/01/life5/</id>
+    <published>2021-01-01T01:09:00.000Z</published>
+    <updated>2021-01-01T01:30:32.683Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;祝各位元旦快乐。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="life" scheme="http://example.com/categories/life/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>nvim使用系统剪切板</title>
+    <link href="http://example.com/2021/01/01/nvim%E4%BD%BF%E7%94%A8%E5%89%AA%E5%88%87%E6%9D%BF/"/>
+    <id>http://example.com/2021/01/01/nvim%E4%BD%BF%E7%94%A8%E5%89%AA%E5%88%87%E6%9D%BF/</id>
+    <published>2021-01-01T01:02:00.000Z</published>
+    <updated>2021-01-01T01:06:35.787Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vim" scheme="http://example.com/categories/blog/vim/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用matplotlib绘制折线图</title>
+    <link href="http://example.com/2020/12/31/matplotlib%E7%BB%98%E6%8A%98%E7%BA%BF%E5%9B%BE/"/>
+    <id>http://example.com/2020/12/31/matplotlib%E7%BB%98%E6%8A%98%E7%BA%BF%E5%9B%BE/</id>
+    <published>2020-12-31T09:03:00.890Z</published>
+    <updated>2020-12-31T09:03:00.890Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;1-基本绘图&quot;&gt;&lt;a href=&quot;#1-基本绘图&quot; class=&quot;headerlink&quot; title=&quot;1.基本绘图&quot;&gt;&lt;/a&gt;1.基本绘图&lt;/h1&gt;&lt;p&gt;使用matplotlib库绘制折线图，由于很简单，所以下面直接上代码:&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; matplotlib &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; pyplot&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 数据在x轴位置，是一个可迭代对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;x = &lt;span class=&quot;built_in&quot;&gt;range&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;26&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 数据在y轴的位置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;y = [&lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;14&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;25&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;26&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;26&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;24&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# x和Y的长度必须相等，如果不相等会报错&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(&lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(x))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(&lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(y))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 绘图&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyplot.plot(x, y)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 展示&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pyplot.show()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;效果图如下:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;matplotlib%E7%BB%98%E6%8A%98%E7%BA%BF%E5%9B%BE/image-20200528092144373.png&quot; alt=&quot;image-20200528092144373&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;img-wrap&quot;&gt;&lt;div class=&quot;img-bg&quot;&gt;&lt;img class=&quot;img&quot; src=&quot;matplotlib%E7%BB%98%E6%8A%98%E7%BA%BF%E5%9B%BE/image-20200528092144373.png&quot;/&gt;&lt;/div&gt;&lt;/div&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    <category term="数据分析" scheme="http://example.com/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="matplotlib" scheme="http://example.com/tags/matplotlib/"/>
+    
+    <category term="折线图" scheme="http://example.com/tags/%E6%8A%98%E7%BA%BF%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>提升clone的速度</title>
+    <link href="http://example.com/2020/12/31/%E6%8F%90%E5%8D%87github%E9%80%9F%E5%BA%A6/"/>
+    <id>http://example.com/2020/12/31/%E6%8F%90%E5%8D%87github%E9%80%9F%E5%BA%A6/</id>
+    <published>2020-12-31T02:33:07.164Z</published>
+    <updated>2020-12-22T02:29:23.155Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="git" scheme="http://example.com/categories/blog/git/"/>
+    
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>添加商品评论</title>
+    <link href="http://example.com/2020/12/31/%E6%B7%BB%E5%8A%A0%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/"/>
+    <id>http://example.com/2020/12/31/%E6%B7%BB%E5%8A%A0%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/</id>
+    <published>2020-12-31T02:33:07.164Z</published>
+    <updated>2020-12-22T02:29:23.155Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;首先先建一张表，该表拥有四个字段，其中有三个整型字段: id, gid(商品id), uid(用户id)。有一个字符串变量: content，用来存储评论。&lt;/p&gt;
+&lt;p&gt;那么首先</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="商品评论" scheme="http://example.com/tags/%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>组操作</title>
+    <link href="http://example.com/2020/12/31/%E7%BB%84%E6%93%8D%E4%BD%9C/"/>
+    <id>http://example.com/2020/12/31/%E7%BB%84%E6%93%8D%E4%BD%9C/</id>
+    <published>2020-12-31T02:33:07.164Z</published>
+    <updated>2020-12-22T02:29:23.155Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;摘抄自&lt;a href=&quot;https://wiki.archlinux.org/index.php/Users_and_groups_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&quot;&gt;Arch Wiki Users and groups&lt;/a&gt;。&lt;br&gt;在/etc/group文件存储了系统中用户组的信息。&lt;br&gt;使用groups命令查看用户所在组的名称:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+    <category term="Linux命令" scheme="http://example.com/tags/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设置商品评论频率</title>
+    <link href="http://example.com/2020/12/31/%E8%AE%BE%E7%BD%AE%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/"/>
+    <id>http://example.com/2020/12/31/%E8%AE%BE%E7%BD%AE%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/</id>
+    <published>2020-12-31T02:33:07.164Z</published>
+    <updated>2020-12-22T02:29:23.158Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="评论频率" scheme="http://example.com/tags/%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python进程线程</title>
+    <link href="http://example.com/2020/12/31/%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B/"/>
+    <id>http://example.com/2020/12/31/%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B/</id>
+    <published>2020-12-31T02:33:07.164Z</published>
+    <updated>2020-12-22T02:29:23.158Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;转载自&lt;a href=&quot;https://v3u.cn&quot;&gt;v3u.cn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;进程，是执行中的计算机程序。也就是说，每个代码在执行的时候，首先本身即是一个进程。&lt;/p&gt;
+&lt;p&gt;一个进程具有:就绪，运行，中断，僵死，结束等状态(不同操作系统不一样)。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关闭vim自动缩进</title>
+    <link href="http://example.com/2020/12/31/%E5%85%B3%E9%97%ADvim%E8%87%AA%E5%8A%A8%E7%BC%A9%E8%BF%9B/"/>
+    <id>http://example.com/2020/12/31/%E5%85%B3%E9%97%ADvim%E8%87%AA%E5%8A%A8%E7%BC%A9%E8%BF%9B/</id>
+    <published>2020-12-31T02:33:07.161Z</published>
+    <updated>2020-12-22T02:29:23.151Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网页切换白天黑夜模式</title>
+    <link href="http://example.com/2020/12/31/%E5%88%87%E6%8D%A2%E7%99%BD%E5%A4%A9%E9%BB%91%E5%A4%9C%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://example.com/2020/12/31/%E5%88%87%E6%8D%A2%E7%99%BD%E5%A4%A9%E9%BB%91%E5%A4%9C%E6%A8%A1%E5%BC%8F/</id>
+    <published>2020-12-31T02:33:07.161Z</published>
+    <updated>2020-12-22T02:29:23.151Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;网页切换白天黑夜模式，其实就是对一个变量进操作，举个栗子: 默认值是false, 进行判断，如果是false的话那么指定元素的颜色为白天的颜色，如果为true那么指定元素的颜色为黑夜的颜色。&lt;/p&gt;
+&lt;p&gt;那么为了方便理解，下面就上代码</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="白天黑夜模式" scheme="http://example.com/tags/%E7%99%BD%E5%A4%A9%E9%BB%91%E5%A4%9C%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>又拍云&amp;拖拽上传</title>
+    <link href="http://example.com/2020/12/31/%E5%8F%88%E6%8B%8D%E4%BA%91%E6%8B%96%E6%8B%BD%E4%B8%8A%E4%BC%A0/"/>
+    <id>http://example.com/2020/12/31/%E5%8F%88%E6%8B%8D%E4%BA%91%E6%8B%96%E6%8B%BD%E4%B8%8A%E4%BC%A0/</id>
+    <published>2020-12-31T02:33:07.161Z</published>
+    <updated>2020-12-22T02:29:23.151Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Vue代码:&lt;/p&gt;
+&lt;p&gt;页面代码(其中input框并不需要):&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div id&amp;#x3D;&amp;#39;upload&amp;#39;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    拖拽上传&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;input type&amp;#x3D;&amp;quot;file&amp;quot; @change&amp;#x3D;&amp;#39;yp_upload&amp;#39;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&amp;#x2F;div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="对象存储" scheme="http://example.com/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
+    
+    <category term="又拍云" scheme="http://example.com/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多关键字查询</title>
+    <link href="http://example.com/2020/12/31/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/"/>
+    <id>http://example.com/2020/12/31/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/</id>
+    <published>2020-12-31T02:33:07.161Z</published>
+    <updated>2020-12-22T02:29:23.151Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这里说的关键字查询，是要实现输入 fire water这两个词，然后后台将这两个词进行模糊查询。&lt;/p&gt;
+&lt;p&gt;Vue部分，用户在搜索框输入需要查询的内容后，前端将用户输入的内容进行判断，如果有空格，那么根据空格将字符串分开；如果没有空格，那么无需分开。&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// indexOF方法找到目标返回1，找不到目标返回-1, text是用户输入的数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.text.indexOf(&lt;span class=&quot;string&quot;&gt;&amp;#x27; &amp;#x27;&lt;/span&gt;) !== -&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 将数据分开, 此方法返回的是一个对象而不是列表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.text = &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.text.split(&lt;span class=&quot;string&quot;&gt;&amp;#x27; &amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 将数据转化，转化之后数据形如:[&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.text = &lt;span class=&quot;built_in&quot;&gt;JSON&lt;/span&gt;.stringify(&lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.text)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 获取后台数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.get_goods();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;前端的处理就这么简单，那么到后台了:&lt;/p&gt;
+&lt;p&gt;首先，获取参数:</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="关键字查询" scheme="http://example.com/tags/%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用ventoy制作启动盘</title>
+    <link href="http://example.com/2020/12/31/%E4%BD%BF%E7%94%A8ventoy%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E7%9B%98/"/>
+    <id>http://example.com/2020/12/31/%E4%BD%BF%E7%94%A8ventoy%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E7%9B%98/</id>
+    <published>2020-12-31T02:33:07.158Z</published>
+    <updated>2020-12-22T02:29:23.148Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近发现了一个很好的、功能很强大的神器:Ventoy。这神器的功能到底有多强大呢？它能够让你在一个U盘里面启动多个系统。。。&lt;/p&gt;
+&lt;p&gt;使用也非常的简单，用ventoy制作过U盘后直接将iso文件拖入U盘即可。那么这里是ventoy的下载地址:&lt;a href=&quot;https://www.ventoy.net/en/download.html&quot;&gt;Ventoy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用方法: 打开ventoy，选择install，会提示你U盘将被格式化。确定。等读条完成后就可以使用了！将ISO文件直接拖入U盘即可。</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    
+    <category term="ventoy" scheme="http://example.com/tags/ventoy/"/>
+    
+    <category term="启动盘" scheme="http://example.com/tags/%E5%90%AF%E5%8A%A8%E7%9B%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows10连接服务器并传送文件</title>
+    <link href="http://example.com/2020/12/31/Windows%2010%E4%B8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B9%B6%E4%BC%A0%E9%80%81%E6%95%B0%E6%8D%AE/"/>
+    <id>http://example.com/2020/12/31/Windows%2010%E4%B8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B9%B6%E4%BC%A0%E9%80%81%E6%95%B0%E6%8D%AE/</id>
+    <published>2020-12-31T02:33:07.121Z</published>
+    <updated>2020-12-22T02:29:23.121Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="服务器" scheme="http://example.com/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+    <category term="服务器" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win10+arch+BIOS+MBR双系统安装</title>
+    <link href="http://example.com/2020/12/31/win10+archlinux/"/>
+    <id>http://example.com/2020/12/31/win10+archlinux/</id>
+    <published>2020-12-31T02:33:07.121Z</published>
+    <updated>2020-12-22T02:29:23.148Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本篇博客来讲win10 + arch linux双系统安装。这里博主用的是legacy，磁盘为MBR。&lt;/p&gt;
+&lt;p&gt;本来本篇博客应该在昨天就发出来的，但是我装好arch的时候发现自己一不小心把win10的引导项覆盖了。。。刚弄好引导项我就来发博客了。&lt;/p&gt;
+&lt;p&gt;那么首先，你当然得有一个镜像啦，这里是arch官网的&lt;a href=&quot;https://www.archlinux.org/download/&quot;&gt;download页面&lt;/a&gt;。下载好镜像后，需要制作镜像，这里我使用的是ventoy(就是之前我博客里提到过的超好用的工具)制作的U盘。然后在磁盘上弄出一块未分配空间，建议大于50G，我分出来了150G。&lt;/p&gt;
+&lt;p&gt;那么安装教程看这里: &lt;a href=&quot;[https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)](https://wiki.archlinux.org/index.php/Installation_guide_(简体中文))&quot;&gt;Installation guide&lt;/a&gt;。这个是官方的教程，讲的挺好的，本篇博客为一些没有经验的朋友来讲一下部分需要英文阅读的地方以及一些令人疑惑的地方，您应当主要参考官方文档，在部分感到疑惑的地方来看本篇博客。&lt;/p&gt;
+&lt;h1 id=&quot;1-live-CD连接无线网络&quot;&gt;&lt;a href=&quot;#1-live-CD连接无线网络&quot; class=&quot;headerlink&quot; title=&quot;1.live CD连接无线网络&quot;&gt;&lt;/a&gt;1.live CD连接无线网络&lt;/h1&gt;&lt;p&gt;由于我是使用的无线网络，所以在进入Live CD后突然发现: 不对啊，我没有联网！那么怎么解决呢？&lt;/p&gt;
+&lt;p&gt;输入:&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wifi-menu&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;会弹出无线网络选择页面，在这里选择网络名以及</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+    <category term="双系统" scheme="http://example.com/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wine TIM Wechat输入中文</title>
+    <link href="http://example.com/2020/12/31/wineTim%E8%AE%BE%E7%BD%AE%E4%B8%AD%E6%96%87/"/>
+    <id>http://example.com/2020/12/31/wineTim%E8%AE%BE%E7%BD%AE%E4%B8%AD%E6%96%87/</id>
+    <published>2020-12-31T02:33:07.121Z</published>
+    <updated>2020-12-22T02:29:23.148Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+    <category term="Wine" scheme="http://example.com/tags/Wine/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使deepinQQ显示图片</title>
+    <link href="http://example.com/2020/12/31/%E4%BD%BFdeepinQQ%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87/"/>
+    <id>http://example.com/2020/12/31/%E4%BD%BFdeepinQQ%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87/</id>
+    <published>2020-12-31T02:33:07.121Z</published>
+    <updated>2020-12-22T02:29:23.148Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;由于我之前一直在使用qq-linux,所以一直没有研究这个问题。然而最近QQ老是抽风，我每滚一次，它就扫码秒退一次…无奈之下，还是摸起了deepin的wineQQ。&lt;br&gt;安装我就不说了哈，这篇博客解决的是无法加载图片的问题。&lt;br&gt;  首先，禁用ipv6，摘抄自&lt;a href=&quot;https://blog.csdn.net/u012320459/article/details/46508399&quot;&gt;Arch下关闭ipv6的方法&lt;/a&gt;。&lt;br&gt;输入以下命令:&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;%sudo touch /etc/sysctl.d/ipv6.conf&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%sudo vim !$&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后写入以下内容:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim文档</title>
+    <link href="http://example.com/2020/12/31/Vim%E6%96%87%E6%A1%A3/"/>
+    <id>http://example.com/2020/12/31/Vim%E6%96%87%E6%A1%A3/</id>
+    <published>2020-12-31T02:33:07.118Z</published>
+    <updated>2020-12-22T02:29:23.118Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue一次上传多个文件</title>
+    <link href="http://example.com/2020/12/31/Vue%E4%B8%80%E6%AC%A1%E4%B8%8A%E4%BC%A0%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/"/>
+    <id>http://example.com/2020/12/31/Vue%E4%B8%80%E6%AC%A1%E4%B8%8A%E4%BC%A0%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/</id>
+    <published>2020-12-31T02:33:07.118Z</published>
+    <updated>2020-12-22T02:29:23.118Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Vue一次发送给后台多个文件，其实很简单:&lt;/p&gt;
+&lt;p&gt;在data里定义一个变量，然后给该变量赋值 new FormData();&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="上传文件" scheme="http://example.com/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue分页</title>
+    <link href="http://example.com/2020/12/31/Vue%E5%88%86%E9%A1%B5/"/>
+    <id>http://example.com/2020/12/31/Vue%E5%88%86%E9%A1%B5/</id>
+    <published>2020-12-31T02:33:07.118Z</published>
+    <updated>2020-12-22T02:29:23.118Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;先来看一下后台的代码:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="分页" scheme="http://example.com/tags/%E5%88%86%E9%A1%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue国际化</title>
+    <link href="http://example.com/2020/12/31/Vue%E5%9B%BD%E9%99%85%E5%8C%96/"/>
+    <id>http://example.com/2020/12/31/Vue%E5%9B%BD%E9%99%85%E5%8C%96/</id>
+    <published>2020-12-31T02:33:07.118Z</published>
+    <updated>2020-12-22T02:29:23.118Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这里所说的国际化，是根据访问者的浏览器语言来更改页面语言。&lt;/p&gt;
+&lt;p&gt;首先，需要导入一个插件:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install vue-i18n --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="国际化" scheme="http://example.com/tags/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue实现画中画播放视频</title>
+    <link href="http://example.com/2020/12/31/Vue%E5%AE%9E%E7%8E%B0%E5%B0%8F%E7%AA%97%E5%8F%A3%E6%92%AD%E6%94%BE/"/>
+    <id>http://example.com/2020/12/31/Vue%E5%AE%9E%E7%8E%B0%E5%B0%8F%E7%AA%97%E5%8F%A3%E6%92%AD%E6%94%BE/</id>
+    <published>2020-12-31T02:33:07.118Z</published>
+    <updated>2020-12-22T02:29:23.121Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;使用vue实现画中画(小窗口播放)的功能&lt;/p&gt;
+&lt;p&gt;html页面代码:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;video src&amp;#x3D;&amp;quot;http:&amp;#x2F;&amp;#x2F;q9ktbyjw1.bkt.clouddn.com&amp;#x2F;DARK%20SOULS%20III%202019_4_28%2011_16_57.mp4&amp;quot; id&amp;#x3D;&amp;#39;video&amp;#39; width&amp;#x3D;&amp;quot;100px&amp;quot; height&amp;#x3D;&amp;#39;100px&amp;#39; controls&amp;#x3D;&amp;quot;controls&amp;quot; autoplay&amp;#x3D;&amp;#39;autoplay&amp;#39; muted loop&amp;#x3D;&amp;#39;loop&amp;#39;&amp;gt;您的浏览器不支持video标签&amp;lt;&amp;#x2F;video&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;button @click&amp;#x3D;&amp;quot;into&amp;quot;&amp;gt;&amp;#123;&amp;#123;mymsg&amp;#125;&amp;#125;&amp;lt;&amp;#x2F;button&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="画中画" scheme="http://example.com/tags/%E7%94%BB%E4%B8%AD%E7%94%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用vim编译C语言文件</title>
+    <link href="http://example.com/2020/12/31/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/"/>
+    <id>http://example.com/2020/12/31/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/</id>
+    <published>2020-12-31T02:33:07.118Z</published>
+    <updated>2020-12-22T02:29:23.145Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue上传进度条</title>
+    <link href="http://example.com/2020/12/31/vue%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E6%9D%A1/"/>
+    <id>http://example.com/2020/12/31/vue%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E6%9D%A1/</id>
+    <published>2020-12-31T02:33:07.118Z</published>
+    <updated>2020-12-22T02:29:23.145Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;目的是展示进度条:&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;file&amp;quot;&lt;/span&gt; @&lt;span class=&quot;attr&quot;&gt;change&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;upload_qiniu&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;Progress&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;:percent&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;load_int&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;color&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;green&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;Progress&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="上传进度条" scheme="http://example.com/tags/%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E6%9D%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python五大排序算法</title>
+    <link href="http://example.com/2020/12/31/Python%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <id>http://example.com/2020/12/31/Python%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</id>
+    <published>2020-12-31T02:33:07.114Z</published>
+    <updated>2020-12-22T02:29:23.118Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;转载自&lt;a href=&quot;https://v3u.cn/&quot;&gt;v3u.cn&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;插入排序&quot;&gt;&lt;a href=&quot;#插入排序&quot; class=&quot;headerlink&quot; title=&quot;插入排序&quot;&gt;&lt;/a&gt;插入排序&lt;/h2&gt;&lt;p&gt;插入排序：插入排序的基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序；首先将第一个作为已经排好序的，然后每次从后的取出插入到前面并排序；&lt;/p&gt;
+&lt;p&gt;时间复杂度：O(n²)&lt;/p&gt;
+&lt;p&gt;空间复杂度：O(1)&lt;/p&gt;
+&lt;p&gt;稳定性：稳定&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;insert_sort&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;ilist&lt;/span&gt;):&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;range&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(ilist)):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; j &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;range&lt;/span&gt;(i):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ilist[i] &amp;lt; ilist[j]:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                ilist.insert(j, ilist.pop(i))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; ilist&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;冒泡排序&quot;&gt;&lt;a href=&quot;#冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序&quot;&gt;&lt;/a&gt;冒泡排序&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>生成器和迭代器</title>
+    <link href="http://example.com/2020/12/31/Python%E7%94%9F%E6%88%90%E5%99%A8%E5%92%8C%E8%BF%AD%E4%BB%A3%E5%99%A8/"/>
+    <id>http://example.com/2020/12/31/Python%E7%94%9F%E6%88%90%E5%99%A8%E5%92%8C%E8%BF%AD%E4%BB%A3%E5%99%A8/</id>
+    <published>2020-12-31T02:33:07.114Z</published>
+    <updated>2020-12-22T02:29:23.118Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Pyhon3安装turtle</title>
+    <link href="http://example.com/2020/12/31/python3%E5%AE%89%E8%A3%85turtle/"/>
+    <id>http://example.com/2020/12/31/python3%E5%AE%89%E8%A3%85turtle/</id>
+    <published>2020-12-31T02:33:07.114Z</published>
+    <updated>2020-12-22T02:29:23.138Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下Python3安装twisted</title>
+    <link href="http://example.com/2020/12/31/python3%E5%AE%89%E8%A3%85twisted/"/>
+    <id>http://example.com/2020/12/31/python3%E5%AE%89%E8%A3%85twisted/</id>
+    <published>2020-12-31T02:33:07.114Z</published>
+    <updated>2020-12-22T02:29:23.141Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用python venv创建虚拟环境</title>
+    <link href="http://example.com/2020/12/31/python_venv/"/>
+    <id>http://example.com/2020/12/31/python_venv/</id>
+    <published>2020-12-31T02:33:07.114Z</published>
+    <updated>2020-12-22T02:29:23.141Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>redis开启事务</title>
+    <link href="http://example.com/2020/12/31/redis%E4%BA%8B%E5%8A%A1/"/>
+    <id>http://example.com/2020/12/31/redis%E4%BA%8B%E5%8A%A1/</id>
+    <published>2020-12-31T02:33:07.114Z</published>
+    <updated>2020-12-22T02:29:23.141Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="乱七八糟" scheme="http://example.com/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>pip升级失败与生成requirements.txt文件失败解决方案</title>
+    <link href="http://example.com/2020/12/31/pip%E5%8D%87%E7%BA%A7%E5%A4%B1%E8%B4%A5%E4%B8%8E%E7%94%9F%E6%88%90requirements%E5%A4%B1%E8%B4%A5/"/>
+    <id>http://example.com/2020/12/31/pip%E5%8D%87%E7%BA%A7%E5%A4%B1%E8%B4%A5%E4%B8%8E%E7%94%9F%E6%88%90requirements%E5%A4%B1%E8%B4%A5/</id>
+    <published>2020-12-31T02:33:07.111Z</published>
+    <updated>2020-12-22T02:29:23.138Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;pip升级失败解决方案&quot;&gt;&lt;a href=&quot;#pip升级失败解决方案&quot; class=&quot;headerlink&quot; title=&quot;pip升级失败解决方案&quot;&gt;&lt;/a&gt;pip升级失败解决方案&lt;/h1&gt;&lt;p&gt;今天使用pip安装模块的时候，提示我pip有新版本了，我就随手升级了一下:&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip install --upgrade pip&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;结果安装失败了。&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ERROR: Could not install packages due to an EnvironmentError: [WinError 5] 拒绝访问。: &amp;#x27;d:\\virtual env&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ironment\\for_django\\scripts\\pip.exe&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Consider using the `--user` option or check the permissions.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后输入pip，报错:&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ModuleNotFoundError: No module named &amp;#x27;pip&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;啊这，这可怎么办？&lt;/p&gt;
+&lt;p&gt;那么下面就是解决方法</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="踩坑" scheme="http://example.com/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+    <category term="pip" scheme="http://example.com/tags/pip/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git fatal远程origin已经存在</title>
+    <link href="http://example.com/2020/12/31/OriginError/"/>
+    <id>http://example.com/2020/12/31/OriginError/</id>
+    <published>2020-12-31T02:33:07.104Z</published>
+    <updated>2020-12-22T02:29:23.108Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="git" scheme="http://example.com/categories/blog/git/"/>
+    
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决Arch安装软件包提示无效或已损坏的软件包 (PGP 签名)</title>
+    <link href="http://example.com/2020/12/31/PGP%E7%AD%BE%E5%90%8D%E6%8D%9F%E5%9D%8F/"/>
+    <id>http://example.com/2020/12/31/PGP%E7%AD%BE%E5%90%8D%E6%8D%9F%E5%9D%8F/</id>
+    <published>2020-12-31T02:33:07.104Z</published>
+    <updated>2020-12-22T02:29:23.108Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nask汇编指令</title>
+    <link href="http://example.com/2020/12/31/nask%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/"/>
+    <id>http://example.com/2020/12/31/nask%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/</id>
+    <published>2020-12-31T02:33:07.104Z</published>
+    <updated>2020-12-22T02:29:23.138Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="30days" scheme="http://example.com/categories/blog/30days/"/>
+    
+    
+    <category term="30days" scheme="http://example.com/tags/30days/"/>
+    
+    <category term="nask" scheme="http://example.com/tags/nask/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux使用v2raya代理</title>
+    <link href="http://example.com/2020/12/31/Linux%E4%BD%BF%E7%94%A8v2raya%E4%BB%A3%E7%90%86/"/>
+    <id>http://example.com/2020/12/31/Linux%E4%BD%BF%E7%94%A8v2raya%E4%BB%A3%E7%90%86/</id>
+    <published>2020-12-31T02:33:07.098Z</published>
+    <updated>2020-12-22T02:29:23.105Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+    <category term="代理" scheme="http://example.com/tags/%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下的性能检测工具</title>
+    <link href="http://example.com/2020/12/31/Linux%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/"/>
+    <id>http://example.com/2020/12/31/Linux%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/</id>
+    <published>2020-12-31T02:33:07.098Z</published>
+    <updated>2020-12-22T02:29:23.108Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="性能检测工具" scheme="http://example.com/tags/%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下查看文件安装路径</title>
+    <link href="http://example.com/2020/12/31/Linux%E6%9F%A5%E7%9C%8B%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84/"/>
+    <id>http://example.com/2020/12/31/Linux%E6%9F%A5%E7%9C%8B%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84/</id>
+    <published>2020-12-31T02:33:07.098Z</published>
+    <updated>2020-12-22T02:29:23.108Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+    <category term="Linux命令" scheme="http://example.com/tags/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux磁力下载器</title>
+    <link href="http://example.com/2020/12/31/Linux%E7%A3%81%E5%8A%9B%E4%B8%8B%E8%BD%BD/"/>
+    <id>http://example.com/2020/12/31/Linux%E7%A3%81%E5%8A%9B%E4%B8%8B%E8%BD%BD/</id>
+    <published>2020-12-31T02:33:07.098Z</published>
+    <updated>2020-12-22T02:29:23.108Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux设置静态ip</title>
+    <link href="http://example.com/2020/12/31/linux%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip/"/>
+    <id>http://example.com/2020/12/31/linux%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip/</id>
+    <published>2020-12-31T02:33:07.098Z</published>
+    <updated>2020-12-22T02:29:23.135Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2020/12/31/Linux%E5%91%BD%E4%BB%A4/"/>
+    <id>http://example.com/2020/12/31/Linux%E5%91%BD%E4%BB%A4/</id>
+    <published>2020-12-31T02:33:07.098Z</published>
+    <updated>2020-12-22T02:29:23.108Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;b&gt;转载自 &lt;a href=&quot;https://www.cnblogs.com/yjd_hycf_space/p/7730690.html&quot;&gt;Linux常用命令大全（非常全！！！）&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;原作者只是给字体加粗了，没有设置标题，我加了标题，方便在博客右方的“文章目录里查找自己需要的内容”。感谢原作者的分享！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+    <category term="Linux命令" scheme="http://example.com/tags/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jwt加密</title>
+    <link href="http://example.com/2020/12/31/jwt%E5%8A%A0%E5%AF%86/"/>
+    <id>http://example.com/2020/12/31/jwt%E5%8A%A0%E5%AF%86/</id>
+    <published>2020-12-31T02:33:07.094Z</published>
+    <updated>2020-12-22T02:29:23.131Z</updated>
+    
+    
+    <summary type="html">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; datetime&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; jwt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;playload = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 过期时间&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;exp&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;built_in&quot;&gt;int&lt;/span&gt;((datetime.datetime.now() + datetime.timedelta(seconds=&lt;span class=&quot;number&quot;&gt;60&lt;/span&gt;)).timestamp()),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;data&amp;#x27;&lt;/span&gt;: &amp;#123;&lt;span class=&quot;string&quot;&gt;&amp;#x27;uid&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;encode_jwt = jwt.encode(playload, &lt;span class=&quot;string&quot;&gt;&amp;#x27;qwe123&amp;#x27;&lt;/span&gt;, algorithm=&lt;span class=&quot;string&quot;&gt;&amp;#x27;HS256&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;encode_str = &lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;(encode_jwt, &lt;span class=&quot;string&quot;&gt;&amp;#x27;utf-8&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;decode_jwt = jwt.decode(encode_str, &lt;span class=&quot;string&quot;&gt;&amp;#x27;qwe123&amp;#x27;&lt;/span&gt;, algorithms=[&lt;span class=&quot;string&quot;&gt;&amp;#x27;HS256&amp;#x27;&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(encode_str)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(encode_jwt)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(decode_jwt)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在这之中，playlod中的exp是可选的，data也是可以直接写成:</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+    <category term="jwt" scheme="http://example.com/tags/jwt/"/>
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arch Linux下使用LinuxQQ</title>
+    <link href="http://example.com/2020/12/31/linuxQQ/"/>
+    <id>http://example.com/2020/12/31/linuxQQ/</id>
+    <published>2020-12-31T02:33:07.094Z</published>
+    <updated>2020-12-22T02:29:23.135Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker微信</title>
+    <link href="http://example.com/2020/12/31/Docker%E5%BE%AE%E4%BF%A1/"/>
+    <id>http://example.com/2020/12/31/Docker%E5%BE%AE%E4%BF%A1/</id>
+    <published>2020-12-31T02:33:07.091Z</published>
+    <updated>2020-12-22T02:29:23.105Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在文章的开头，我先说出我配置完成后遗留的问题，方便大家决定是否参考我的博客。&lt;br&gt;我按照我博客里的流程配置完毕后，微信出现的问题是看不到输入框里的字，无论是输入中文还是输入英文，都看不见。不过这不影响发送出去文字。另外有一点，我不知道这是不是问题，因为wine-wechat也是如此，那就是截图的时候屏幕是黑的。。。除了这些之外，消息和图片消息都可以正常接受，暂时没有发现其他问题。&lt;/p&gt;
+&lt;p&gt;那么下面是安装了。&lt;br&gt;首先安装Dokcer:&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pacman -S docker&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WindowsHexo迁移至Linux</title>
+    <link href="http://example.com/2020/12/31/hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/"/>
+    <id>http://example.com/2020/12/31/hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/</id>
+    <published>2020-12-31T02:33:07.091Z</published>
+    <updated>2020-12-22T02:29:23.131Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Deepin安装Docker</title>
+    <link href="http://example.com/2020/12/31/Deepin%E5%AE%89%E8%A3%85docker/"/>
+    <id>http://example.com/2020/12/31/Deepin%E5%AE%89%E8%A3%85docker/</id>
+    <published>2020-12-31T02:33:07.088Z</published>
+    <updated>2020-12-22T02:29:23.101Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今天感觉好久没有踩坑了，心里有点不舒服，于是就打算在Deepin系统中装个Docker。一有这想法，我就动手干，果然我想要的坑就来了。&lt;/p&gt;
+&lt;p&gt;首先，我参考了博客: &lt;a href=&quot;https://www.cnblogs.com/wh4am1/p/10263272.html&quot;&gt;https://www.cnblogs.com/wh4am1/p/10263272.html&lt;/a&gt;的内容，博主讲的很好，不过这里我还是说一下我安装的经过，如果有些地方大家也遇到了希望可以帮助到大家。&lt;/p&gt;
+&lt;p&gt;这里我先讲一下我干了什么，我图省事一开始就执行了安装命令:&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install docker-ce&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后突然看到了别人的博客，觉得自己的安装步骤不对(其实是根本没有往下看别人的博客)，我就拆卸了docker，这里很多人都是输入的:&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get remove docker.io docker-engine&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;但是我输入之后告诉我没这个东西，我就将docker.io改成了docker.ce，然后果然成功拆卸了。&lt;/p&gt;
+&lt;p&gt;然后按着步骤走:</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Deepin" scheme="http://example.com/categories/blog/Deepin/"/>
+    
+    
+    <category term="Deepin" scheme="http://example.com/tags/Deepin/"/>
+    
+    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
+    
+    <category term="踩坑" scheme="http://example.com/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django Models排序</title>
+    <link href="http://example.com/2020/12/31/Django%20models%E6%8E%92%E5%BA%8F/"/>
+    <id>http://example.com/2020/12/31/Django%20models%E6%8E%92%E5%BA%8F/</id>
+    <published>2020-12-31T02:33:07.088Z</published>
+    <updated>2020-12-22T02:29:23.101Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django中间件</title>
+    <link href="http://example.com/2020/12/31/Django%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    <id>http://example.com/2020/12/31/Django%E4%B8%AD%E9%97%B4%E4%BB%B6/</id>
+    <published>2020-12-31T02:33:07.088Z</published>
+    <updated>2020-12-22T02:29:23.105Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;什么是中间件&quot;&gt;&lt;a href=&quot;#什么是中间件&quot; class=&quot;headerlink&quot; title=&quot;什么是中间件&quot;&gt;&lt;/a&gt;什么是中间件&lt;/h2&gt;&lt;p&gt;中间件就是在&lt;strong&gt;目标&lt;/strong&gt;和&lt;strong&gt;结果&lt;/strong&gt;之间进行的额外处理过程，在Django中就是&lt;strong&gt;request和response之间进行的处理&lt;/strong&gt;，相对来说实现起来比较简单，但是要注意它是对全局有效的，可以在全局范围内改变输入和输出结果，因此需要谨慎使用，否则不仅会造成难以定位的错误，而且可能会影响整体性能。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+    <category term="中间件" scheme="http://example.com/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django展示图片</title>
+    <link href="http://example.com/2020/12/31/Django%E8%AE%BF%E9%97%AE%E5%9B%BE%E7%89%87/"/>
+    <id>http://example.com/2020/12/31/Django%E8%AE%BF%E9%97%AE%E5%9B%BE%E7%89%87/</id>
+    <published>2020-12-31T02:33:07.088Z</published>
+    <updated>2020-12-22T02:29:23.105Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Django询问是否已经导入mysql</title>
+    <link href="http://example.com/2020/12/31/Django%E8%AF%A2%E9%97%AE%E6%98%AF%E5%90%A6%E5%AF%BC%E5%85%A5mysql/"/>
+    <id>http://example.com/2020/12/31/Django%E8%AF%A2%E9%97%AE%E6%98%AF%E5%90%A6%E5%AF%BC%E5%85%A5mysql/</id>
+    <published>2020-12-31T02:33:07.088Z</published>
+    <updated>2020-12-22T02:29:23.105Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="踩坑" scheme="http://example.com/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arch安装我的世界hmcl</title>
+    <link href="http://example.com/2020/12/31/Arch%E5%AE%89%E8%A3%85%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/"/>
+    <id>http://example.com/2020/12/31/Arch%E5%AE%89%E8%A3%85%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/</id>
+    <published>2020-12-31T02:33:07.084Z</published>
+    <updated>2020-12-22T02:29:23.101Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ArchLinux安装锁屏</title>
+    <link href="http://example.com/2020/12/31/arch%E5%AE%89%E8%A3%85%E9%94%81%E5%B1%8F/"/>
+    <id>http://example.com/2020/12/31/arch%E5%AE%89%E8%A3%85%E9%94%81%E5%B1%8F/</id>
+    <published>2020-12-31T02:33:07.084Z</published>
+    <updated>2020-12-22T02:29:23.125Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用蓝牙耳机录音</title>
+    <link href="http://example.com/2020/12/31/arch%E8%93%9D%E7%89%99%E5%BD%95%E9%9F%B3/"/>
+    <id>http://example.com/2020/12/31/arch%E8%93%9D%E7%89%99%E5%BD%95%E9%9F%B3/</id>
+    <published>2020-12-31T02:33:07.084Z</published>
+    <updated>2020-12-22T02:29:23.125Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>替换关键词</title>
+    <link href="http://example.com/2020/12/31/change_keyword/"/>
+    <id>http://example.com/2020/12/31/change_keyword/</id>
+    <published>2020-12-31T02:33:07.084Z</published>
+    <updated>2020-12-22T02:29:23.125Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今天闲着无聊(其实就是不想写web)，突然想到之前写博客时分类大小写搞错了找文件的艰辛，就决心写一个能够在当前目录下改变指定文件类型中关键字的脚本。那么先说一下思路吧。&lt;/p&gt;
+&lt;p&gt;先获取当前目录下的所有文件名称，然后根据文件名来判断是否更改，并且在更改前将将要被更改的文件存进一个文件夹(其实就是备份啦)，之后替换关键词即可。&lt;/p&gt;
+&lt;p&gt;那么下面是代码:</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2020/12/31/C%E8%AF%AD%E8%A8%80%E6%89%93%E5%8D%B0%E6%8C%87%E9%92%88%E5%9C%B0%E5%9D%80/"/>
+    <id>http://example.com/2020/12/31/C%E8%AF%AD%E8%A8%80%E6%89%93%E5%8D%B0%E6%8C%87%E9%92%88%E5%9C%B0%E5%9D%80/</id>
+    <published>2020-12-31T02:33:07.084Z</published>
+    <updated>2020-12-22T02:29:23.101Z</updated>
+    
+    
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;title: C语言打印指针地址&lt;br&gt;categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;blog&lt;/li&gt;
+&lt;li&gt;C&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;发现GCC加了-Werror后C primer plus上打印指针地址的代码无法通过编译，于是问了群里大佬，得到了答复，下面我把能够通过编译的代码贴上:&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>day01的专门术语</title>
+    <link href="http://example.com/2020/12/31/day01%E7%9A%84%E4%B8%93%E9%97%A8%E6%9C%AF%E8%AF%AD/"/>
+    <id>http://example.com/2020/12/31/day01%E7%9A%84%E4%B8%93%E9%97%A8%E6%9C%AF%E8%AF%AD/</id>
+    <published>2020-12-31T02:33:07.084Z</published>
+    <updated>2020-12-22T02:29:23.128Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="30days" scheme="http://example.com/categories/blog/30days/"/>
+    
+    
+    <category term="30days" scheme="http://example.com/tags/30days/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ArchLinux使用sudo</title>
+    <link href="http://example.com/2020/12/31/ArchLinux%E8%AE%BE%E7%BD%AEsudo/"/>
+    <id>http://example.com/2020/12/31/ArchLinux%E8%AE%BE%E7%BD%AEsudo/</id>
+    <published>2020-12-31T02:33:07.081Z</published>
+    <updated>2020-12-22T02:29:23.098Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>arch使用deb包</title>
+    <link href="http://example.com/2020/12/31/Arch%E4%B8%8B%E4%BD%BF%E7%94%A8deb%E5%8C%85/"/>
+    <id>http://example.com/2020/12/31/Arch%E4%B8%8B%E4%BD%BF%E7%94%A8deb%E5%8C%85/</id>
+    <published>2020-12-31T02:33:07.081Z</published>
+    <updated>2020-12-22T02:29:23.098Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arch 安装pip及pip3</title>
+    <link href="http://example.com/2020/12/31/Arch%E5%AE%89%E8%A3%85pip/"/>
+    <id>http://example.com/2020/12/31/Arch%E5%AE%89%E8%A3%85pip/</id>
+    <published>2020-12-31T02:33:07.081Z</published>
+    <updated>2020-12-22T02:29:23.101Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arch安装VNCViewer</title>
+    <link href="http://example.com/2020/12/31/Arch%E5%AE%89%E8%A3%85vncviewer/"/>
+    <id>http://example.com/2020/12/31/Arch%E5%AE%89%E8%A3%85vncviewer/</id>
+    <published>2020-12-31T02:33:07.081Z</published>
+    <updated>2020-12-22T02:29:23.101Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>archlinux下python3安装tkinter</title>
+    <link href="http://example.com/2020/12/31/arch_tkinter/"/>
+    <id>http://example.com/2020/12/31/arch_tkinter/</id>
+    <published>2020-12-31T02:33:07.081Z</published>
+    <updated>2020-12-22T02:29:23.125Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arch安装使用Redis</title>
+    <link href="http://example.com/2020/12/31/archlinux%E5%AE%89%E8%A3%85redis/"/>
+    <id>http://example.com/2020/12/31/archlinux%E5%AE%89%E8%A3%85redis/</id>
+    <published>2020-12-31T02:33:07.081Z</published>
+    <updated>2020-12-22T02:29:23.125Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用VNCServer</title>
+    <link href="http://example.com/2020/12/31/arch%E4%BD%BF%E7%94%A8vncserver/"/>
+    <id>http://example.com/2020/12/31/arch%E4%BD%BF%E7%94%A8vncserver/</id>
+    <published>2020-12-31T02:33:07.081Z</published>
+    <updated>2020-12-22T02:29:23.125Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ArchLinux安装mongoDB</title>
+    <link href="http://example.com/2020/12/31/arch%E5%AE%89%E8%A3%85mongoDB/"/>
+    <id>http://example.com/2020/12/31/arch%E5%AE%89%E8%A3%85mongoDB/</id>
+    <published>2020-12-31T02:33:07.081Z</published>
+    <updated>2020-12-22T02:29:23.125Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arch下bash安装powerline</title>
+    <link href="http://example.com/2020/12/31/arch%E5%AE%89%E8%A3%85powerline/"/>
+    <id>http://example.com/2020/12/31/arch%E5%AE%89%E8%A3%85powerline/</id>
+    <published>2020-12-31T02:33:07.081Z</published>
+    <updated>2020-12-22T02:29:23.125Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本来Arch Wiki上是有教程的，没有写这个的必要，但是那个教程是英文的，为了避免以后再翻译一遍(悲)，我就先写个博客吧。为了保险起见，这里贴上&lt;a href=&quot;https://wiki.archlinux.org/index.php/Powerline&quot;&gt;Arch Wiki Powerline&lt;/a&gt;的链接。&lt;br&gt;  那么下面是安装，首先，输入:&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pacman -S powerline&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装powerline,然后输入:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Anaconda创建虚拟环境</title>
+    <link href="http://example.com/2020/12/31/Anaconda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
+    <id>http://example.com/2020/12/31/Anaconda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</id>
+    <published>2020-12-31T02:33:07.078Z</published>
+    <updated>2020-12-22T02:29:23.098Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;使用Anaconda创建虚拟环境:&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;conda create -n your_env_name python=X.X（2.7、3.6等)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;查看当前安装了哪些虚拟环境:&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;conda env list&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;查看安装了哪些包:&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;conda list&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; 使用以下命令激活虚拟环境:</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Anaconda" scheme="http://example.com/categories/blog/Anaconda/"/>
+    
+    
+    <category term="Anaconda" scheme="http://example.com/tags/Anaconda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arch Linux同步时间</title>
+    <link href="http://example.com/2020/12/31/ArchKeepTime/"/>
+    <id>http://example.com/2020/12/31/ArchKeepTime/</id>
+    <published>2020-12-31T02:33:07.078Z</published>
+    <updated>2020-12-22T02:29:23.098Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>arch安装audacious音乐播放器</title>
+    <link href="http://example.com/2020/12/31/archInstallMusicPlayer/"/>
+    <id>http://example.com/2020/12/31/archInstallMusicPlayer/</id>
+    <published>2020-12-31T02:33:07.078Z</published>
+    <updated>2020-12-22T02:29:23.121Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arch Linux xfce4主题美化</title>
+    <link href="http://example.com/2020/12/31/Arch%20Linux%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"/>
+    <id>http://example.com/2020/12/31/Arch%20Linux%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</id>
+    <published>2020-12-31T02:33:07.078Z</published>
+    <updated>2020-12-22T02:29:23.098Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2020/12/31/hello-world/"/>
+    <id>http://example.com/2020/12/31/hello-world/</id>
+    <published>2020-12-31T02:29:49.107Z</published>
+    <updated>2020-12-31T02:29:49.107Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>解决pacman提示数据库锁定</title>
+    <link href="http://example.com/2020/12/20/%E8%A7%A3%E5%86%B3pacman%E9%94%81%E5%AE%9A%E9%97%AE%E9%A2%98/"/>
+    <id>http://example.com/2020/12/20/%E8%A7%A3%E5%86%B3pacman%E9%94%81%E5%AE%9A%E9%97%AE%E9%A2%98/</id>
+    <published>2020-12-20T01:54:00.000Z</published>
+    <updated>2020-12-22T02:29:23.155Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决make时提示缺少“/lib/modules/5.9.14-arch1-1/build”</title>
+    <link href="http://example.com/2020/12/20/%E8%A7%A3%E5%86%B3make%E6%97%B6%E7%BC%BA%E5%B0%91build%E7%9B%AE%E5%BD%95/"/>
+    <id>http://example.com/2020/12/20/%E8%A7%A3%E5%86%B3make%E6%97%B6%E7%BC%BA%E5%B0%91build%E7%9B%AE%E5%BD%95/</id>
+    <published>2020-12-20T01:47:00.000Z</published>
+    <updated>2020-12-22T02:29:23.155Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vim以指定编码打开文件</title>
+    <link href="http://example.com/2020/12/18/vim%E4%BB%A5%E6%8C%87%E5%AE%9A%E7%BC%96%E7%A0%81%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/"/>
+    <id>http://example.com/2020/12/18/vim%E4%BB%A5%E6%8C%87%E5%AE%9A%E7%BC%96%E7%A0%81%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/</id>
+    <published>2020-12-17T19:15:00.000Z</published>
+    <updated>2020-12-22T02:29:23.145Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vim" scheme="http://example.com/categories/blog/vim/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>coc_nvim安装c++代码补全</title>
+    <link href="http://example.com/2020/12/11/nvim%E5%AE%89%E8%A3%85c++%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8/"/>
+    <id>http://example.com/2020/12/11/nvim%E5%AE%89%E8%A3%85c++%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8/</id>
+    <published>2020-12-11T09:35:00.000Z</published>
+    <updated>2020-12-22T02:29:23.138Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vim" scheme="http://example.com/categories/blog/vim/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决卡sddm登陆界面</title>
+    <link href="http://example.com/2020/12/11/%E8%A7%A3%E5%86%B3%E5%8D%A1sddm%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2/"/>
+    <id>http://example.com/2020/12/11/%E8%A7%A3%E5%86%B3%E5%8D%A1sddm%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2/</id>
+    <published>2020-12-11T09:16:00.000Z</published>
+    <updated>2020-12-22T02:29:23.158Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="踩坑" scheme="http://example.com/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>纪念拿到驾照</title>
+    <link href="http://example.com/2020/11/16/life4/"/>
+    <id>http://example.com/2020/11/16/life4/</id>
+    <published>2020-11-16T08:32:00.000Z</published>
+    <updated>2020-12-22T02:29:23.135Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;终于拿到驾照啦，发个博客纪念一下。不过我不是今天才拿到的，我是在11月9号拿到的。一直想发篇博客纪念一下，结果一直忘，今天终于想起来了，就发了。总之非常开心，相信以后的我回头看时看到这篇博客也会感慨颇多吧。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="life" scheme="http://example.com/categories/life/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>python3将png转换为jpg文件</title>
+    <link href="http://example.com/2020/10/26/python3%E5%B0%86png%E8%BD%AC%E6%8D%A2%E4%B8%BAjpg/"/>
+    <id>http://example.com/2020/10/26/python3%E5%B0%86png%E8%BD%AC%E6%8D%A2%E4%B8%BAjpg/</id>
+    <published>2020-10-26T13:31:00.000Z</published>
+    <updated>2020-12-22T02:29:23.141Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="PIL" scheme="http://example.com/tags/PIL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下使用scrcpy控制你的手机</title>
+    <link href="http://example.com/2020/10/12/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8scrcpy/"/>
+    <id>http://example.com/2020/10/12/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8scrcpy/</id>
+    <published>2020-10-12T12:52:00.000Z</published>
+    <updated>2020-12-22T02:29:23.105Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C语言位操作</title>
+    <link href="http://example.com/2020/10/10/C%E8%AF%AD%E8%A8%80%E4%BD%8D%E6%93%8D%E4%BD%9C/"/>
+    <id>http://example.com/2020/10/10/C%E8%AF%AD%E8%A8%80%E4%BD%8D%E6%93%8D%E4%BD%9C/</id>
+    <published>2020-10-10T00:50:00.000Z</published>
+    <updated>2020-12-22T02:29:23.101Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;前几天和朋友上了几天网，前进的脚步有点缓了，今日再次开始充实自我。因为K&amp;amp;R上讲的过于简洁，所以我转而参考C Primer Plus。因为C Primer Plus上讲的很详细，所以我这里只写几个实例。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="C" scheme="http://example.com/categories/blog/C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>KDE更改默认终端为deepin_terminal</title>
+    <link href="http://example.com/2020/10/07/kde%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF/"/>
+    <id>http://example.com/2020/10/07/kde%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF/</id>
+    <published>2020-10-07T07:34:00.000Z</published>
+    <updated>2020-12-22T02:29:23.135Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C语言实现删除字符串中指定字符</title>
+    <link href="http://example.com/2020/10/05/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6/"/>
+    <id>http://example.com/2020/10/05/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6/</id>
+    <published>2020-10-05T02:49:00.000Z</published>
+    <updated>2020-12-22T02:29:23.101Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今天跟着K&amp;amp;R继续学习C语言，其中有这么一段代码让我感觉很妙:&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;chars_process&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; fire[], &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; c)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; g, f;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (g = f = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; fire[g] != &lt;span class=&quot;string&quot;&gt;&amp;#x27;\0&amp;#x27;&lt;/span&gt;; g++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (fire[g] != c)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            fire[f++] = fire[g];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    fire[f] = &lt;span class=&quot;string&quot;&gt;&amp;#x27;\0&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这是一段删除字符串中指定字符的代码。如果您觉得这段代码没什么，那么这篇博客下面的内容就不需要看了。如果您对它感兴趣，请继续看我分析。</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="C" scheme="http://example.com/categories/blog/C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>18岁生日，随便写写</title>
+    <link href="http://example.com/2020/09/21/life3/"/>
+    <id>http://example.com/2020/09/21/life3/</id>
+    <published>2020-09-21T02:16:00.000Z</published>
+    <updated>2020-12-22T02:29:23.135Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;emmm，今天18岁了，来随便写写。&lt;/p&gt;
+&lt;p&gt;这几天我更新博客的速度显著下降，完全没有了一个月前一天一篇的劲头。其实不是我不想更新，而是我最近在学C语言，我自认为学的效果还算不错，但是没有什么我认为是需要记下来的，所以这几天就停了更新。&lt;/p&gt;
+&lt;p&gt;最近练车，教练天天数落我，说我理解能力差，后来上升到了人身攻击，说我智商有问题，哈哈，他不知道我根本就没用心学，我的热情都给了计算机，对驾驶汽车这一技术根本谈不上喜欢，因为我认为驾驶汽车上路是很危险的一件事，可能遇到各种各样的突发事件，况且不学汽车也没什么问题。&lt;/p&gt;
+&lt;p&gt;现在我也当上了现充的人(这词的意思是现实生活充实而不是现场充钱)，其实我也不想这样的，实在是因为&lt;del&gt;破事太多&lt;/del&gt; 生活所迫。</summary>
+    
+    
+    
+    <category term="life" scheme="http://example.com/categories/life/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>初次使用zsh</title>
+    <link href="http://example.com/2020/09/12/%E5%88%9D%E6%AC%A1%E4%BD%BF%E7%94%A8zsh/"/>
+    <id>http://example.com/2020/09/12/%E5%88%9D%E6%AC%A1%E4%BD%BF%E7%94%A8zsh/</id>
+    <published>2020-09-12T13:57:00.000Z</published>
+    <updated>2020-12-22T02:29:23.151Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本篇文章参考自:&lt;br&gt;&lt;a href=&quot;https://www.jianshu.com/p/ba782b57ae96&quot;&gt;Ubuntu | 安装oh-my-zsh&lt;/a&gt;，&lt;br&gt;&lt;a href=&quot;https://www.zrahh.com/archives/167.html&quot;&gt;oh-my-zsh插件推荐&lt;/a&gt;。&lt;br&gt;感谢这些博主的分享。&lt;/p&gt;
+&lt;p&gt;zsh是一个相当骚气的shell,但是由于博主水平过低加上英文辣鸡，所以导致一直想像别人的zsh一样骚气但是一直没有那个效果。今天在和群友吹水的时候突然提到了zsh,正好今天下午学过了C语言，晚上又不想打游戏，那就来折腾一把zsh吧。其实说是折腾，其实一点难度也没有，主要还是因为看了别人的博客和群友提供了帮助。。。&lt;/p&gt;
+&lt;p&gt;那么废话少说，我们这就开始吧。&lt;br&gt;首先，安装zsh:</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+    <category term="zsh" scheme="http://example.com/tags/zsh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的vim配置</title>
+    <link href="http://example.com/2020/09/09/%E6%88%91%E7%9A%84vim%E6%8F%92%E4%BB%B6/"/>
+    <id>http://example.com/2020/09/09/%E6%88%91%E7%9A%84vim%E6%8F%92%E4%BB%B6/</id>
+    <published>2020-09-09T09:00:00.000Z</published>
+    <updated>2021-01-01T01:01:24.073Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vim" scheme="http://example.com/categories/blog/vim/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scp自动输入密码</title>
+    <link href="http://example.com/2020/09/04/scp%E8%87%AA%E5%8A%A8%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81/"/>
+    <id>http://example.com/2020/09/04/scp%E8%87%AA%E5%8A%A8%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81/</id>
+    <published>2020-09-04T08:40:00.000Z</published>
+    <updated>2020-12-22T02:29:23.141Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="服务器" scheme="http://example.com/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+    <category term="服务器" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于C语言的字符型</title>
+    <link href="http://example.com/2020/08/30/%E5%85%B3%E4%BA%8EC%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E5%9E%8B/"/>
+    <id>http://example.com/2020/08/30/%E5%85%B3%E4%BA%8EC%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E5%9E%8B/</id>
+    <published>2020-08-30T01:46:00.000Z</published>
+    <updated>2020-12-22T02:29:23.148Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="C" scheme="http://example.com/categories/blog/C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>解决&quot;modprobe_FATAL Module fuse not found in directory /lib/modules/5.8.2-arch1-1&quot;</title>
+    <link href="http://example.com/2020/08/24/%E8%A7%A3%E5%86%B3modprobe-FATAL-Module-fuse-not-found-in-directory-libmodules5.8.2-arch1-1/"/>
+    <id>http://example.com/2020/08/24/%E8%A7%A3%E5%86%B3modprobe-FATAL-Module-fuse-not-found-in-directory-libmodules5.8.2-arch1-1/</id>
+    <published>2020-08-24T08:09:00.000Z</published>
+    <updated>2020-12-22T02:29:23.155Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="踩坑" scheme="http://example.com/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arch下Intel+Nvidia双显卡解决方案</title>
+    <link href="http://example.com/2020/08/20/Intel+Nvidia%E5%8F%8C%E6%98%BE%E5%8D%A1%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://example.com/2020/08/20/Intel+Nvidia%E5%8F%8C%E6%98%BE%E5%8D%A1%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <published>2020-08-20T04:53:00.000Z</published>
+    <updated>2020-12-22T02:29:23.105Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于C语言中的整数类型</title>
+    <link href="http://example.com/2020/08/17/%E5%85%B3%E4%BA%8EC%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://example.com/2020/08/17/%E5%85%B3%E4%BA%8EC%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B/</id>
+    <published>2020-08-17T03:03:00.000Z</published>
+    <updated>2020-12-22T02:29:23.148Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近学的很杂，PyQt5，数据分析，操作系统……都在学习。可能我就是这样吧，对于任何事物都只有三分钟热情。这样就没有办法了，只能先学一点，等一段时间后再学一点。之前学过C语言，不过学的不深，而且经过了一年多差不多忘的干净了。本篇的主题是关于C语言中的整数类型，参考书为C primer Plus第六版(说是参考，实际上大部分都是抄出我认为有必要记的地方啦)。&lt;/p&gt;
+&lt;p&gt;那么下面开讲。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="C" scheme="http://example.com/categories/blog/C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最近的状况</title>
+    <link href="http://example.com/2020/08/09/life2/"/>
+    <id>http://example.com/2020/08/09/life2/</id>
+    <published>2020-08-09T01:20:00.000Z</published>
+    <updated>2020-12-22T02:29:23.135Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  最近的日子很丰富多彩，一个月前坐飞机到宁夏银川附近的一个地方，</summary>
+    
+    
+    
+    <category term="life" scheme="http://example.com/categories/life/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下如何优雅的截图</title>
+    <link href="http://example.com/2020/08/06/Linux%E4%B8%8B%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E6%88%AA%E5%9B%BE/"/>
+    <id>http://example.com/2020/08/06/Linux%E4%B8%8B%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E6%88%AA%E5%9B%BE/</id>
+    <published>2020-08-06T10:54:00.000Z</published>
+    <updated>2020-12-22T02:29:23.105Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PyQt5创建一个基本的程序</title>
+    <link href="http://example.com/2020/08/06/pyqt5%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://example.com/2020/08/06/pyqt5%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F/</id>
+    <published>2020-08-06T08:59:00.000Z</published>
+    <updated>2020-12-22T02:29:23.138Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近在Boss直聘上找工作，看到很多的爬虫工作上都有”能够一键爬虫”这一要求，我觉得有这个要求可能是考虑到用户的水平吧，既然如此，我想用户也不一定能看得习惯命令行，还是给用户一个方便的UI界面比较好。虽然因为种种原因没有去实际工作(这里感谢提供给我机会的喵房科技的范毓魁经理)，不过要学习GUI这事我却记下了。之前曾有想法，想要直接使用HTML页面来控制程序，这样不但方便，也省下学习GUI花费的时间了。&lt;/p&gt;
+&lt;p&gt;然而想法是美好的，HTML也可以让用户在本地访问，但是你都打开浏览器了，那网页不弄得美观点有点说不过去吧？但是鉴于本人的前端技术实在太烂，终于还是选择了学习Gui编程。&lt;/p&gt;
+&lt;p&gt;这里使用的是PyQt5，见网上有人说这个性能高，于是就打算学这个了。那么闲聊到此结束，下面先来一道基本程序。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    <category term="PyQt5" scheme="http://example.com/categories/blog/Python/PyQt5/"/>
+    
+    
+    <category term="PyQt5" scheme="http://example.com/tags/PyQt5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下使用Qv2ray实现HTTP代理Chromium</title>
+    <link href="http://example.com/2020/08/05/Qv2ray%E5%8A%A0Chromium%E4%BB%A3%E7%90%86/"/>
+    <id>http://example.com/2020/08/05/Qv2ray%E5%8A%A0Chromium%E4%BB%A3%E7%90%86/</id>
+    <published>2020-08-05T06:55:00.000Z</published>
+    <updated>2020-12-22T02:29:23.118Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+    <category term="代理" scheme="http://example.com/tags/%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pymysql查询</title>
+    <link href="http://example.com/2020/07/30/pymysql%E6%9F%A5%E8%AF%A2/"/>
+    <id>http://example.com/2020/07/30/pymysql%E6%9F%A5%E8%AF%A2/</id>
+    <published>2020-07-30T00:27:00.000Z</published>
+    <updated>2020-12-22T02:29:23.138Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Flask_Restful使用局部装饰器</title>
+    <link href="http://example.com/2020/07/29/flask_restful%E4%BD%BF%E7%94%A8%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
+    <id>http://example.com/2020/07/29/flask_restful%E4%BD%BF%E7%94%A8%E8%A3%85%E9%A5%B0%E5%99%A8/</id>
+    <published>2020-07-29T11:24:00.000Z</published>
+    <updated>2020-12-22T02:29:23.128Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本篇是给使用了flask_restful的视图加装饰器，如果您想要看的不是这种内容，建议访问官方文档&lt;a href=&quot;http://docs.jinkan.org/docs/flask/patterns/viewdecorators.html&quot;&gt;视图装饰器&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;本篇博客参考了&lt;a href=&quot;https://www.jianshu.com/p/6b6e29f8248a&quot;&gt;Flask-RESTful中装饰器的使用-dnsir&lt;/a&gt;的博客，感谢博主分享知识。&lt;/p&gt;
+&lt;p&gt;这里我使用的是JWT加密，一看就懂，那么我直接上代码:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    <category term="flask" scheme="http://example.com/categories/blog/Python/flask/"/>
+    
+    
+    <category term="jwt" scheme="http://example.com/tags/jwt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flask使用Restful</title>
+    <link href="http://example.com/2020/07/29/flask%E4%BD%BF%E7%94%A8restful%E6%8E%A5%E5%8F%A3/"/>
+    <id>http://example.com/2020/07/29/flask%E4%BD%BF%E7%94%A8restful%E6%8E%A5%E5%8F%A3/</id>
+    <published>2020-07-28T23:33:00.000Z</published>
+    <updated>2020-12-22T02:29:23.131Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本篇博客参考自官方文档:&lt;a href=&quot;https://flask-restful.readthedocs.io/en/latest/quickstart.html&quot;&gt;Quickstart&lt;/a&gt;。&lt;/p&gt;
+&lt;h1 id=&quot;一个demo&quot;&gt;&lt;a href=&quot;#一个demo&quot; class=&quot;headerlink&quot; title=&quot;一个demo&quot;&gt;&lt;/a&gt;一个demo&lt;/h1&gt;&lt;p&gt;首先，安装flask_restful包:&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip3 install flask_restful&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    <category term="flask" scheme="http://example.com/categories/blog/Python/flask/"/>
+    
+    
+    <category term="Flask" scheme="http://example.com/tags/Flask/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第一篇</title>
+    <link href="http://example.com/2020/07/28/life1/"/>
+    <id>http://example.com/2020/07/28/life1/</id>
+    <published>2020-07-28T07:27:00.000Z</published>
+    <updated>2020-12-22T02:29:23.135Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="life" scheme="http://example.com/categories/life/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>初学Flask</title>
+    <link href="http://example.com/2020/07/27/flask_%E5%88%9D%E5%AD%A6/"/>
+    <id>http://example.com/2020/07/27/flask_%E5%88%9D%E5%AD%A6/</id>
+    <published>2020-07-27T00:12:00.000Z</published>
+    <updated>2020-12-22T02:29:23.128Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;之前曾学过flask,但是快要忘光了，而且也没有做笔记，这次重温一遍，就当是初学了。&lt;br&gt;本篇是在W3Cschool上学习的，链接:&amp;lt;a href=”&lt;a href=&quot;https://www.w3cschool.cn/flask/flask_application.html&amp;quot;W3Cschool&amp;gt;&quot;&gt;https://www.w3cschool.cn/flask/flask_application.html&amp;quot;W3Cschool&amp;gt;&lt;/a&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;h1 id=&quot;flask的安装与应用&quot;&gt;&lt;a href=&quot;#flask的安装与应用&quot; class=&quot;headerlink&quot; title=&quot;flask的安装与应用&quot;&gt;&lt;/a&gt;flask的安装与应用&lt;/h1&gt;&lt;p&gt;输入以下命令来安装flask:&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip3 install flask&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    <category term="flask" scheme="http://example.com/categories/blog/Python/flask/"/>
+    
+    
+    <category term="Flask" scheme="http://example.com/tags/Flask/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>部署nginx+vue后没有css样式</title>
+    <link href="http://example.com/2020/07/23/%E9%83%A8%E7%BD%B2vue%E5%90%8E%E6%B2%A1%E6%9C%89css%E6%A0%B7%E5%BC%8F/"/>
+    <id>http://example.com/2020/07/23/%E9%83%A8%E7%BD%B2vue%E5%90%8E%E6%B2%A1%E6%9C%89css%E6%A0%B7%E5%BC%8F/</id>
+    <published>2020-07-23T00:34:00.000Z</published>
+    <updated>2020-12-22T02:29:23.158Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;昨晚部署了一波vue,在本地使用”npm run build”打包后使用scp命令发送到了服务器的根目录，然后配置了服务器的nginx,因为我的服务器是ubuntu，所以用apt-get安装的nginx目录为/etc/nginx。我配置了nginx.conf文件，具体配置如下:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本地运行vuebuild后的项目</title>
+    <link href="http://example.com/2020/07/22/vue_build%E5%90%8E%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD/"/>
+    <id>http://example.com/2020/07/22/vue_build%E5%90%8E%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD/</id>
+    <published>2020-07-22T01:10:00.000Z</published>
+    <updated>2020-12-22T02:29:23.145Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>几条vim指令</title>
+    <link href="http://example.com/2020/07/20/vim%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://example.com/2020/07/20/vim%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-07-20T00:23:00.000Z</published>
+    <updated>2020-12-22T02:29:23.145Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue修改全局背景</title>
+    <link href="http://example.com/2020/07/19/vue%E4%BF%AE%E6%94%B9%E5%85%A8%E5%B1%80%E8%83%8C%E6%99%AF/"/>
+    <id>http://example.com/2020/07/19/vue%E4%BF%AE%E6%94%B9%E5%85%A8%E5%B1%80%E8%83%8C%E6%99%AF/</id>
+    <published>2020-07-19T11:59:00.000Z</published>
+    <updated>2020-12-22T02:29:23.145Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>matplotlib绘制条形图</title>
+    <link href="http://example.com/2020/07/17/matplotlib%E7%BB%98%E5%88%B6%E6%9D%A1%E5%BD%A2%E5%9B%BE/"/>
+    <id>http://example.com/2020/07/17/matplotlib%E7%BB%98%E5%88%B6%E6%9D%A1%E5%BD%A2%E5%9B%BE/</id>
+    <published>2020-07-17T01:31:00.000Z</published>
+    <updated>2020-12-22T02:29:23.135Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    <category term="数据分析" scheme="http://example.com/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="matplotlib" scheme="http://example.com/tags/matplotlib/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DjangoJWt解密装饰器</title>
+    <link href="http://example.com/2020/07/16/DjangoJWt%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
+    <id>http://example.com/2020/07/16/DjangoJWt%E8%A3%85%E9%A5%B0%E5%99%A8/</id>
+    <published>2020-07-16T08:01:00.000Z</published>
+    <updated>2020-12-22T02:29:23.101Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="jwt" scheme="http://example.com/tags/jwt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决连接mysql时&quot;RuntimeError:cryptographyisrequiredforsha256_passwordorcaching_sha2_password&quot;</title>
+    <link href="http://example.com/2020/07/16/mysqlRuntime%E6%8A%A5%E9%94%99/"/>
+    <id>http://example.com/2020/07/16/mysqlRuntime%E6%8A%A5%E9%94%99/</id>
+    <published>2020-07-16T07:11:00.000Z</published>
+    <updated>2020-12-22T02:29:23.138Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="踩坑" scheme="http://example.com/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用matplotlib绘制散点图</title>
+    <link href="http://example.com/2020/07/16/%E7%BB%98%E5%88%B6%E6%95%A3%E7%82%B9%E5%9B%BE/"/>
+    <id>http://example.com/2020/07/16/%E7%BB%98%E5%88%B6%E6%95%A3%E7%82%B9%E5%9B%BE/</id>
+    <published>2020-07-16T00:14:00.000Z</published>
+    <updated>2020-12-22T02:29:23.155Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    <category term="数据分析" scheme="http://example.com/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>解决django_makemigrations时提示版本过低</title>
+    <link href="http://example.com/2020/07/15/Djangomysql%E7%89%88%E6%9C%AC%E4%BD%8E/"/>
+    <id>http://example.com/2020/07/15/Djangomysql%E7%89%88%E6%9C%AC%E4%BD%8E/</id>
+    <published>2020-07-15T07:47:00.000Z</published>
+    <updated>2020-12-22T02:29:23.105Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DjangoModelSerializer返回指定字段</title>
+    <link href="http://example.com/2020/07/15/DjangoModelserializer%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5/"/>
+    <id>http://example.com/2020/07/15/DjangoModelserializer%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5/</id>
+    <published>2020-07-14T22:30:00.000Z</published>
+    <updated>2020-12-22T02:29:23.105Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>友链</title>
+    <link href="http://example.com/2020/07/14/%E5%8F%8B%E9%93%BE/"/>
+    <id>http://example.com/2020/07/14/%E5%8F%8B%E9%93%BE/</id>
+    <published>2020-07-14T08:27:00.000Z</published>
+    <updated>2020-12-31T03:00:37.210Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="friendlink" scheme="http://example.com/categories/friendlink/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>订阅和博客问题日志</title>
+    <link href="http://example.com/2020/07/14/Wdnnd_log/"/>
+    <id>http://example.com/2020/07/14/Wdnnd_log/</id>
+    <published>2020-07-14T06:54:00.000Z</published>
+    <updated>2021-02-02T06:49:08.028Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="博客日志" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Arch连接蓝牙</title>
+    <link href="http://example.com/2020/07/14/Arch%E8%BF%9E%E6%8E%A5%E8%93%9D%E7%89%99/"/>
+    <id>http://example.com/2020/07/14/Arch%E8%BF%9E%E6%8E%A5%E8%93%9D%E7%89%99/</id>
+    <published>2020-07-14T02:46:00.000Z</published>
+    <updated>2020-12-22T02:29:23.101Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本博客部分内容借鉴于:&lt;a href=&quot;https://www.jianshu.com/p/19d88ecf4f5e&quot;&gt;解决Linux无法连接蓝牙耳机Bose QuietComfort 35(QC35)的问题-漫月者&lt;/a&gt;，感谢博主的分享！&lt;/p&gt;
+&lt;p&gt;首先，安装蓝牙模块，参照Arch Wiki:&lt;a href=&quot;https://wiki.archlinux.org/index.php/Bluetooth_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&quot;&gt;Bluetooth&lt;/a&gt;。&lt;br&gt;安装bluez和bluez-utils:&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo pacman -S bluez&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;加载模块:&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;modprobe bluetooth&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;设置开机启动:&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo systemctl enable bluetooth.service&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;开启服务:&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo systemctl start bluetooth.service&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="bluetooth" scheme="http://example.com/tags/bluetooth/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的常用工具</title>
+    <link href="http://example.com/2020/07/13/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    <id>http://example.com/2020/07/13/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/</id>
+    <published>2020-07-13T07:00:00.000Z</published>
+    <updated>2020-12-22T02:29:23.151Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    
+    <category term="Arch" scheme="http://example.com/tags/Arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>简历</title>
+    <link href="http://example.com/2020/05/05/resume-0/"/>
+    <id>http://example.com/2020/05/05/resume-0/</id>
+    <published>2020-05-05T08:02:01.000Z</published>
+    <updated>2020-12-22T02:29:23.141Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;个人信息&quot;&gt;&lt;a href=&quot;#个人信息&quot; class=&quot;headerlink&quot; title=&quot;个人信息:&quot;&gt;&lt;/a&gt;个人信息:&lt;/h1&gt;&lt;p&gt;姓名: 吴松哲&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="resume" scheme="http://example.com/categories/resume/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PIL长图片合成</title>
+    <link href="http://example.com/2020/05/01/PIL%E9%95%BF%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90/"/>
+    <id>http://example.com/2020/05/01/PIL%E9%95%BF%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90/</id>
+    <published>2020-04-30T22:19:13.000Z</published>
+    <updated>2020-12-22T02:29:23.115Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这次的内容是PIL长图片合成，效果如下:&lt;/p&gt;
+&lt;img src=&quot;/PIL%E9%95%BF%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90/image-20200501142112475.png&quot; class=&quot;[LongImage]&quot;&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="PIL" scheme="http://example.com/tags/PIL/"/>
+    
+    <category term="图片合成" scheme="http://example.com/tags/%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>七牛云对象存储</title>
+    <link href="http://example.com/2020/04/30/%E4%B8%83%E7%89%9B%E4%BA%91%E4%BA%91%E5%AD%98%E5%82%A8/"/>
+    <id>http://example.com/2020/04/30/%E4%B8%83%E7%89%9B%E4%BA%91%E4%BA%91%E5%AD%98%E5%82%A8/</id>
+    <published>2020-04-30T03:56:43.000Z</published>
+    <updated>2020-12-22T02:29:23.148Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;想要用七牛云对象储存，首先，你需要有一个七牛云账号。注册好账号之后点击右上角的控制台，选择对象存储，开心的创建应用…..???什么！居然需要实名认证！告辞…&lt;/p&gt;
+&lt;p&gt;那么实名认证之后，在命令行输入:</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="对象存储" scheme="http://example.com/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Deepin打开窗口特效</title>
+    <link href="http://example.com/2020/04/30/deepin%E6%89%93%E5%BC%80%E7%AA%97%E5%8F%A3%E7%89%B9%E6%95%88/"/>
+    <id>http://example.com/2020/04/30/deepin%E6%89%93%E5%BC%80%E7%AA%97%E5%8F%A3%E7%89%B9%E6%95%88/</id>
+    <published>2020-04-29T23:14:13.000Z</published>
+    <updated>2020-12-22T02:29:23.128Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;如果在使用deepin系统时出现个性化里的窗口特效打不开的情况，那么可以采取以下方法:&lt;/p&gt;
+&lt;p&gt;首先，安装模块&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt install deepin-wm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后输入以下命令:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;deepin-wm --replace&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Deepin" scheme="http://example.com/categories/blog/Deepin/"/>
+    
+    
+    <category term="Deepin" scheme="http://example.com/tags/Deepin/"/>
+    
+    <category term="踩坑" scheme="http://example.com/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows+deepin双系统安装及踩坑</title>
+    <link href="http://example.com/2020/04/29/windows+deepin/"/>
+    <id>http://example.com/2020/04/29/windows+deepin/</id>
+    <published>2020-04-29T06:45:17.000Z</published>
+    <updated>2020-12-22T02:29:23.148Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;前几天突然想起来了之前心血来潮下载的deepin镜像，但是当时有事没安装，终于有时间了打算来安装一下。</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Deepin" scheme="http://example.com/categories/blog/Deepin/"/>
+    
+    
+    <category term="Deepin" scheme="http://example.com/tags/Deepin/"/>
+    
+    <category term="踩坑" scheme="http://example.com/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+    <category term="双系统" scheme="http://example.com/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue传递图片到Django</title>
+    <link href="http://example.com/2020/04/29/Vue%E4%BC%A0%E9%80%92%E5%9B%BE%E7%89%87%E5%88%B0Django/"/>
+    <id>http://example.com/2020/04/29/Vue%E4%BC%A0%E9%80%92%E5%9B%BE%E7%89%87%E5%88%B0Django/</id>
+    <published>2020-04-28T23:45:54.000Z</published>
+    <updated>2020-12-22T02:29:23.118Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;html代码:&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;file&amp;quot;&lt;/span&gt; @&lt;span class=&quot;attr&quot;&gt;change&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;submit&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cv2压缩图片</title>
+    <link href="http://example.com/2020/04/29/2%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/"/>
+    <id>http://example.com/2020/04/29/2%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/</id>
+    <published>2020-04-28T23:31:59.000Z</published>
+    <updated>2020-12-22T02:29:23.098Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;需要导入python的cv2库&lt;/p&gt;
+&lt;p&gt;pip导入:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip install opencv-python&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="cv2" scheme="http://example.com/tags/cv2/"/>
+    
+    <category term="压缩图片" scheme="http://example.com/tags/%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用PIL添加中文水印</title>
+    <link href="http://example.com/2020/04/29/PIL%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%B0%B4%E5%8D%B0/"/>
+    <id>http://example.com/2020/04/29/PIL%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%B0%B4%E5%8D%B0/</id>
+    <published>2020-04-28T23:19:13.000Z</published>
+    <updated>2020-12-22T02:29:23.108Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;原图:&lt;/p&gt;
+&lt;img src=&quot;/PIL%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%B0%B4%E5%8D%B0/image-20200429153309963.png&quot; class=&quot;[image-20200429153309963]&quot;&gt;
+
+
+&lt;p&gt;加水印后:</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="PIL" scheme="http://example.com/tags/PIL/"/>
+    
+    <category term="水印" scheme="http://example.com/tags/%E6%B0%B4%E5%8D%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用钉钉、微博第三方登录</title>
+    <link href="http://example.com/2020/04/28/%E4%BD%BF%E7%94%A8%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/"/>
+    <id>http://example.com/2020/04/28/%E4%BD%BF%E7%94%A8%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/</id>
+    <published>2020-04-28T04:57:11.000Z</published>
+    <updated>2020-12-22T02:29:23.148Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;钉钉的第三方登录，乍一看开发文档觉得没什么，然而越往下进行越觉得棘手，</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="钉钉第三方登录" scheme="http://example.com/tags/%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/"/>
+    
+    <category term="微博第三方登录" scheme="http://example.com/tags/%E5%BE%AE%E5%8D%9A%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Selenium完成简单的滑块验证与下载验证码</title>
+    <link href="http://example.com/2020/04/26/selenium%E6%BB%91%E5%9D%97/"/>
+    <id>http://example.com/2020/04/26/selenium%E6%BB%91%E5%9D%97/</id>
+    <published>2020-04-26T00:27:13.000Z</published>
+    <updated>2020-12-22T02:29:23.141Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;完成简单的滑块验证&quot;&gt;&lt;a href=&quot;#完成简单的滑块验证&quot; class=&quot;headerlink&quot; title=&quot;完成简单的滑块验证&quot;&gt;&lt;/a&gt;完成简单的滑块验证&lt;/h2&gt;&lt;p&gt;这次内容是使用selenium完成简单的滑块验证，并非拼图哦~&lt;/p&gt;
+&lt;p&gt;那么简单的滑块到底有多简单呢？它是长这个样子的~&lt;/p&gt;
+&lt;img src=&quot;/selenium%E6%BB%91%E5%9D%97/image-20200426163019384.png&quot; class=&quot;[image-20200426163019384]&quot;&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="selenium" scheme="http://example.com/tags/selenium/"/>
+    
+    <category term="滑块验证" scheme="http://example.com/tags/%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>调用百度文字识别</title>
+    <link href="http://example.com/2020/04/26/useBaiduOCR/"/>
+    <id>http://example.com/2020/04/26/useBaiduOCR/</id>
+    <published>2020-04-25T22:49:36.000Z</published>
+    <updated>2020-12-22T02:29:23.145Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;要使用百度的文字识别，首先你需要有一个百度账号，然后登入百度智能云，登录后在右上角选择”管理控制台“，页面跳转之后往下划，</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="百度文字识别" scheme="http://example.com/tags/%E7%99%BE%E5%BA%A6%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue滑动验证</title>
+    <link href="http://example.com/2020/04/26/vue%E6%BB%91%E5%8A%A8%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
+    <id>http://example.com/2020/04/26/vue%E6%BB%91%E5%8A%A8%E9%AA%8C%E8%AF%81%E7%A0%81/</id>
+    <published>2020-04-25T18:49:08.000Z</published>
+    <updated>2020-12-22T02:29:23.145Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;首先，你需要有一个叫做“vue-drag-verify”的东西，可以在vue/package.json文件中查看有没有该组件，如果有的话，那么接下来是它的使用:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="滑块验证" scheme="http://example.com/tags/%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>五次登录失败锁账号</title>
+    <link href="http://example.com/2020/04/25/fivecount/"/>
+    <id>http://example.com/2020/04/25/fivecount/</id>
+    <published>2020-04-24T23:19:57.000Z</published>
+    <updated>2020-12-22T02:29:23.128Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这次用到了redis模块和Redis数据库。那么代码如下:&lt;/p&gt;
+&lt;p&gt;首先，连接上redis数据库&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="redis" scheme="http://example.com/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django+Vue验证码的生成与使用</title>
+    <link href="http://example.com/2020/04/24/django%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
+    <id>http://example.com/2020/04/24/django%E9%AA%8C%E8%AF%81%E7%A0%81/</id>
+    <published>2020-04-24T02:34:39.000Z</published>
+    <updated>2020-12-22T02:29:23.128Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;生成验证码&quot;&gt;&lt;a href=&quot;#生成验证码&quot; class=&quot;headerlink&quot; title=&quot;生成验证码&quot;&gt;&lt;/a&gt;生成验证码&lt;/h3&gt;&lt;p&gt;注意，代码中的r是实例化了Redis对象，r.set()是向redis中存入键值对的方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+    <category term="生成图片验证码" scheme="http://example.com/tags/%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
+    
+    <category term="PIL" scheme="http://example.com/tags/PIL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django入门</title>
+    <link href="http://example.com/2020/04/23/createDjango/"/>
+    <id>http://example.com/2020/04/23/createDjango/</id>
+    <published>2020-04-22T19:27:27.000Z</published>
+    <updated>2020-12-22T02:29:23.128Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;创建Django项目&quot;&gt;&lt;a href=&quot;#创建Django项目&quot; class=&quot;headerlink&quot; title=&quot;创建Django项目:&quot;&gt;&lt;/a&gt;创建Django项目:&lt;/h2&gt;&lt;p&gt;cd 到你想要创建Django项目的目录下，然后运行以下命令:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;django-admin startproject mysite&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这行代码会在当前目录下创建一个mysite目录。(注意事项:</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python md5加密</title>
+    <link href="http://example.com/2020/04/23/pythonmd5/"/>
+    <id>http://example.com/2020/04/23/pythonmd5/</id>
+    <published>2020-04-22T19:17:08.000Z</published>
+    <updated>2020-12-22T02:29:23.141Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;使用python来进行md5加密，下面是代码:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git push不上解决方案</title>
+    <link href="http://example.com/2020/04/22/gitpush%E4%B8%8D%E4%B8%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://example.com/2020/04/22/gitpush%E4%B8%8D%E4%B8%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <published>2020-04-22T00:05:27.000Z</published>
+    <updated>2020-12-22T02:29:23.131Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="git" scheme="http://example.com/categories/blog/git/"/>
+    
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue各个组件的作用</title>
+    <link href="http://example.com/2020/04/22/vue%E5%90%84%E4%B8%AA%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/"/>
+    <id>http://example.com/2020/04/22/vue%E5%90%84%E4%B8%AA%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/</id>
+    <published>2020-04-21T19:33:06.000Z</published>
+    <updated>2020-12-22T02:29:23.145Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一些vue知识</title>
+    <link href="http://example.com/2020/04/22/vue%E7%9F%A5%E8%AF%86/"/>
+    <id>http://example.com/2020/04/22/vue%E7%9F%A5%E8%AF%86/</id>
+    <published>2020-04-21T17:09:31.000Z</published>
+    <updated>2020-12-22T02:29:23.145Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;复习了一遍vue，为了防止忘记特意将其记录下来。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用git删除仓库里的文件夹</title>
+    <link href="http://example.com/2020/04/21/%E4%BD%BF%E7%94%A8git%E5%88%A0%E9%99%A4%E4%BB%93%E5%BA%93%E9%87%8C%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
+    <id>http://example.com/2020/04/21/%E4%BD%BF%E7%94%A8git%E5%88%A0%E9%99%A4%E4%BB%93%E5%BA%93%E9%87%8C%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/</id>
+    <published>2020-04-21T06:03:39.000Z</published>
+    <updated>2020-12-22T02:29:23.148Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;首先，初始化:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="git" scheme="http://example.com/categories/blog/git/"/>
+    
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>几条Hugo命令</title>
+    <link href="http://example.com/2020/04/21/hugo%E5%91%BD%E4%BB%A4/"/>
+    <id>http://example.com/2020/04/21/hugo%E5%91%BD%E4%BB%A4/</id>
+    <published>2020-04-20T20:49:06.000Z</published>
+    <updated>2020-12-22T02:29:23.131Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;打包项目(在根目录下)&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hugo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="hugo" scheme="http://example.com/categories/blog/hugo/"/>
+    
+    
+    <category term="hugo" scheme="http://example.com/tags/hugo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git push时卡住解决方法</title>
+    <link href="http://example.com/2020/04/21/gitpush%E6%97%B6%E5%8D%A1%E4%BD%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>http://example.com/2020/04/21/gitpush%E6%97%B6%E5%8D%A1%E4%BD%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
+    <published>2020-04-20T19:32:06.000Z</published>
+    <updated>2020-12-22T02:29:23.131Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="git" scheme="http://example.com/categories/blog/git/"/>
+    
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>清空GitHub仓库下的所有内容</title>
+    <link href="http://example.com/2020/04/21/%E6%B8%85%E7%A9%BAGitHub%E4%BB%93%E5%BA%93%E4%B8%8B%E7%9A%84%E6%89%80%E6%9C%89%E5%86%85%E5%AE%B9/"/>
+    <id>http://example.com/2020/04/21/%E6%B8%85%E7%A9%BAGitHub%E4%BB%93%E5%BA%93%E4%B8%8B%E7%9A%84%E6%89%80%E6%9C%89%E5%86%85%E5%AE%B9/</id>
+    <published>2020-04-20T19:22:05.000Z</published>
+    <updated>2020-12-22T02:29:23.155Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="git" scheme="http://example.com/categories/blog/git/"/>
+    
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub使用hugo</title>
+    <link href="http://example.com/2020/04/21/GitHub%E4%BD%BF%E7%94%A8hugo/"/>
+    <id>http://example.com/2020/04/21/GitHub%E4%BD%BF%E7%94%A8hugo/</id>
+    <published>2020-04-20T18:41:32.000Z</published>
+    <updated>2020-12-22T02:29:23.105Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;1.先创建一个仓库&lt;/p&gt;
+&lt;p&gt;2.在新建的仓库的settings页面下GitHUb Pages里选择choose theme，随意选择一个主题。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="hugo" scheme="http://example.com/categories/blog/hugo/"/>
+    
+    
+    <category term="hugo" scheme="http://example.com/tags/hugo/"/>
+    
+  </entry>
+  
+</feed>
