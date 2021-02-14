@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -21,7 +19,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2020/12 - Gray-Ice</title>
+  <title>vim实用指令 - Gray-Ice</title>
+  
+    <meta name="keywords" content="vim">
   
 
   
@@ -329,7 +329,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  search' style="display: ;">
+        <div id="half" class='cover-wrapper post search' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -371,133 +371,218 @@
         
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow blur article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
+    
+      <h1 class="title">
+        vim实用指令
+      </h1>
+      <div class='new-meta-box'>
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/11/nvim%E5%AE%89%E8%A3%85c++%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8/">
-        coc_nvim安装c++代码补全
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        之前安装的C语言代码补全自从我开始学CPP后就不太灵光的样子，而且我忘记COC插件列表的网址是什么了，所以这里我又百度到了一篇安装C++的博客。
-以下内容借鉴自VIM 插件之 coc.nvim，感谢博主分享知识。
-那么首先要确保你安装了clang，下面是Arch Linux下安装clang的命令:
-1pacman -S clang
-博主原文中说如果没有安装clang直接装COC的CPP扩展会...
-      
-    
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2020-12-11</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Feb 5, 2021</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="vim实用指令" data-path="/2021/02/05/vim%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>发现了挺实用的几条vim指令，来分享一下。以后再有发现好用的指令会在这里面更新。<br>这里面不会有hjkl之类的基础操作。<br>以下内容均经过博主亲自测试并成功后才分享。</p>
+<h1 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h1><h2 id="删除括号以及引号里面的内容"><a href="#删除括号以及引号里面的内容" class="headerlink" title="删除括号以及引号里面的内容"></a>删除括号以及引号里面的内容</h2><p>使用方法: 将光标停留在括号上或者引号上，或者停留在括号或者引号中。<br>主要命令是:di。d还是原意，此时的i似乎代表了”inside”。</p>
+<h3 id="删除双引号里面的内容"><a href="#删除双引号里面的内容" class="headerlink" title="删除双引号里面的内容"></a>删除双引号里面的内容</h3><p><font color="red">di”</font>: 删除双引号”里面的内容，如:</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">moxi<span class="string">&quot;moxi&quot;</span>q</span><br><span class="line"># 光标停留在从左往右第一个<span class="string">&quot;上或第一个&quot;</span>与第二个<span class="string">&quot;之间，执行di&quot;</span></span><br><span class="line"># 结果:</span><br><span class="line">moxi<span class="string">&quot;&quot;</span>q</span><br></pre></td></tr></table></figure>
+<p>因为每条都这样说明很麻烦，所以以后就不带第二行和第三行的注释了，读者只要知道该二级标题下的内容都是这个意思就好。</p>
+<h3 id="删除小括号里面的内容"><a href="#删除小括号里面的内容" class="headerlink" title="删除小括号里面的内容"></a>删除小括号里面的内容</h3><p><font color="red">di(</font>。</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hello(YoXI)aaa</span><br><span class="line"></span><br><span class="line">hello()aaa</span><br></pre></td></tr></table></figure>
+<h3 id="删除大括号里的内容"><a href="#删除大括号里的内容" class="headerlink" title="删除大括号里的内容"></a>删除大括号里的内容</h3><p><font color="red">di{</font>。</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h&#123;hadasdas&#125;h</span><br><span class="line"></span><br><span class="line">h&#123;&#125;h</span><br></pre></td></tr></table></figure>
+<h1 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h1><h2 id="复制括号以及引号里面的内容"><a href="#复制括号以及引号里面的内容" class="headerlink" title="复制括号以及引号里面的内容"></a>复制括号以及引号里面的内容</h2><p>使用方法: 将光标停留在括号上或者引号上，或者停留在括号或者引号中。<br>主要命令是yi。y仍是原意，此时的i似乎代表了”inside”。然后需要注意的是，这些命令是复制括号或者引号内的内容，而不是复制从当前光标到下一个括号或引号内的内容。</p>
+<h3 id="复制小括号内的内容"><a href="#复制小括号内的内容" class="headerlink" title="复制小括号内的内容"></a>复制小括号内的内容</h3><p><font color="red">yi(</font>。</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gc(gcc)<span class="keyword">a</span></span><br><span class="line"># 此时光标停留在(上或者括号内容中, 在Normal模式下输入:yi(</span><br><span class="line"># 之后按下<span class="keyword">p</span>, 出现内容如下</span><br><span class="line">gcc</span><br></pre></td></tr></table></figure>
+<p>双引号，单引号，大括号也是同理，其分别对应: <font color="red">yi”</font>, <font color="red">yi’</font>, <font color="red">yi{</font>。 </p>
+<p>(本篇未完结，时不时会更新一下)</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2020/12/11/nvim%E5%AE%89%E8%A3%85c++%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8/'>
-            Read More
-          </a>
-        </div>
+      
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-02-05T11:19:13+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Feb 5, 2021</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
+          
   
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/11/%E8%A7%A3%E5%86%B3%E5%8D%A1sddm%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2/">
-        解决卡sddm登陆界面
-      </a>
-    </h2>
-  
-  <div class='md'>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/vim/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>vim</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        记忆中我是发过这篇博客的，但是当交流群中的群友遇到这个问题的时候我在博客里找居然没找到。。。也许是我管理博客的时候一不小心漏了几篇文章吧。既然没有，那我就重新写一遍了。
-为了精准对接问题，我再来描述一下问题吧，Arch Linux在安装sddm后，可以进入sddm界面，但是输入完帐号密码后(这两者都输对了)按回车，并没有出现预想中的进入桌面而是又跳回了sddm。
-这件事与你的用户有关。因为s...
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/02/05/vim%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/&title=vim实用指令 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/02/05/vim%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/&title=vim实用指令 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/02/05/vim%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/&title=vim实用指令 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
       
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</div>
+
+
+
         
-        <time>2020-12-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
       
-        <div>
-          <a class='readmore' href='/2020/12/11/%E8%A7%A3%E5%86%B3%E5%8D%A1sddm%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2/'>
-            Read More
-          </a>
-        </div>
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/02/05/Vim%E6%96%87%E6%A1%A3/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Vim文档</p>
+          <p class='content'>有了这条地址应该就不用满网找vim教程了:sourceforge.net.
+</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/02/03/cpp%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E5%AE%9A%E4%B9%89%E5%88%A0%E9%99%A4%E5%99%A8/'>
+          <p class='title'>解决Cpp中智能指针与自动回收的冲突<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>这个问题是当智能指针指向一个变量的时候产生的，因为智能指针会自动释放，变量也会被内存回收，所以这两者冲突了。虽然最容易的解决方法是直接使用普通指针，但是因为丰富的求知欲，我们就来看一看如何解决这...</p>
+        </a>
       
     </div>
   
+</article>
 
-</div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/archives/2020/12/page/7/">
-            <section class="post prev white-box shadow blur" >
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          8 / 8
-        </p>
-        
-      </div>
-    
   
 
+  <article class="post white-box reveal shadow blur" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="gitalk-container"></div>
 
-	
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -505,208 +590,19 @@
     
     
 
-<section class="widget blogger shadow blur desktop mobile">
-  <div class='content'>
-    
-    
-      <div class='text'>
-        
-          <h2>Gray-Ice</h2>
-        
-        
-          <p>A silent devloper.</p>
-
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Gray-Ice/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
 
 
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow blur desktop">
+  <section class="widget toc-wrapper shadow blur desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/blog/" href="/categories/blog/"
-            id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(131)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/30days/" href="/categories/blog/30days/"
-            id="categoriesblog30days"
-            ><div class='name'>30days</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Anaconda/" href="/categories/blog/Anaconda/"
-            id="categoriesblogAnaconda"
-            ><div class='name'>Anaconda</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/C/" href="/categories/blog/C/"
-            id="categoriesblogC"
-            ><div class='name'>C</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
-            id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"
-            id="categoriesblogDeepin"
-            ><div class='name'>Deepin</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Linux/" href="/categories/blog/Linux/"
-            id="categoriesblogLinux"
-            ><div class='name'>Linux</div><div class='badge'>(16)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/" href="/categories/blog/Python/"
-            id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(42)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"
-            id="categoriesblogPythonPyQt5"
-            ><div class='name'>PyQt5</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/flask/" href="/categories/blog/Python/flask/"
-            id="categoriesblogPythonflask"
-            ><div class='name'>flask</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            id="categoriesblogPythonE695B0E68DAEE58886E69E90"
-            ><div class='name'>数据分析</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/arch/" href="/categories/blog/arch/"
-            id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(32)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/git/" href="/categories/blog/git/"
-            id="categoriesbloggit"
-            ><div class='name'>git</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/hugo/" href="/categories/blog/hugo/"
-            id="categoriesbloghugo"
-            ><div class='name'>hugo</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/vim/" href="/categories/blog/vim/"
-            id="categoriesblogvim"
-            ><div class='name'>vim</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/vue/" href="/categories/blog/vue/"
-            id="categoriesblogvue"
-            ><div class='name'>vue</div><div class='badge'>(13)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
-            id="categoriesblogE4B9B1E4B883E585ABE7B39F"
-            ><div class='name'>乱七八糟</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"
-            id="categoriesblogE69C8DE58AA1E599A8"
-            ><div class='name'>服务器</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/friendlink/" href="/categories/friendlink/"
-            id="categoriesfriendlink"
-            ><div class='name'>friendlink</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/life/" href="/categories/life/"
-            id="categorieslife"
-            ><div class='name'>life</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/resume/" href="/categories/resume/"
-            id="categoriesresume"
-            ><div class='name'>resume</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/" href="/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/"
-            id="categoriesE58D9AE5AEA2E697A5E5BF97"
-            ><div class='name'>博客日志</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow blur desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/30days/" style="font-size: 15.11px; color: #919191">30days</a> <a href="/tags/Anaconda/" style="font-size: 14px; color: #999">Anaconda</a> <a href="/tags/Arch/" style="font-size: 24px; color: #555">Arch</a> <a href="/tags/Deepin/" style="font-size: 16.22px; color: #8a8a8a">Deepin</a> <a href="/tags/Django/" style="font-size: 21.78px; color: #646464">Django</a> <a href="/tags/Docker/" style="font-size: 15.11px; color: #919191">Docker</a> <a href="/tags/Flask/" style="font-size: 15.11px; color: #919191">Flask</a> <a href="/tags/Linux%E5%91%BD%E4%BB%A4/" style="font-size: 16.22px; color: #8a8a8a">Linux命令</a> <a href="/tags/PIL/" style="font-size: 17.33px; color: #828282">PIL</a> <a href="/tags/PyQt5/" style="font-size: 14px; color: #999">PyQt5</a> <a href="/tags/Vue/" style="font-size: 22.89px; color: #5d5d5d">Vue</a> <a href="/tags/Wine/" style="font-size: 14px; color: #999">Wine</a> <a href="/tags/bluetooth/" style="font-size: 14px; color: #999">bluetooth</a> <a href="/tags/cv2/" style="font-size: 14px; color: #999">cv2</a> <a href="/tags/git/" style="font-size: 18.44px; color: #7b7b7b">git</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/hugo/" style="font-size: 15.11px; color: #919191">hugo</a> <a href="/tags/jwt/" style="font-size: 16.22px; color: #8a8a8a">jwt</a> <a href="/tags/matplotlib/" style="font-size: 15.11px; color: #919191">matplotlib</a> <a href="/tags/nask/" style="font-size: 14px; color: #999">nask</a> <a href="/tags/pip/" style="font-size: 14px; color: #999">pip</a> <a href="/tags/redis/" style="font-size: 14px; color: #999">redis</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/ventoy/" style="font-size: 14px; color: #999">ventoy</a> <a href="/tags/vim/" style="font-size: 20.67px; color: #6c6c6c">vim</a> <a href="/tags/zsh/" style="font-size: 14px; color: #999">zsh</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/" style="font-size: 14px; color: #999">上传文件</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E6%9D%A1/" style="font-size: 14px; color: #999">上传进度条</a> <a href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/" style="font-size: 14px; color: #999">中间件</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 15.11px; color: #919191">代理</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/" style="font-size: 14px; color: #999">关键字查询</a> <a href="/tags/%E5%88%86%E9%A1%B5/" style="font-size: 14px; color: #999">分页</a> <a href="/tags/%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/" style="font-size: 14px; color: #999">压缩图片</a> <a href="/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/" style="font-size: 14px; color: #999">又拍云</a> <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/" style="font-size: 15.11px; color: #919191">双系统</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E7%9B%98/" style="font-size: 14px; color: #999">启动盘</a> <a href="/tags/%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/" style="font-size: 14px; color: #999">商品评论</a> <a href="/tags/%E5%9B%BD%E9%99%85%E5%8C%96/" style="font-size: 14px; color: #999">国际化</a> <a href="/tags/%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90/" style="font-size: 14px; color: #999">图片合成</a> <a href="/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" style="font-size: 15.11px; color: #919191">对象存储</a> <a href="/tags/%E5%BE%AE%E5%8D%9A%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">微博第三方登录</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">性能检测工具</a> <a href="/tags/%E6%8A%98%E7%BA%BF%E5%9B%BE/" style="font-size: 14px; color: #999">折线图</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 15.11px; color: #919191">服务器</a> <a href="/tags/%E6%B0%B4%E5%8D%B0/" style="font-size: 14px; color: #999">水印</a> <a href="/tags/%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81/" style="font-size: 15.11px; color: #919191">滑块验证</a> <a href="/tags/%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81/" style="font-size: 14px; color: #999">生成图片验证码</a> <a href="/tags/%E7%94%BB%E4%B8%AD%E7%94%BB/" style="font-size: 14px; color: #999">画中画</a> <a href="/tags/%E7%99%BD%E5%A4%A9%E9%BB%91%E5%A4%9C%E6%A8%A1%E5%BC%8F/" style="font-size: 14px; color: #999">白天黑夜模式</a> <a href="/tags/%E7%99%BE%E5%BA%A6%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">百度文字识别</a> <a href="/tags/%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/" style="font-size: 14px; color: #999">评论频率</a> <a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 19.56px; color: #737373">踩坑</a> <a href="/tags/%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">钉钉第三方登录</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%8B%AC%E5%8F%B7%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%8F%B7%E9%87%8C%E9%9D%A2%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-text">删除括号以及引号里面的内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%8F%8C%E5%BC%95%E5%8F%B7%E9%87%8C%E9%9D%A2%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-text">删除双引号里面的内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%B0%8F%E6%8B%AC%E5%8F%B7%E9%87%8C%E9%9D%A2%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-text">删除小括号里面的内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%A4%A7%E6%8B%AC%E5%8F%B7%E9%87%8C%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-text">删除大括号里的内容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E6%8B%AC%E5%8F%B7%E4%BB%A5%E5%8F%8A%E5%BC%95%E5%8F%B7%E9%87%8C%E9%9D%A2%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-text">复制括号以及引号里面的内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E5%B0%8F%E6%8B%AC%E5%8F%B7%E5%86%85%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-text">复制小括号内的内容</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -717,6 +613,7 @@
 </aside>
 
 
+
         
         
           <!--此文件用来存放一些不方便取值的变量-->
@@ -724,8 +621,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="vim实用指令";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
@@ -764,13 +661,6 @@
       
         <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
-      
-    
-      
-        <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
-
-        </div>
       
     
   </footer>

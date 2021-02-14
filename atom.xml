@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-30T11:23:52.096Z</updated>
+  <updated>2021-02-14T02:24:31.194Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,182 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决kde桌面特效消失</title>
+    <link href="http://example.com/2021/02/14/%E8%A7%A3%E5%86%B3kde%E6%A1%8C%E9%9D%A2%E7%89%B9%E6%95%88%E6%B6%88%E5%A4%B1/"/>
+    <id>http://example.com/2021/02/14/%E8%A7%A3%E5%86%B3kde%E6%A1%8C%E9%9D%A2%E7%89%B9%E6%95%88%E6%B6%88%E5%A4%B1/</id>
+    <published>2021-02-14T02:16:00.000Z</published>
+    <updated>2021-02-14T02:24:31.194Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Cpp中定义析构函数</title>
+    <link href="http://example.com/2021/02/11/cpp%E5%AE%9A%E4%B9%89%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/"/>
+    <id>http://example.com/2021/02/11/cpp%E5%AE%9A%E4%B9%89%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/</id>
+    <published>2021-02-11T11:00:00.000Z</published>
+    <updated>2021-02-11T23:02:59.101Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这只是一篇备忘博文(虽然我大多数文章的目的也都是备忘)。&lt;br&gt;定义析构函数时只需要在类名前加上~即可说明这是析构函数，如:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux安装mysql++</title>
+    <link href="http://example.com/2021/02/07/cpp%E5%AE%89%E8%A3%85mysql++/"/>
+    <id>http://example.com/2021/02/07/cpp%E5%AE%89%E8%A3%85mysql++/</id>
+    <published>2021-02-07T00:58:00.000Z</published>
+    <updated>2021-02-07T03:49:18.288Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;昨天晚上就想拿C++连接Mysql了，今天一早上就起来尝试，终于弄明白了怎么安装(顺便还给自己补了一波cpp的知识)。&lt;br&gt;下面是安装方法:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用vim编写C语言文件</title>
+    <link href="http://example.com/2021/02/05/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/"/>
+    <id>http://example.com/2021/02/05/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/</id>
+    <published>2021-02-05T03:26:01.947Z</published>
+    <updated>2021-02-05T03:26:01.947Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vim" scheme="http://example.com/categories/blog/vim/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim文档</title>
+    <link href="http://example.com/2021/02/05/Vim%E6%96%87%E6%A1%A3/"/>
+    <id>http://example.com/2021/02/05/Vim%E6%96%87%E6%A1%A3/</id>
+    <published>2021-02-05T03:19:37.462Z</published>
+    <updated>2021-02-05T03:19:37.462Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vim" scheme="http://example.com/categories/blog/vim/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vim实用指令</title>
+    <link href="http://example.com/2021/02/05/vim%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+    <id>http://example.com/2021/02/05/vim%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/</id>
+    <published>2021-02-05T02:40:00.000Z</published>
+    <updated>2021-02-05T03:19:13.159Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vim" scheme="http://example.com/categories/blog/vim/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决Cpp中智能指针与自动回收的冲突</title>
+    <link href="http://example.com/2021/02/03/cpp%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E5%AE%9A%E4%B9%89%E5%88%A0%E9%99%A4%E5%99%A8/"/>
+    <id>http://example.com/2021/02/03/cpp%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E5%AE%9A%E4%B9%89%E5%88%A0%E9%99%A4%E5%99%A8/</id>
+    <published>2021-02-03T04:54:00.000Z</published>
+    <updated>2021-02-04T03:13:42.563Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这个问题是当智能指针指向一个变量的时候产生的，因为智能指针会自动释放，变量也会被内存回收，所以这两者冲突了。&lt;br&gt;虽然最容易的解决方法是直接使用普通指针，但是因为丰富的求知欲，我们就来看一看如何解决这个问题。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>让Cpp中new不抛出异常</title>
+    <link href="http://example.com/2021/02/02/cpp%E4%B8%ADnew%E4%B8%8D%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8/"/>
+    <id>http://example.com/2021/02/02/cpp%E4%B8%ADnew%E4%B8%8D%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8/</id>
+    <published>2021-02-02T08:25:00.000Z</published>
+    <updated>2021-02-02T08:30:00.560Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;为了防止日后找不到解决方法，所以就先写上。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>做一个QQ机器人</title>
@@ -567,30 +743,6 @@
   </entry>
   
   <entry>
-    <title>Vim文档</title>
-    <link href="http://example.com/2020/12/31/Vim%E6%96%87%E6%A1%A3/"/>
-    <id>http://example.com/2020/12/31/Vim%E6%96%87%E6%A1%A3/</id>
-    <published>2020-12-31T02:33:07.118Z</published>
-    <updated>2020-12-22T02:29:23.118Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="blog" scheme="http://example.com/categories/blog/"/>
-    
-    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
-    
-    
-    <category term="vim" scheme="http://example.com/tags/vim/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vue一次上传多个文件</title>
     <link href="http://example.com/2020/12/31/Vue%E4%B8%80%E6%AC%A1%E4%B8%8A%E4%BC%A0%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/"/>
     <id>http://example.com/2020/12/31/Vue%E4%B8%80%E6%AC%A1%E4%B8%8A%E4%BC%A0%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/</id>
@@ -686,30 +838,6 @@
     <category term="Vue" scheme="http://example.com/tags/Vue/"/>
     
     <category term="画中画" scheme="http://example.com/tags/%E7%94%BB%E4%B8%AD%E7%94%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用vim编译C语言文件</title>
-    <link href="http://example.com/2020/12/31/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/"/>
-    <id>http://example.com/2020/12/31/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/</id>
-    <published>2020-12-31T02:33:07.118Z</published>
-    <updated>2020-12-22T02:29:23.145Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="blog" scheme="http://example.com/categories/blog/"/>
-    
-    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
-    
-    
-    <category term="vim" scheme="http://example.com/tags/vim/"/>
     
   </entry>
   
@@ -2495,7 +2623,7 @@
     <link href="http://example.com/2020/07/20/vim%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://example.com/2020/07/20/vim%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
     <published>2020-07-20T00:23:00.000Z</published>
-    <updated>2020-12-22T02:29:23.145Z</updated>
+    <updated>2021-02-05T03:20:59.726Z</updated>
     
     
       
@@ -2507,7 +2635,7 @@
     
     <category term="blog" scheme="http://example.com/categories/blog/"/>
     
-    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    <category term="vim" scheme="http://example.com/categories/blog/vim/"/>
     
     
     <category term="vim" scheme="http://example.com/tags/vim/"/>

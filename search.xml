@@ -4,6 +4,198 @@
   
     
     <entry>
+      <title>解决kde桌面特效消失</title>
+      <link href="2021/02/14/%E8%A7%A3%E5%86%B3kde%E6%A1%8C%E9%9D%A2%E7%89%B9%E6%95%88%E6%B6%88%E5%A4%B1/"/>
+      <url>2021/02/14/%E8%A7%A3%E5%86%B3kde%E6%A1%8C%E9%9D%A2%E7%89%B9%E6%95%88%E6%B6%88%E5%A4%B1/</url>
+      
+        <content type="html"><![CDATA[<p>前天用OBS Studio的时候发现录制的画面一直闪烁，就把渲染后端换成了Xrender。然后录制完视频后第二天才发现，我的桌面特效不见辽。不见的特效有:破碎，飘落，魔灯等。那么该怎么办呢？很简单，把渲染后端切换成OpenGL就行了，无论是OpenGL2.0和3.1都没有问题。<br>(也许你会以为我在水博客，但是我曾经因为这个问题找不到问题所在重装了一次系统)<br>本篇完。祝大家过年快乐。<del>虽然今天已经大年初三了。</del></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> arch </category>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Cpp中定义析构函数</title>
+      <link href="2021/02/11/cpp%E5%AE%9A%E4%B9%89%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/"/>
+      <url>2021/02/11/cpp%E5%AE%9A%E4%B9%89%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<p>这只是一篇备忘博文(虽然我大多数文章的目的也都是备忘)。<br>定义析构函数时只需要在类名前加上~即可说明这是析构函数，如:</p><a id="more"></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Ts</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> num1 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        ~Ts()</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;This class was deleted.&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>需要注意的是，析构函数不接受任何参数。<br>那么来演示一下上面定义的类的运行结果,代码:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Ts</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> num1 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        Ts() = <span class="keyword">default</span>;</span><br><span class="line">        ~Ts()</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Ts is going to be delete.&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Ts t1, t2;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">╭─fire@butterfly ~/codeSet/CPPCode  </span><br><span class="line">╰─➤  ./a.out     </span><br><span class="line">Ts is going to be delete.</span><br><span class="line">Ts is going to be delete.</span><br></pre></td></tr></table></figure><p>由于内存回收，所以~Ts()会被调用。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Cpp </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux安装mysql++</title>
+      <link href="2021/02/07/cpp%E5%AE%89%E8%A3%85mysql++/"/>
+      <url>2021/02/07/cpp%E5%AE%89%E8%A3%85mysql++/</url>
+      
+        <content type="html"><![CDATA[<p>昨天晚上就想拿C++连接Mysql了，今天一早上就起来尝试，终于弄明白了怎么安装(顺便还给自己补了一波cpp的知识)。<br>下面是安装方法:</p><a id="more"></a><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>先到<a href="https://tangentsoft.com/mysqlpp/home">官网</a>下载最新版本(其实是不是最新应该没有关系)，如果您实在是不原因看英文，那么点击这个链接<a href="https://tangentsoft.com/mysqlpp/releases/mysql++-3.2.5.tar.gz">mysql++-3.2.5.tar.gz</a>即可下载。<br>下载完成后，首先要解压:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf mysql++-3.2.5.tar.gz</span><br></pre></td></tr></table></figure><p>如果您是萌新，请把上面的”mysql++-3.2.5.tar.gz”换成您下载的压缩包的名字。<br>之后进入解压后的目录:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd mysql++-3.2.5.tar.gz</span><br></pre></td></tr></table></figure><p>接下来是安装:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 配置</span></span><br><span class="line">./configure</span><br><span class="line"><span class="meta">#</span><span class="bash"> 编译</span></span><br><span class="line">make</span><br><span class="line"><span class="meta">#</span><span class="bash">安装(如果权限不够记得加sudo)</span></span><br><span class="line">make install</span><br></pre></td></tr></table></figure><p>默认会安装到/usr/local/lib和/usr/local/include下。</p><h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1><p>先进入mysql++-3.2.5文件夹(即您解压出的文件夹)，然后输入:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make uninstall</span><br></pre></td></tr></table></figure><p>如果提示您权限不够记得加sudo。</p><h1 id="使用中遇到的问题"><a href="#使用中遇到的问题" class="headerlink" title="使用中遇到的问题"></a>使用中遇到的问题</h1><p>如果您按照以上方法安装完成后，使用:#include “mysql++.h”的时候提示您未找到文件，将其换成#include “mysql++/mysql++.h”。(我开头说到的补了Cpp的知识就是因为这个。如果您使用此方法依旧无效后，请将其填写成mysql++.h的绝对路径)。<br>另外，如果按照我上面所说的修改include语句后，提示缺少”mysql.h”文件，不要急，这是因为mysql++.h包含了connection.h，而connection.h包含了common.h，但是common.h中有这么一段话:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Now that we&#x27;ve defined all the stuff above, we can pull in the full</span></span><br><span class="line"><span class="comment">// MySQL header.  Basically, the above largely replaces MySQL&#x27;s my_global.h</span></span><br><span class="line"><span class="comment">// while actually working with C++.  This is why we disobey the MySQL</span></span><br><span class="line"><span class="comment">// developer docs, which recommend including my_global.h before mysql.h.</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">if</span> defined(MYSQLPP_MYSQL_HEADERS_BURIED)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;mysql/mysql.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;mysql.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure><p>恕我学识浅薄，只能看得似懂非懂，不过显而易见问题就出在了这里。虽然知道作者是基于一定的考量才写下了:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;mysql.h&gt;</span></span></span><br></pre></td></tr></table></figure><p>这段代码。<br>不过既然出错了，我们就需要手动更正，比如将其换为:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;mysql/mysql.h&gt;</span></span></span><br></pre></td></tr></table></figure><p>即可。</p><p>编译时如果提示类似undefined reference to `mysqlpp::Connection::Connection(bool)’之类的话，则将/usr/local/lib下的关于mysql++的东西全部拷贝到/usr/lib，在我写这篇博客的时候，需要拷贝的有:libmysqlpp.so  libmysqlpp.so.3  libmysqlpp.so.3.2.5  。这个问题困扰了我近一个小时，无论是改ld的配置文件还是指定目录都会出现各种各样的bug，最后脑子一抽就想出了这么个方法。</p><p>不行了，太累了，有机会我再出博客介绍mysql++的使用吧，本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> arch </category>
+          
+          <category> Linux </category>
+          
+          <category> Cpp </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用vim编写C语言文件</title>
+      <link href="2021/02/05/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/"/>
+      <url>2021/02/05/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/</url>
+      
+        <content type="html"><![CDATA[<p>借鉴自<a href="https://blog.csdn.net/u011182346/article/details/84075246">https://blog.csdn.net/u011182346/article/details/84075246</a>。<br>1.安装gcc，不会安装的话建议百度。<br>2.在终端命令行中输入:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim test.c</span><br></pre></td></tr></table></figure><p>这条命令的作用是创建或编辑test.c文件。然后在其中输入c语言代码，例如:</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello World\n&quot;</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>应该没输错吧，这段代码就是输出一个Hello World字符串，由于我好久没写C了，所以连这个都记得不太清了，不过我确实是运行出来了。<br>按下Esc键，然后输入:wq，作用是写入并退出。<br>然后输入:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc test.c</span><br></pre></td></tr></table></figure><p>会提示你编译了文件。<br>接着输入:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./a.out</span><br></pre></td></tr></table></figure><p>来执行。<br>(2021/02/05: 这篇文章应该是我在2020年7月份到8月份之间写的，不知道当时的我为什么会发这篇文章。为了防止因为没有date导致日后修整博客时日期出错，将其日期设置为2020/08/01, 同时将分类从Linux移动至vim)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> vim </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vim文档</title>
+      <link href="2021/02/05/Vim%E6%96%87%E6%A1%A3/"/>
+      <url>2021/02/05/Vim%E6%96%87%E6%A1%A3/</url>
+      
+        <content type="html"><![CDATA[<p>有了这条地址应该就不用满网找vim教程了:<a href="http://vimcdoc.sourceforge.net/doc/">sourceforge.net</a>.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> vim </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vim实用指令</title>
+      <link href="2021/02/05/vim%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+      <url>2021/02/05/vim%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<p>发现了挺实用的几条vim指令，来分享一下。以后再有发现好用的指令会在这里面更新。<br>这里面不会有hjkl之类的基础操作。<br>以下内容均经过博主亲自测试并成功后才分享。</p><h1 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h1><h2 id="删除括号以及引号里面的内容"><a href="#删除括号以及引号里面的内容" class="headerlink" title="删除括号以及引号里面的内容"></a>删除括号以及引号里面的内容</h2><p>使用方法: 将光标停留在括号上或者引号上，或者停留在括号或者引号中。<br>主要命令是:di。d还是原意，此时的i似乎代表了”inside”。</p><h3 id="删除双引号里面的内容"><a href="#删除双引号里面的内容" class="headerlink" title="删除双引号里面的内容"></a>删除双引号里面的内容</h3><p><font color="red">di”</font>: 删除双引号”里面的内容，如:</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">moxi<span class="string">&quot;moxi&quot;</span>q</span><br><span class="line"># 光标停留在从左往右第一个<span class="string">&quot;上或第一个&quot;</span>与第二个<span class="string">&quot;之间，执行di&quot;</span></span><br><span class="line"># 结果:</span><br><span class="line">moxi<span class="string">&quot;&quot;</span>q</span><br></pre></td></tr></table></figure><p>因为每条都这样说明很麻烦，所以以后就不带第二行和第三行的注释了，读者只要知道该二级标题下的内容都是这个意思就好。</p><h3 id="删除小括号里面的内容"><a href="#删除小括号里面的内容" class="headerlink" title="删除小括号里面的内容"></a>删除小括号里面的内容</h3><p><font color="red">di(</font>。</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hello(YoXI)aaa</span><br><span class="line"></span><br><span class="line">hello()aaa</span><br></pre></td></tr></table></figure><h3 id="删除大括号里的内容"><a href="#删除大括号里的内容" class="headerlink" title="删除大括号里的内容"></a>删除大括号里的内容</h3><p><font color="red">di{</font>。</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h&#123;hadasdas&#125;h</span><br><span class="line"></span><br><span class="line">h&#123;&#125;h</span><br></pre></td></tr></table></figure><h1 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h1><h2 id="复制括号以及引号里面的内容"><a href="#复制括号以及引号里面的内容" class="headerlink" title="复制括号以及引号里面的内容"></a>复制括号以及引号里面的内容</h2><p>使用方法: 将光标停留在括号上或者引号上，或者停留在括号或者引号中。<br>主要命令是yi。y仍是原意，此时的i似乎代表了”inside”。然后需要注意的是，这些命令是复制括号或者引号内的内容，而不是复制从当前光标到下一个括号或引号内的内容。</p><h3 id="复制小括号内的内容"><a href="#复制小括号内的内容" class="headerlink" title="复制小括号内的内容"></a>复制小括号内的内容</h3><p><font color="red">yi(</font>。</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gc(gcc)<span class="keyword">a</span></span><br><span class="line"># 此时光标停留在(上或者括号内容中, 在Normal模式下输入:yi(</span><br><span class="line"># 之后按下<span class="keyword">p</span>, 出现内容如下</span><br><span class="line">gcc</span><br></pre></td></tr></table></figure><p>双引号，单引号，大括号也是同理，其分别对应: <font color="red">yi”</font>, <font color="red">yi’</font>, <font color="red">yi{</font>。 </p><p>(本篇未完结，时不时会更新一下)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> vim </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决Cpp中智能指针与自动回收的冲突</title>
+      <link href="2021/02/03/cpp%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E5%AE%9A%E4%B9%89%E5%88%A0%E9%99%A4%E5%99%A8/"/>
+      <url>2021/02/03/cpp%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E5%AE%9A%E4%B9%89%E5%88%A0%E9%99%A4%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<p>这个问题是当智能指针指向一个变量的时候产生的，因为智能指针会自动释放，变量也会被内存回收，所以这两者冲突了。<br>虽然最容易的解决方法是直接使用普通指针，但是因为丰富的求知欲，我们就来看一看如何解决这个问题。</p><a id="more"></a><p>代码如下:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">release_ptr</span><span class="params">(<span class="keyword">int</span> *ptr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">30</span>;</span><br><span class="line">    <span class="function"><span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span>&gt; <span class="title">p1</span><span class="params">(&amp;a, release_ptr)</span></span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *p1 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>这个原理其实就是定义了一个删除器来代替掉智能指针默认的自动释放，当智能指针不再自动释放的时候，问题也就解决了，int变量a的内存将由自动回收清理掉。</p><p>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Cpp </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>让Cpp中new不抛出异常</title>
+      <link href="2021/02/02/cpp%E4%B8%ADnew%E4%B8%8D%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8/"/>
+      <url>2021/02/02/cpp%E4%B8%ADnew%E4%B8%8D%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8/</url>
+      
+        <content type="html"><![CDATA[<p>为了防止日后找不到解决方法，所以就先写上。</p><a id="more"></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;new&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> * p = <span class="keyword">new</span> (nothrow) <span class="keyword">int</span>(<span class="number">1024</span>);  <span class="comment">// 如果没有分配成功，则返回空指针。</span></span><br><span class="line">    <span class="keyword">if</span>(p != <span class="literal">NULL</span>)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *p &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Cpp </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>做一个QQ机器人</title>
       <link href="2021/01/30/%E5%81%9A%E4%B8%80%E4%B8%AAQQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
       <url>2021/01/30/%E5%81%9A%E4%B8%80%E4%B8%AAQQ%E6%9C%BA%E5%99%A8%E4%BA%BA/</url>
@@ -619,33 +811,6 @@
     
     
     <entry>
-      <title>Vim文档</title>
-      <link href="2020/12/31/Vim%E6%96%87%E6%A1%A3/"/>
-      <url>2020/12/31/Vim%E6%96%87%E6%A1%A3/</url>
-      
-        <content type="html"><![CDATA[<p>有了这条地址应该就不用满网找vim教程了:<a href="http://vimcdoc.sourceforge.net/doc/">sourceforge.net</a>.</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> blog </category>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> vim </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>vue一次上传多个文件</title>
       <link href="2020/12/31/Vue%E4%B8%80%E6%AC%A1%E4%B8%8A%E4%BC%A0%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/"/>
       <url>2020/12/31/Vue%E4%B8%80%E6%AC%A1%E4%B8%8A%E4%BC%A0%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/</url>
@@ -756,33 +921,6 @@
             <tag> Vue </tag>
             
             <tag> 画中画 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>使用vim编译C语言文件</title>
-      <link href="2020/12/31/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/"/>
-      <url>2020/12/31/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/</url>
-      
-        <content type="html"><![CDATA[<p>转载自<a href="https://blog.csdn.net/u011182346/article/details/84075246">https://blog.csdn.net/u011182346/article/details/84075246</a>。<br>1.安装gcc，不会安装的话建议百度。<br>2.在终端命令行中输入:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim test.c</span><br></pre></td></tr></table></figure><p>这条命令的作用是创建或编辑test.c文件。然后在其中输入c语言代码，例如:</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello World\n&quot;</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>应该没输错吧，这段代码就是输出一个Hello World字符串，由于我好久没写C了，所以连这个都记得不太清了，不过我确实是运行出来了。<br>按下Esc键，然后输入:wq，作用是写入并退出。<br>然后输入:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc test.c</span><br></pre></td></tr></table></figure><p>会提示你编译了文件。<br>接着输入:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./a.out</span><br></pre></td></tr></table></figure><p>来执行。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> blog </category>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> vim </tag>
             
         </tags>
       
@@ -2713,14 +2851,14 @@
       <link href="2020/07/20/vim%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
       <url>2020/07/20/vim%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
       
-        <content type="html"><![CDATA[<p>虽然Windows也有vim，但是我还是把它归在了Linux下，因为我不想再建立一个只有一篇内容的分类了。。。<br>那么废话少说，这就开始。</p><h1 id="显示行数"><a href="#显示行数" class="headerlink" title="显示行数"></a>显示行数</h1><p>在命令状态下输入:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:set nu</span><br></pre></td></tr></table></figure><p>或者:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set number</span><br></pre></td></tr></table></figure><p>来显示行数。</p><h1 id="将光标移动到指定行"><a href="#将光标移动到指定行" class="headerlink" title="将光标移动到指定行"></a>将光标移动到指定行</h1><p>在命令状态下输入行数，然后按shift+G即可跳转到指定的行数。<br>如: 命令状态下输入 2,然后按shift+G，你就会发现光标移动到了第二行。</p><h1 id="撤销、重做和保存"><a href="#撤销、重做和保存" class="headerlink" title="撤销、重做和保存"></a>撤销、重做和保存</h1><p>命令状态输入u，撤销上一步操作。类似Windows记事本的ctrl+z。<br>命令状态按Ctrl+r，可以撤销回你撤销的操作。类似Windows记事本的ctrl+y。</p><h1 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h1><p>:sp 文件名  横向工作区<br>:vsp 文件名 纵向工作区<br>按下ctrl + w后再按方向键以切换工作区。<br>ctrl + w + o 只显示当前工作区</p><h1 id="选区"><a href="#选区" class="headerlink" title="选区"></a>选区</h1><p>使用v进行字符选择，使用V进行行选择，使用ctrl + v进行列选择。</p><h1 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h1><p>选中目标后按下r(replace的意思)，然后按下想要替换成的字符。如果选中了多个字符后按下r1,那么这多个字符都会被替换成1。</p><h1 id="查找指定字符串"><a href="#查找指定字符串" class="headerlink" title="查找指定字符串"></a>查找指定字符串</h1><p>输入/words来查找指定字符串。words就是你要查找的字符串。查找不到会提示你没有对应的模式。查找到后按下n来查找下一个。</p><h1 id="单词跳转"><a href="#单词跳转" class="headerlink" title="单词跳转"></a>单词跳转</h1><p>输入w来跳转到下一个单词。输入b来跳转到上一个单词。</p>]]></content>
+        <content type="html"><![CDATA[<p>虽然Windows也有vim，但是我还是把它归在了Linux下，因为我不想再建立一个只有一篇内容的分类了。。。(2021/02/05，该文章从Linux分类移入vim分类)<br>那么废话少说，这就开始。</p><h1 id="显示行数"><a href="#显示行数" class="headerlink" title="显示行数"></a>显示行数</h1><p>在命令状态下输入:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:set nu</span><br></pre></td></tr></table></figure><p>或者:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set number</span><br></pre></td></tr></table></figure><p>来显示行数。</p><h1 id="将光标移动到指定行"><a href="#将光标移动到指定行" class="headerlink" title="将光标移动到指定行"></a>将光标移动到指定行</h1><p>在命令状态下输入行数，然后按shift+G即可跳转到指定的行数。<br>如: 命令状态下输入 2,然后按shift+G，你就会发现光标移动到了第二行。</p><h1 id="撤销、重做和保存"><a href="#撤销、重做和保存" class="headerlink" title="撤销、重做和保存"></a>撤销、重做和保存</h1><p>命令状态输入u，撤销上一步操作。类似Windows记事本的ctrl+z。<br>命令状态按Ctrl+r，可以撤销回你撤销的操作。类似Windows记事本的ctrl+y。</p><h1 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h1><p>:sp 文件名  横向工作区<br>:vsp 文件名 纵向工作区<br>按下ctrl + w后再按方向键以切换工作区。<br>ctrl + w + o 只显示当前工作区</p><h1 id="选区"><a href="#选区" class="headerlink" title="选区"></a>选区</h1><p>使用v进行字符选择，使用V进行行选择，使用ctrl + v进行列选择。</p><h1 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h1><p>选中目标后按下r(replace的意思)，然后按下想要替换成的字符。如果选中了多个字符后按下r1,那么这多个字符都会被替换成1。</p><h1 id="查找指定字符串"><a href="#查找指定字符串" class="headerlink" title="查找指定字符串"></a>查找指定字符串</h1><p>输入/words来查找指定字符串。words就是你要查找的字符串。查找不到会提示你没有对应的模式。查找到后按下n来查找下一个。</p><h1 id="单词跳转"><a href="#单词跳转" class="headerlink" title="单词跳转"></a>单词跳转</h1><p>输入w来跳转到下一个单词。输入b来跳转到上一个单词。</p>]]></content>
       
       
       <categories>
           
           <category> blog </category>
           
-          <category> Linux </category>
+          <category> vim </category>
           
       </categories>
       
