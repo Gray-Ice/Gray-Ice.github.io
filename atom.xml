@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-02-14T02:24:31.194Z</updated>
+  <updated>2021-02-17T12:06:40.702Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Unix网络编程卷一第一章使用的函数及库</title>
+    <link href="http://example.com/2021/02/17/Unix%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B71%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
+    <id>http://example.com/2021/02/17/Unix%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B71%E7%AC%AC%E4%B8%80%E7%AB%A0/</id>
+    <published>2021-02-17T07:20:00.000Z</published>
+    <updated>2021-02-17T12:06:40.702Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Socket" scheme="http://example.com/categories/blog/Socket/"/>
+    
+    
+    <category term="Socket" scheme="http://example.com/tags/Socket/"/>
+    
+  </entry>
   
   <entry>
     <title>解决kde桌面特效消失</title>
@@ -36,6 +60,28 @@
     <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
     
     <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>安装Unix网络编程卷一的unp.h库</title>
+    <link href="http://example.com/2021/02/14/%E5%AE%89%E8%A3%85Unix%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B71%E7%9A%84unp%E5%BA%93/"/>
+    <id>http://example.com/2021/02/14/%E5%AE%89%E8%A3%85Unix%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B71%E7%9A%84unp%E5%BA%93/</id>
+    <published>2021-02-13T16:00:00.000Z</published>
+    <updated>2021-02-17T07:18:56.731Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Socket" scheme="http://example.com/categories/blog/Socket/"/>
     
     
   </entry>

@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Unix网络编程卷一第一章使用的函数及库</title>
+      <link href="2021/02/17/Unix%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B71%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
+      <url>2021/02/17/Unix%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B71%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<p>以下部分内容摘抄自C语言中文网与百度百科，因为我不知道比这两个更好的渠道了，如果有其他更好的渠道欢迎补充。在我博客的socket分类下，超链接文本”更多内容”通常是跳转到以上提到的这几个网站。<br>以下内容皆与Windows无关。<br>写此篇的目的是方便博主自己边看书边方便的查看相关内容。</p><p>以下内容中提到的章节与Unix网络编程卷一中的章节对应。</p><h1 id="1-2章-一个简单的时间获取客户程序"><a href="#1-2章-一个简单的时间获取客户程序" class="headerlink" title="1.2章 一个简单的时间获取客户程序"></a>1.2章 一个简单的时间获取客户程序</h1><p>书中提到的206.168.112.96已经ping不通了。</p><h2 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h2><p>AF_INET： Ipv4网络协议.<br>SOCK_STREAM： 提供面向连接的稳定数据传输，即TCP协议.<br>SA: 书中有提到，unp.h中使用#define把SA定义为struct sockaddr, 也就是通用套接字地址结构。</p><h2 id="socket-函数"><a href="#socket-函数" class="headerlink" title="socket()函数"></a>socket()函数</h2><p>头文件：#include &lt;sys/types.h&gt;   #include &lt;sys/socket.h&gt;<br>函数原型: int socket(int domain, int type, int protocol);<br><a href="http://c.biancheng.net/cpp/html/376.html">更多内容</a>。这里写了参数等内容。</p><h2 id="sockaddr-in结构体"><a href="#sockaddr-in结构体" class="headerlink" title="sockaddr_in结构体"></a>sockaddr_in结构体</h2><p>头文件: netinet/in.h<br>在windows/linux下有下面结构：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span></span></span><br><span class="line"><span class="class"> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">short</span> sin_family;<span class="comment">/*Address family一般来说AF_INET（地址族）PF_INET（协议族）*/</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">short</span> sin_port;<span class="comment">/*Port number(必须要采用网络数据格式,普通数字可以用htons()函数转换成网络数据格式的数字)*/</span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">in_addr</span> <span class="title">sin_addr</span>;</span><span class="comment">/*IP address in network byte order（Internet address）*/</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> sin_zero[<span class="number">8</span>];<span class="comment">/*Same size as struct sockaddr没有实际意义,只是为了　跟SOCKADDR结构在内存中对齐*/</span></span><br><span class="line"> </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><a href="https://baike.baidu.com/item/SOCKADDR_IN">更多内容</a>。里面有参数等内容。</p><h2 id="bezero-函数"><a href="#bezero-函数" class="headerlink" title="bezero()函数"></a>bezero()函数</h2><p>该函数效果和memset()差不多，故此不再多写。</p><h2 id="htonl-函数"><a href="#htonl-函数" class="headerlink" title="htonl()函数"></a>htonl()函数</h2><p>将主机数转换成无符号长整型的网络字节顺序。本函数将一个32位数从主机字节顺序转换成网络字节顺序。</p><p>头文件:  &lt;arpa/inet.h&gt; 有些系统包含的头文件是 &lt;netinet/in.h&gt; 而不是 &lt;arpa/inet.h&gt;.<br>函数原型: uint32_t htonl(uint32_t hostlong);<br>参数: hostlong：主机字节顺序表达的32位数。<br><a href="https://baike.baidu.com/item/htonl%28%29?fromtitle=htonl&fromid=17201656"> 更多内容</a>。</p><h2 id="inet-pton-函数"><a href="#inet-pton-函数" class="headerlink" title="inet_pton()函数"></a>inet_pton()函数</h2><p>inet_pton是一个IP地址转换函数，可以在将点分文本的IP地址转换为二进制网络字节序”的IP地址，而且inet_pton和inet_ntop这2个函数能够处理ipv4和ipv6。</p><p>头文件: &lt;sys/socket.h&gt; &lt;netinet/in.h&gt; &lt;arpa/inet.h&gt;<br>函数原型: int inet_pton(int af, const char *src, void *dst);<br><a href="https://baike.baidu.com/item/inet_pton">更多内容</a>。</p><h2 id="connect"><a href="#connect" class="headerlink" title="connect()"></a>connect()</h2><p>connect()用于建立与指定socket的连接。<br>头文件: &lt;sys/socket.h&gt;<br>函数原型: int connect(SOCKET s, const struct sockaddr * name, int namelen);<br>参数:<br>s：标识一个未连接socket<br>name：指向要连接套接字的sockaddr结构体的指针<br>namelen：sockaddr结构体的字节长度<br><a href="https://baike.baidu.com/item/connect%28%29">更多内容</a>。</p><h2 id="read"><a href="#read" class="headerlink" title="read()"></a>read()</h2><p>头文件: &lt;unistd.h&gt;<br>函数原型: ssize_t read(int fd, void * buf, size_t count);</p><p>read()会把参数fd 所指的文件传送count 个字节到buf 指针所指的内存中. 若参数count 为0, 则read()不会有作用并返回0. 返回值为实际读取到的字节数, 如果返回0, 表示已到达文件尾或是无可读取的数据,此外文件读写位置会随读取到的字节移动。<br><a href="http://c.biancheng.net/cpp/html/239.html">更多内容</a>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Socket </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Socket </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>解决kde桌面特效消失</title>
       <link href="2021/02/14/%E8%A7%A3%E5%86%B3kde%E6%A1%8C%E9%9D%A2%E7%89%B9%E6%95%88%E6%B6%88%E5%A4%B1/"/>
       <url>2021/02/14/%E8%A7%A3%E5%86%B3kde%E6%A1%8C%E9%9D%A2%E7%89%B9%E6%95%88%E6%B6%88%E5%A4%B1/</url>
@@ -18,6 +45,27 @@
           <category> arch </category>
           
           <category> Linux </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>安装Unix网络编程卷一的unp.h库</title>
+      <link href="2021/02/14/%E5%AE%89%E8%A3%85Unix%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B71%E7%9A%84unp%E5%BA%93/"/>
+      <url>2021/02/14/%E5%AE%89%E8%A3%85Unix%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B71%E7%9A%84unp%E5%BA%93/</url>
+      
+        <content type="html"><![CDATA[<p>也许各位朋友在读Unix网络编程卷一的时候发现没有unp.h库，不知道该咋解决了，那么可以先访问官网:<a href="http://www.unpbook.com">http://www.unpbook.com</a>。在页面左边有一个叫”Source Code”的超链接，里面会告诉你接下来要怎么做。<br>那么不愿意看英文的朋友也不用着急，接下来我会直接给出安装的方法。<br>第一步，先clone这个项目:<a href="https://github.com/unpbook/unpv13e">unpbook/unpv13e</a>。你可以尝试看一看README文件，里面记载了使用方法，如果不愿意看的话跟着第二步走。第二步只是我翻译了一部分文档。</p><p>第二步:<br>首先cd进入目录，然后在cli输入:./configure<br>然后cd进入lib，输入make<br>然后cd进入../libfree, 输入make<br>如果你是在Linux系统上，则不需要输入以下两行:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ../libroute # only if your system supports 4.4BSD style routing sockets</span><br><span class="line">make           # only if your system supports 4.4BSD style routing sockets</span><br></pre></td></tr></table></figure><p>看样子如果你是BSD系统才需要输入以上两行的内容。<br>接下来输入:cd ../intro，之后再输入make daytimetcpcli，然后输入./daytimetcpcli 127.0.0.1。这一步是做一个测试，可执行文件成功工作即可。其实似乎是让./daytimetcpcli 206.168.112.96的，但是这个地址已经ping不通了。。。</p><p>然后就是这个unp.h到底在哪呢？它在unpv13e/lib下。<br>更多内容还需要看REAME文档。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Socket </category>
           
       </categories>
       
