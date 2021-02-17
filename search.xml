@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>好玩的ncurses库</title>
+      <link href="2021/02/17/%E5%A5%BD%E7%8E%A9%E7%9A%84ncurses%E5%BA%93/"/>
+      <url>2021/02/17/%E5%A5%BD%E7%8E%A9%E7%9A%84ncurses%E5%BA%93/</url>
+      
+        <content type="html"><![CDATA[<p>在我苦苦寻找类似pacman更新包时输出#号的方法时，一位大佬告诉我使用ncurses库。<br>然后我就发现这玩意儿真好玩。<br>我参考了这位博主的博客: <a href="https://www.cnblogs.com/funnylinux/p/3516187.html">ncurses库常见用法</a>。<br>这里是文档<a href="https://tldp.org/HOWTO/NCURSES-Programming-HOWTO/">NCURSES Programming HOWTO</a>，不过是英文的，虽然我也想看中文文档，但是找不到就很气。<br>然后写了一个在屏幕上实时显示输入的字符的玩具。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ncurses.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    initscr();  <span class="comment">// 初始化屏幕</span></span><br><span class="line">    raw();</span><br><span class="line">    noecho();</span><br><span class="line">    <span class="keyword">char</span> input;</span><br><span class="line">    <span class="keyword">while</span>((input = getchar())!= <span class="string">&#x27;q&#x27;</span> &amp;&amp; input != EOF)</span><br><span class="line">    &#123;</span><br><span class="line">        clear();  <span class="comment">// 防止输入Ctrl+Z时显示^Z导致字符一直留在屏幕上</span></span><br><span class="line">        refresh();  <span class="comment">// 刷新</span></span><br><span class="line">        mvprintw(<span class="number">0</span>, <span class="number">0</span>, <span class="string">&quot;%c&quot;</span>, input);  <span class="comment">// 在指定位置输出字符</span></span><br><span class="line">        refresh();</span><br><span class="line">    &#125;</span><br><span class="line">    clear();</span><br><span class="line">    endwin();  <span class="comment">// 结束屏幕绘画</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>不过我测试的时候getchar()输入Ctrl + D居然捕获不到EOF了，有点奇妙。而且我还另写了一个程序，证实了我的系统下EOF确实是Ctrl + D, 这可真是太怪了。</p><p>在编译上面的程序的时候，记得加上-lncurses，比如:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc test.c -lncurses</span><br></pre></td></tr></table></figure><p>好了，那么本篇完(话说我为什么在学Socket的时候突然学起了ncurses?)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> C </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Unix网络编程卷一第一章使用的函数及库</title>
       <link href="2021/02/17/Unix%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B71%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
       <url>2021/02/17/Unix%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B71%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>

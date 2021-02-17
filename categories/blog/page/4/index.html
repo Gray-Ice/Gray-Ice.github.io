@@ -388,6 +388,57 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/win10+archlinux/">
+        win10+arch+BIOS+MBR双系统安装
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>本篇博客来讲win10 + arch linux双系统安装。这里博主用的是legacy，磁盘为MBR。</p>
+<p>本来本篇博客应该在昨天就发出来的，但是我装好arch的时候发现自己一不小心把win10的引导项覆盖了。。。刚弄好引导项我就来发博客了。</p>
+<p>那么首先，你当然得有一个镜像啦，这里是arch官网的<a target="_blank" rel="noopener" href="https://www.archlinux.org/download/">download页面</a>。下载好镜像后，需要制作镜像，这里我使用的是ventoy(就是之前我博客里提到过的超好用的工具)制作的U盘。然后在磁盘上弄出一块未分配空间，建议大于50G，我分出来了150G。</p>
+<p>那么安装教程看这里: <a href="[https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)](https://wiki.archlinux.org/index.php/Installation_guide_(简体中文))">Installation guide</a>。这个是官方的教程，讲的挺好的，本篇博客为一些没有经验的朋友来讲一下部分需要英文阅读的地方以及一些令人疑惑的地方，您应当主要参考官方文档，在部分感到疑惑的地方来看本篇博客。</p>
+<h1 id="1-live-CD连接无线网络"><a href="#1-live-CD连接无线网络" class="headerlink" title="1.live CD连接无线网络"></a>1.live CD连接无线网络</h1><p>由于我是使用的无线网络，所以在进入Live CD后突然发现: 不对啊，我没有联网！那么怎么解决呢？</p>
+<p>输入:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wifi-menu</span><br></pre></td></tr></table></figure>
+<p>会弹出无线网络选择页面，在这里选择网络名以及
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/win10+archlinux/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/wineTim%E8%AE%BE%E7%BD%AE%E4%B8%AD%E6%96%87/">
         wine TIM Wechat输入中文
       </a>
@@ -798,56 +849,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/python3%E5%AE%89%E8%A3%85turtle/">
-        Pyhon3安装turtle
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        参考python3.7安装turtle。先下载好turtle包:Turtle。解压缩，修改setup.py文件，将”except ValueError, ve”修改为:”except (ValueError, ve)”，然后安装twisted:
-1sudo pip3 install twisted
-然后使用:
-1pip3 install -e turtle-0.0.2(文件夹名)
-稍等一会儿...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/python3%E5%AE%89%E8%A3%85turtle/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -894,7 +895,7 @@
           <h2>Gray-Ice</h2>
         
         
-          <p>A silent devloper.</p>
+          <p>一位好奇心十足的开发者。</p>
 
         
         
@@ -957,7 +958,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(139)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(140)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -972,7 +973,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/C/" href="/categories/blog/C/"
             id="categoriesblogC"
-            ><div class='name'>C</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>C</div><div class='badge'>(5)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
