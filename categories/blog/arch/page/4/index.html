@@ -446,11 +446,10 @@
     
       
         参考自:可能是Arch分支最正确的显卡驱动方案。
-安装这些包:
+(2021/02/20)更新两条systemd指令。安装这些包:
 12pacman -S nvidia bbswitchyaourt -S optimus-manager-qt  # 如果是KDE桌面，可以选择optimus-manager-qt-kde
 安装完成后终端输入:
-1sudo optimus-manager-qt
-来启动管理器，应该是以一个托盘的形式存在的。这里必须要以管理员权限运...
+12systemctl enable optimus-manage...
       
     
   </div>
