@@ -388,6 +388,108 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/Deepin%E5%AE%89%E8%A3%85docker/">
+        Deepin安装Docker
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>今天感觉好久没有踩坑了，心里有点不舒服，于是就打算在Deepin系统中装个Docker。一有这想法，我就动手干，果然我想要的坑就来了。</p>
+<p>首先，我参考了博客: <a target="_blank" rel="noopener" href="https://www.cnblogs.com/wh4am1/p/10263272.html">https://www.cnblogs.com/wh4am1/p/10263272.html</a>的内容，博主讲的很好，不过这里我还是说一下我安装的经过，如果有些地方大家也遇到了希望可以帮助到大家。</p>
+<p>这里我先讲一下我干了什么，我图省事一开始就执行了安装命令:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install docker-ce</span><br></pre></td></tr></table></figure>
+<p>然后突然看到了别人的博客，觉得自己的安装步骤不对(其实是根本没有往下看别人的博客)，我就拆卸了docker，这里很多人都是输入的:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove docker.io docker-engine</span><br></pre></td></tr></table></figure>
+<p>但是我输入之后告诉我没这个东西，我就将docker.io改成了docker.ce，然后果然成功拆卸了。</p>
+<p>然后按着步骤走:
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Deepin/">Deepin</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Deepin%E5%AE%89%E8%A3%85docker/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/Django%20models%E6%8E%92%E5%BA%8F/">
+        Django Models排序
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        对Django的model排序:
+1goods = Goods.objects.all().order_by(&#x27;-id&#x27;)
+该命令的意思是根据id字段进行反向排序。
+如果有多个属性，可以使用:
+1goods = Goods.objects.all().order_by(&#x27;-id&#x27;, &#x27;create_time&#x27;)
+该命令的意思是先根据...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Django%20models%E6%8E%92%E5%BA%8F/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/Django%E4%B8%AD%E9%97%B4%E4%BB%B6/">
         Django中间件
       </a>
@@ -759,108 +861,6 @@ FAT12格式    (FAT12 Format)用Windows或MS-DOS格式化出来的软盘就是�
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/ArchLinux%E8%AE%BE%E7%BD%AEsudo/">
-        ArchLinux使用sudo
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Arch Linux刚安装好的时候是没有sudo命令的，需要自行安装，首先输入su命令以获取root权限，然后安装sudo:
-1pacman -S sudo
-想要查看具体的操作可以查看官方Wiki: Sudo。这里我只写下给用户添加sudo使用权限。安装了sudo之后，终端输入:
-1EDITOR=vim visudo
-这句话的意思是使用vim编辑sudo文件。这么做的原因是因为我输入visu...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/ArchLinux%E8%AE%BE%E7%BD%AEsudo/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Arch%E4%B8%8B%E4%BD%BF%E7%94%A8deb%E5%8C%85/">
-        arch使用deb包
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        先安装debtap包，然后执行:
-1sudo debtap -u
-如果你的网不好，执行这条命令会很费劲，而且有很大几率会失败。不过多尝试几次(博主失败了四五次才装上)似乎就会成功。安装好之后在含有.deb文件的目录下输入:
-1debtap package
-来转换包，转换的时候会有选项，记得选。转换好之后输入:
-1sudo pacman -U package
-之后就安装好啦。那么如何运行文件呢...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Arch%E4%B8%8B%E4%BD%BF%E7%94%A8deb%E5%8C%85/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -875,7 +875,7 @@ FAT12格式    (FAT12 Format)用Windows或MS-DOS格式化出来的软盘就是�
           </a>
         
         <p class="current">
-          7 / 14
+          7 / 15
         </p>
         
           <a class="next" rel="next" href="/categories/blog/page/8/">
@@ -970,7 +970,7 @@ FAT12格式    (FAT12 Format)用Windows或MS-DOS格式化出来的软盘就是�
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(140)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(142)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -985,7 +985,7 @@ FAT12格式    (FAT12 Format)用Windows或MS-DOS格式化出来的软盘就是�
           <li><a class="flat-box child"
             title="/categories/blog/C/" href="/categories/blog/C/"
             id="categoriesblogC"
-            ><div class='name'>C</div><div class='badge'>(5)</div></a></li>
+            ><div class='name'>C</div><div class='badge'>(6)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
@@ -1030,7 +1030,7 @@ FAT12格式    (FAT12 Format)用Windows或MS-DOS格式化出来的软盘就是�
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(34)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(35)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/git/" href="/categories/blog/git/"

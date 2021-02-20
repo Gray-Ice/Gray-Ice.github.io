@@ -387,6 +387,101 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/vue%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E6%9D%A1/">
+        Vue上传进度条
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>目的是展示进度条:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> @<span class="attr">change</span>=<span class="string">&quot;upload_qiniu&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Progress</span> <span class="attr">:percent</span>=<span class="string">&quot;load_int&quot;</span> <span class="attr">color</span>=<span class="string">&quot;green&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">Progress</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/vue%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E6%9D%A1/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/Python%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+        python五大排序算法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>转载自<a target="_blank" rel="noopener" href="https://v3u.cn/">v3u.cn</a></p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>插入排序：插入排序的基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序；首先将第一个作为已经排好序的，然后每次从后的取出插入到前面并排序；</p>
+<p>时间复杂度：O(n²)</p>
+<p>空间复杂度：O(1)</p>
+<p>稳定性：稳定</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">insert_sort</span>(<span class="params">ilist</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(ilist)):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i):</span><br><span class="line">            <span class="keyword">if</span> ilist[i] &lt; ilist[j]:</span><br><span class="line">                ilist.insert(j, ilist.pop(i))</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> ilist</span><br></pre></td></tr></table></figure>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Python%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/Python%E7%94%9F%E6%88%90%E5%99%A8%E5%92%8C%E8%BF%AD%E4%BB%A3%E5%99%A8/">
         生成器和迭代器
       </a>
@@ -777,99 +872,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/nask%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/">
-        nask汇编指令
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        DB指令是”define byte”的缩写，也就是往文件里直接写入1个字节的指令，小写的db也一样。只要有了DB指令，就可以做出任何数据。可以直接用它写字符串。在写字符串的时候，汇编语言会自动的查找字符串中每一个字符所对应的编码，然后把它们一个字节一个字节地排列起来。这个功能非常方便，也就是说，当我们想要变更输出信息的时候，就再也不用自己去查字符编码了。
-RESB指令是”reverse by...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/30days/">30days</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/nask%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Linux%E4%BD%BF%E7%94%A8v2raya%E4%BB%A3%E7%90%86/">
-        Linux使用v2raya代理
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        由于博主是小白，配置好了Qv2ray之后能够测试延迟但是上不了网，在百般百度无果的情况下，偶然得知还有这么一款开箱即用的v2ray图形化软件。那么话不多说，开始安装。v2rayA是无法通过pacman获取的，所以要从github上下载它，在Releases中下载对应的包，一番解压之后可以得到两个文件夹:etc文件夹和usr文件夹，打开可以看到，etc文件夹中有一个systemd文件夹，usr...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Linux%E4%BD%BF%E7%94%A8v2raya%E4%BB%A3%E7%90%86/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -884,7 +886,7 @@ RESB指令是”reverse by...
           </a>
         
         <p class="current">
-          5 / 15
+          5 / 16
         </p>
         
           <a class="next" rel="next" href="/page/6/">
@@ -977,7 +979,7 @@ RESB指令是”reverse by...
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(140)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(142)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -992,7 +994,7 @@ RESB指令是”reverse by...
           <li><a class="flat-box child"
             title="/categories/blog/C/" href="/categories/blog/C/"
             id="categoriesblogC"
-            ><div class='name'>C</div><div class='badge'>(5)</div></a></li>
+            ><div class='name'>C</div><div class='badge'>(6)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
@@ -1037,7 +1039,7 @@ RESB指令是”reverse by...
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(34)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(35)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/git/" href="/categories/blog/git/"

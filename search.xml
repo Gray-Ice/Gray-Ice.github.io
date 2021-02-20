@@ -4,6 +4,48 @@
   
     
     <entry>
+      <title>Arch安装netstat</title>
+      <link href="2021/02/20/arch%E4%BD%BF%E7%94%A8netstat/"/>
+      <url>2021/02/20/arch%E4%BD%BF%E7%94%A8netstat/</url>
+      
+        <content type="html"><![CDATA[<p>原文:<a href="https://bbs.archlinux.org/viewtopic.php?id=130879">Arch Forums</a>。</p><p>博主精简内容之后: 输入pacman -S net-tools即可。里面有老哥不推荐使用net-tools，不过这篇博文只讲安装netstat。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> arch </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C语言获取时间</title>
+      <link href="2021/02/20/C%E8%AF%AD%E8%A8%80%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4/"/>
+      <url>2021/02/20/C%E8%AF%AD%E8%A8%80%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4/</url>
+      
+        <content type="html"><![CDATA[<p>本篇博文中获取的时间格式是这样的: Sat Feb 20 17:41:09 2021 。</p><p>那么代码如下:</p><a id="more"></a><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">time_t</span> tm;</span><br><span class="line">    tm = time(<span class="literal">NULL</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>, ctime(&amp;tm));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>当前时间和日期是由库函数time返回的，它实际上返回的是自Unix纪元即1970年1月1日0点0分0秒(国际标准时间)以来的秒数。下一个库函数ctime把该整数值转换成直观可读的时间格式。(摘抄自Unix网络编程卷一)</p><p>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> C </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>好玩的ncurses库</title>
       <link href="2021/02/17/%E5%A5%BD%E7%8E%A9%E7%9A%84ncurses%E5%BA%93/"/>
       <url>2021/02/17/%E5%A5%BD%E7%8E%A9%E7%9A%84ncurses%E5%BA%93/</url>
