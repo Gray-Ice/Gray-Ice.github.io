@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>Arch安装netstat</title>
+      <title>Arch安装netstat和ifconfig</title>
       <link href="2021/02/20/arch%E4%BD%BF%E7%94%A8netstat/"/>
       <url>2021/02/20/arch%E4%BD%BF%E7%94%A8netstat/</url>
       
-        <content type="html"><![CDATA[<p>原文:<a href="https://bbs.archlinux.org/viewtopic.php?id=130879">Arch Forums</a>。</p><p>博主精简内容之后: 输入pacman -S net-tools即可。里面有老哥不推荐使用net-tools，不过这篇博文只讲安装netstat。<br>本篇完。</p>]]></content>
+        <content type="html"><![CDATA[<p>关于netstat的原文:<a href="https://bbs.archlinux.org/viewtopic.php?id=130879">Arch Forums</a>。<br>关于ifconfig的原文: <a href="https://bbs.archlinux.org/viewtopic.php?id=120548">Arch Forums</a>。</p><p>博主精简内容之后: 输入pacman -S net-tools即可。里面有老哥不推荐使用net-tools，不过这篇博文只讲安装netstat和ifconfig。<br>本篇完。</p>]]></content>
       
       
       <categories>

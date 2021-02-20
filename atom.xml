@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-02-20T10:21:55.418Z</updated>
+  <updated>2021-02-20T10:43:32.370Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Arch安装netstat</title>
+    <title>Arch安装netstat和ifconfig</title>
     <link href="http://example.com/2021/02/20/arch%E4%BD%BF%E7%94%A8netstat/"/>
     <id>http://example.com/2021/02/20/arch%E4%BD%BF%E7%94%A8netstat/</id>
     <published>2021-02-20T10:17:00.000Z</published>
-    <updated>2021-02-20T10:21:55.418Z</updated>
+    <updated>2021-02-20T10:43:32.370Z</updated>
     
     
       
