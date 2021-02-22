@@ -4,6 +4,48 @@
   
     
     <entry>
+      <title>ssh连接Termux</title>
+      <link href="2021/02/22/ssh%E8%BF%9E%E6%8E%A5Termux/"/>
+      <url>2021/02/22/ssh%E8%BF%9E%E6%8E%A5Termux/</url>
+      
+        <content type="html"><![CDATA[<p>参考博客<a href="https://www.jianshu.com/p/f4496bb2f9bc">电脑通过ssh登录到Termux – Moneys</a>。</p><p>先安装openssh:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install openssh</span><br></pre></td></tr></table></figure><p>然后启动sshd服务:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshd</span><br></pre></td></tr></table></figure><p>然后配置登录密钥。<br>如果电脑生成过密钥，可以跳过这一步：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure><p>默认会生成在.ssh下，然后把生成的id_rsa.pub拷贝到手机里。注意，这一步的目的是要把文件拷贝进Termux。所以建议拷贝到手机的dcim, downloads, movies, music, pictures, shared这几个文件夹任意一个里。因为这样可以用termux直接访问。这里我假设拷贝进了dcim里。<br>然后termux申请读写权限:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure><p>获得读写权限后， 执行以下命令:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line">cp ~/storage/dcim/id_rsa.pub ./</span><br><span class="line">cat id_rsa.pub &gt;&gt; authorized_key</span><br></pre></td></tr></table></figure><p>然后手机查看当前用户名。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whoami</span><br></pre></td></tr></table></figure><p>查看当前ip:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig -a</span><br></pre></td></tr></table></figure><p>然后电脑使用ssh连接到termux:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh username@ip -p 8022</span><br></pre></td></tr></table></figure><p>username就是whoami输出的内容，ip就是手机的ip地址。<br>这样就可以了。<br>本篇完。好困，午休time。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Termux </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Termux获得文件访问权限</title>
+      <link href="2021/02/22/termux%E8%8E%B7%E5%BE%97%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90/"/>
+      <url>2021/02/22/termux%E8%8E%B7%E5%BE%97%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90/</url>
+      
+        <content type="html"><![CDATA[<p>仔细一看发现我居然没有写过关于Termux的文章。。。那么先简介一下，Termux是一个Android下的终端模拟器, 无需root即可使用。可以在Google Play商店里找到。</p><p>好，那么简介完毕，接下来说这篇博文的标题: 获得文件访问权限。<br>只需要在Termux里执行这条命令即可:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure><p>然后手机大概会弹窗提示你Termux在申请存储权限，允许即可。<br>之后Termux中会创建一个新目录~/storage，其中的文件夹有:dcim, downloads, movies, music, pictures, shared。这几个文件夹是不是有点熟悉？没错，就是你想的那样。<br>不过只能访问这几个文件夹(我不知道root后能否访问根目录下全部文件夹), 但是能够访问这些文件夹也足够在手机与Termux之间传递文件了。</p><p>好，那么，本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Termux </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Arch安装netstat和ifconfig</title>
       <link href="2021/02/20/arch%E4%BD%BF%E7%94%A8netstat/"/>
       <url>2021/02/20/arch%E4%BD%BF%E7%94%A8netstat/</url>

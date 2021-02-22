@@ -685,9 +685,115 @@
         
           
         
+          
+        
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/02/22/ssh%E8%BF%9E%E6%8E%A5Termux/">
+        ssh连接Termux
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        参考博客电脑通过ssh登录到Termux – Moneys。
+先安装openssh:
+12apt updateapt install openssh
+然后启动sshd服务:
+1sshd
+然后配置登录密钥。如果电脑生成过密钥，可以跳过这一步：
+1ssh-keygen
+默认会生成在.ssh下，然后把生成的id_rsa.pub拷贝到手机里。注意，这一步的目的是要把文件拷贝进Termux。所以建议拷...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-02-22</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Termux/">Termux</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/02/22/ssh%E8%BF%9E%E6%8E%A5Termux/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/02/22/termux%E8%8E%B7%E5%BE%97%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90/">
+        Termux获得文件访问权限
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        仔细一看发现我居然没有写过关于Termux的文章。。。那么先简介一下，Termux是一个Android下的终端模拟器, 无需root即可使用。可以在Google Play商店里找到。
+好，那么简介完毕，接下来说这篇博文的标题: 获得文件访问权限。只需要在Termux里执行这条命令即可:
+1termux-setup-storage
+然后手机大概会弹窗提示你Termux在申请存储权限，允许即可。...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-02-22</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Termux/">Termux</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/02/22/termux%E8%8E%B7%E5%BE%97%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -1055,102 +1161,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/02/05/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/">
-        使用vim编写C语言文件
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        借鉴自https://blog.csdn.net/u011182346/article/details/84075246。1.安装gcc，不会安装的话建议百度。2.在终端命令行中输入:
-1vim test.c
-这条命令的作用是创建或编辑test.c文件。然后在其中输入c语言代码，例如:
-123456#include &lt;stdio.h&gt;int main()&#123;printf(...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-02-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/02/05/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/02/05/Vim%E6%96%87%E6%A1%A3/">
-        Vim文档
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        有了这条地址应该就不用满网找vim教程了:sourceforge.net.
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-02-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/02/05/Vim%E6%96%87%E6%A1%A3/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -1252,7 +1262,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(142)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(144)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1308,6 +1318,11 @@
             title="/categories/blog/Socket/" href="/categories/blog/Socket/"
             id="categoriesblogSocket"
             ><div class='name'>Socket</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/blog/Termux/" href="/categories/blog/Termux/"
+            id="categoriesblogTermux"
+            ><div class='name'>Termux</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
