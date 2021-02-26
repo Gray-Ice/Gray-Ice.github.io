@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Vue安装路由</title>
+      <link href="2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/"/>
+      <url>2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/</url>
+      
+        <content type="html"><![CDATA[<p>由于我不想到时候再去官网看(其实是怕忘了官网网址), 于是乎先记在博客上。<br>官网网址: <a href="https://router.vuejs.org/zh/installation.html">Vue Router 中文文档</a>。</p><h1 id="NPM安装"><a href="#NPM安装" class="headerlink" title="NPM安装"></a>NPM安装</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-router</span><br></pre></td></tr></table></figure><p>如果在一个模块化工程中使用它，必须要通过 Vue.use() 明确地安装路由功能：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#39;vue&#39;</span><br><span class="line">import VueRouter from &#39;vue-router&#39;</span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter)</span><br></pre></td></tr></table></figure><p>如果使用全局的 script 标签，则无须如此 (手动安装)。</p><p>Vue CLI<br>如果你有一个正在使用 Vue CLI 的项目，你可以以项目插件的形式添加 Vue Router。CLI 可以生成上述代码及两个示例路由。它也会覆盖你的 App.vue，因此请确保在项目中运行以下命令之前备份这个文件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue add router</span><br></pre></td></tr></table></figure><p>本篇完。这篇只是我用来偷懒才写的，还是建议看官网。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ssh连接Termux</title>
       <link href="2021/02/22/ssh%E8%BF%9E%E6%8E%A5Termux/"/>
       <url>2021/02/22/ssh%E8%BF%9E%E6%8E%A5Termux/</url>

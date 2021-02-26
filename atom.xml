@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-02-22T05:26:52.999Z</updated>
+  <updated>2021-02-25T02:22:45.749Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue安装路由</title>
+    <link href="http://example.com/2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/"/>
+    <id>http://example.com/2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/</id>
+    <published>2021-02-25T02:17:00.000Z</published>
+    <updated>2021-02-25T02:22:45.749Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>ssh连接Termux</title>

@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -21,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Tag: Arch - Gray-Ice</title>
+  <title>Vue安装路由 - Gray-Ice</title>
   
 
   
@@ -329,7 +327,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  search' style="display: ;">
+        <div id="half" class='cover-wrapper post search' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -370,539 +368,209 @@
       <div class='body-wrapper' id="pjax-container">
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow blur article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
     
-      
+      <h1 class="title">
+        Vue安装路由
+      </h1>
+      <div class='new-meta-box'>
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/arch%E8%93%9D%E7%89%99%E5%BD%95%E9%9F%B3/">
-        使用蓝牙耳机录音
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        使用蓝牙耳机播放音乐请看我之前的博客，标题是:Arch连接蓝牙。这里就不放出链接了。我按照之前使用蓝牙耳机播放音乐的博客配置完成后，下载了个OBS用来录屏，结果发现录音噪音过大，整了半天终于发现了解决方法。首先安装blueberry模块:
-1pacman -S blueberry
-安装完成后在命令行输入:
-1blueberry
-以启动blueberry。blueberry其实是个蓝牙管理器，...
-      
-    
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2020-12-31</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Feb 25, 2021</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Vue安装路由" data-path="/2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>由于我不想到时候再去官网看(其实是怕忘了官网网址), 于是乎先记在博客上。<br>官网网址: <a target="_blank" rel="noopener" href="https://router.vuejs.org/zh/installation.html">Vue Router 中文文档</a>。</p>
+<h1 id="NPM安装"><a href="#NPM安装" class="headerlink" title="NPM安装"></a>NPM安装</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-router</span><br></pre></td></tr></table></figure>
+<p>如果在一个模块化工程中使用它，必须要通过 Vue.use() 明确地安装路由功能：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#39;vue&#39;</span><br><span class="line">import VueRouter from &#39;vue-router&#39;</span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter)</span><br></pre></td></tr></table></figure>
+<p>如果使用全局的 script 标签，则无须如此 (手动安装)。</p>
+<p>Vue CLI<br>如果你有一个正在使用 Vue CLI 的项目，你可以以项目插件的形式添加 Vue Router。CLI 可以生成上述代码及两个示例路由。它也会覆盖你的 App.vue，因此请确保在项目中运行以下命令之前备份这个文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue add router</span><br></pre></td></tr></table></figure>
+<p>本篇完。这篇只是我用来偷懒才写的，还是建议看官网。</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2020/12/31/arch%E8%93%9D%E7%89%99%E5%BD%95%E9%9F%B3/'>
-            Read More
-          </a>
-        </div>
+      
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-02-25T10:22:45+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Feb 25, 2021</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/ArchLinux%E8%AE%BE%E7%BD%AEsudo/">
-        ArchLinux使用sudo
-      </a>
-    </h2>
-  
-  <div class='md'>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        Arch Linux刚安装好的时候是没有sudo命令的，需要自行安装，首先输入su命令以获取root权限，然后安装sudo:
-1pacman -S sudo
-想要查看具体的操作可以查看官方Wiki: Sudo。这里我只写下给用户添加sudo使用权限。安装了sudo之后，终端输入:
-1EDITOR=vim visudo
-这句话的意思是使用vim编辑sudo文件。这么做的原因是因为我输入visu...
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/&title=Vue安装路由 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/&title=Vue安装路由 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/&title=Vue安装路由 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
       
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/ArchLinux%E8%AE%BE%E7%BD%AEsudo/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
 </div>
 
-          </div>
+
+
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Arch%E4%B8%8B%E4%BD%BF%E7%94%A8deb%E5%8C%85/">
-        arch使用deb包
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        先安装debtap包，然后执行:
-1sudo debtap -u
-如果你的网不好，执行这条命令会很费劲，而且有很大几率会失败。不过多尝试几次(博主失败了四五次才装上)似乎就会成功。安装好之后在含有.deb文件的目录下输入:
-1debtap package
-来转换包，转换的时候会有选项，记得选。转换好之后输入:
-1sudo pacman -U package
-之后就安装好啦。那么如何运行文件呢...
-      
-    
+    </div>
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
+  
+
+  
+    <div class="prev-next">
       
-        <div>
-          <a class='readmore' href='/2020/12/31/Arch%E4%B8%8B%E4%BD%BF%E7%94%A8deb%E5%8C%85/'>
-            Read More
-          </a>
-        </div>
+      
+        <a class='next' href='/2021/02/22/ssh%E8%BF%9E%E6%8E%A5Termux/'>
+          <p class='title'>ssh连接Termux<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>参考博客电脑通过ssh登录到Termux – Moneys。
+先安装openssh:
+12apt updateapt install openssh
+然后启动sshd服务:
+1sshd
+然后配置...</p>
+        </a>
       
     </div>
   
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Arch%E5%AE%89%E8%A3%85pip/">
-        Arch 安装pip及pip3
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Arch安装pip以及pip3十分的简单，只需要一条指令:
-1pacman -S python-pip
-说实话执行这条指令的时候我以为是安装的pip的，但是执行完之后我又执行了一遍pacman -S python-pip3，但是提示我未找到该Package,于是我就尝试着输入了一遍pip3，没想到竟然安装上了。。。。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Arch%E5%AE%89%E8%A3%85pip/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Arch%E5%AE%89%E8%A3%85vncviewer/">
-        Arch安装VNCViewer
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        首先去VNC的官网下载文件VNC Viewer，这里我选择的是Standalone，下载之后会获得一个名字类似“VNC-Viewer-6.20.529-Linux-x86”的文件，这时我们需要使用:
-1chmod +x VNC*
-来给一个执行的权限，不然即使用root也无法跑起来程序。然后就可以通过:./VNC-Viewer*来执行程序了。就是这么简单。那么本篇完结。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Arch%E5%AE%89%E8%A3%85vncviewer/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/arch_tkinter/">
-        archlinux下python3安装tkinter
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        借鉴自ArchLinux Python3 安装 tkinter。
-输入:
-1sudo pacman -S tk
-即可安装tkinter。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/arch_tkinter/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/archlinux%E5%AE%89%E8%A3%85redis/">
-        Arch安装使用Redis
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        首先，使用pacman安装redis:
-1sudo pacman -S redis
-然后，输入:
-1systemctl enable redis.service
-说实话我不知道这句话有什么用，从作用上来看应该是开机启动redis服务，但是就算这么设置了，redis服务也得自己手动开启。。。在终端输入:
-1redis-server
-开启redis server，然后输入redis-cli就可以...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/archlinux%E5%AE%89%E8%A3%85redis/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/arch%E4%BD%BF%E7%94%A8vncserver/">
-        使用VNCServer
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        本次使用的是REALVNC SERVER，目的在于实现局域网内开启一个只能被观看屏幕不能被控制的服务端。
-下载VNCServer访问RealVNC官网:VNC Server,选择Linux，在下面的选项里选择Gerneric script x86或x64,自己决定。下载完成之后解压缩:
-1tar -zxvf VNC*.tar.gz
-安装VNCServercd进解压后的文件夹，终端输入:
-1s...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/arch%E4%BD%BF%E7%94%A8vncserver/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/arch%E5%AE%89%E8%A3%85mongoDB/">
-        ArchLinux安装mongoDB
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        安装的过程有点麻烦(没法直接pacman了)，因为官方软件仓库里没有这个包了(详情还请看Arch Wiki)，所以这里我们得使用AUR了。访问ArchLinux安装MongoDB，在”安装”标题下选择你想要安装的软件包，这里我选择的是mongodb-bin软件包，使用的git下载，速度还挺快的。那么当软件包clone到本地后，你可以看到文件夹下有一个PKGBUILD文件，打开终端，输入:``...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/arch%E5%AE%89%E8%A3%85mongoDB/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/arch%E5%AE%89%E8%A3%85powerline/">
-        Arch下bash安装powerline
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>本来Arch Wiki上是有教程的，没有写这个的必要，但是那个教程是英文的，为了避免以后再翻译一遍(悲)，我就先写个博客吧。为了保险起见，这里贴上<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Powerline">Arch Wiki Powerline</a>的链接。<br>  那么下面是安装，首先，输入:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S powerline</span><br></pre></td></tr></table></figure>
-<p>安装powerline,然后输入:</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/arch%E5%AE%89%E8%A3%85powerline/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/tags/Arch/">
-            <section class="post prev white-box shadow blur" >
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          2 / 3
-        </p>
-        
-          <a class="next" rel="next" href="/tags/Arch/page/3/">
-            <section class="post next white-box shadow blur">
-              &nbsp;Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
+</article>
 
 
-    
   
+
+  <article class="post white-box reveal shadow blur" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="gitalk-container"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -910,218 +578,19 @@
     
     
 
-<section class="widget blogger shadow blur desktop mobile">
-  <div class='content'>
-    
-    
-      <div class='text'>
-        
-          <h2>Gray-Ice</h2>
-        
-        
-          <p>一位好奇心十足的开发者。</p>
-
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Gray-Ice/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
 
 
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow blur desktop">
+  <section class="widget toc-wrapper shadow blur desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
         
-          <li><a class="flat-box"
-            title="/categories/blog/" href="/categories/blog/"
-            id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(145)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/30days/" href="/categories/blog/30days/"
-            id="categoriesblog30days"
-            ><div class='name'>30days</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Anaconda/" href="/categories/blog/Anaconda/"
-            id="categoriesblogAnaconda"
-            ><div class='name'>Anaconda</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/C/" href="/categories/blog/C/"
-            id="categoriesblogC"
-            ><div class='name'>C</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
-            id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"
-            id="categoriesblogDeepin"
-            ><div class='name'>Deepin</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Linux/" href="/categories/blog/Linux/"
-            id="categoriesblogLinux"
-            ><div class='name'>Linux</div><div class='badge'>(15)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/" href="/categories/blog/Python/"
-            id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(42)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"
-            id="categoriesblogPythonPyQt5"
-            ><div class='name'>PyQt5</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/flask/" href="/categories/blog/Python/flask/"
-            id="categoriesblogPythonflask"
-            ><div class='name'>flask</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            id="categoriesblogPythonE695B0E68DAEE58886E69E90"
-            ><div class='name'>数据分析</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Socket/" href="/categories/blog/Socket/"
-            id="categoriesblogSocket"
-            ><div class='name'>Socket</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Termux/" href="/categories/blog/Termux/"
-            id="categoriesblogTermux"
-            ><div class='name'>Termux</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/arch/" href="/categories/blog/arch/"
-            id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(35)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/git/" href="/categories/blog/git/"
-            id="categoriesbloggit"
-            ><div class='name'>git</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/hugo/" href="/categories/blog/hugo/"
-            id="categoriesbloghugo"
-            ><div class='name'>hugo</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/vim/" href="/categories/blog/vim/"
-            id="categoriesblogvim"
-            ><div class='name'>vim</div><div class='badge'>(9)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/vue/" href="/categories/blog/vue/"
-            id="categoriesblogvue"
-            ><div class='name'>vue</div><div class='badge'>(14)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
-            id="categoriesblogE4B9B1E4B883E585ABE7B39F"
-            ><div class='name'>乱七八糟</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"
-            id="categoriesblogE69C8DE58AA1E599A8"
-            ><div class='name'>服务器</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/friendlink/" href="/categories/friendlink/"
-            id="categoriesfriendlink"
-            ><div class='name'>friendlink</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/life/" href="/categories/life/"
-            id="categorieslife"
-            ><div class='name'>life</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/resume/" href="/categories/resume/"
-            id="categoriesresume"
-            ><div class='name'>resume</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/" href="/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/"
-            id="categoriesE58D9AE5AEA2E697A5E5BF97"
-            ><div class='name'>博客日志</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow blur desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/30days/" style="font-size: 15.11px; color: #919191">30days</a> <a href="/tags/Anaconda/" style="font-size: 14px; color: #999">Anaconda</a> <a href="/tags/Arch/" style="font-size: 24px; color: #555">Arch</a> <a href="/tags/Deepin/" style="font-size: 16.22px; color: #8a8a8a">Deepin</a> <a href="/tags/Django/" style="font-size: 21.78px; color: #646464">Django</a> <a href="/tags/Docker/" style="font-size: 15.11px; color: #919191">Docker</a> <a href="/tags/Flask/" style="font-size: 15.11px; color: #919191">Flask</a> <a href="/tags/Linux%E5%91%BD%E4%BB%A4/" style="font-size: 16.22px; color: #8a8a8a">Linux命令</a> <a href="/tags/PIL/" style="font-size: 17.33px; color: #828282">PIL</a> <a href="/tags/PyQt5/" style="font-size: 14px; color: #999">PyQt5</a> <a href="/tags/Socket/" style="font-size: 14px; color: #999">Socket</a> <a href="/tags/Vue/" style="font-size: 22.89px; color: #5d5d5d">Vue</a> <a href="/tags/Wine/" style="font-size: 14px; color: #999">Wine</a> <a href="/tags/bluetooth/" style="font-size: 14px; color: #999">bluetooth</a> <a href="/tags/cv2/" style="font-size: 14px; color: #999">cv2</a> <a href="/tags/git/" style="font-size: 18.44px; color: #7b7b7b">git</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/hugo/" style="font-size: 15.11px; color: #919191">hugo</a> <a href="/tags/jwt/" style="font-size: 16.22px; color: #8a8a8a">jwt</a> <a href="/tags/matplotlib/" style="font-size: 15.11px; color: #919191">matplotlib</a> <a href="/tags/nask/" style="font-size: 14px; color: #999">nask</a> <a href="/tags/pip/" style="font-size: 14px; color: #999">pip</a> <a href="/tags/redis/" style="font-size: 14px; color: #999">redis</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/ventoy/" style="font-size: 14px; color: #999">ventoy</a> <a href="/tags/vim/" style="font-size: 20.67px; color: #6c6c6c">vim</a> <a href="/tags/zsh/" style="font-size: 14px; color: #999">zsh</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/" style="font-size: 14px; color: #999">上传文件</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E6%9D%A1/" style="font-size: 14px; color: #999">上传进度条</a> <a href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/" style="font-size: 14px; color: #999">中间件</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 15.11px; color: #919191">代理</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/" style="font-size: 14px; color: #999">关键字查询</a> <a href="/tags/%E5%88%86%E9%A1%B5/" style="font-size: 14px; color: #999">分页</a> <a href="/tags/%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/" style="font-size: 14px; color: #999">压缩图片</a> <a href="/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/" style="font-size: 14px; color: #999">又拍云</a> <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/" style="font-size: 15.11px; color: #919191">双系统</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E7%9B%98/" style="font-size: 14px; color: #999">启动盘</a> <a href="/tags/%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/" style="font-size: 14px; color: #999">商品评论</a> <a href="/tags/%E5%9B%BD%E9%99%85%E5%8C%96/" style="font-size: 14px; color: #999">国际化</a> <a href="/tags/%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90/" style="font-size: 14px; color: #999">图片合成</a> <a href="/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" style="font-size: 15.11px; color: #919191">对象存储</a> <a href="/tags/%E5%BE%AE%E5%8D%9A%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">微博第三方登录</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">性能检测工具</a> <a href="/tags/%E6%8A%98%E7%BA%BF%E5%9B%BE/" style="font-size: 14px; color: #999">折线图</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 15.11px; color: #919191">服务器</a> <a href="/tags/%E6%B0%B4%E5%8D%B0/" style="font-size: 14px; color: #999">水印</a> <a href="/tags/%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81/" style="font-size: 15.11px; color: #919191">滑块验证</a> <a href="/tags/%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81/" style="font-size: 14px; color: #999">生成图片验证码</a> <a href="/tags/%E7%94%BB%E4%B8%AD%E7%94%BB/" style="font-size: 14px; color: #999">画中画</a> <a href="/tags/%E7%99%BD%E5%A4%A9%E9%BB%91%E5%A4%9C%E6%A8%A1%E5%BC%8F/" style="font-size: 14px; color: #999">白天黑夜模式</a> <a href="/tags/%E7%99%BE%E5%BA%A6%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">百度文字识别</a> <a href="/tags/%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/" style="font-size: 14px; color: #999">评论频率</a> <a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 19.56px; color: #737373">踩坑</a> <a href="/tags/%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">钉钉第三方登录</a>
     </div>
   </section>
 
@@ -1132,6 +601,7 @@
 </aside>
 
 
+
         
         
           <!--此文件用来存放一些不方便取值的变量-->
@@ -1139,8 +609,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Vue安装路由";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
