@@ -388,6 +388,54 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/20/%E8%A7%A3%E5%86%B3make%E6%97%B6%E7%BC%BA%E5%B0%91build%E7%9B%AE%E5%BD%95/">
+        解决make时提示缺少“/lib/modules/5.9.14-arch1-1/build”
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        昨天使用make安装无线网卡驱动的时候提示not found file or directory /lib/modules/5.9.14-arch1-1/build。于是我上Arch Linux CN TG群问了问，得知出现这个问题的原因是少了一个包，arch linux使用以下命令安装:
+1pacman -S linux-headers
+安装完这个包再make就不会提示缺少build目录了...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-20</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/20/%E8%A7%A3%E5%86%B3make%E6%97%B6%E7%BC%BA%E5%B0%91build%E7%9B%AE%E5%BD%95/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/18/vim%E4%BB%A5%E6%8C%87%E5%AE%9A%E7%BC%96%E7%A0%81%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/">
         vim以指定编码打开文件
       </a>
@@ -805,54 +853,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/09/09/%E6%88%91%E7%9A%84vim%E6%8F%92%E4%BB%B6/">
-        我的vim配置
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        本篇的目的是为了 记录我现在使用的vim插件。为什么要记录呢？我怕之后系统挂了需要重装的时候忘了都配置了什么了。(ps.博主是vim新手，如果想要一份强大的vim配置文件不要看此文章)
-插件管理器: vim-plug    Github地址:https://github.com/junegunn/vim-plug
-代码补全插件: coc.nvim  实测这个插件在vim上也能使用，而且该插件...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/09/09/%E6%88%91%E7%9A%84vim%E6%8F%92%E4%BB%B6/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -962,7 +962,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(147)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(148)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1053,6 +1053,11 @@
             title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
             id="categoriesblogE4B9B1E4B883E585ABE7B39F"
             ><div class='name'>乱七八糟</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/blog/%E5%89%8D%E7%AB%AF/" href="/categories/blog/%E5%89%8D%E7%AB%AF/"
+            id="categoriesblogE5898DE7ABAF"
+            ><div class='name'>前端</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"

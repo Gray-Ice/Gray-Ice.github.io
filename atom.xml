@@ -61,11 +61,11 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>JS修改CSS变量</title>
     <link href="http://example.com/2021/02/28/JS%E4%BF%AE%E6%94%B9CSS%E5%8F%98%E9%87%8F/"/>
     <id>http://example.com/2021/02/28/JS%E4%BF%AE%E6%94%B9CSS%E5%8F%98%E9%87%8F/</id>
-    <published>2021-02-28T06:03:14.414Z</published>
-    <updated>2021-02-28T06:03:14.414Z</updated>
+    <published>2021-02-28T05:30:00.000Z</published>
+    <updated>2021-03-01T09:29:00.527Z</updated>
     
     
       
@@ -74,6 +74,10 @@
       
     
     
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="前端" scheme="http://example.com/categories/blog/%E5%89%8D%E7%AB%AF/"/>
     
     
   </entry>
