@@ -4,6 +4,61 @@
   
     
     <entry>
+      <title></title>
+      <link href="2021/03/01/python%E9%97%AD%E5%8C%85/"/>
+      <url>2021/03/01/python%E9%97%AD%E5%8C%85/</url>
+      
+        <content type="html"><![CDATA[<p>关于闭包的概述:”在计算机科学中，闭包（英语：Closure），又称词法闭包（Lexical Closure）或函数闭包（function closures），是在支持头等函数的编程语言中实现词法绑定的一种技术。闭包在实现上是一个结构体，它存储了一个函数（通常是其入口地址）和一个关联的环境（相当于一个符号查找表）。环境里是若干对符号和值的对应关系，它既要包括约束变量（该函数内部绑定的符号），也要包括自由变量（在函数外部定义但在函数内被引用），有些函数也可能没有自由变量。闭包跟函数最大的不同在于，当捕捉闭包的时候，它的自由变量会在捕捉时被确定，这样即便脱离了捕捉时的上下文，它也能照常运行。捕捉时对于值的处理可以是值拷贝，也可以是名称引用，这通常由语言设计者决定，也可能由用户自行指定（如C++）。” –wikipedia</p><p>那么下面是代码实现:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func1</span>():</span></span><br><span class="line">        print(<span class="string">&quot;Hello&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> func1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">func()()</span><br></pre></td></tr></table></figure><p>程序输出:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello</span><br></pre></td></tr></table></figure><p>就我个人而言，在python开发中很少用到闭包。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python猴子补丁</title>
+      <link href="2021/03/01/python%E7%8C%B4%E5%AD%90%E8%A1%A5%E4%B8%81/"/>
+      <url>2021/03/01/python%E7%8C%B4%E5%AD%90%E8%A1%A5%E4%B8%81/</url>
+      
+        <content type="html"><![CDATA[<p>什么是猴子补丁？”猴补丁（英语：Monkey patch）是一种很脏的编程技巧，用拼凑代码的方法修改程序逻辑。这种技巧也叫鸭子双关。[1]猴补丁意思是用类似双关的技巧拼凑出和常规程序相左的程序逻辑，这种技巧只会在运行时刻生效。猴补丁的出现说明程序本身设计有缺陷，它用在网页和数据库上就是SQL注入攻击，Unix Shell的flag使用不当也会产生类似的安全问题，比如将文件命名为“-x”形式，命令行就可能将文件名认作一个传递的参数而造成运行异常。” –wikipedia</p><p>其实就是在程序运行时修改类或模块。<br>那么代码如下:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">self</span>):</span></span><br><span class="line">        print(<span class="string">&quot;I&#x27;ll tell you &quot;</span>, end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">monkey</span>(<span class="params">self</span>):</span></span><br><span class="line">    print(<span class="string">&quot;The truth.&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">test1 = Test()</span><br><span class="line">test1.func()  <span class="comment"># 此时程序输出的是I&#x27;ll tell you</span></span><br><span class="line">Test.func = monkey</span><br><span class="line">test1.func()  <span class="comment"># 此时程序输出的是The truth.</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>其实就我个人的认知来说，如果用猴子补丁会导致程序逻辑的混乱，虽然作者本人也许不会受影响，但是其他人在维护代码的时候一定会骂他。。。写这篇博客只是因为觉得猴子补丁好玩，从C和C++回来后觉得python太有趣了，哈哈哈。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="2021/02/28/JS%E4%BF%AE%E6%94%B9CSS%E5%8F%98%E9%87%8F/"/>
+      <url>2021/02/28/JS%E4%BF%AE%E6%94%B9CSS%E5%8F%98%E9%87%8F/</url>
+      
+        <content type="html"><![CDATA[<hr><p>title: JS修改CSS变量<br>date: 2021/02/28 13:30<br>categories:</p><ul><li>blog</li><li>前端</li></ul><hr><p>这个问题折磨我快俩小时了，其中因为各种因素导致内在原因一直没有被我发现，现在我也只是略懂了一些，不过代码好歹是能用了。</p><h1 id="声明CSS变量"><a href="#声明CSS变量" class="headerlink" title="声明CSS变量"></a>声明CSS变量</h1><p>声明一个CSS变量需要在变量名前加俩-号，如:</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.title</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">--vara</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="使用CSS变量"><a href="#使用CSS变量" class="headerlink" title="使用CSS变量"></a>使用CSS变量</h1><p>直接看代码(请忽略变量名和实际用处的牛头不对马嘴):</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.title</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attribute">--h1-size</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">--h1-color</span>: red;</span><br><span class="line">  <span class="attribute">--title-align</span>: right;</span><br><span class="line">  <span class="attribute">text-align</span>: <span class="built_in">var</span>(--title-align);</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="built_in">var</span>(--h1-size);</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--h1-color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>不过直接这么定义的话，会导致js无法修改变量的值(也可能是Chromium的Bug)。<br>而且网上的其他教程一般都是类似这么定义的:</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attribute">--h1-size</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">--h1-color</span>: red;</span><br><span class="line">  <span class="attribute">--title-align</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.title</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attribute">text-align</span>: <span class="built_in">var</span>(--title-align);</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="built_in">var</span>(--h1-size);</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--h1-color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>很多教程里都说:root是全局作用域，不过不知道为何，我这里的.title无法访问:root下的变量(若无法访问变量的话，就会取默认值)。那我也没有办法，只能在认为:root不是全局作用域的情况下动手了。而且因为上面提到过在同级作用域声明的变量无法被js修改，所以我就索性不写变量，直接用JS设置变量了。那么JS如何设置变量以及我代码最后写成了什么样子请看下一标题。</p><h1 id="JS修改CSS变量"><a href="#JS修改CSS变量" class="headerlink" title="JS修改CSS变量"></a>JS修改CSS变量</h1><p>代码如下:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.setProperty(<span class="string">&quot;--h1-size&quot;</span>, <span class="string">&quot;10px&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.documentElement.style.setProperty(<span class="string">&quot;--h1-color&quot;</span>, <span class="string">&quot;blue&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.documentElement.style.setProperty(<span class="string">&quot;--title-align&quot;</span>, <span class="string">&quot;right&quot;</span>);</span><br></pre></td></tr></table></figure><p>这段代码就能修改CSS的变量了。不过设置的貌似是全局变量，会被局部变量覆盖。<br>那么我的代码如下(无关部分我就缩写了):</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;h1 class&#x3D;&quot;title&quot;&gt;&#123;&#123; title &#125;&#125;&lt;&#x2F;h1&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">:root</span><br><span class="line">&#123;</span><br><span class="line">  --h1-size: 10px;</span><br><span class="line">  --h1-color: red;</span><br><span class="line">  --title-align: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.title</span><br><span class="line">&#123;</span><br><span class="line">  text-align: var(--title-align);</span><br><span class="line">  font-size: var(--h1-size);</span><br><span class="line">  color: var(--h1-color);</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    document.documentElement.style.setProperty(&quot;--h1-size&quot;, &quot;10px&quot;);</span><br><span class="line">    document.documentElement.style.setProperty(&quot;--h1-color&quot;, &quot;blue&quot;);</span><br><span class="line">    document.documentElement.style.setProperty(&quot;--title-align&quot;, &quot;right&quot;);</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><p>虽然:root下的变量无法作用到.title里，但是这里还是写一下代表有这个变量吧。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue安装路由</title>
       <link href="2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/"/>
       <url>2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/</url>
@@ -3239,7 +3294,7 @@
       <link href="2020/07/14/%E5%8F%8B%E9%93%BE/"/>
       <url>2020/07/14/%E5%8F%8B%E9%93%BE/</url>
       
-        <content type="html"><![CDATA[<p>这是我的一个朋友的博客:<a href="https://www.alfred-alan.online/">Alfred-Alan</a>.</p><p>这是我的另一个朋友的博客: <a href="https://asyx.gitee.io/bike">Admin</a>.</p><p>这是一个<font color="red">大佬</font>的博客: <a href="https://v3u.cn/">v3u.cn</a>.</p><p>Web前端开发: <a href="www.educodes.cn"><font color="blue">www.educodes.cn</font></a>。</p>]]></content>
+        <content type="html"><![CDATA[<p>这是我的一个朋友的博客:<a href="https://www.alfred-alan.online/">Alfred-Alan</a>.</p><p>这是我的另一个朋友的博客: <a href="https://asyx.gitee.io/bike">Admin</a>.</p><p>这是一个<font color="red">大佬</font>的博客: <a href="https://v3u.cn/">v3u.cn</a>.</p><p>Web前端开发: <a href="www.educodes.cn"><font color="blue">www.educodes.cn</font></a>。</p><p>我的Arch群友们: <a href="zzy-ac.gitee.io">点墨阁</a>, <a href="weiliang1503.gitee.io">朝色</a>。 </p>]]></content>
       
       
       <categories>

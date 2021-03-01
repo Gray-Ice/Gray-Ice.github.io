@@ -388,6 +388,105 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/07/15/Djangomysql%E7%89%88%E6%9C%AC%E4%BD%8E/">
+        解决django_makemigrations时提示版本过低
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        参考自mysql异常处理。
+在init.py文件夹里添加一行:
+1pymysql.version_info = (8, 0, 20, &#x27;final&#x27;, 0)
+再次执行:
+1python3 manage.py makemigrations
+即可成功。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-07-15</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/07/15/Djangomysql%E7%89%88%E6%9C%AC%E4%BD%8E/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/07/15/DjangoModelserializer%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5/">
+        DjangoModelSerializer返回指定字段
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        可以直接在类里设定返回指定的字段:
+123456class ArchUserSerializer(ModelSerializer):    class Meta:        model = ArchUser        fields = [&#x27;id&#x27;, &#x27;username&#x27;, &#x27;email&#x27;, &#x27;phone&#x27;...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-07-15</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/07/15/DjangoModelserializer%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/07/14/Arch%E8%BF%9E%E6%8E%A5%E8%93%9D%E7%89%99/">
         Arch连接蓝牙
       </a>
@@ -750,98 +849,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/04/29/PIL%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%B0%B4%E5%8D%B0/">
-        使用PIL添加中文水印
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>原图:</p>
-<img src="/PIL%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%B0%B4%E5%8D%B0/image-20200429153309963.png" class="lazyload" data-srcset="/PIL%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%B0%B4%E5%8D%B0/image-20200429153309963.png" srcset="data:image/png;base64,666" class="[image-20200429153309963] lazyload">
-
-
-<p>加水印后:
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-04-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/04/29/PIL%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%B0%B4%E5%8D%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/04/28/%E4%BD%BF%E7%94%A8%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/">
-        使用钉钉、微博第三方登录
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>钉钉的第三方登录，乍一看开发文档觉得没什么，然而越往下进行越觉得棘手，
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-04-28</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/04/28/%E4%BD%BF%E7%94%A8%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -951,7 +958,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(145)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(147)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -986,7 +993,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/Python/" href="/categories/blog/Python/"
             id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(42)</div></a></li>
+            ><div class='name'>Python</div><div class='badge'>(44)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"

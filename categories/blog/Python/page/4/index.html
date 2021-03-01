@@ -388,6 +388,105 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/07/15/Djangomysql%E7%89%88%E6%9C%AC%E4%BD%8E/">
+        解决django_makemigrations时提示版本过低
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        参考自mysql异常处理。
+在init.py文件夹里添加一行:
+1pymysql.version_info = (8, 0, 20, &#x27;final&#x27;, 0)
+再次执行:
+1python3 manage.py makemigrations
+即可成功。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-07-15</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/07/15/Djangomysql%E7%89%88%E6%9C%AC%E4%BD%8E/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/07/15/DjangoModelserializer%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5/">
+        DjangoModelSerializer返回指定字段
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        可以直接在类里设定返回指定的字段:
+123456class ArchUserSerializer(ModelSerializer):    class Meta:        model = ArchUser        fields = [&#x27;id&#x27;, &#x27;username&#x27;, &#x27;email&#x27;, &#x27;phone&#x27;...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-07-15</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/07/15/DjangoModelserializer%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/05/01/PIL%E9%95%BF%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90/">
         PIL长图片合成
       </a>
@@ -742,95 +841,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/04/25/fivecount/">
-        五次登录失败锁账号
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>这次用到了redis模块和Redis数据库。那么代码如下:</p>
-<p>首先，连接上redis数据库</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-04-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/04/25/fivecount/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/04/24/django%E9%AA%8C%E8%AF%81%E7%A0%81/">
-        Django+Vue验证码的生成与使用
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <h3 id="生成验证码"><a href="#生成验证码" class="headerlink" title="生成验证码"></a>生成验证码</h3><p>注意，代码中的r是实例化了Redis对象，r.set()是向redis中存入键值对的方法。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-04-24</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/04/24/django%E9%AA%8C%E8%AF%81%E7%A0%81/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -940,7 +950,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(145)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(147)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -975,7 +985,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/Python/" href="/categories/blog/Python/"
             id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(42)</div></a></li>
+            ><div class='name'>Python</div><div class='badge'>(44)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"
