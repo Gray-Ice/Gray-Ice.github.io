@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-01T09:27:02.423Z</updated>
+  <updated>2021-03-02T07:50:45.919Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vim窗口操作</title>
+    <link href="http://example.com/2021/03/02/vim%E7%AA%97%E5%8F%A3%E6%93%8D%E4%BD%9C/"/>
+    <id>http://example.com/2021/03/02/vim%E7%AA%97%E5%8F%A3%E6%93%8D%E4%BD%9C/</id>
+    <published>2021-03-02T07:24:00.000Z</published>
+    <updated>2021-03-02T07:50:45.919Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vim" scheme="http://example.com/categories/blog/vim/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
   
   <entry>
     <title>python闭包</title>
