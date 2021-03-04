@@ -443,7 +443,7 @@
   <p>参考(其实已经差不多可以说是转载了)自<a target="_blank" rel="noopener" href="https://blog.csdn.net/shuangde800/article/details/11430659">vim 多窗口编辑</a>。建议直接看这篇博客，写的非常好，而且有图片实例。</p>
 <h1 id="启动多窗口编辑"><a href="#启动多窗口编辑" class="headerlink" title="启动多窗口编辑"></a>启动多窗口编辑</h1><p>vim -o file1 file2  显示为水平分割成两半的窗口。<br>vim -O file1 file2  显示为垂直分割成两半的窗口。<br>vim -o5 file1 file2  将分配5个相同的窗口，其中3个是闲置的。</p>
 <h1 id="vim运行中的多窗口编辑"><a href="#vim运行中的多窗口编辑" class="headerlink" title="vim运行中的多窗口编辑"></a>vim运行中的多窗口编辑</h1><p>:split 新建一个窗口，水平分割当前窗口。<br>:vsplit 新建一个窗口，垂直分割当前窗口。<br>如果这两个命令后面加了一个文件路径，那么新打开的窗口里显示的会是那个文件。</p>
-<h2 id="分割窗口的选项"><a href="#分割窗口的选项" class="headerlink" title="分割窗口的选项"></a>分割窗口的选项</h2><p>：[n] split(vsplit)  [++opt]  [+cmd]  [file]</p>
+<h1 id="分割窗口的选项"><a href="#分割窗口的选项" class="headerlink" title="分割窗口的选项"></a>分割窗口的选项</h1><p>：[n] split(vsplit)  [++opt]  [+cmd]  [file]</p>
 <p>命令中：<br>n   为vim指定在新窗口中显示的行数，且新窗口的大小刚好容纳该行数，新窗口位于画面顶端<br>opt  传递vim选项信息给新的窗口会话（请注意，它的前面必须加上两个加号）<br>cmd 传入欲在新窗口中执行的命令（请注意，它的前面必须加上一个加号）<br>file  指定在新窗口中编辑的文件</p>
 <p>：sview  filename  以只读的方式水平分割打开一个新窗口<br>：sfind  [++opt]  [+cmd]  [file]  和split的运作方式相似，但在path中寻找filename，如果vim未找到文件则不显示</p>
 <h1 id="在窗口间移动光标"><a href="#在窗口间移动光标" class="headerlink" title="在窗口间移动光标"></a>在窗口间移动光标</h1><p>按住Ctrl + w, 然后按h,j,k,l这几个键来切换窗口(也可以先按Ctrl+w, 松开后再按h, j, k, l。h, j, k, l对应左，下，上，右移动)。<br>Ctrl + w + w  这个命令会在所有窗口中循环移动。<br>Ctrl + w + t  移动到最左上角的窗口。<br>Ctrl + w + b  移动到最右下角的窗口。<br>Ctrl + w + p  移动到前一个访问的窗口。</p>
@@ -465,6 +465,7 @@
 <h1 id="游走分页"><a href="#游走分页" class="headerlink" title="游走分页"></a>游走分页</h1><p>可以直接点鼠标来移动到另一个分页，也可以用命令<br>Ctrl + PageDown：移动到下一个分页<br>Ctrl + PageUp：移动到上一个分页</p>
 <h1 id="关闭与离开窗口"><a href="#关闭与离开窗口" class="headerlink" title="关闭与离开窗口"></a>关闭与离开窗口</h1><p>有4种关闭窗口的方式，分别是：离开（quit）、关闭（close）、隐藏（hide）、关闭其他窗口</p>
 <p>^代表Ctrl键<br>^Wq，离开当前窗口<br>^Wc，关闭当前的窗口<br>^Wo，关闭当前窗口以外的所有窗口</p>
+<p>本篇完。</p>
 
   
   
@@ -484,7 +485,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-02T15:50:45+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-02T15:57:15+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Mar 2, 2021</p>
@@ -563,6 +564,11 @@
   
     <div class="prev-next">
       
+        <a class='prev' href='/2021/03/03/KDE%E4%B8%8B%E6%8B%89%E5%BC%8F%E7%BB%88%E7%AB%AF/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>KDE下拉式终端</p>
+          <p class='content'>这是一个十分舒服的下拉式终端，Arch Wiki上有关于它的详情: Yakuake。由于我安装KDE的时候直接安装了kde-applications这个包，所以刚安装好就有这个终端。想要启用它可...</p>
+        </a>
+      
       
         <a class='next' href='/2021/03/01/python%E9%97%AD%E5%8C%85/'>
           <p class='title'>python闭包<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
@@ -607,7 +613,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%89%B2%E7%AA%97%E5%8F%A3%E7%9A%84%E9%80%89%E9%A1%B9"><span class="toc-text">分割窗口的选项</span></a></li></ol>
+        
     </div>
   </section>
 

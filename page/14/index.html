@@ -387,6 +387,58 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/07/15/Djangomysql%E7%89%88%E6%9C%AC%E4%BD%8E/">
+        解决django_makemigrations时提示版本过低
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        参考自mysql异常处理。
+在init.py文件夹里添加一行:
+1pymysql.version_info = (8, 0, 20, &#x27;final&#x27;, 0)
+再次执行:
+1python3 manage.py makemigrations
+即可成功。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-07-15</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/07/15/Djangomysql%E7%89%88%E6%9C%AC%E4%BD%8E/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/07/15/DjangoModelserializer%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5/">
         DjangoModelSerializer返回指定字段
       </a>
@@ -803,50 +855,6 @@ Web前端开发: www.educodes.cn。
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/04/29/windows+deepin/">
-        Windows+deepin双系统安装及踩坑
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>前几天突然想起来了之前心血来潮下载的deepin镜像，但是当时有事没安装，终于有时间了打算来安装一下。
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-04-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Deepin/">Deepin</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/04/29/windows+deepin/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -984,7 +992,7 @@ Web前端开发: www.educodes.cn。
           <li><a class="flat-box child"
             title="/categories/blog/Linux/" href="/categories/blog/Linux/"
             id="categoriesblogLinux"
-            ><div class='name'>Linux</div><div class='badge'>(15)</div></a></li>
+            ><div class='name'>Linux</div><div class='badge'>(16)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/" href="/categories/blog/Python/"
@@ -1019,7 +1027,7 @@ Web前端开发: www.educodes.cn。
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(35)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(36)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/git/" href="/categories/blog/git/"
@@ -1034,7 +1042,7 @@ Web前端开发: www.educodes.cn。
           <li><a class="flat-box child"
             title="/categories/blog/vim/" href="/categories/blog/vim/"
             id="categoriesblogvim"
-            ><div class='name'>vim</div><div class='badge'>(10)</div></a></li>
+            ><div class='name'>vim</div><div class='badge'>(9)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/vue/" href="/categories/blog/vue/"

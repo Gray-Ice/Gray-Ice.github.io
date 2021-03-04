@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-02T07:50:45.919Z</updated>
+  <updated>2021-03-04T13:37:09.956Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,55 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vim文档</title>
+    <link href="http://example.com/2021/03/04/Vim%E6%96%87%E6%A1%A3/"/>
+    <id>http://example.com/2021/03/04/Vim%E6%96%87%E6%A1%A3/</id>
+    <published>2021-03-04T13:37:09.956Z</published>
+    <updated>2021-03-04T13:37:09.956Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KDE下拉式终端</title>
+    <link href="http://example.com/2021/03/03/KDE%E4%B8%8B%E6%8B%89%E5%BC%8F%E7%BB%88%E7%AB%AF/"/>
+    <id>http://example.com/2021/03/03/KDE%E4%B8%8B%E6%8B%89%E5%BC%8F%E7%BB%88%E7%AB%AF/</id>
+    <published>2021-03-03T02:11:00.000Z</published>
+    <updated>2021-03-03T02:16:39.293Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="arch" scheme="http://example.com/categories/blog/arch/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>vim窗口操作</title>
     <link href="http://example.com/2021/03/02/vim%E7%AA%97%E5%8F%A3%E6%93%8D%E4%BD%9C/"/>
     <id>http://example.com/2021/03/02/vim%E7%AA%97%E5%8F%A3%E6%93%8D%E4%BD%9C/</id>
     <published>2021-03-02T07:24:00.000Z</published>
-    <updated>2021-03-02T07:50:45.919Z</updated>
+    <updated>2021-03-02T07:57:15.052Z</updated>
     
     
       
@@ -354,30 +398,6 @@
     <id>http://example.com/2021/02/05/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/</id>
     <published>2021-02-05T03:26:01.947Z</published>
     <updated>2021-02-05T03:26:01.947Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="blog" scheme="http://example.com/categories/blog/"/>
-    
-    <category term="vim" scheme="http://example.com/categories/blog/vim/"/>
-    
-    
-    <category term="vim" scheme="http://example.com/tags/vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim文档</title>
-    <link href="http://example.com/2021/02/05/Vim%E6%96%87%E6%A1%A3/"/>
-    <id>http://example.com/2021/02/05/Vim%E6%96%87%E6%A1%A3/</id>
-    <published>2021-02-05T03:19:37.462Z</published>
-    <updated>2021-02-05T03:19:37.462Z</updated>
     
     
       
@@ -3152,7 +3172,7 @@
     <link href="http://example.com/2020/07/13/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
     <id>http://example.com/2020/07/13/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/</id>
     <published>2020-07-13T07:00:00.000Z</published>
-    <updated>2020-12-22T02:29:23.151Z</updated>
+    <updated>2021-03-04T13:45:43.964Z</updated>
     
     
       
