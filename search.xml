@@ -4,6 +4,54 @@
   
     
     <entry>
+      <title>cowsay --萌萌的终端玩具</title>
+      <link href="2021/03/15/cowsay/"/>
+      <url>2021/03/15/cowsay/</url>
+      
+        <content type="html"><![CDATA[<p>cowsay是我在昨天和群友唠嗑时发现的好玩的东西。那么cowsay是什么？cowsay是一个能够输出数行文本的工具(玩具?)。先看看它的一个输出:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">╭─fire@butterfly ~/volantis_try/source/_posts  ‹master*› </span><br><span class="line">╰─➤  cowsay -f stegosaurus hello       </span><br><span class="line"> _______ </span><br><span class="line">&lt; hello &gt;</span><br><span class="line"> ------- </span><br><span class="line">\                             .       .</span><br><span class="line"> \                           / `.   .&#x27; &quot; </span><br><span class="line">  \                  .---.  &lt;    &gt; &lt;    &gt;  .---.</span><br><span class="line">   \                 |    \  \ - ~ ~ - /  /    |</span><br><span class="line">         _____          ..-~             ~-..-~</span><br><span class="line">        |     |   \~~~\.&#x27;                    `./~~~/</span><br><span class="line">       ---------   \__/                        \__/</span><br><span class="line">      .&#x27;  O    \     /               /       \  &quot; </span><br><span class="line">     (_____,    `._.&#x27;               |         &#125;  \/~~~/</span><br><span class="line">      `----.          /       &#125;     |        /    \__/</span><br><span class="line">            `-.      |       /      |       /      `. ,~~|</span><br><span class="line">                ~-.__|      /_ - ~ ^|      /- _      `..-&#x27;   </span><br><span class="line">                     |     /        |     /     ~-.     `-. _  _  _</span><br><span class="line">                     |_____|        |_____|         ~ - . _ _ _ _ _&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>看到这个输出你是不是明白了什么呢？(明白了确实是玩具)<br>-f 选项能够选择输出不同的图像，而hello是输出的内容。想要看都有哪些图像，可以输入<font color="red">cowsay -l</font>来查看。<br>下面是cowsay支持的图像列表</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">╭─fire@butterfly ~/volantis_try/source/_posts  ‹master*› </span><br><span class="line">╰─➤  cowsay -l                  </span><br><span class="line">Cow files in /usr/share/cows:</span><br><span class="line">beavis.zen blowfish bong bud-frogs bunny cheese cower daemon default dragon</span><br><span class="line">dragon-and-cow elephant elephant-in-snake eyes flaming-sheep ghostbusters</span><br><span class="line">head-in hellokitty kiss kitty koala kosh luke-koala meow milk moofasa moose</span><br><span class="line">mutilated ren satanic sheep skeleton small sodomized stegosaurus stimpy</span><br><span class="line">supermilker surgery telebears three-eyes turkey turtle tux udder vader</span><br><span class="line">vader-koala www</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>我们来试一试kiss:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">╭─fire@butterfly ~/volantis_try/source/_posts  ‹master*› </span><br><span class="line">╰─➤  cowsay -f kiss &quot;kiss~&quot;     </span><br><span class="line"> _______ </span><br><span class="line">&lt; kiss~ &gt;</span><br><span class="line"> ------- </span><br><span class="line">     \</span><br><span class="line">      \</span><br><span class="line">             ,;;;;;;;,</span><br><span class="line">            ;;;;;;;;;;;,</span><br><span class="line">           ;;;;;&#x27;_____;&#x27;</span><br><span class="line">           ;;;(/))))|((\</span><br><span class="line">           _;;((((((|))))</span><br><span class="line">          / |_\\\\\\\\\\\\</span><br><span class="line">     .--~(  \ ~))))))))))))</span><br><span class="line">    /     \  `\-(((((((((((\\</span><br><span class="line">    |    | `\   ) |\       /|)</span><br><span class="line">     |    |  `. _/  \_____/ |</span><br><span class="line">      |    , `\~            /</span><br><span class="line">       |    \  \           /</span><br><span class="line">      | `.   `\|          /</span><br><span class="line">      |   ~-   `\        /</span><br><span class="line">       \____~._/~ -_,   (\</span><br><span class="line">        |-----|\   \    &#x27;;;</span><br><span class="line">       |      | :;;;&#x27;     \</span><br><span class="line">      |  /    |            |</span><br><span class="line">      |       |            |</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>看，这是kiss的图像。<br>博主感觉自己受到了暴击。<br>咳咳，那么这个玩意儿主要用途(玩法)是什么呢？博主目前发现的最有用的玩法就是把命令写在.zshrc里(bash则是写在.bashrc)，然后每一次打开终端都受到一次暴击。不过说起来，这玩意儿搭配lolcat还挺好玩的…<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Linux </category>
+          
+          <category> 乱七八糟 </category>
+          
+          <category> Arch </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Flask屏幕截图</title>
+      <link href="2021/03/15/flask%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE/"/>
+      <url>2021/03/15/flask%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE/</url>
+      
+        <content type="html"><![CDATA[<p>没啥好说的，直接看代码吧。这次我写了详细的注释。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, make_response</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageGrab</span><br><span class="line"><span class="keyword">import</span> io</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&quot;/&quot;</span></span>)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">response</span>():</span></span><br><span class="line">    <span class="comment"># 截图</span></span><br><span class="line">    im = ImageGrab.grab()</span><br><span class="line">    <span class="comment"># 创建BytesIO对象</span></span><br><span class="line">    bio = io.BytesIO()</span><br><span class="line">    <span class="comment"># 把截的图存储进内存</span></span><br><span class="line">    im.save(bio, <span class="built_in">format</span>=<span class="string">&quot;png&quot;</span>)</span><br><span class="line">    <span class="comment"># 构建响应体</span></span><br><span class="line">    res = make_response(bio.getvalue())</span><br><span class="line">    <span class="comment"># 设置响应头, content-type声明了数据的类型，以便浏览器识别</span></span><br><span class="line">    res.headers[<span class="string">&quot;content-type&quot;</span>] = <span class="string">&quot;image/png&quot;</span></span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run(<span class="string">&quot;localhost&quot;</span>, <span class="number">7788</span>)</span><br></pre></td></tr></table></figure><p>不过关于res.headers[“content-type”] = “image/png”这段代码我要说一下，如果不加上这个键值对的话，浏览器说不定会把发送过来的二进制内容当作文本处理，从而让你的图片以文本的形式呈现出来(会显示出一堆乱码)。为什么我会知道这个知识点呢？这是一个因为没有深入了解浏览器工作机制而导致的悲伤的故事。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Python </category>
+          
+          <category> flask </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vim文档</title>
       <link href="2021/03/05/Vim%E6%96%87%E6%A1%A3/"/>
       <url>2021/03/05/Vim%E6%96%87%E6%A1%A3/</url>
