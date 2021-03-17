@@ -410,6 +410,54 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/03/17/flask%E9%99%90%E5%88%B6%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0/">
+        Flask限制访问次数
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        今天访问网站的时候发现访问的过于频繁被人限制访问次数了，于是我决定自己也玩玩限制次数。其实直接拿Redis实现就好，不过这里我就不用redis了，我用的是flask-limiter。文档在这里: FlaskLimiter。如果不想读英语的话，可以看一下这位博主写的Flask-Limit使用详细说明，很不错。
+我这里就只写简单的应用了。
+1234567891011121314151617181...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-17</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/flask/">flask</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/17/flask%E9%99%90%E5%88%B6%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/03/15/cowsay/">
         cowsay --萌萌的终端玩具
       </a>
@@ -828,59 +876,6 @@ NPM安装1npm install vue-router
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/02/22/ssh%E8%BF%9E%E6%8E%A5Termux/">
-        ssh连接Termux
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        参考博客电脑通过ssh登录到Termux – Moneys。
-先安装openssh:
-12apt updateapt install openssh
-然后启动sshd服务:
-1sshd
-然后配置登录密钥。如果电脑生成过密钥，可以跳过这一步：
-1ssh-keygen
-默认会生成在.ssh下，然后把生成的id_rsa.pub拷贝到手机里。注意，这一步的目的是要把文件拷贝进Termux。所以建议拷...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-02-22</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Termux/">Termux</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/02/22/ssh%E8%BF%9E%E6%8E%A5Termux/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -983,7 +978,7 @@ NPM安装1npm install vue-router
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(151)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(152)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1023,7 +1018,7 @@ NPM安装1npm install vue-router
           <li><a class="flat-box child"
             title="/categories/blog/Python/" href="/categories/blog/Python/"
             id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(45)</div></a></li>
+            ><div class='name'>Python</div><div class='badge'>(46)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"
@@ -1033,7 +1028,7 @@ NPM安装1npm install vue-router
           <li><a class="flat-box child"
             title="/categories/blog/Python/flask/" href="/categories/blog/Python/flask/"
             id="categoriesblogPythonflask"
-            ><div class='name'>flask</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>flask</div><div class='badge'>(5)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
