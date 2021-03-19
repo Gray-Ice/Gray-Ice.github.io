@@ -388,56 +388,6 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/12/31/Python%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-        python五大排序算法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>转载自<a target="_blank" rel="noopener" href="https://v3u.cn/">v3u.cn</a></p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>插入排序：插入排序的基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序；首先将第一个作为已经排好序的，然后每次从后的取出插入到前面并排序；</p>
-<p>时间复杂度：O(n²)</p>
-<p>空间复杂度：O(1)</p>
-<p>稳定性：稳定</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">insert_sort</span>(<span class="params">ilist</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(ilist)):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i):</span><br><span class="line">            <span class="keyword">if</span> ilist[i] &lt; ilist[j]:</span><br><span class="line">                ilist.insert(j, ilist.pop(i))</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> ilist</span><br></pre></td></tr></table></figure>
-<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Python%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
       <a href="/2020/12/31/Python%E7%94%9F%E6%88%90%E5%99%A8%E5%92%8C%E8%BF%AD%E4%BB%A3%E5%99%A8/">
         生成器和迭代器
       </a>
@@ -876,6 +826,52 @@
           </div>
         
       
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/change_keyword/">
+        替换关键词
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>今天闲着无聊(其实就是不想写web)，突然想到之前写博客时分类大小写搞错了找文件的艰辛，就决心写一个能够在当前目录下改变指定文件类型中关键字的脚本。那么先说一下思路吧。</p>
+<p>先获取当前目录下的所有文件名称，然后根据文件名来判断是否更改，并且在更改前将将要被更改的文件存进一个文件夹(其实就是备份啦)，之后替换关键词即可。</p>
+<p>那么下面是代码:
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/change_keyword/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
     
   </section>
   
@@ -985,7 +981,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(154)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(155)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1085,7 +1081,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/%E5%89%8D%E7%AB%AF/" href="/categories/blog/%E5%89%8D%E7%AB%AF/"
             id="categoriesblogE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>前端</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"
