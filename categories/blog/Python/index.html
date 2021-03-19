@@ -412,6 +412,51 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/03/19/jwt%E5%8A%A0%E5%AF%86/">
+        jwt加密
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> jwt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">payload = &#123;</span><br><span class="line">    <span class="comment"># 过期时间</span></span><br><span class="line">    <span class="string">&#x27;exp&#x27;</span>: <span class="built_in">int</span>((datetime.datetime.now() + datetime.timedelta(seconds=<span class="number">60</span>)).timestamp()),</span><br><span class="line">    <span class="string">&#x27;data&#x27;</span>: &#123;<span class="string">&#x27;uid&#x27;</span>: <span class="number">2</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line">encode_jwt = jwt.encode(payload, <span class="string">&#x27;qwe123&#x27;</span>, algorithm=<span class="string">&#x27;HS256&#x27;</span>)</span><br><span class="line">encode_str = <span class="built_in">str</span>(encode_jwt, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line">decode_jwt = jwt.decode(encode_str, <span class="string">&#x27;qwe123&#x27;</span>, algorithms=[<span class="string">&#x27;HS256&#x27;</span>])</span><br><span class="line">print(encode_str)</span><br><span class="line">print(encode_jwt)</span><br><span class="line">print(decode_jwt)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>在这之中，paylod中的exp是可选的，data也是可以直接写成:
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-19</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/19/jwt%E5%8A%A0%E5%AF%86/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/03/17/flask%E9%99%90%E5%88%B6%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0/">
         Flask限制访问次数
       </a>
@@ -814,56 +859,6 @@
       
         <div>
           <a class='readmore' href='/2020/12/31/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Python%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
-        python五大排序算法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>转载自<a target="_blank" rel="noopener" href="https://v3u.cn/">v3u.cn</a></p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>插入排序：插入排序的基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序；首先将第一个作为已经排好序的，然后每次从后的取出插入到前面并排序；</p>
-<p>时间复杂度：O(n²)</p>
-<p>空间复杂度：O(1)</p>
-<p>稳定性：稳定</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">insert_sort</span>(<span class="params">ilist</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(ilist)):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i):</span><br><span class="line">            <span class="keyword">if</span> ilist[i] &lt; ilist[j]:</span><br><span class="line">                ilist.insert(j, ilist.pop(i))</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> ilist</span><br></pre></td></tr></table></figure>
-<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Python%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/'>
             Read More
           </a>
         </div>

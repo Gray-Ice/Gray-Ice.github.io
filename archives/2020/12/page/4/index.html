@@ -673,51 +673,6 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/12/31/jwt%E5%8A%A0%E5%AF%86/">
-        jwt加密
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> jwt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">playload = &#123;</span><br><span class="line">    <span class="comment"># 过期时间</span></span><br><span class="line">    <span class="string">&#x27;exp&#x27;</span>: <span class="built_in">int</span>((datetime.datetime.now() + datetime.timedelta(seconds=<span class="number">60</span>)).timestamp()),</span><br><span class="line">    <span class="string">&#x27;data&#x27;</span>: &#123;<span class="string">&#x27;uid&#x27;</span>: <span class="number">2</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line">encode_jwt = jwt.encode(playload, <span class="string">&#x27;qwe123&#x27;</span>, algorithm=<span class="string">&#x27;HS256&#x27;</span>)</span><br><span class="line">encode_str = <span class="built_in">str</span>(encode_jwt, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line">decode_jwt = jwt.decode(encode_str, <span class="string">&#x27;qwe123&#x27;</span>, algorithms=[<span class="string">&#x27;HS256&#x27;</span>])</span><br><span class="line">print(encode_str)</span><br><span class="line">print(encode_jwt)</span><br><span class="line">print(decode_jwt)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>在这之中，playlod中的exp是可选的，data也是可以直接写成:
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/jwt%E5%8A%A0%E5%AF%86/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
       <a href="/2020/12/31/linuxQQ/">
         Arch Linux下使用LinuxQQ
       </a>
@@ -837,6 +792,57 @@
       
         <div>
           <a class='readmore' href='/2020/12/31/hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/Deepin%E5%AE%89%E8%A3%85docker/">
+        Deepin安装Docker
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>今天感觉好久没有踩坑了，心里有点不舒服，于是就打算在Deepin系统中装个Docker。一有这想法，我就动手干，果然我想要的坑就来了。</p>
+<p>首先，我参考了博客: <a target="_blank" rel="noopener" href="https://www.cnblogs.com/wh4am1/p/10263272.html">https://www.cnblogs.com/wh4am1/p/10263272.html</a>的内容，博主讲的很好，不过这里我还是说一下我安装的经过，如果有些地方大家也遇到了希望可以帮助到大家。</p>
+<p>这里我先讲一下我干了什么，我图省事一开始就执行了安装命令:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install docker-ce</span><br></pre></td></tr></table></figure>
+<p>然后突然看到了别人的博客，觉得自己的安装步骤不对(其实是根本没有往下看别人的博客)，我就拆卸了docker，这里很多人都是输入的:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove docker.io docker-engine</span><br></pre></td></tr></table></figure>
+<p>但是我输入之后告诉我没这个东西，我就将docker.io改成了docker.ce，然后果然成功拆卸了。</p>
+<p>然后按着步骤走:
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Deepin/">Deepin</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Deepin%E5%AE%89%E8%A3%85docker/'>
             Read More
           </a>
         </div>

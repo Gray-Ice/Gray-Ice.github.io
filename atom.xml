@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-19T07:35:27.746Z</updated>
+  <updated>2021-03-19T08:57:03.222Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jwt加密</title>
+    <link href="http://example.com/2021/03/19/jwt%E5%8A%A0%E5%AF%86/"/>
+    <id>http://example.com/2021/03/19/jwt%E5%8A%A0%E5%AF%86/</id>
+    <published>2021-03-19T08:57:03.222Z</published>
+    <updated>2021-03-19T08:57:03.222Z</updated>
+    
+    
+    <summary type="html">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; datetime&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; jwt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;payload = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 过期时间&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;exp&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;built_in&quot;&gt;int&lt;/span&gt;((datetime.datetime.now() + datetime.timedelta(seconds=&lt;span class=&quot;number&quot;&gt;60&lt;/span&gt;)).timestamp()),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;data&amp;#x27;&lt;/span&gt;: &amp;#123;&lt;span class=&quot;string&quot;&gt;&amp;#x27;uid&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;encode_jwt = jwt.encode(payload, &lt;span class=&quot;string&quot;&gt;&amp;#x27;qwe123&amp;#x27;&lt;/span&gt;, algorithm=&lt;span class=&quot;string&quot;&gt;&amp;#x27;HS256&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;encode_str = &lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;(encode_jwt, &lt;span class=&quot;string&quot;&gt;&amp;#x27;utf-8&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;decode_jwt = jwt.decode(encode_str, &lt;span class=&quot;string&quot;&gt;&amp;#x27;qwe123&amp;#x27;&lt;/span&gt;, algorithms=[&lt;span class=&quot;string&quot;&gt;&amp;#x27;HS256&amp;#x27;&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(encode_str)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(encode_jwt)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(decode_jwt)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在这之中，paylod中的exp是可选的，data也是可以直接写成:</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+    <category term="Django" scheme="http://example.com/tags/Django/"/>
+    
+    <category term="jwt" scheme="http://example.com/tags/jwt/"/>
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>vue-cli删除eslint</title>
@@ -1645,32 +1671,6 @@
     
     
     <category term="Linux命令" scheme="http://example.com/tags/Linux%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jwt加密</title>
-    <link href="http://example.com/2020/12/31/jwt%E5%8A%A0%E5%AF%86/"/>
-    <id>http://example.com/2020/12/31/jwt%E5%8A%A0%E5%AF%86/</id>
-    <published>2020-12-31T02:33:07.094Z</published>
-    <updated>2020-12-22T02:29:23.131Z</updated>
-    
-    
-    <summary type="html">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; datetime&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; jwt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;playload = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 过期时间&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;exp&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;built_in&quot;&gt;int&lt;/span&gt;((datetime.datetime.now() + datetime.timedelta(seconds=&lt;span class=&quot;number&quot;&gt;60&lt;/span&gt;)).timestamp()),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;data&amp;#x27;&lt;/span&gt;: &amp;#123;&lt;span class=&quot;string&quot;&gt;&amp;#x27;uid&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;encode_jwt = jwt.encode(playload, &lt;span class=&quot;string&quot;&gt;&amp;#x27;qwe123&amp;#x27;&lt;/span&gt;, algorithm=&lt;span class=&quot;string&quot;&gt;&amp;#x27;HS256&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;encode_str = &lt;span class=&quot;built_in&quot;&gt;str&lt;/span&gt;(encode_jwt, &lt;span class=&quot;string&quot;&gt;&amp;#x27;utf-8&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;decode_jwt = jwt.decode(encode_str, &lt;span class=&quot;string&quot;&gt;&amp;#x27;qwe123&amp;#x27;&lt;/span&gt;, algorithms=[&lt;span class=&quot;string&quot;&gt;&amp;#x27;HS256&amp;#x27;&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(encode_str)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(encode_jwt)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(decode_jwt)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;在这之中，playlod中的exp是可选的，data也是可以直接写成:</summary>
-    
-    
-    
-    <category term="blog" scheme="http://example.com/categories/blog/"/>
-    
-    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
-    
-    
-    <category term="Django" scheme="http://example.com/tags/Django/"/>
-    
-    <category term="jwt" scheme="http://example.com/tags/jwt/"/>
-    
-    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
     
   </entry>
   

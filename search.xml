@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>jwt加密</title>
+      <link href="2021/03/19/jwt%E5%8A%A0%E5%AF%86/"/>
+      <url>2021/03/19/jwt%E5%8A%A0%E5%AF%86/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> jwt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">payload = &#123;</span><br><span class="line">    <span class="comment"># 过期时间</span></span><br><span class="line">    <span class="string">&#x27;exp&#x27;</span>: <span class="built_in">int</span>((datetime.datetime.now() + datetime.timedelta(seconds=<span class="number">60</span>)).timestamp()),</span><br><span class="line">    <span class="string">&#x27;data&#x27;</span>: &#123;<span class="string">&#x27;uid&#x27;</span>: <span class="number">2</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line">encode_jwt = jwt.encode(payload, <span class="string">&#x27;qwe123&#x27;</span>, algorithm=<span class="string">&#x27;HS256&#x27;</span>)</span><br><span class="line">encode_str = <span class="built_in">str</span>(encode_jwt, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line">decode_jwt = jwt.decode(encode_str, <span class="string">&#x27;qwe123&#x27;</span>, algorithms=[<span class="string">&#x27;HS256&#x27;</span>])</span><br><span class="line">print(encode_str)</span><br><span class="line">print(encode_jwt)</span><br><span class="line">print(decode_jwt)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>在这之中，paylod中的exp是可选的，data也是可以直接写成:<a id="more"></a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;uid&#x27;</span>: <span class="number">2</span></span><br></pre></td></tr></table></figure><p>加上exp是为了设置一个过期时间，过了时间后，解码就解不出来了，会直接报错，没错，就是这么直接！</p><p>编码的时候，第一个参数是字典类型，第二个参数是密钥，第三个参数是加密方式。</p><p>encode之后会返回一条Byte类型的数据，然后将其转码，弄出一个utf-8编码的字符串。</p><p>接下来是解码，参数第一个填转码后的字符串，第二个填密钥，第三个要注意了，参数是列表形式，键名也不是编码时的algorithm，而是algorithms。加了个s，这里要看清楚，以免遭遇不测。解码之后就可以看到内容了。</p><p>再说一下Django+Vue时使用jwt的设计思路:</p><p>在用户成功登陆后就把jwt放在客户端，设置jwt会过期，在过期后使用户退出登陆，再次登陆获取新的jwt。</p><p>(2021/03/19)2.0.1版本的PyJWT与之前不同了，encode返回的直接就是字符串，所以上面的代码应该改为:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> jwt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">payload = &#123;</span><br><span class="line">    <span class="comment"># 过期时间</span></span><br><span class="line">    <span class="string">&#x27;exp&#x27;</span>: <span class="built_in">int</span>((datetime.datetime.now() + datetime.timedelta(seconds=<span class="number">60</span>)).timestamp()),</span><br><span class="line">    <span class="string">&#x27;data&#x27;</span>: &#123;<span class="string">&#x27;uid&#x27;</span>: <span class="number">2</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line">encode_jwt = jwt.encode(payload, <span class="string">&#x27;qwe123&#x27;</span>, algorithm=<span class="string">&#x27;HS256&#x27;</span>)</span><br><span class="line"></span><br><span class="line">decode_jwt = jwt.decode(encode_jwt, <span class="string">&#x27;qwe123&#x27;</span>, algorithms=[<span class="string">&#x27;HS256&#x27;</span>])</span><br><span class="line">print(encode_jwt)</span><br><span class="line">print(decode_jwt)</span><br></pre></td></tr></table></figure><p>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Django </tag>
+            
+            <tag> jwt </tag>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue-cli删除eslint</title>
       <link href="2021/03/19/vue_cli%E5%85%B3%E9%97%ADeslint/"/>
       <url>2021/03/19/vue_cli%E5%85%B3%E9%97%ADeslint/</url>
@@ -1736,37 +1767,6 @@
         <tags>
             
             <tag> Linux命令 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>jwt加密</title>
-      <link href="2020/12/31/jwt%E5%8A%A0%E5%AF%86/"/>
-      <url>2020/12/31/jwt%E5%8A%A0%E5%AF%86/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> jwt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">playload = &#123;</span><br><span class="line">    <span class="comment"># 过期时间</span></span><br><span class="line">    <span class="string">&#x27;exp&#x27;</span>: <span class="built_in">int</span>((datetime.datetime.now() + datetime.timedelta(seconds=<span class="number">60</span>)).timestamp()),</span><br><span class="line">    <span class="string">&#x27;data&#x27;</span>: &#123;<span class="string">&#x27;uid&#x27;</span>: <span class="number">2</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line">encode_jwt = jwt.encode(playload, <span class="string">&#x27;qwe123&#x27;</span>, algorithm=<span class="string">&#x27;HS256&#x27;</span>)</span><br><span class="line">encode_str = <span class="built_in">str</span>(encode_jwt, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line">decode_jwt = jwt.decode(encode_str, <span class="string">&#x27;qwe123&#x27;</span>, algorithms=[<span class="string">&#x27;HS256&#x27;</span>])</span><br><span class="line">print(encode_str)</span><br><span class="line">print(encode_jwt)</span><br><span class="line">print(decode_jwt)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>在这之中，playlod中的exp是可选的，data也是可以直接写成:<a id="more"></a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;uid&#x27;</span>: <span class="number">2</span></span><br></pre></td></tr></table></figure><p>加上exp是为了设置一个过期时间，过了时间后，解码就解不出来了，会直接报错，没错，就是这么直接！</p><p>编码的时候，第一个参数是字典类型，第二个参数是密钥，第三个参数是加密方式。</p><p>encode之后会返回一条Byte类型的数据，然后将其转码，弄出一个utf-8编码的字符串。</p><p>接下来是解码，参数第一个填转码后的字符串，第二个填密钥，第三个要注意了，参数是列表形式，键名也不是编码时的algorithm，而是algorithms。加了个s，这里要看清楚，以免遭遇不测。解码之后就可以看到内容了。</p><p>再说一下Django+Vue时使用jwt的设计思路:</p><p>在用户成功登陆后就把jwt放在客户端，设置jwt会过期，在过期后使用户退出登陆，再次登陆获取新的jwt。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> blog </category>
-          
-          <category> Python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Django </tag>
-            
-            <tag> jwt </tag>
-            
-            <tag> Vue </tag>
             
         </tags>
       
