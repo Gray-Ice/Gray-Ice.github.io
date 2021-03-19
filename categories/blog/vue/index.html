@@ -412,6 +412,100 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/03/19/vue_cli%E5%85%B3%E9%97%ADeslint/">
+        vue-cli关闭eslint
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Eslint有的时候会让人感到十分烦人，比如你在index.html导入了js，到组件上用的时候Eslint偏偏说你没定义，所以这篇博客记录怎么关掉eslint。我的目录下没有.eslintrc，也没有build文件夹，那么eslint的配置文件在哪呢？它在package.json中。在package.json中找到：
+1234567891011121314&quot;eslintConfi...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-19</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/19/vue_cli%E5%85%B3%E9%97%ADeslint/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/19/vue_cli%E4%BD%BF%E7%94%A8layui/">
+        vue-cli使用layui
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        先clone下来layui，github地址:layui。然后把layui/src下的全部文件复制到vue项目的public文件夹下，之后在index.html中引入css和js文件:
+12&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/layui.css&quot;&gt;&lt;script type=&quot;text/jav...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-19</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/19/vue_cli%E4%BD%BF%E7%94%A8layui/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/">
         Vue安装路由
       </a>
@@ -768,99 +862,6 @@ NPM安装1npm install vue-router
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/07/23/%E9%83%A8%E7%BD%B2vue%E5%90%8E%E6%B2%A1%E6%9C%89css%E6%A0%B7%E5%BC%8F/">
-        部署nginx+vue后没有css样式
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>昨晚部署了一波vue,在本地使用”npm run build”打包后使用scp命令发送到了服务器的根目录，然后配置了服务器的nginx,因为我的服务器是ubuntu，所以用apt-get安装的nginx目录为/etc/nginx。我配置了nginx.conf文件，具体配置如下:</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-07-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/07/23/%E9%83%A8%E7%BD%B2vue%E5%90%8E%E6%B2%A1%E6%9C%89css%E6%A0%B7%E5%BC%8F/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/07/22/vue_build%E5%90%8E%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD/">
-        本地运行vuebuild后的项目
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        安装一个包:
-1npm install -g serve
-然后在vue根目录下运行serve -s dist来运行项目，一般端口会开在localhost:5000。访问这个端口，就可以看到你的项目了。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-07-22</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/07/22/vue_build%E5%90%8E%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -964,7 +965,7 @@ NPM安装1npm install vue-router
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(152)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(154)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1054,7 +1055,7 @@ NPM安装1npm install vue-router
           <li><a class="flat-box child"
             title="/categories/blog/vue/" href="/categories/blog/vue/"
             id="categoriesblogvue"
-            ><div class='name'>vue</div><div class='badge'>(14)</div></a></li>
+            ><div class='name'>vue</div><div class='badge'>(16)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"

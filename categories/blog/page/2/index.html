@@ -388,6 +388,108 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/">
+        Vue安装路由
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        由于我不想到时候再去官网看(其实是怕忘了官网网址), 于是乎先记在博客上。官网网址: Vue Router 中文文档。
+NPM安装1npm install vue-router
+如果在一个模块化工程中使用它，必须要通过 Vue.use() 明确地安装路由功能：
+1234import Vue from &#39;vue&#39;import VueRouter from &#39;vue-ro...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-02-25</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/02/25/vue%E5%AE%89%E8%A3%85%E8%B7%AF%E7%94%B1/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/02/22/ssh%E8%BF%9E%E6%8E%A5Termux/">
+        ssh连接Termux
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        参考博客电脑通过ssh登录到Termux – Moneys。
+先安装openssh:
+12apt updateapt install openssh
+然后启动sshd服务:
+1sshd
+然后配置登录密钥。如果电脑生成过密钥，可以跳过这一步：
+1ssh-keygen
+默认会生成在.ssh下，然后把生成的id_rsa.pub拷贝到手机里。注意，这一步的目的是要把文件拷贝进Termux。所以建议拷...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-02-22</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Termux/">Termux</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/02/22/ssh%E8%BF%9E%E6%8E%A5Termux/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/02/22/termux%E8%8E%B7%E5%BE%97%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90/">
         Termux获得文件访问权限
       </a>
@@ -750,99 +852,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/02/07/cpp%E5%AE%89%E8%A3%85mysql++/">
-        Linux安装mysql++
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>昨天晚上就想拿C++连接Mysql了，今天一早上就起来尝试，终于弄明白了怎么安装(顺便还给自己补了一波cpp的知识)。<br>下面是安装方法:</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-02-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/02/07/cpp%E5%AE%89%E8%A3%85mysql++/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/02/05/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/">
-        使用vim编写C语言文件
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        借鉴自https://blog.csdn.net/u011182346/article/details/84075246。1.安装gcc，不会安装的话建议百度。2.在终端命令行中输入:
-1vim test.c
-这条命令的作用是创建或编辑test.c文件。然后在其中输入c语言代码，例如:
-123456#include &lt;stdio.h&gt;int main()&#123;printf(...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-02-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/02/05/vim%E7%BC%96%E8%AF%91C%E8%AF%AD%E8%A8%80/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -952,7 +961,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(152)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(154)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1042,7 +1051,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/vue/" href="/categories/blog/vue/"
             id="categoriesblogvue"
-            ><div class='name'>vue</div><div class='badge'>(14)</div></a></li>
+            ><div class='name'>vue</div><div class='badge'>(16)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
