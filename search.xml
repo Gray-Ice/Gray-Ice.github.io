@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>vue-cli关闭eslint</title>
+      <title>vue-cli删除eslint</title>
       <link href="2021/03/19/vue_cli%E5%85%B3%E9%97%ADeslint/"/>
       <url>2021/03/19/vue_cli%E5%85%B3%E9%97%ADeslint/</url>
       
-        <content type="html"><![CDATA[<p>Eslint有的时候会让人感到十分烦人，比如你在index.html导入了js，到组件上用的时候Eslint偏偏说你没定义，所以这篇博客记录怎么关掉eslint。<br>我的目录下没有.eslintrc，也没有build文件夹，那么eslint的配置文件在哪呢？它在package.json中。<br>在package.json中找到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&quot;eslintConfig&quot;: &#123;</span><br><span class="line">  &quot;root&quot;: true,</span><br><span class="line">  &quot;env&quot;: &#123;</span><br><span class="line">    &quot;node&quot;: true</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;extends&quot;: [</span><br><span class="line">    &quot;plugin:vue&#x2F;essential&quot;,</span><br><span class="line">    &quot;eslint:recommended&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;parserOptions&quot;: &#123;</span><br><span class="line">    &quot;parser&quot;: &quot;babel-eslint&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;rules&quot;: &#123;&#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><p>然后删除掉这段内容就好了。<br>本篇完。</p>]]></content>
+        <content type="html"><![CDATA[<p>多亏这个了<a href="https://www.coder.work/article/1327116">vue.js - 如何在vue cli 3生成的项目中完成删除eslint的操作？</a>。<br>Eslint有的时候会让人感到十分烦人，比如你在index.html导入了js，到组件上用的时候Eslint偏偏说你没定义，所以这篇博客记录怎么删除eslint。<br>在package.json中找到所有和eslint有关的东西，删除掉，然后运行npm i。然后重启项目，就没有eslint来打扰你了。<br>本篇完。</p>]]></content>
       
       
       <categories>

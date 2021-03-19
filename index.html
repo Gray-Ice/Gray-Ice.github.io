@@ -725,15 +725,14 @@
     
     <h2 class="article-title" >
       <a href="/2021/03/19/vue_cli%E5%85%B3%E9%97%ADeslint/">
-        vue-cli关闭eslint
+        vue-cli删除eslint
       </a>
     </h2>
   
   <div class='md'>
     
       
-        Eslint有的时候会让人感到十分烦人，比如你在index.html导入了js，到组件上用的时候Eslint偏偏说你没定义，所以这篇博客记录怎么关掉eslint。我的目录下没有.eslintrc，也没有build文件夹，那么eslint的配置文件在哪呢？它在package.json中。在package.json中找到：
-1234567891011121314&quot;eslintConfi...
+        多亏这个了vue.js - 如何在vue cli 3生成的项目中完成删除eslint的操作？。Eslint有的时候会让人感到十分烦人，比如你在index.html导入了js，到组件上用的时候Eslint偏偏说你没定义，所以这篇博客记录怎么删除eslint。在package.json中找到所有和eslint有关的东西，删除掉，然后运行npm i。然后重启项目，就没有eslint来打扰你了。本篇...
       
     
   </div>
