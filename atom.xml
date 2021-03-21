@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-21T05:33:46.865Z</updated>
+  <updated>2021-03-21T11:33:18.192Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>g++报错will be initialized after</title>
+    <link href="http://example.com/2021/03/21/cpp_will_be_init/"/>
+    <id>http://example.com/2021/03/21/cpp_will_be_init/</id>
+    <published>2021-03-21T11:22:00.000Z</published>
+    <updated>2021-03-21T11:33:18.192Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>vue组件导入js文件中的函数</title>
@@ -605,7 +627,7 @@
     <link href="http://example.com/2021/02/05/vim%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
     <id>http://example.com/2021/02/05/vim%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/</id>
     <published>2021-02-05T02:40:00.000Z</published>
-    <updated>2021-02-05T03:19:13.159Z</updated>
+    <updated>2021-03-21T06:05:40.648Z</updated>
     
     
       
