@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-20T11:04:23.652Z</updated>
+  <updated>2021-03-21T05:33:46.865Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue组件导入js文件中的函数</title>
+    <link href="http://example.com/2021/03/21/vue%E7%BB%84%E4%BB%B6%E5%AF%BC%E5%85%A5js%E6%96%87%E4%BB%B6%E5%87%BD%E6%95%B0/"/>
+    <id>http://example.com/2021/03/21/vue%E7%BB%84%E4%BB%B6%E5%AF%BC%E5%85%A5js%E6%96%87%E4%BB%B6%E5%87%BD%E6%95%B0/</id>
+    <published>2021-03-21T05:10:00.000Z</published>
+    <updated>2021-03-21T05:33:46.865Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>requests报错SSLError</title>

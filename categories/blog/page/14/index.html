@@ -388,6 +388,58 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/07/15/Djangomysql%E7%89%88%E6%9C%AC%E4%BD%8E/">
+        解决django_makemigrations时提示版本过低
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        参考自mysql异常处理。
+在init.py文件夹里添加一行:
+1pymysql.version_info = (8, 0, 20, &#x27;final&#x27;, 0)
+再次执行:
+1python3 manage.py makemigrations
+即可成功。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-07-15</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/07/15/Djangomysql%E7%89%88%E6%9C%AC%E4%BD%8E/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/07/15/DjangoModelserializer%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5/">
         DjangoModelSerializer返回指定字段
       </a>
@@ -797,54 +849,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/04/29/PIL%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%B0%B4%E5%8D%B0/">
-        使用PIL添加中文水印
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>原图:</p>
-<img src="/PIL%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%B0%B4%E5%8D%B0/image-20200429153309963.png" class="lazyload" data-srcset="/PIL%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%B0%B4%E5%8D%B0/image-20200429153309963.png" srcset="data:image/png;base64,666" class="[image-20200429153309963] lazyload">
-
-
-<p>加水印后:
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-04-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/04/29/PIL%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%B0%B4%E5%8D%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -954,7 +958,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(156)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(157)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1044,7 +1048,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/vue/" href="/categories/blog/vue/"
             id="categoriesblogvue"
-            ><div class='name'>vue</div><div class='badge'>(16)</div></a></li>
+            ><div class='name'>vue</div><div class='badge'>(17)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
