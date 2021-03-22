@@ -412,7 +412,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Mar 22, 2021</p>
+    <p>发布于：Mar 21, 2021</p>
   </a>
 </div>
 
@@ -423,7 +423,7 @@
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="vim交换CAPSLOCK和ESC" data-path="/2021/03/22/vim%E4%BA%A4%E6%8D%A2CAPSLOCK%E5%92%8CESC/">
+      <div id="lc-pv" data-title="vim交换CAPSLOCK和ESC" data-path="/2021/03/21/vim%E4%BA%A4%E6%8D%A2CAPSLOCK%E5%92%8CESC/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -440,21 +440,21 @@
 
 
   
-  <p>本文只讲Linux下的方法。<br>关于把CAPSLOCK映射成ESC键，网上有各种各样的教程。总结起来无非就是三种。</p>
-<h1 id="1-在终端启动时执行"><a href="#1-在终端启动时执行" class="headerlink" title="1.在终端启动时执行"></a>1.在终端启动时执行</h1><p>把这段代码写进shell的配置文件:</p>
+  <h1 id="本文只讲Linux下的方法。"><a href="#本文只讲Linux下的方法。" class="headerlink" title="本文只讲Linux下的方法。"></a>本文只讲Linux下的方法。</h1><p>关于把CAPSLOCK映射成ESC键，网上有各种各样的教程。总结起来无非就是三种。</p>
+<h2 id="1-在终端启动时执行"><a href="#1-在终端启动时执行" class="headerlink" title="1.在终端启动时执行"></a>1.在终端启动时执行</h2><p>把这段代码写进shell的配置文件:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmodmap -e &#x27;clear Lock&#x27; -e &#x27;keycode 0x42 = Escape&#x27;</span><br></pre></td></tr></table></figure>
 <p>然后在打开终端的时候就会自动删除CAPSLOCK并将其换成Esc。这么做需要有xorg-xmodmap这个包才能行。<br>这种方法有一个缺点: 打开终端时会卡几秒钟（推测是因为要执行xmodmap命令)。</p>
-<h1 id="2-在vim启动时执行"><a href="#2-在vim启动时执行" class="headerlink" title="2.在vim启动时执行"></a>2.在vim启动时执行</h1><p>把这段代码写入.vimrc中:</p>
+<h2 id="2-在vim启动时执行"><a href="#2-在vim启动时执行" class="headerlink" title="2.在vim启动时执行"></a>2.在vim启动时执行</h2><p>把这段代码写入.vimrc中:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">au VimEnter * !xmodmap -e &#39;clear Lock&#39; -e &#39;keycode 0x42 &#x3D; Escape&#39;</span><br><span class="line">au VimLeave * !xmodmap -e &#39;clear Lock&#39; -e &#39;keycode 0x42 &#x3D; Caps_Lock&#39;</span><br></pre></td></tr></table></figure>
 <p>这样在启动vim时会把CAPSLOCK换成ESC，在离开vim后会换回来。<br>不过这样做缺点也很明显: 打开vim时和离开vim时都会卡个几秒钟。同上一样需要xorg-xmodmap。</p>
-<h1 id="3-配置Xorg映射表"><a href="#3-配置Xorg映射表" class="headerlink" title="3.配置Xorg映射表"></a>3.配置Xorg映射表</h1><p>关于这个映射表是什么，Arch Wiki上有详细的解释: <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Xmodmap_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">Xmodmap</a>。<del>此时让我们再次高呼Arch Wiki永远滴神。</del><br>那么这一步应该干什么？首先复制以下代码:</p>
+<h2 id="3-配置Xorg映射表"><a href="#3-配置Xorg映射表" class="headerlink" title="3.配置Xorg映射表"></a>3.配置Xorg映射表</h2><p>关于这个映射表是什么，Arch Wiki上有详细的解释: <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Xmodmap_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">Xmodmap</a>。<del>此时让我们再次高呼Arch Wiki永远滴神。</del><br>那么这一步应该干什么？首先复制以下代码:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">clear Lock</span><br><span class="line">keycode 0x42 &#x3D; Escape</span><br></pre></td></tr></table></figure>
 <p>然后按照Arch Wiki上推荐的方法，在Home目录下创建一个.Xmodmap文件(为了防止有读者不明白Home目录是啥，先解释以下，Home即是$HOME。如果还不懂，Home即是~。即家目录。而不是/home或者~/home)。<br>然后把上面的代码复制进~/.Xmodmap里。<br>然后编辑~/.xinitrc，在里面加入这样一段代码:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if [ -f $HOME/.Xmodmap ]; then</span><br><span class="line">/usr/bin/xmodmap $HOME/.Xmodmap</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
 <p>我来翻译一下: 如果Home目录下存在这个叫做.Xmodmap的文件，那么执行/usr/bin/xmodmap $HOME/.Xmodmap。/usr/bin/xmodmap是xmodmap可执行文件的路径，$HOME/.Xmodmap是参数。所以其实我们也可以在.xinitrc中直接这么写:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmodmap -e &#x27;clear Lock&#x27; -e &#x27;keycode 0x42 = Escape&#x27;</span><br></pre></td></tr></table></figure>
 <p>那么为什么不这样写呢？因为这样写没有逼格。。。<br>不过同上面的几点一样，想要让这段代码正常执行，你同样需要安装xorg-xmodmap包(毕竟这条命令本身就是依靠xmodmap执行的)。<br>然后重启xorg，因为.xinitrc是在xorg启动后执行的，所以一定要重启xorg。那么怎么重启xorg呢？直接关机重启就行。。。<br>重启之后可以按一下CAPSLOCK键，键盘指示灯没有亮起就算成功。</p>
-<h1 id="4-使用KDE自带的键位改写"><a href="#4-使用KDE自带的键位改写" class="headerlink" title="4.使用KDE自带的键位改写"></a>4.使用KDE自带的键位改写</h1><p>此时，让我们怀着虔诚的心，大声颂扬<del>BugDE</del>KDE的名字。<br>KDE的设置里，有能够更改CAPSLOCK键功能的功能。其中一条就是CAPSLOCK与ESC键互换。怎么个互换法呢？就是字面上的意思，即ESC变为CAPSLOCK，CAPSLOCK变为ESC。<br>那么怎么打开这个设置呢？<br>打开KDE的系统设置，找到”硬件”下的”输入设备”，单击”输入设备”，单击”键盘”，单击”高级”，勾选”配置键盘选项”，找到”大写锁定行为”，打开”大写锁定行为”的下拉列表，找到”交换ESC和大写锁定”，勾选上，单击右下角的”应用”。<br>然后你的ESC就和CAPS互换了。<br>不过我也不知道这个方法需不需要xorg-xmodmap这个包。</p>
+<h2 id="4-使用KDE自带的键位改写"><a href="#4-使用KDE自带的键位改写" class="headerlink" title="4.使用KDE自带的键位改写"></a>4.使用KDE自带的键位改写</h2><p>此时，让我们怀着虔诚的心，大声颂扬<del>BugDE</del>KDE的名字。<br>KDE的设置里，有能够更改CAPSLOCK键功能的功能。其中一条就是CAPSLOCK与ESC键互换。怎么个互换法呢？就是字面上的意思，即ESC变为CAPSLOCK，CAPSLOCK变为ESC。<br>那么怎么打开这个设置呢？<br>打开KDE的系统设置，找到”硬件”下的”输入设备”，单击”输入设备”，单击”键盘”，单击”高级”，勾选”配置键盘选项”，找到”大写锁定行为”，打开”大写锁定行为”的下拉列表，找到”交换ESC和大写锁定”，勾选上，单击右下角的”应用”。<br>然后你的ESC就和CAPS互换了。<br>不过我也不知道这个方法需不需要xorg-xmodmap这个包。</p>
 <p>那么本篇博客的内容到这里就结束了，别看这次的篇幅这么短，写下来可是花费了一番功夫。<br>也许有的朋友会疑惑我为什么会在HOME那里写的那么详细，这是我怕以后我推荐小白看我的博客时看的稀里糊涂的(绝不是因为我当年就把家目录当成/home和~/home从而勾起了回忆)。<br>那么，本篇完。</p>
 
   
@@ -475,7 +475,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-22T11:57:47+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-22T12:42:12+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Mar 22, 2021</p>
@@ -500,7 +500,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/03/22/vim%E4%BA%A4%E6%8D%A2CAPSLOCK%E5%92%8CESC/&title=vim交换CAPSLOCK和ESC - Gray-Ice&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/03/21/vim%E4%BA%A4%E6%8D%A2CAPSLOCK%E5%92%8CESC/&title=vim交换CAPSLOCK和ESC - Gray-Ice&summary="
           
           >
           
@@ -512,7 +512,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/03/22/vim%E4%BA%A4%E6%8D%A2CAPSLOCK%E5%92%8CESC/&title=vim交换CAPSLOCK和ESC - Gray-Ice&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/03/21/vim%E4%BA%A4%E6%8D%A2CAPSLOCK%E5%92%8CESC/&title=vim交换CAPSLOCK和ESC - Gray-Ice&summary="
           
           >
           
@@ -524,7 +524,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/03/22/vim%E4%BA%A4%E6%8D%A2CAPSLOCK%E5%92%8CESC/&title=vim交换CAPSLOCK和ESC - Gray-Ice&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/03/21/vim%E4%BA%A4%E6%8D%A2CAPSLOCK%E5%92%8CESC/&title=vim交换CAPSLOCK和ESC - Gray-Ice&summary="
           
           >
           
@@ -599,7 +599,7 @@
 
 
     <div class='content'>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9C%A8%E7%BB%88%E7%AB%AF%E5%90%AF%E5%8A%A8%E6%97%B6%E6%89%A7%E8%A1%8C"><span class="toc-text">1.在终端启动时执行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%9C%A8vim%E5%90%AF%E5%8A%A8%E6%97%B6%E6%89%A7%E8%A1%8C"><span class="toc-text">2.在vim启动时执行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AEXorg%E6%98%A0%E5%B0%84%E8%A1%A8"><span class="toc-text">3.配置Xorg映射表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E4%BD%BF%E7%94%A8KDE%E8%87%AA%E5%B8%A6%E7%9A%84%E9%94%AE%E4%BD%8D%E6%94%B9%E5%86%99"><span class="toc-text">4.使用KDE自带的键位改写</span></a></li></ol>
     </div>
   </section>
 
