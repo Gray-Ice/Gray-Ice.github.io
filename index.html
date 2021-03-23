@@ -721,9 +721,156 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/23/Qt%E5%88%9B%E5%BB%BA%E7%8A%B6%E6%80%81%E6%A0%8F/">
+        Qt创建状态栏
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        书接前文(不知道前文是什么的可以在我博客的搜索框里搜索”Qt创建菜单栏”)，这次我们来创建状态栏，代码还用上文的代码。在本文中我只改变mainwindow.cpp这一个文件。那么先看代码吧:
+1234567891011121314151617181920212223242526#include &quot;mainwindow.h&quot;#include &lt;QMenuBar&gt;...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-23</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/23/Qt%E5%88%9B%E5%BB%BA%E7%8A%B6%E6%80%81%E6%A0%8F/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/23/Qt%E5%88%9B%E5%BB%BA%E8%8F%9C%E5%8D%95%E6%A0%8F/">
+        Qt创建菜单栏
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Qt创建菜单栏本篇博文讲菜单栏的创建以及添加子菜单和选项(我也不知道这个翻译成什么好，请原谅野生自学者的学识浅薄)。先说下我的开发环境，我的操作系统是Arch Linux，使用的桌面是KDE，Qt版本是5.9.9。那么首先是创建菜单，这里我们需要一个继承了QMainWindow类的类，这里我是用Qt Creator创建的QMainWindow项目。那么这是我用Qt Creator创建的项目的...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-23</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/23/Qt%E5%88%9B%E5%BB%BA%E8%8F%9C%E5%8D%95%E6%A0%8F/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/23/QT%E8%87%AA%E5%8A%A8%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/">
+        QT自动内存回收
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        本博文并不会讲的很全，因为博主也是刚知道还有这么回事。在Qt中，QObject是顶层对象，当Qt程序关闭的时候，QOject对象会被自动释放掉。而因为QObject是顶层对象，所以其所有派生类在Qt程序关闭的时候都会被自动释放掉。 –这段话是我从别人的博客里抄来的。
+实际的应用中，在一个动态分配的类指定了父对象后，其会被自动释放掉。但是如果没有指定父对象，则其不会被释放。
+举个例子，我定义一...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-23</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/23/QT%E8%87%AA%E5%8A%A8%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -1055,148 +1202,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/17/flask%E9%99%90%E5%88%B6%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0/">
-        Flask限制访问次数
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        今天访问网站的时候发现访问的过于频繁被人限制访问次数了，于是我决定自己也玩玩限制次数。其实直接拿Redis实现就好，不过这里我就不用redis了，我用的是flask-limiter。文档在这里: FlaskLimiter。如果不想读英语的话，可以看一下这位博主写的Flask-Limit使用详细说明，很不错。
-我这里就只写简单的应用了。
-1234567891011121314151617181...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-17</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/flask/">flask</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/17/flask%E9%99%90%E5%88%B6%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/15/cowsay/">
-        cowsay --萌萌的终端玩具
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        cowsay是我在昨天和群友唠嗑时发现的好玩的东西。那么cowsay是什么？cowsay是一个能够输出数行文本的工具(玩具?)。先看看它的一个输出:
-1234567891011121314151617181920╭─fire@butterfly ~/volantis_try/source/_posts  ‹master*› ╰─➤  cowsay -f stegosaurus hello  ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-15</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Arch/">Arch</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a><span class="sep"></span><a class="category-link" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/">乱七八糟</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/15/cowsay/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/15/flask%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE/">
-        Flask屏幕截图
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        没啥好说的，直接看代码吧。这次我写了详细的注释。
-123456789101112131415161718192021222324from flask import Flask, make_responsefrom PIL import ImageGrabimport ioapp = Flask(__name__)@app.route(&quot;/&quot;)def response():...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-15</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/flask/">flask</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/15/flask%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -1205,7 +1210,7 @@
       <div class="prev-next">
         
         <p class="current">
-          1 / 17
+          1 / 18
         </p>
         
           <a class="next" rel="next" href="/page/2/">
@@ -1298,7 +1303,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(159)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(162)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1323,7 +1328,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
             id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(7)</div></a></li>
+            ><div class='name'>Cpp</div><div class='badge'>(10)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
+            id="categoriesblogCppQt"
+            ><div class='name'>Qt</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"
