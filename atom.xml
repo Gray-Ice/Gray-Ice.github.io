@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-24T00:34:41.913Z</updated>
+  <updated>2021-03-24T14:52:20.516Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QtQtimer的使用</title>
+    <link href="http://example.com/2021/03/24/QtQTimer/"/>
+    <id>http://example.com/2021/03/24/QtQTimer/</id>
+    <published>2021-03-24T14:52:20.516Z</published>
+    <updated>2021-03-24T14:52:20.516Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    <category term="Qt" scheme="http://example.com/categories/blog/Cpp/Qt/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>linux下录制gif软件</title>
+    <link href="http://example.com/2021/03/24/linux%E4%B8%8B%E5%BD%95gif%E8%BD%AF%E4%BB%B6/"/>
+    <id>http://example.com/2021/03/24/linux%E4%B8%8B%E5%BD%95gif%E8%BD%AF%E4%BB%B6/</id>
+    <published>2021-03-24T00:59:00.000Z</published>
+    <updated>2021-03-24T01:05:45.278Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Linux" scheme="http://example.com/categories/blog/Linux/"/>
+    
+    <category term="Arch" scheme="http://example.com/categories/blog/Arch/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Qt创建工具栏</title>
