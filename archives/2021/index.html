@@ -410,7 +410,106 @@
   
     
     <h2 class="article-title" >
-      <a href="/2021/03/24/QtQTimer/">
+      <a href="/2021/03/26/Qt%E8%AE%A1%E6%97%B6%E5%99%A8%E4%BA%8B%E4%BB%B6/">
+        Qt计时器事件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        不多说，直入主题。想要启用计时器事件，自然需要先在头文件里定义了:
+12protected:    void timerEvent(QTimerEvent *e);
+可以通过在构造函数里调用startTimer来根据设置的触发时间来触发计时器事件:
+1startTimer(1000);  // 单位毫秒
+比如这里我设置的就是每隔一秒触发一次。不过，一个类可以设置多个计时器，如:
+12star...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-26</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/26/Qt%E8%AE%A1%E6%97%B6%E5%99%A8%E4%BA%8B%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/26/QtQWidget%E8%A7%A6%E5%8F%91%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/">
+        QtQwidget触发键盘事件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        今天跟着Qt教程走的时候发现教程里可以触发键盘事件(如keyPressEvent)，但是我不可以，于是一番谷歌后找到了这个博客:检测按键输入及解决无法响应方向键问题。当然你也可以直接看我博客。这个问题似乎是所有QWidget的派生类都有的，那么如何解决它呢？可以在类的构造函数里加一条:
+1setFocusPolicy(Qt::ClickFocus);
+该函数可以设置focus策略。然后Qt:...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-26</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/26/QtQWidget%E8%A7%A6%E5%8F%91%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/26/QtQTimer/">
         QtQtimer的使用
       </a>
     </h2>
@@ -427,7 +526,7 @@
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-03-24</time>
+        <time>2021-03-26</time>
         
           <span class="dot"></span>
           <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
@@ -435,7 +534,54 @@
       </div>
       
         <div>
-          <a class='readmore' href='/2021/03/24/QtQTimer/'>
+          <a class='readmore' href='/2021/03/26/QtQTimer/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/26/Qt%E6%8E%A7%E4%BB%B6%E8%AE%BE%E7%BD%AE%E9%BB%98%E8%AE%A4%E8%BF%BD%E8%B8%AA%E9%BC%A0%E6%A0%87/">
+        Qt控件设置默认追踪鼠标
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        先来看一下只使用mouseMoveEvent()而不设置默认追踪鼠标的效果。我的mouseMoveEvent是这么写的:
+1234567void MyLabel::mouseMoveEvent(QMouseEvent *ev)&#123;    int x = ev-&gt;x();    int y = ev-&gt;y();    QString qs = QString(&quot;&...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-26</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/26/Qt%E6%8E%A7%E4%BB%B6%E8%AE%BE%E7%BD%AE%E9%BB%98%E8%AE%A4%E8%BF%BD%E8%B8%AA%E9%BC%A0%E6%A0%87/'>
             Read More
           </a>
         </div>
@@ -734,147 +880,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/21/vue%E7%BB%84%E4%BB%B6%E5%AF%BC%E5%85%A5js%E6%96%87%E4%BB%B6%E5%87%BD%E6%95%B0/">
-        vue组件导入js文件中的函数
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        可能这个问题对于前端的朋友们来说很简单，但是对于我这个半吊子前端来说着实有点难度，所以我就记录下来了。我有一个名为dev_helper.js的文件，里面定义了一个函数:
-123456789101112131415161718192021222324252627282930import axios from &#x27;axios&#x27;export function CheckToken...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/21/vue%E7%BB%84%E4%BB%B6%E5%AF%BC%E5%85%A5js%E6%96%87%E4%BB%B6%E5%87%BD%E6%95%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/20/requests%E8%AF%B7%E6%B1%82ssl%E6%8A%A5%E9%94%99/">
-        requests报错SSLError
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        参考python request 请求https 挂代理报错。这是我在挂了代理后用requests请求Youtube时发生的错误，报错：
-1requests.exceptions.SSLError: HTTPSConnectionPool(host=&#x27;www.youtube.com&#x27;, port=443): Max retries exceeded with url: /...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/20/requests%E8%AF%B7%E6%B1%82ssl%E6%8A%A5%E9%94%99/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/19/%E5%8E%9F%E7%94%9Fjs%E5%A2%9E%E5%88%A0class/">
-        原生js增删class
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        今天是沉迷前端无法自拔的一天…那么本篇文章要说的是js增删class。参考自原生js增加或者删除class。并在MDN上查到了文档:Element.classList。Html5增加了classList，MDN上是这么写的:Element.classList 是一个只读属性，返回一个元素的类属性的实时 DOMTokenList 集合。语法:
-1const elementClasses = e...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/%E5%89%8D%E7%AB%AF/">前端</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/19/%E5%8E%9F%E7%94%9Fjs%E5%A2%9E%E5%88%A0class/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -977,7 +982,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(164)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(167)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1002,12 +1007,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
             id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(11)</div></a></li>
+            ><div class='name'>Cpp</div><div class='badge'>(14)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
             id="categoriesblogCppQt"
-            ><div class='name'>Qt</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>Qt</div><div class='badge'>(7)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"
