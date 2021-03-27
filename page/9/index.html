@@ -387,6 +387,105 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/Linux%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/">
+        Linux下的性能检测工具
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这是一个叫做htop的工具，我看着还挺好用的，今天就来记录一波。首先，安装软件包:
+1pacman -S htop
+在终端输入htop来使用它。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Linux%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/Linux%E6%9F%A5%E7%9C%8B%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84/">
+        Linux下查看文件安装路径
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        使用whereis binaryfile来查看文件路径。如:
+1whereis pacman
+输出:
+1pacman: /usr/bin/pacman /etc/pacman.d /etc/pacman.conf /usr/share/pacman /usr/share/man/man8/pacman.8.gz /usr/share/man/man6/pacman.6.gz
+之前就觉得应该有...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Linux%E6%9F%A5%E7%9C%8B%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/Linux%E7%A3%81%E5%8A%9B%E4%B8%8B%E8%BD%BD/">
         linux磁力下载器
       </a>
@@ -762,97 +861,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Django%E4%B8%AD%E9%97%B4%E4%BB%B6/">
-        Django中间件
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <h2 id="什么是中间件"><a href="#什么是中间件" class="headerlink" title="什么是中间件"></a>什么是中间件</h2><p>中间件就是在<strong>目标</strong>和<strong>结果</strong>之间进行的额外处理过程，在Django中就是<strong>request和response之间进行的处理</strong>，相对来说实现起来比较简单，但是要注意它是对全局有效的，可以在全局范围内改变输入和输出结果，因此需要谨慎使用，否则不仅会造成难以定位的错误，而且可能会影响整体性能。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Django%E4%B8%AD%E9%97%B4%E4%BB%B6/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Django%E8%AE%BF%E9%97%AE%E5%9B%BE%E7%89%87/">
-        Django展示图片
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        想要通过访问如同127.0.0.1:8000/static/Tree.png的形式来访问在Django目录下的静态文件，首先需要在Django目录下创建一个static文件夹，该文件夹需与manage.py文件同级。然后编辑settings.py，在末尾加上:
-12345STATIC_URL = &#x27;/static/&#x27;STATICFILES_DIRS = [    os.p...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Django%E8%AE%BF%E9%97%AE%E5%9B%BE%E7%89%87/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -960,7 +968,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(167)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(169)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -985,12 +993,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
             id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(14)</div></a></li>
+            ><div class='name'>Cpp</div><div class='badge'>(16)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
             id="categoriesblogCppQt"
-            ><div class='name'>Qt</div><div class='badge'>(7)</div></a></li>
+            ><div class='name'>Qt</div><div class='badge'>(9)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"

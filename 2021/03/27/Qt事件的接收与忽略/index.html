@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -21,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Tag: Flask - Gray-Ice</title>
+  <title>Qt事件的接收与忽略 - Gray-Ice</title>
   
 
   
@@ -329,7 +327,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  search' style="display: ;">
+        <div id="half" class='cover-wrapper post search' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -370,124 +368,227 @@
       <div class='body-wrapper' id="pjax-container">
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow blur article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        Qt事件的接收与忽略
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
           
         
           
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/07/29/flask%E4%BD%BF%E7%94%A8restful%E6%8E%A5%E5%8F%A3/">
-        Flask使用Restful
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>本篇博客参考自官方文档:<a target="_blank" rel="noopener" href="https://flask-restful.readthedocs.io/en/latest/quickstart.html">Quickstart</a>。</p>
-<h1 id="一个demo"><a href="#一个demo" class="headerlink" title="一个demo"></a>一个demo</h1><p>首先，安装flask_restful包:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install flask_restful</span><br></pre></td></tr></table></figure>
-    
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2020-07-29</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Mar 27, 2021</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/flask/">flask</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Qt事件的接收与忽略" data-path="/2021/03/27/Qt%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%BF%BD%E7%95%A5/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <h1 id="Qt事件的接收与忽略"><a href="#Qt事件的接收与忽略" class="headerlink" title="Qt事件的接收与忽略"></a>Qt事件的接收与忽略</h1><p>事件对象有个接收标志，其为bool类型的accepted。这个标志(flag)决定了当前事件是否是需要的事件，如果不是需要的事件话，那么这个事件就会被父组件接收(注意，是父组件，不是父类)。当accepted为true的时候，其会被认为是需要的事件，如果是false，其会被认为是不需要的事件。使用QMouseEvent.accept()函数可以将其设置为true，使用QMouseEvent.ignore()可以将其设置为false。</p>
+<p>而重写事件，会导致该事件对应的信号失效，因为信号就是在事件里发送的。解决方法就是在事件里手动发送信号。<br>那么我们先看重写事件导致的信号失效。</p>
+<h2 id="重写事件导致对应的信号失效"><a href="#重写事件导致对应的信号失效" class="headerlink" title="重写事件导致对应的信号失效"></a>重写事件导致对应的信号失效</h2><p>那么下面是代码例子:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// MyButton函数头文件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyButton</span>:</span><span class="keyword">public</span> QPushButton</span><br><span class="line">&#123;</span><br><span class="line">    Q_OBJECT</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">MyButton</span><span class="params">(QWidget* parent)</span></span>;</span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">mousePressEvent</span><span class="params">(QMouseEvent*)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// MyButton实现</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;mybutton.h&quot;</span></span></span><br><span class="line"></span><br><span class="line">MyButton::<span class="built_in">MyButton</span>(QWidget* parent):<span class="built_in">QPushButton</span>(parent)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">connect</span>(<span class="keyword">this</span>, &amp;MyButton::clicked, []()&#123;std::cout &lt;&lt; <span class="string">&quot;This button was clicked.&quot;</span> &lt;&lt; std::endl;&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MyButton::mousePressEvent</span><span class="params">(QMouseEvent *ev)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Press!!&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    ev-&gt;<span class="built_in">accept</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到，我重写了mousePressEvent事件，在mousePressEvent事件里输出了”Press!!”，这样每当mousePressEvent被触发都会输出一次”Press!!”。ev-&gt;accept()的作用是将accepted标志设置为true，这样就不会触发父组件的对应事件了。而在构造函数里我连接了这个类的click信号和一个lambda定义的槽，每次点击的时候会输出:”This button was clicked.”。<br>那么我运行一下程序，并单击一次这个BUtton:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">13:35:02: Starting /home/fire/codeSet/QtSet/build-untitled9-unknown-Debug/untitled9 ...</span><br><span class="line">Press!!</span><br><span class="line">13:35:06: /home/fire/codeSet/QtSet/build-untitled9-unknown-Debug/untitled9 exited with code 0</span><br></pre></td></tr></table></figure>
+<p>这是这个程序的输出。可以看到，mousePressEvent被触发了，但是clicked信号对应的槽函数并没有输出，所以clicked信号并没有被触发。原因我上面说过了，是因为我们重写了mousePressEvent，导致了对应的信号失效了。那么我们如何让这个信号正常工作呢？很简单，直接在事件函数里重新调用这个事件就好了:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MyButton::mousePressEvent</span><span class="params">(QMouseEvent *ev)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Press!!&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="built_in">clicked</span>();  <span class="comment">// 发送信号</span></span><br><span class="line">    ev-&gt;<span class="built_in">accept</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这是我运行程序并单击一次button的输出结果:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">13:39:20: Starting /home/fire/codeSet/QtSet/build-untitled9-unknown-Debug/untitled9 ...</span><br><span class="line">Press!!</span><br><span class="line">This button was clicked.</span><br><span class="line">13:39:23: /home/fire/codeSet/QtSet/build-untitled9-unknown-Debug/untitled9 exited with code 0</span><br></pre></td></tr></table></figure>
+<p>可以看到，这次clicked信号对应的槽函数也被触发了。</p>
+<h2 id="事件的接收与忽略"><a href="#事件的接收与忽略" class="headerlink" title="事件的接收与忽略"></a>事件的接收与忽略</h2><p>接下来我们来讲事件的接收与忽略，这是我的button的mousePressEvent:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void MyButton::mousePressEvent(QMouseEvent *ev)</span><br><span class="line">&#123;</span><br><span class="line">    std::cout &lt;&lt; &quot;Press!!&quot; &lt;&lt; std::endl;</span><br><span class="line">    ev-&gt;accept();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这是这个button父组件的mousePressEvent:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Widget::mousePressEvent</span><span class="params">(QMouseEvent *event)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Father widget was pressed.&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后我运行程序并单击一下button:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">13:44:44: Starting /home/fire/codeSet/QtSet/build-untitled9-unknown-Debug/untitled9 ...</span><br><span class="line">Press!!</span><br><span class="line">13:44:48: /home/fire/codeSet/QtSet/build-untitled9-unknown-Debug/untitled9 exited with code 0</span><br></pre></td></tr></table></figure>
+<p>这是程序的输出结果。<br>接下来我修改button的mousePressEvent函数，把accept()改成ignore():</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MyButton::mousePressEvent</span><span class="params">(QMouseEvent *ev)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Press!!&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    ev-&gt;<span class="built_in">ignore</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后再次运行程序并单击一次button:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">13:47:40: Starting /home/fire/codeSet/QtSet/build-untitled9-unknown-Debug/untitled9 ...</span><br><span class="line">Press!!</span><br><span class="line">Father widget was pressed.</span><br><span class="line">13:47:43: /home/fire/codeSet/QtSet/build-untitled9-unknown-Debug/untitled9 exited with code 0</span><br></pre></td></tr></table></figure>
+<p>这是程序的输出结果。<br>可以看到，不只是button的mousePressEvent事件，其父组件的mousePressEvent也被触发了。<br>代码已经很清楚了。<br>本篇完。</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2020/07/29/flask%E4%BD%BF%E7%94%A8restful%E6%8E%A5%E5%8F%A3/'>
-            Read More
-          </a>
-        </div>
+      
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-27T13:52:52+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Mar 27, 2021</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-    <h2 class="article-title" >
-      <a href="/2020/07/27/flask_%E5%88%9D%E5%AD%A6/">
-        初学Flask
-      </a>
-    </h2>
-  
-  <div class='md'>
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/03/27/Qt%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%BF%BD%E7%95%A5/&title=Qt事件的接收与忽略 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
     
-      <p>之前曾学过flask,但是快要忘光了，而且也没有做笔记，这次重温一遍，就当是初学了。<br>本篇是在W3Cschool上学习的，链接:&lt;a href=”<a target="_blank" rel="noopener" href="https://www.w3cschool.cn/flask/flask_application.html&quot;W3Cschool&gt;">https://www.w3cschool.cn/flask/flask_application.html&quot;W3Cschool&gt;</a></a>。</p>
-<h1 id="flask的安装与应用"><a href="#flask的安装与应用" class="headerlink" title="flask的安装与应用"></a>flask的安装与应用</h1><p>输入以下命令来安装flask:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install flask</span><br></pre></td></tr></table></figure>
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/03/27/Qt%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%BF%BD%E7%95%A5/&title=Qt事件的接收与忽略 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/03/27/Qt%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%BF%BD%E7%95%A5/&title=Qt事件的接收与忽略 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
+      
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</div>
+
+
+
         
-        <time>2020-07-27</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/flask/">flask</a>
-        
-      </div>
       
-        <div>
-          <a class='readmore' href='/2020/07/27/flask_%E5%88%9D%E5%AD%A6/'>
-            Read More
-          </a>
-        </div>
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/03/27/Qt%E4%BA%8B%E4%BB%B6%E8%BF%87%E6%BB%A4%E5%99%A8/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Qt事件过滤器</p>
+          <p class='content'>今天我的截图工具Peek坏了，似乎是ffmpeg的锅。所以今天没有GIF演示了，我会把GIF可以表达的内容全部换成终端表达。
+先看代码:
+1234567891011121314151617181...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/03/26/Qt%E8%AE%A1%E6%97%B6%E5%99%A8%E4%BA%8B%E4%BB%B6/'>
+          <p class='title'>Qt计时器事件<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>不多说，直入主题。想要启用计时器事件，自然需要先在头文件里定义了:
+12protected:    void timerEvent(QTimerEvent *e);
+可以通过在构造函数里调用st...</p>
+        </a>
       
     </div>
   
+</article>
 
-</div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
   
 
-
+  <article class="post white-box reveal shadow blur" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
     
-  
+    <div id="gitalk-container"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -495,233 +596,19 @@
     
     
 
-<section class="widget blogger shadow blur desktop mobile">
-  <div class='content'>
-    
-    
-      <div class='text'>
-        
-          <h2>Gray-Ice</h2>
-        
-        
-          <p>一位好奇心十足的开发者。</p>
-
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Gray-Ice/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
 
 
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow blur desktop">
+  <section class="widget toc-wrapper shadow blur desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/blog/" href="/categories/blog/"
-            id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(169)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/30days/" href="/categories/blog/30days/"
-            id="categoriesblog30days"
-            ><div class='name'>30days</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Anaconda/" href="/categories/blog/Anaconda/"
-            id="categoriesblogAnaconda"
-            ><div class='name'>Anaconda</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Arch/" href="/categories/blog/Arch/"
-            id="categoriesblogArch"
-            ><div class='name'>Arch</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/C/" href="/categories/blog/C/"
-            id="categoriesblogC"
-            ><div class='name'>C</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
-            id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(16)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
-            id="categoriesblogCppQt"
-            ><div class='name'>Qt</div><div class='badge'>(9)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"
-            id="categoriesblogDeepin"
-            ><div class='name'>Deepin</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Linux/" href="/categories/blog/Linux/"
-            id="categoriesblogLinux"
-            ><div class='name'>Linux</div><div class='badge'>(18)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/" href="/categories/blog/Python/"
-            id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(47)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"
-            id="categoriesblogPythonPyQt5"
-            ><div class='name'>PyQt5</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/flask/" href="/categories/blog/Python/flask/"
-            id="categoriesblogPythonflask"
-            ><div class='name'>flask</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            id="categoriesblogPythonE695B0E68DAEE58886E69E90"
-            ><div class='name'>数据分析</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Socket/" href="/categories/blog/Socket/"
-            id="categoriesblogSocket"
-            ><div class='name'>Socket</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Termux/" href="/categories/blog/Termux/"
-            id="categoriesblogTermux"
-            ><div class='name'>Termux</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/arch/" href="/categories/blog/arch/"
-            id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(36)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/git/" href="/categories/blog/git/"
-            id="categoriesbloggit"
-            ><div class='name'>git</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/hugo/" href="/categories/blog/hugo/"
-            id="categoriesbloghugo"
-            ><div class='name'>hugo</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/vim/" href="/categories/blog/vim/"
-            id="categoriesblogvim"
-            ><div class='name'>vim</div><div class='badge'>(10)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/vue/" href="/categories/blog/vue/"
-            id="categoriesblogvue"
-            ><div class='name'>vue</div><div class='badge'>(17)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
-            id="categoriesblogE4B9B1E4B883E585ABE7B39F"
-            ><div class='name'>乱七八糟</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E5%89%8D%E7%AB%AF/" href="/categories/blog/%E5%89%8D%E7%AB%AF/"
-            id="categoriesblogE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"
-            id="categoriesblogE69C8DE58AA1E599A8"
-            ><div class='name'>服务器</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/friendlink/" href="/categories/friendlink/"
-            id="categoriesfriendlink"
-            ><div class='name'>friendlink</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/life/" href="/categories/life/"
-            id="categorieslife"
-            ><div class='name'>life</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/resume/" href="/categories/resume/"
-            id="categoriesresume"
-            ><div class='name'>resume</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/" href="/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/"
-            id="categoriesE58D9AE5AEA2E697A5E5BF97"
-            ><div class='name'>博客日志</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow blur desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/30days/" style="font-size: 15.11px; color: #919191">30days</a> <a href="/tags/Anaconda/" style="font-size: 14px; color: #999">Anaconda</a> <a href="/tags/Arch/" style="font-size: 24px; color: #555">Arch</a> <a href="/tags/Deepin/" style="font-size: 16.22px; color: #8a8a8a">Deepin</a> <a href="/tags/Django/" style="font-size: 21.78px; color: #646464">Django</a> <a href="/tags/Docker/" style="font-size: 15.11px; color: #919191">Docker</a> <a href="/tags/Flask/" style="font-size: 15.11px; color: #919191">Flask</a> <a href="/tags/Linux%E5%91%BD%E4%BB%A4/" style="font-size: 16.22px; color: #8a8a8a">Linux命令</a> <a href="/tags/PIL/" style="font-size: 17.33px; color: #828282">PIL</a> <a href="/tags/PyQt5/" style="font-size: 14px; color: #999">PyQt5</a> <a href="/tags/Socket/" style="font-size: 14px; color: #999">Socket</a> <a href="/tags/Vue/" style="font-size: 22.89px; color: #5d5d5d">Vue</a> <a href="/tags/Wine/" style="font-size: 14px; color: #999">Wine</a> <a href="/tags/bluetooth/" style="font-size: 14px; color: #999">bluetooth</a> <a href="/tags/cv2/" style="font-size: 14px; color: #999">cv2</a> <a href="/tags/git/" style="font-size: 18.44px; color: #7b7b7b">git</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/hugo/" style="font-size: 15.11px; color: #919191">hugo</a> <a href="/tags/jwt/" style="font-size: 16.22px; color: #8a8a8a">jwt</a> <a href="/tags/matplotlib/" style="font-size: 15.11px; color: #919191">matplotlib</a> <a href="/tags/nask/" style="font-size: 14px; color: #999">nask</a> <a href="/tags/pip/" style="font-size: 14px; color: #999">pip</a> <a href="/tags/redis/" style="font-size: 14px; color: #999">redis</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/ventoy/" style="font-size: 14px; color: #999">ventoy</a> <a href="/tags/vim/" style="font-size: 20.67px; color: #6c6c6c">vim</a> <a href="/tags/zsh/" style="font-size: 14px; color: #999">zsh</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/" style="font-size: 14px; color: #999">上传文件</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E6%9D%A1/" style="font-size: 14px; color: #999">上传进度条</a> <a href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/" style="font-size: 14px; color: #999">中间件</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 15.11px; color: #919191">代理</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/" style="font-size: 14px; color: #999">关键字查询</a> <a href="/tags/%E5%88%86%E9%A1%B5/" style="font-size: 14px; color: #999">分页</a> <a href="/tags/%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/" style="font-size: 14px; color: #999">压缩图片</a> <a href="/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/" style="font-size: 14px; color: #999">又拍云</a> <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/" style="font-size: 15.11px; color: #919191">双系统</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E7%9B%98/" style="font-size: 14px; color: #999">启动盘</a> <a href="/tags/%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/" style="font-size: 14px; color: #999">商品评论</a> <a href="/tags/%E5%9B%BD%E9%99%85%E5%8C%96/" style="font-size: 14px; color: #999">国际化</a> <a href="/tags/%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90/" style="font-size: 14px; color: #999">图片合成</a> <a href="/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" style="font-size: 15.11px; color: #919191">对象存储</a> <a href="/tags/%E5%BE%AE%E5%8D%9A%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">微博第三方登录</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">性能检测工具</a> <a href="/tags/%E6%8A%98%E7%BA%BF%E5%9B%BE/" style="font-size: 14px; color: #999">折线图</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 15.11px; color: #919191">服务器</a> <a href="/tags/%E6%B0%B4%E5%8D%B0/" style="font-size: 14px; color: #999">水印</a> <a href="/tags/%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81/" style="font-size: 15.11px; color: #919191">滑块验证</a> <a href="/tags/%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81/" style="font-size: 14px; color: #999">生成图片验证码</a> <a href="/tags/%E7%94%BB%E4%B8%AD%E7%94%BB/" style="font-size: 14px; color: #999">画中画</a> <a href="/tags/%E7%99%BD%E5%A4%A9%E9%BB%91%E5%A4%9C%E6%A8%A1%E5%BC%8F/" style="font-size: 14px; color: #999">白天黑夜模式</a> <a href="/tags/%E7%99%BE%E5%BA%A6%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">百度文字识别</a> <a href="/tags/%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/" style="font-size: 14px; color: #999">评论频率</a> <a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 19.56px; color: #737373">踩坑</a> <a href="/tags/%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">钉钉第三方登录</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%86%99%E4%BA%8B%E4%BB%B6%E5%AF%BC%E8%87%B4%E5%AF%B9%E5%BA%94%E7%9A%84%E4%BF%A1%E5%8F%B7%E5%A4%B1%E6%95%88"><span class="toc-text">重写事件导致对应的信号失效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%BF%BD%E7%95%A5"><span class="toc-text">事件的接收与忽略</span></a></li></ol>
     </div>
   </section>
 
@@ -732,6 +619,7 @@
 </aside>
 
 
+
         
         
           <!--此文件用来存放一些不方便取值的变量-->
@@ -739,8 +627,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Qt事件的接收与忽略";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
