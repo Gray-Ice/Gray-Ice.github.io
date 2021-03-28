@@ -41,6 +41,30 @@
   </entry>
   
   <entry>
+    <title>Qt绘图</title>
+    <link href="http://example.com/2021/03/27/Qt%E7%BB%98%E5%9B%BE/"/>
+    <id>http://example.com/2021/03/27/Qt%E7%BB%98%E5%9B%BE/</id>
+    <published>2021-03-27T06:57:00.000Z</published>
+    <updated>2021-03-28T07:48:46.933Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    <category term="Qt" scheme="http://example.com/categories/blog/Cpp/Qt/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Qt事件的接收与忽略</title>
     <link href="http://example.com/2021/03/27/Qt%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%BF%BD%E7%95%A5/"/>
     <id>http://example.com/2021/03/27/Qt%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%BF%BD%E7%95%A5/</id>
