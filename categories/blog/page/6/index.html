@@ -388,6 +388,54 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/matplotlib%E7%BB%98%E6%8A%98%E7%BA%BF%E5%9B%BE/">
+        使用matplotlib绘制折线图
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h1 id="1-基本绘图"><a href="#1-基本绘图" class="headerlink" title="1.基本绘图"></a>1.基本绘图</h1><p>使用matplotlib库绘制折线图，由于很简单，所以下面直接上代码:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据在x轴位置，是一个可迭代对象</span></span><br><span class="line">x = <span class="built_in">range</span>(<span class="number">2</span>, <span class="number">26</span>, <span class="number">2</span>)</span><br><span class="line"><span class="comment"># 数据在y轴的位置</span></span><br><span class="line">y = [<span class="number">15</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">5</span>, <span class="number">17</span>, <span class="number">20</span>, <span class="number">25</span>, <span class="number">26</span>, <span class="number">26</span>, <span class="number">24</span>, <span class="number">22</span>, <span class="number">18</span>]</span><br><span class="line"><span class="comment"># x和Y的长度必须相等，如果不相等会报错</span></span><br><span class="line">print(<span class="built_in">len</span>(x))</span><br><span class="line">print(<span class="built_in">len</span>(y))</span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line">pyplot.plot(x, y)</span><br><span class="line"><span class="comment"># 展示</span></span><br><span class="line">pyplot.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>效果图如下:</p>
+<p><img src="matplotlib%E7%BB%98%E6%8A%98%E7%BA%BF%E5%9B%BE/image-20200528092144373.png" class="lazyload" data-srcset="matplotlib%E7%BB%98%E6%8A%98%E7%BA%BF%E5%9B%BE/image-20200528092144373.png" srcset="data:image/png;base64,666" alt="image-20200528092144373"></p>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="matplotlib%E7%BB%98%E6%8A%98%E7%BA%BF%E5%9B%BE/image-20200528092144373.png" class="lazyload" data-srcset="matplotlib%E7%BB%98%E6%8A%98%E7%BA%BF%E5%9B%BE/image-20200528092144373.png" srcset="data:image/png;base64,666"/></div></div>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/matplotlib%E7%BB%98%E6%8A%98%E7%BA%BF%E5%9B%BE/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/%E6%8F%90%E5%8D%87github%E9%80%9F%E5%BA%A6/">
         提升clone的速度
       </a>
@@ -795,52 +843,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/%E4%BD%BF%E7%94%A8ventoy%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E7%9B%98/">
-        使用ventoy制作启动盘
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>最近发现了一个很好的、功能很强大的神器:Ventoy。这神器的功能到底有多强大呢？它能够让你在一个U盘里面启动多个系统。。。</p>
-<p>使用也非常的简单，用ventoy制作过U盘后直接将iso文件拖入U盘即可。那么这里是ventoy的下载地址:<a target="_blank" rel="noopener" href="https://www.ventoy.net/en/download.html">Ventoy</a></p>
-<p>使用方法: 打开ventoy，选择install，会提示你U盘将被格式化。确定。等读条完成后就可以使用了！将ISO文件直接拖入U盘即可。
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/%E4%BD%BF%E7%94%A8ventoy%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E7%9B%98/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -950,7 +952,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(171)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(172)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -975,12 +977,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
             id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(18)</div></a></li>
+            ><div class='name'>Cpp</div><div class='badge'>(19)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
             id="categoriesblogCppQt"
-            ><div class='name'>Qt</div><div class='badge'>(11)</div></a></li>
+            ><div class='name'>Qt</div><div class='badge'>(12)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"

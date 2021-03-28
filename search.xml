@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>QtQFile读写文件</title>
+      <link href="2021/03/28/QtQFile%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6/"/>
+      <url>2021/03/28/QtQFile%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<p>直接看代码吧，没啥好说的。</p><p>读:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取文件路径</span></span><br><span class="line">QString path = QFileDialog::<span class="built_in">getOpenFileName</span>(<span class="keyword">this</span>, <span class="string">&quot;open a file&quot;</span>, <span class="string">&quot;../&quot;</span>, <span class="string">&quot;All(*.*)&quot;</span>);</span><br><span class="line"><span class="comment">// 创建一个QFile对象</span></span><br><span class="line">QFile qf;</span><br><span class="line"><span class="comment">// 设置文件名(因为你得知道文件名才能对文件进行操作)，也可以用QFile(QString filename)的方式来设置文件名。</span></span><br><span class="line">qf.<span class="built_in">setFileName</span>(path);</span><br><span class="line"><span class="comment">// 设置打开文件的模式</span></span><br><span class="line">qf.<span class="built_in">open</span>(QIODevice::ReadOnly);</span><br><span class="line"><span class="comment">// 读取文件一行，最多读取300字符。并将其转换为QString。该函数为重载函数，当传入qint64的值或不传入值的时候，返回一个QByteArray对象，故此需要转换成QString。如果不转换，有些时候在用到QString的地方编译器会隐式转换</span></span><br><span class="line"><span class="function">QString <span class="title">lines</span><span class="params">(qf.readLine(<span class="number">300</span>))</span></span>;</span><br><span class="line"><span class="comment">// 再读取一行</span></span><br><span class="line"><span class="comment">// 想要一次性读完可以使用qf.readAll()。这里我就不写了。</span></span><br><span class="line">lines += qf.<span class="built_in">readLine</span>(<span class="number">300</span>);</span><br><span class="line"><span class="comment">// 使用读取的数据</span></span><br><span class="line">ui-&gt;textBrowser-&gt;<span class="built_in">setText</span>(lines);</span><br><span class="line"><span class="comment">// 关闭文件</span></span><br><span class="line">qf.<span class="built_in">close</span>();</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>写文件:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取将要创建的文件的路径</span></span><br><span class="line">QString path = QFileDialog::<span class="built_in">getSaveFileName</span>(<span class="keyword">this</span>, <span class="string">&quot;Create a file&quot;</span>, <span class="string">&quot;../&quot;</span>, <span class="string">&quot;All(*.*)&quot;</span>);</span><br><span class="line"><span class="comment">// 设置文件路径</span></span><br><span class="line"><span class="function">QFile <span class="title">qf</span><span class="params">(path)</span></span>;</span><br><span class="line"><span class="comment">// 如果打开成功返回true，失败返回false</span></span><br><span class="line"><span class="keyword">bool</span> open_ok = qf.<span class="built_in">open</span>(QIODevice::WriteOnly);</span><br><span class="line"><span class="keyword">if</span>(open_ok)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 写文件</span></span><br><span class="line">    qf.<span class="built_in">write</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">    <span class="comment">// 关闭文件</span></span><br><span class="line">    qf.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>就是这样。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Cpp </category>
+          
+          <category> Qt </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Qt设置无边框和窗口透明</title>
       <link href="2021/03/28/Qt%E8%AE%BE%E7%BD%AE%E7%A8%8B%E5%BA%8F%E8%BE%B9%E6%A1%86%E5%92%8C%E7%AA%97%E5%8F%A3%E9%80%8F%E6%98%8E/"/>
       <url>2021/03/28/Qt%E8%AE%BE%E7%BD%AE%E7%A8%8B%E5%BA%8F%E8%BE%B9%E6%A1%86%E5%92%8C%E7%AA%97%E5%8F%A3%E9%80%8F%E6%98%8E/</url>
