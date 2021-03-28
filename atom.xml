@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-27T09:55:51.282Z</updated>
+  <updated>2021-03-28T09:15:54.798Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Qt设置无边框和窗口透明</title>
+    <link href="http://example.com/2021/03/28/Qt%E8%AE%BE%E7%BD%AE%E7%A8%8B%E5%BA%8F%E8%BE%B9%E6%A1%86%E5%92%8C%E7%AA%97%E5%8F%A3%E9%80%8F%E6%98%8E/"/>
+    <id>http://example.com/2021/03/28/Qt%E8%AE%BE%E7%BD%AE%E7%A8%8B%E5%BA%8F%E8%BE%B9%E6%A1%86%E5%92%8C%E7%AA%97%E5%8F%A3%E9%80%8F%E6%98%8E/</id>
+    <published>2021-03-28T09:02:00.000Z</published>
+    <updated>2021-03-28T09:15:54.798Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    <category term="Qt" scheme="http://example.com/categories/blog/Cpp/Qt/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Qt事件过滤器</title>
@@ -45,7 +69,7 @@
     <link href="http://example.com/2021/03/27/Qt%E7%BB%98%E5%9B%BE/"/>
     <id>http://example.com/2021/03/27/Qt%E7%BB%98%E5%9B%BE/</id>
     <published>2021-03-27T06:57:00.000Z</published>
-    <updated>2021-03-28T07:48:46.933Z</updated>
+    <updated>2021-03-28T09:16:05.535Z</updated>
     
     
       

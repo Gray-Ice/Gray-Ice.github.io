@@ -412,6 +412,55 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/03/28/Qt%E8%AE%BE%E7%BD%AE%E7%A8%8B%E5%BA%8F%E8%BE%B9%E6%A1%86%E5%92%8C%E7%AA%97%E5%8F%A3%E9%80%8F%E6%98%8E/">
+        Qt设置无边框和窗口透明
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        setWindowFlag(Qt::FramelessWindowHint);可以设置无边框。然后看看设置无边框的效果。setAttribute(Qt::WA_TranslucentBackground);可以设置窗口背景透明，效果图如下:我看帮助文档上说如果想要在Windows上使用这个选项，你得先把无边框设置了才行。
+然后看看这两者一起使用的效果:
+十分漂亮。(然而并没有什么用)本篇完。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-28</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/28/Qt%E8%AE%BE%E7%BD%AE%E7%A8%8B%E5%BA%8F%E8%BE%B9%E6%A1%86%E5%92%8C%E7%AA%97%E5%8F%A3%E9%80%8F%E6%98%8E/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/03/27/Qt%E4%BA%8B%E4%BB%B6%E8%BF%87%E6%BB%A4%E5%99%A8/">
         Qt事件过滤器
       </a>
@@ -468,8 +517,8 @@
   <div class='md'>
     
       
-        Qt绘图先来看看效果:这是我在主窗口上绘制的一个图形，其中顶部和左边的灰线可以随着主窗口的重绘而跟着变化。先来看看代码吧:
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859// widget.hclass Widget : ...
+        先来看看效果:这是我在主窗口上绘制的一个图形，其中顶部和左边的灰线可以随着主窗口的重绘而跟着变化。先来看看代码吧:
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859// widget.hclass Widget : publ...
       
     
   </div>
@@ -830,57 +879,24 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/23/QT%E8%87%AA%E5%8A%A8%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/">
-        QT自动内存回收
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        本博文并不会讲的很全，因为博主也是刚知道还有这么回事。在Qt中，QObject是顶层对象，当Qt程序关闭的时候，QOject对象会被自动释放掉。而因为QObject是顶层对象，所以其所有派生类在Qt程序关闭的时候都会被自动释放掉。 –这段话是我从别人的博客里抄来的。
-实际的应用中，在一个动态分配的类指定了父对象后，其会被自动释放掉。但是如果没有指定父对象，则其不会被释放。
-举个例子，我定义一...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/23/QT%E8%87%AA%E5%8A%A8%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
+    
+      <br>
+      <div class="prev-next">
+        
+        <p class="current">
+          1 / 2
+        </p>
+        
+          <a class="next" rel="next" href="/categories/blog/Cpp/Qt/page/2/">
+            <section class="post next white-box shadow blur">
+              &nbsp;Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </section>
+          </a>
+        
+      </div>
     
   
 
@@ -966,7 +982,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(170)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(171)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -991,12 +1007,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
             id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(17)</div></a></li>
+            ><div class='name'>Cpp</div><div class='badge'>(18)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
             id="categoriesblogCppQt"
-            ><div class='name'>Qt</div><div class='badge'>(10)</div></a></li>
+            ><div class='name'>Qt</div><div class='badge'>(11)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"
