@@ -387,6 +387,106 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/pip%E5%8D%87%E7%BA%A7%E5%A4%B1%E8%B4%A5%E4%B8%8E%E7%94%9F%E6%88%90requirements%E5%A4%B1%E8%B4%A5/">
+        pip升级失败与生成requirements.txt文件失败解决方案
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <h1 id="pip升级失败解决方案"><a href="#pip升级失败解决方案" class="headerlink" title="pip升级失败解决方案"></a>pip升级失败解决方案</h1><p>今天使用pip安装模块的时候，提示我pip有新版本了，我就随手升级了一下:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+<p>结果安装失败了。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ERROR: Could not install packages due to an EnvironmentError: [WinError 5] 拒绝访问。: &#x27;d:\\virtual env</span><br><span class="line">ironment\\for_django\\scripts\\pip.exe&#x27;</span><br><span class="line">Consider using the `--user` option or check the permissions.</span><br></pre></td></tr></table></figure>
+<p>然后输入pip，报错:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModuleNotFoundError: No module named &#x27;pip&#x27;</span><br></pre></td></tr></table></figure>
+<p>啊这，这可怎么办？</p>
+<p>那么下面就是解决方法
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/pip%E5%8D%87%E7%BA%A7%E5%A4%B1%E8%B4%A5%E4%B8%8E%E7%94%9F%E6%88%90requirements%E5%A4%B1%E8%B4%A5/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/OriginError/">
+        git fatal远程origin已经存在
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        今天把博客迁到linux系统后连接仓库的时候出现了错误: fatal: 远程origin已经存在。下面是解决方案:
+1git remote rm origin
+然后重新remote即可。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/git/">git</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/OriginError/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/PGP%E7%AD%BE%E5%90%8D%E6%8D%9F%E5%9D%8F/">
         解决Arch安装软件包提示无效或已损坏的软件包 (PGP 签名)
       </a>
@@ -761,100 +861,6 @@ RESB指令是”reverse by...
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/linuxQQ/">
-        Arch Linux下使用LinuxQQ
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        在Arch Linux下安装 Linux QQ十分的简单，你甚至不需要安装wine(我也是今天才知道)，QQ提供了Linux版。那么回归正题，首先你需要安装下面两个包，输入命令:
-12pacman -S gtk2pacman -S nss
-然后是安装QQ，这里我使用过使用pacman直接安装，但是效果不怎么理想，所以这里我打开了QQ for linux的官网，点击立即下载，选择pacman(...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/linuxQQ/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Docker%E5%BE%AE%E4%BF%A1/">
-        Docker微信
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>在文章的开头，我先说出我配置完成后遗留的问题，方便大家决定是否参考我的博客。<br>我按照我博客里的流程配置完毕后，微信出现的问题是看不到输入框里的字，无论是输入中文还是输入英文，都看不见。不过这不影响发送出去文字。另外有一点，我不知道这是不是问题，因为wine-wechat也是如此，那就是截图的时候屏幕是黑的。。。除了这些之外，消息和图片消息都可以正常接受，暂时没有发现其他问题。</p>
-<p>那么下面是安装了。<br>首先安装Dokcer:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S docker</span><br></pre></td></tr></table></figure>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Docker%E5%BE%AE%E4%BF%A1/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -962,7 +968,7 @@ RESB指令是”reverse by...
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(172)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(174)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -987,12 +993,12 @@ RESB指令是”reverse by...
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
             id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(19)</div></a></li>
+            ><div class='name'>Cpp</div><div class='badge'>(21)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
             id="categoriesblogCppQt"
-            ><div class='name'>Qt</div><div class='badge'>(12)</div></a></li>
+            ><div class='name'>Qt</div><div class='badge'>(14)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"
