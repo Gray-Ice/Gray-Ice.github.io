@@ -388,6 +388,100 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/linuxQQ/">
+        Arch Linux下使用LinuxQQ
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        在Arch Linux下安装 Linux QQ十分的简单，你甚至不需要安装wine(我也是今天才知道)，QQ提供了Linux版。那么回归正题，首先你需要安装下面两个包，输入命令:
+12pacman -S gtk2pacman -S nss
+然后是安装QQ，这里我使用过使用pacman直接安装，但是效果不怎么理想，所以这里我打开了QQ for linux的官网，点击立即下载，选择pacman(...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/linuxQQ/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/Docker%E5%BE%AE%E4%BF%A1/">
+        Docker微信
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>在文章的开头，我先说出我配置完成后遗留的问题，方便大家决定是否参考我的博客。<br>我按照我博客里的流程配置完毕后，微信出现的问题是看不到输入框里的字，无论是输入中文还是输入英文，都看不见。不过这不影响发送出去文字。另外有一点，我不知道这是不是问题，因为wine-wechat也是如此，那就是截图的时候屏幕是黑的。。。除了这些之外，消息和图片消息都可以正常接受，暂时没有发现其他问题。</p>
+<p>那么下面是安装了。<br>首先安装Dokcer:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S docker</span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Docker%E5%BE%AE%E4%BF%A1/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/">
         WindowsHexo迁移至Linux
       </a>
@@ -764,102 +858,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/arch%E8%93%9D%E7%89%99%E5%BD%95%E9%9F%B3/">
-        使用蓝牙耳机录音
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        使用蓝牙耳机播放音乐请看我之前的博客，标题是:Arch连接蓝牙。这里就不放出链接了。我按照之前使用蓝牙耳机播放音乐的博客配置完成后，下载了个OBS用来录屏，结果发现录音噪音过大，整了半天终于发现了解决方法。首先安装blueberry模块:
-1pacman -S blueberry
-安装完成后在命令行输入:
-1blueberry
-以启动blueberry。blueberry其实是个蓝牙管理器，...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/arch%E8%93%9D%E7%89%99%E5%BD%95%E9%9F%B3/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/change_keyword/">
-        替换关键词
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>今天闲着无聊(其实就是不想写web)，突然想到之前写博客时分类大小写搞错了找文件的艰辛，就决心写一个能够在当前目录下改变指定文件类型中关键字的脚本。那么先说一下思路吧。</p>
-<p>先获取当前目录下的所有文件名称，然后根据文件名来判断是否更改，并且在更改前将将要被更改的文件存进一个文件夹(其实就是备份啦)，之后替换关键词即可。</p>
-<p>那么下面是代码:
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/change_keyword/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -969,7 +967,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(174)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(176)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -989,7 +987,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/C/" href="/categories/blog/C/"
             id="categoriesblogC"
-            ><div class='name'>C</div><div class='badge'>(6)</div></a></li>
+            ><div class='name'>C</div><div class='badge'>(7)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
@@ -1044,7 +1042,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(36)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(37)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/git/" href="/categories/blog/git/"

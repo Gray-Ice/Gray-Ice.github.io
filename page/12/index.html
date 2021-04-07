@@ -387,6 +387,108 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/arch_tkinter/">
+        archlinux下python3安装tkinter
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        借鉴自ArchLinux Python3 安装 tkinter。
+输入:
+1sudo pacman -S tk
+即可安装tkinter。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/arch_tkinter/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/archlinux%E5%AE%89%E8%A3%85redis/">
+        Arch安装使用Redis
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        首先，使用pacman安装redis:
+1sudo pacman -S redis
+然后，输入:
+1systemctl enable redis.service
+说实话我不知道这句话有什么用，从作用上来看应该是开机启动redis服务，但是就算这么设置了，redis服务也得自己手动开启。。。在终端输入:
+1redis-server
+开启redis server，然后输入redis-cli就可以...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/archlinux%E5%AE%89%E8%A3%85redis/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/arch%E4%BD%BF%E7%94%A8vncserver/">
         使用VNCServer
       </a>
@@ -763,103 +865,6 @@ Qu...
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/20/%E8%A7%A3%E5%86%B3pacman%E9%94%81%E5%AE%9A%E9%97%AE%E9%A2%98/">
-        解决pacman提示数据库锁定
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        前几天滚的时候因为网速太慢就停了，过了一天发现pacman -Syu无法正常工作了，提示我数据库被锁定，但是pacman -S还能正常运作。然后解决方法如下:
-1rm /var/lib/pacman/db.lck
-记得加root权限。执行完这条命令后再pacman -Syu就可以了。这条命令看上去是删掉pacman的数据库锁文件。那么，本篇完。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/20/%E8%A7%A3%E5%86%B3pacman%E9%94%81%E5%AE%9A%E9%97%AE%E9%A2%98/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/20/%E8%A7%A3%E5%86%B3make%E6%97%B6%E7%BC%BA%E5%B0%91build%E7%9B%AE%E5%BD%95/">
-        解决make时提示缺少“/lib/modules/5.9.14-arch1-1/build”
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        昨天使用make安装无线网卡驱动的时候提示not found file or directory /lib/modules/5.9.14-arch1-1/build。于是我上Arch Linux CN TG群问了问，得知出现这个问题的原因是少了一个包，arch linux使用以下命令安装:
-1pacman -S linux-headers
-安装完这个包再make就不会提示缺少build目录了...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/20/%E8%A7%A3%E5%86%B3make%E6%97%B6%E7%BC%BA%E5%B0%91build%E7%9B%AE%E5%BD%95/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -967,7 +972,7 @@ Qu...
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(174)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(176)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -987,7 +992,7 @@ Qu...
           <li><a class="flat-box child"
             title="/categories/blog/C/" href="/categories/blog/C/"
             id="categoriesblogC"
-            ><div class='name'>C</div><div class='badge'>(6)</div></a></li>
+            ><div class='name'>C</div><div class='badge'>(7)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
@@ -1042,7 +1047,7 @@ Qu...
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(36)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(37)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/git/" href="/categories/blog/git/"

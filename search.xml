@@ -4,6 +4,48 @@
   
     
     <entry>
+      <title>IEEE浮点数</title>
+      <link href="2021/04/07/IEEE%E6%B5%AE%E7%82%B9%E6%95%B0/"/>
+      <url>2021/04/07/IEEE%E6%B5%AE%E7%82%B9%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<p>本篇博文的内容参考自CSAPP第三版。</p><h1 id="IEEE浮点数"><a href="#IEEE浮点数" class="headerlink" title="IEEE浮点数"></a>IEEE浮点数</h1><h2 id="大致概念"><a href="#大致概念" class="headerlink" title="大致概念"></a>大致概念</h2><p>IEEE浮点标准用V = (-1)<sup>s</sup> * M * 2<sup>E</sup> 的形式来表示一个数。<br>符号s决定这数是负数(s=1)还是正数(s=0)，而对于数值0的符号位解释作为特殊情况处理。<br>尾数M是一个二进制小数。<br>阶码E的作用是对浮点数加权，这个权重是2的E次幂(可能是负数)。<br>浮点数的位表示划分为3个字段，分别对这些值进行编码:<br>一个单独的符号位s直接编码符号s。<br>k位的阶码字段编码E。<br>n位的小数字段编码M。<br>这些内容建议直接看CSAPP第三版78页，我写这篇博客的目的其实是为了记录下来如何表示E和M。</p><h2 id="表示方法"><a href="#表示方法" class="headerlink" title="表示方法"></a>表示方法</h2><p>将一个位序列划分成三个部分，从高位到低位，第一部分表示s，共有1位；第二部分表示E，共有k位；第三部分表示M，共有n位。<br><br/><br>这里我们假设有一个8位的位序列，第一部分用来表示符号s，所以占据一位；第二部分用来表示E，它占3位，因为我们用k表示第二部分的位数，所以k=3；第三部分用来表示M，它占4位，因为我们用n表示第三部分的位数，所以n=4。这样一个8位的位序列就已经分配完了，接下来我们来看看它是如何表示浮点数的。<br>s的值如果为1，那么该浮点数为负数；如果s的值为零，那么该浮点数为正数。<br>第二部分的位字段如果全部为1或者全部为0,属于特殊情况。我们先讲正常情况的。<br><br/></p><h3 id="规格化的值"><a href="#规格化的值" class="headerlink" title="规格化的值"></a>规格化的值</h3><p>这里我们讲的是正常情况:第二部分的位字段不全部为1或者0。因为第二部分共3位，而且其位字段不全部为1或者为0，所以其最大值为0b110，即十进制的6。在这时，阶码字段E为:E = e - bias。e为第二部分所表示的无符号值，这里我们假设第二部分表示的为其最大值，即0b110，十进制的6。bias为2<sup>k-1</sup>-1，所以E = 6 - (2<sup>3 - 1 </sup> - 1) = 3。M = 1+f。f为第三部分表示的小数值，即(1或0) * 2<sup>-1</sup> + (1或0) * 2<sup>-2</sup> +…(1或0) * 2<sup>-4</sup>。设第三部分的位表示为:0b1000，则M = 1 + f = 1 + 1/2 = 3/2。此时我们将第一部分的值设为1，那么V = -1 * 2<sup>3</sup> * 3/2 = -12。</p><h3 id="非规格化的值"><a href="#非规格化的值" class="headerlink" title="非规格化的值"></a>非规格化的值</h3><p>当第二部分全部为0时，E = 1 - bias，M = f。所以当第二部分和第三部分都为0时，值为(+或-)0。</p><h3 id="特殊值"><a href="#特殊值" class="headerlink" title="特殊值"></a>特殊值</h3><p>当第二部分全部为1，当第三部分全部为0，得到的值表示无穷。s = 0则为正无穷，s = -1则为负无穷。<br>当第二部分全部为1但是第三部分不全部为0，结果值被称为NaN，即”Not a Number”。</p><p>如果发现讲的哪里有问题欢迎提出或补充。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> C </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VSCode中使用QQ</title>
+      <link href="2021/04/07/VSCode%E4%B8%AD%E4%BD%BF%E7%94%A8QQ/"/>
+      <url>2021/04/07/VSCode%E4%B8%AD%E4%BD%BF%E7%94%A8QQ/</url>
+      
+        <content type="html"><![CDATA[<p>今天我刚回家，在内蒙待了一个星期，所以这么长时间都没有更新博客了。<br>前几天看到群友在VSCode中玩起来了QQ，虽然功能简陋，但是对于Linux玩家来说这玩意儿仍然胜过qq-linux，所以刚回家我就来写一篇关于VSCode中使用QQ的博客。<br>先看我的示例:<br><img src="https://gray-bed.oss-cn-hongkong.aliyuncs.com/VSCQQShow.png" class="lazyload" data-srcset="https://gray-bed.oss-cn-hongkong.aliyuncs.com/VSCQQShow.png" srcset="data:image/png;base64,666" alt="图片正在加载中...如果没有出现图片请提醒Gray-Ice换图床"><br>据我群友所说，这个QQ插件可以直接在扩展市场里搜关键字”QQ”，但是我搜了搜并没有搜到，于是这里采用离线安装的方式安装QQ插件。<br>那么这是这个插件的网址: <a href="https://marketplace.visualstudio.com/items?itemName=takayama.vscode-qq">QQ</a>。<br>从这个网址下载好插件后，在其同级目录输入:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code --install-extension takayama.vscode-qq-1.0.0.vsix</span><br></pre></td></tr></table></figure><p>把takayama.vscode-qq-1.0.0.vsix替换成你自己的插件名。</p><p>然后下面是使用。<br>打开VSCode，你会发现右下角多了QQ俩字，然后点击QQ，点击”我在线上”，输入帐号密码，就可以登录上帐号尽情的聊天啦。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> arch </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>QtQDataStream读取变量</title>
       <link href="2021/03/29/QtDataStream/"/>
       <url>2021/03/29/QtDataStream/</url>
