@@ -387,6 +387,150 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/03/27/Qt%E7%BB%98%E5%9B%BE/">
+        Qt绘图
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        先来看看效果:这是我在主窗口上绘制的一个图形，其中顶部和左边的灰线可以随着主窗口的重绘而跟着变化。先来看看代码吧:
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859// widget.hclass Widget : publ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-27</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/27/Qt%E7%BB%98%E5%9B%BE/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/27/Qt%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%BF%BD%E7%95%A5/">
+        Qt事件的接收与忽略
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Qt事件的接收与忽略事件对象有个接收标志，其为bool类型的accepted。这个标志(flag)决定了当前事件是否是需要的事件，如果不是需要的事件话，那么这个事件就会被父组件接收(注意，是父组件，不是父类)。当accepted为true的时候，其会被认为是需要的事件，如果是false，其会被认为是不需要的事件。使用QMouseEvent.accept()函数可以将其设置为true，使用QM...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-27</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/27/Qt%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%BF%BD%E7%95%A5/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/26/Qt%E8%AE%A1%E6%97%B6%E5%99%A8%E4%BA%8B%E4%BB%B6/">
+        Qt计时器事件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        不多说，直入主题。想要启用计时器事件，自然需要先在头文件里定义了:
+12protected:    void timerEvent(QTimerEvent *e);
+可以通过在构造函数里调用startTimer来根据设置的触发时间来触发计时器事件:
+1startTimer(1000);  // 单位毫秒
+比如这里我设置的就是每隔一秒触发一次。不过，一个类可以设置多个计时器，如:
+12star...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-26</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/26/Qt%E8%AE%A1%E6%97%B6%E5%99%A8%E4%BA%8B%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/03/26/QtQWidget%E8%A7%A6%E5%8F%91%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/">
         QtQwidget触发键盘事件
       </a>
@@ -710,149 +854,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/21/vim%E4%BA%A4%E6%8D%A2CAPSLOCK%E5%92%8CESC/">
-        vim交换CAPSLOCK和ESC
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        本文只讲Linux下的方法。关于把CAPSLOCK映射成ESC键，网上有各种各样的教程。总结起来无非就是三种。
-1.在终端启动时执行把这段代码写进shell的配置文件:
-1xmodmap -e &#x27;clear Lock&#x27; -e &#x27;keycode 0x42 = Escape&#x27;
-然后在打开终端的时候就会自动删除CAPSLOCK并将其换成Esc。这么做需要有x...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/21/vim%E4%BA%A4%E6%8D%A2CAPSLOCK%E5%92%8CESC/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/21/cpp_will_be_init/">
-        g++报错will be initialized after
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        报错如下:
-12345678910111213╭─fire@butterfly ~/codeSet/CPPCode  ╰─➤  g++ -Werror -Wextra -Wall -pedantic -Wconversion test.cpptest.cpp: 在复制构造函数‘HasPtr::HasPtr(const HasPtr&amp;)’:test.cpp:11:18: 错误：‘Has...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/21/cpp_will_be_init/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/21/vue%E7%BB%84%E4%BB%B6%E5%AF%BC%E5%85%A5js%E6%96%87%E4%BB%B6%E5%87%BD%E6%95%B0/">
-        vue组件导入js文件中的函数
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        可能这个问题对于前端的朋友们来说很简单，但是对于我这个半吊子前端来说着实有点难度，所以我就记录下来了。我有一个名为dev_helper.js的文件，里面定义了一个函数:
-123456789101112131415161718192021222324252627282930import axios from &#x27;axios&#x27;export function CheckToken...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/21/vue%E7%BB%84%E4%BB%B6%E5%AF%BC%E5%85%A5js%E6%96%87%E4%BB%B6%E5%87%BD%E6%95%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -960,7 +961,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(176)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(179)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -985,12 +986,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
             id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(21)</div></a></li>
+            ><div class='name'>Cpp</div><div class='badge'>(23)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
             id="categoriesblogCppQt"
-            ><div class='name'>Qt</div><div class='badge'>(14)</div></a></li>
+            ><div class='name'>Qt</div><div class='badge'>(16)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"
@@ -1050,7 +1051,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/vim/" href="/categories/blog/vim/"
             id="categoriesblogvim"
-            ><div class='name'>vim</div><div class='badge'>(10)</div></a></li>
+            ><div class='name'>vim</div><div class='badge'>(11)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/vue/" href="/categories/blog/vue/"

@@ -4,6 +4,79 @@
   
     
     <entry>
+      <title>vim注释插件</title>
+      <link href="2021/04/09/vim%E6%B3%A8%E9%87%8A%E6%8F%92%E4%BB%B6/"/>
+      <url>2021/04/09/vim%E6%B3%A8%E9%87%8A%E6%8F%92%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<p>本篇介绍的插件是nerdcommenter，github地址<a href="https://github.com/preservim/nerdcommenter">nerdcommenter</a>。本博客参考自: <a href="https://vimjc.com/vim-nerdcommenter-plugin.html">Vim插件推荐–Vim高效率注释插件nerdcommenter的安装和使用方法</a>。本博客中的改变&lt;leader&gt;键的方法参考自:<a href="https://zhuanlan.zhihu.com/p/63626180">VIM学习笔记 前缀键(leader)</a>。<br>那么先安装这个插件，因为我是用的Vim-Plug，所以需要在vim的配置文件里加入这段话:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Plug &#39;preservim&#x2F;nerdcommenter&#39;</span><br></pre></td></tr></table></figure><p>然后打开vim，运行:PlugInstall来安装插件。<br>安装好之后，可以通过[count]&lt;leader&gt;cc来注释count行，也可以通过[count]&lt;leader&gt;cu来解除注释count行。<br>比如默认leader键是\，我们要注释3行，就可以输入3然后按住\键输入cc，这样就会向下注释三行。<br>如果要解除3行注释，就输入3然后按住\键输入cu，这样就会向下解除三行注释。<br>count是可选项，你可以直接输入\cc来注释光标当前所在行，亦可以直接输入\cu来解除光标当前所在行的注释。<br>当&lt;leader&gt;键为\的时候做这样的操作有点难受，所以可以用这个方法把空格改成&lt;leader&gt;:在vim配置文件中加入这段文本:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let mapleader &#x3D; &quot;\&lt;space&gt;&quot;</span><br></pre></td></tr></table></figure><p>然后你的&lt;leader&gt;键就变成空格啦，就可以按住空格再按两下cc或cu来注释或解注释了。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> vim </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>QtQBuffer</title>
+      <link href="2021/04/08/QtQBuffer/"/>
+      <url>2021/04/08/QtQBuffer/</url>
+      
+        <content type="html"><![CDATA[<p>QBuffer可以在内存中开辟一块空间用来存储临时数据，QBuffer继承自QIODevice。<br>这个比较好理解，直接看代码吧(记得包含QBuffer头文件):</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建QBuffer对象</span></span><br><span class="line">QBuffer membuf;</span><br><span class="line"><span class="comment">// 设置打开模式为只写</span></span><br><span class="line"><span class="keyword">if</span>(membuf.<span class="built_in">open</span>(QIODevice::WriteOnly))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 写入文本</span></span><br><span class="line">    membuf.<span class="built_in">write</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">    membuf.<span class="built_in">write</span>(<span class="string">&quot; This is QBuffer&quot;</span>);</span><br><span class="line">    <span class="comment">// 关闭只写打开模式</span></span><br><span class="line">    membuf.<span class="built_in">close</span>();</span><br><span class="line">    <span class="comment">// 以只读方式打开membuf</span></span><br><span class="line">    membuf.<span class="built_in">open</span>(QIODevice::ReadOnly);</span><br><span class="line">    <span class="comment">// 读取内容并输出。reaAll()返回一个QByteArry</span></span><br><span class="line">    cout &lt;&lt; membuf.<span class="built_in">readAll</span>().<span class="built_in">toStdString</span>() &lt;&lt; endl;</span><br><span class="line">    membuf.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>输出内容如下:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">11:35:49: Starting /home/fire/codeSet/QtSet/build-untitled9-unknown-Debug/untitled9 ...</span><br><span class="line">Hello This is QBuffer</span><br><span class="line">11:35:52: /home/fire/codeSet/QtSet/build-untitled9-unknown-Debug/untitled9 exited with code 0</span><br></pre></td></tr></table></figure><p>你也可以这么做:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 所有的操作都是对QByteArray类型的arr变量的操作</span></span><br><span class="line">QByteArray arr;</span><br><span class="line"><span class="function">QBuffer <span class="title">membuf</span><span class="params">(&amp;arr)</span></span>;</span><br><span class="line">QDataStream stream;</span><br><span class="line"><span class="keyword">if</span>(membuf.<span class="built_in">open</span>(QIODevice::WriteOnly))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">QString <span class="title">msg</span><span class="params">(<span class="string">&quot;Now!Buf!&quot;</span>)</span></span>;</span><br><span class="line">    stream.<span class="built_in">setDevice</span>(&amp;membuf);</span><br><span class="line">    <span class="comment">// 写入QString类型的数据和int类型的数据</span></span><br><span class="line">    stream &lt;&lt; msg &lt;&lt; <span class="number">777</span>;</span><br><span class="line">    membuf.<span class="built_in">close</span>();</span><br><span class="line"></span><br><span class="line">    QString resq;</span><br><span class="line">    <span class="keyword">int</span> resi;</span><br><span class="line">    membuf.<span class="built_in">open</span>(QIODevice::ReadOnly);</span><br><span class="line">    <span class="comment">// 依次读取QString类型和int类型的数据</span></span><br><span class="line">    stream &gt;&gt; resq &gt;&gt; resi;</span><br><span class="line">    std::cout &lt;&lt; resq.<span class="built_in">toUtf8</span>().<span class="built_in">data</span>() &lt;&lt; resi &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>输出如下:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">11:41:50: Starting /home/fire/codeSet/QtSet/build-untitled9-unknown-Debug/untitled9 ...</span><br><span class="line">Now!Buf!777</span><br><span class="line">11:41:54: /home/fire/codeSet/QtSet/build-untitled9-unknown-Debug/untitled9 exited with code 0</span><br></pre></td></tr></table></figure><p>这篇文章就介绍到这里，本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Cpp </category>
+          
+          <category> Qt </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>QtQTextStream</title>
+      <link href="2021/04/08/QtQTextStream/"/>
+      <url>2021/04/08/QtQTextStream/</url>
+      
+        <content type="html"><![CDATA[<p>QTextStream是一个文本流，用法如下:</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 指定文件名</span></span><br><span class="line"><span class="function">QFile <span class="title">qf</span><span class="params">(<span class="string">&quot;../new.txt&quot;</span>)</span></span>;</span><br><span class="line"><span class="comment">// 设置以只写方式打开文件，如果打开成功则执行if中的内容</span></span><br><span class="line"><span class="keyword">if</span>(qf.<span class="built_in">open</span>(QFile::WriteOnly))</span><br><span class="line">&#123;</span><br><span class="line">    QTextStream stream;</span><br><span class="line">    stream.<span class="built_in">setDevice</span>(&amp;qf);</span><br><span class="line">    stream &lt;&lt; <span class="built_in">QString</span>(<span class="string">&quot;Hello Shark&quot;</span>) &lt;&lt; <span class="number">250</span>;</span><br><span class="line">    qf.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>写入文件的内容直接就是文本:</p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># ../new.txt</span><br><span class="line">Hello Shark250</span><br></pre></td></tr></table></figure><p>本篇博客就写到这儿了。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Cpp </category>
+          
+          <category> Qt </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IEEE浮点数</title>
       <link href="2021/04/07/IEEE%E6%B5%AE%E7%82%B9%E6%95%B0/"/>
       <url>2021/04/07/IEEE%E6%B5%AE%E7%82%B9%E6%95%B0/</url>

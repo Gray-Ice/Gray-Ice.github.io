@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-07T05:53:06.613Z</updated>
+  <updated>2021-04-09T05:18:10.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vim注释插件</title>
+    <link href="http://example.com/2021/04/09/vim%E6%B3%A8%E9%87%8A%E6%8F%92%E4%BB%B6/"/>
+    <id>http://example.com/2021/04/09/vim%E6%B3%A8%E9%87%8A%E6%8F%92%E4%BB%B6/</id>
+    <published>2021-04-09T05:04:00.000Z</published>
+    <updated>2021-04-09T05:18:10.000Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vim" scheme="http://example.com/categories/blog/vim/"/>
+    
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>QtQBuffer</title>
+    <link href="http://example.com/2021/04/08/QtQBuffer/"/>
+    <id>http://example.com/2021/04/08/QtQBuffer/</id>
+    <published>2021-04-08T03:30:00.000Z</published>
+    <updated>2021-04-08T03:43:15.640Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    <category term="Qt" scheme="http://example.com/categories/blog/Cpp/Qt/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>QtQTextStream</title>
+    <link href="http://example.com/2021/04/08/QtQTextStream/"/>
+    <id>http://example.com/2021/04/08/QtQTextStream/</id>
+    <published>2021-04-08T02:57:00.000Z</published>
+    <updated>2021-04-08T03:01:59.572Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    <category term="Qt" scheme="http://example.com/categories/blog/Cpp/Qt/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>IEEE浮点数</title>
