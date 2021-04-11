@@ -439,16 +439,17 @@
 
   
   <p>本篇博文参考自csapp。<br>因为详细内容书上已经讲的很清楚，所以这里我就只记一下各个函数所需要的参数以及返回值。</p>
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="getpid"><a href="#getpid" class="headerlink" title="getpid()"></a>getpid()</h2><p>返回调用进程的PID<br>函数原型: pid_t getpid(void);<br>参数: 无<br>返回值: 调用进程的PID</p>
-<h2 id="getppid"><a href="#getppid" class="headerlink" title="getppid()"></a>getppid()</h2><p>返回它的父进程的PID<br>函数原型: pid_t getppid(void);<br>参数: 无<br>返回值: 返回它的父进程的PID</p>
-<h2 id="fork"><a href="#fork" class="headerlink" title="fork()"></a>fork()</h2><p>函数原型: pid_t fork(void);<br>返回两个值: 在主进程中返回子进程的id，在子进程中返回0。<br>参数: 无<br>返回值: 如果当前进程是主进程，返回fork出的子进程的进程id；如果当前进程是子进程，返回0。</p>
-<h2 id="waitpid"><a href="#waitpid" class="headerlink" title="waitpid()"></a>waitpid()</h2><p>根据不同的参数表现出不同的行为返回不同的值<br>函数原型: pid_t waitpid(pid_t pid, int *statusp, int options);<br>参数:</p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="getpid"><a href="#getpid" class="headerlink" title="getpid()"></a>getpid()</h2><p>返回调用进程的PID。<br>头文件: &lt;unistd.h&gt;<br>函数原型: pid_t getpid(void);<br>参数: 无<br>返回值: 调用进程的PID。</p>
+<h2 id="getppid"><a href="#getppid" class="headerlink" title="getppid()"></a>getppid()</h2><p>返回它的父进程的PID。<br>头文件: &lt;unistd.h&gt;<br>函数原型: pid_t getppid(void);<br>参数: 无<br>返回值: 返回它的父进程的PID。</p>
+<h2 id="fork"><a href="#fork" class="headerlink" title="fork()"></a>fork()</h2><p>返回两个值: 在主进程中返回子进程的id，在子进程中返回0。<br>头文件: &lt;unistd.h&gt;<br>函数原型: pid_t fork(void);<br>参数: 无<br>返回值: 如果当前进程是主进程，返回fork出的子进程的进程id；如果当前进程是子进程，返回0。</p>
+<h2 id="waitpid"><a href="#waitpid" class="headerlink" title="waitpid()"></a>waitpid()</h2><p>根据不同的参数表现出不同的行为返回不同的值。<br>头文件: &lt;wait.h&gt;<br>函数原型: pid_t waitpid(pid_t pid, int *statusp, int options);<br>参数:</p>
 <ol>
 <li>pid: 如果pid &gt; 0，那么等待集合就是一个单独的子进程，它的进程ID等于pid。如果pid = -1，那么等待集合就是由父进程的所有子进程组成的。</li>
 <li>statusp: 该参数反映了已回收子进程的状态。</li>
 <li>options: 该参数设置了函数的行为。<br>由于该函数稍微复杂，非三言两语可以讲明白，若欲详细了解相关内容及其参数的作用请移步<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/waitpid">百度百科: waitpid</a>。</li>
 </ol>
-<p>未完待续。</p>
+<h2 id="sleep"><a href="#sleep" class="headerlink" title="sleep()"></a>sleep()</h2><p>sleep函数将一个进程挂起一段时间。<br>头文件: &lt;unistd.h&gt;<br>函数原型: unsigned int sleep(unsigned int secs);<br>参数: 秒速<br>返回值: 如果请求的时间量已经到了，secs返回0; 否则返回还剩下要休眠的秒数。</p>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h2 id="errno"><a href="#errno" class="headerlink" title="errno"></a>errno</h2><p>头文件: &lt;errno.h&gt;<br>如果waitpid的调用进程没有子进程，那么waitpid会把errno设置为ECHILD。如果waitpid函数被一个信号中断，那么它会设置errno为EINTR。<br>未完待续。</p>
 
   
   
@@ -468,7 +469,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-10T10:31:42+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-10T20:58:18+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Apr 10, 2021</p>
@@ -544,6 +545,12 @@
   
     <div class="prev-next">
       
+        <a class='prev' href='/2021/04/11/linuxQt%E4%BE%9D%E8%B5%96%E8%87%AA%E5%8A%A8%E6%8B%B7%E8%B4%9D%E8%84%9A%E6%9C%AC/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>linuxQt依赖自动拷贝脚本</p>
+          <p class='content'>手动拷贝Qt的依赖实非明智之举，于是我就做了个半自动拷贝依赖的脚本(之所以是半自动，是因为其中有一部分需要手动操作)。那么脚本代码如下:
+1234567891011121314151617181...</p>
+        </a>
+      
       
         <a class='next' href='/2021/04/09/vim%E6%B3%A8%E9%87%8A%E6%8F%92%E4%BB%B6/'>
           <p class='title'>vim注释插件<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
@@ -588,7 +595,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#getpid"><span class="toc-text">getpid()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#getppid"><span class="toc-text">getppid()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fork"><span class="toc-text">fork()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#waitpid"><span class="toc-text">waitpid()</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#getpid"><span class="toc-text">getpid()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#getppid"><span class="toc-text">getppid()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fork"><span class="toc-text">fork()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#waitpid"><span class="toc-text">waitpid()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sleep"><span class="toc-text">sleep()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#errno"><span class="toc-text">errno</span></a></li></ol>
     </div>
   </section>
 

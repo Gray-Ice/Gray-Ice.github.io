@@ -387,6 +387,56 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/01/01/nvim%E4%BD%BF%E7%94%A8%E5%89%AA%E5%88%87%E6%9D%BF/">
+        nvim使用系统剪切板
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        今天是元旦了，节日快乐。
+由于我重装系统后发现nvim的剪切板失效了，无论怎样”+y就是不好使，于是我在Arch群问了问群友，得到了答案: 因为我没装xclip包。那么就装上xclip包:
+1pacman -S xclip
+之后就可以正常使用nvim的复制粘贴功能了。那么，本篇完。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-01-01</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/01/01/nvim%E4%BD%BF%E7%94%A8%E5%89%AA%E5%88%87%E6%9D%BF/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/matplotlib%E7%BB%98%E6%8A%98%E7%BA%BF%E5%9B%BE/">
         使用matplotlib绘制折线图
       </a>
@@ -794,54 +844,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/">
-        多关键字查询
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>这里说的关键字查询，是要实现输入 fire water这两个词，然后后台将这两个词进行模糊查询。</p>
-<p>Vue部分，用户在搜索框输入需要查询的内容后，前端将用户输入的内容进行判断，如果有空格，那么根据空格将字符串分开；如果没有空格，那么无需分开。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// indexOF方法找到目标返回1，找不到目标返回-1, text是用户输入的数据</span></span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">this</span>.text.indexOf(<span class="string">&#x27; &#x27;</span>) !== -<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="comment">// 将数据分开, 此方法返回的是一个对象而不是列表</span></span><br><span class="line">        <span class="built_in">this</span>.text = <span class="built_in">this</span>.text.split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    <span class="comment">// 将数据转化，转化之后数据形如:[&quot;1&quot;, &quot;2&quot;]</span></span><br><span class="line">        <span class="built_in">this</span>.text = <span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.text)</span><br><span class="line">      &#125;</span><br><span class="line"><span class="comment">// 获取后台数据</span></span><br><span class="line">      <span class="built_in">this</span>.get_goods();</span><br></pre></td></tr></table></figure>
-<p>前端的处理就这么简单，那么到后台了:</p>
-<p>首先，获取参数:
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -949,7 +951,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(180)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(181)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -974,12 +976,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
             id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(23)</div></a></li>
+            ><div class='name'>Cpp</div><div class='badge'>(24)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
             id="categoriesblogCppQt"
-            ><div class='name'>Qt</div><div class='badge'>(16)</div></a></li>
+            ><div class='name'>Qt</div><div class='badge'>(17)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"
