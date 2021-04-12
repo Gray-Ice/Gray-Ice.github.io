@@ -388,6 +388,101 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/03/29/QtQFileInfo/">
+        QtQFileInfo获取文件信息
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这里只列举几个常用的方法: 获取文件所在文件夹的绝对路径，获取文件所在的目录，获取文件名，获取文件创建事件，获取文件大小。那么直接看代码:
+123456789101112131415161718// 输出文件的绝对路径QString path = QFileDialog::getOpenFileName(this, &quot;open a file&quot;, &quot;../&quo...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/29/QtQFileInfo/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/28/QtQFile%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6/">
+        QtQFile读写文件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        直接看代码吧，没啥好说的。
+读:
+123456789101112131415161718// 获取文件路径QString path = QFileDialog::getOpenFileName(this, &quot;open a file&quot;, &quot;../&quot;, &quot;All(*.*)&quot;);// 创建一个QFile对象QFile qf;// 设置文件...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-28</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/28/QtQFile%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/03/28/Qt%E8%AE%BE%E7%BD%AE%E7%A8%8B%E5%BA%8F%E8%BE%B9%E6%A1%86%E5%92%8C%E7%AA%97%E5%8F%A3%E9%80%8F%E6%98%8E/">
         Qt设置无边框和窗口透明
       </a>
@@ -762,102 +857,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/24/linux%E4%B8%8B%E5%BD%95gif%E8%BD%AF%E4%BB%B6/">
-        linux下录制gif软件
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        这是一个叫做peek的软件，其功能不仅仅限于录制GIF。安装:
-1pamcan -S peek
-使用: 在命令行输入peek并回车，即可打开peek。peek是一个窗口，其中心是透明的，且鼠标可以穿透其中心(这么看来与其说是透明不如说是什么都没有比较恰当)。其中心中的所有内容都会在你按下录制按钮后被录制。录制完成后点击停止即可。如果嫌默认的窗口太小，可以用鼠标把窗口拉的大一些。
-这样我写Qt...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-24</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Arch/">Arch</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/24/linux%E4%B8%8B%E5%BD%95gif%E8%BD%AF%E4%BB%B6/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/23/Qt%E5%88%9B%E5%BB%BA%E5%B7%A5%E5%85%B7%E6%A0%8F/">
-        Qt创建工具栏
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        书接前文(不知道前文是什么的可以在我博客的搜索框里搜索”Qt创建菜单栏”)，这次我们来创建工具栏，代码还用上文的代码。在本文中我只改变mainwindow.cpp这一个文件。那么先看代码吧:
-1234567891011121314151617181920212223242526#include &quot;mainwindow.h&quot;#include &lt;QMenuBar&gt;...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/23/Qt%E5%88%9B%E5%BB%BA%E5%B7%A5%E5%85%B7%E6%A0%8F/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -967,7 +966,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(181)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(183)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -992,12 +991,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
             id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(24)</div></a></li>
+            ><div class='name'>Cpp</div><div class='badge'>(26)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
             id="categoriesblogCppQt"
-            ><div class='name'>Qt</div><div class='badge'>(17)</div></a></li>
+            ><div class='name'>Qt</div><div class='badge'>(18)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"

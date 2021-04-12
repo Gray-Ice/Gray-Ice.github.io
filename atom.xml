@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-11T14:53:45.889Z</updated>
+  <updated>2021-04-12T04:53:07.316Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cpp定义类型转换运算符</title>
+    <link href="http://example.com/2021/04/12/cpp%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>http://example.com/2021/04/12/cpp%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%BF%90%E7%AE%97%E7%AC%A6/</id>
+    <published>2021-04-12T03:40:00.000Z</published>
+    <updated>2021-04-12T04:53:07.316Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Qt客户端和服务端Tcp通信</title>
+    <link href="http://example.com/2021/04/12/Qt%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%9A%E4%BF%A1/"/>
+    <id>http://example.com/2021/04/12/Qt%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%9A%E4%BF%A1/</id>
+    <published>2021-04-11T22:28:00.000Z</published>
+    <updated>2021-04-12T12:09:57.033Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Cpp" scheme="http://example.com/categories/blog/Cpp/"/>
+    
+    <category term="Qt" scheme="http://example.com/categories/blog/Cpp/Qt/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>linuxQt依赖自动拷贝脚本</title>
