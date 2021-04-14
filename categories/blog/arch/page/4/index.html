@@ -388,6 +388,154 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/archInstallMusicPlayer/">
+        arch安装audacious音乐播放器
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        安装音乐播放器:
+1pacman -S audacious
+这样就安装好了，右击桌面(我使用的xfce),然后选择Create Lanucher，在第一行输入:audacious，会出现一个提示，点击提示就会自动补充下面几行。然后选择Create就创建好桌面打开方式了。然后可以安装一个歌词插件:
+1pacman -S osdlyrics
+安装完成之后可以在桌面创建快捷方式，创建方式同auda...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/archInstallMusicPlayer/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/Arch%20Linux%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/">
+        Arch Linux xfce4主题美化
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        首先，先去下载一个主题，访问xfce4-look.org，下载你喜欢的xfce主题。
+下载下来的应该是一个.tar.xz的压缩包(如果是其他格式也没事), 使用以下命令解xz压缩:
+1xz -d yourfile.tar.xz
+将压缩包文件拷贝到/usr/share/themes文件夹(这里由于前面已经解xz压缩了，所以是.tar)，注意，这里可能需要用户权限，若是cp失败，则先获取root...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Arch%20Linux%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/20/%E8%A7%A3%E5%86%B3pacman%E9%94%81%E5%AE%9A%E9%97%AE%E9%A2%98/">
+        解决pacman提示数据库锁定
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        前几天滚的时候因为网速太慢就停了，过了一天发现pacman -Syu无法正常工作了，提示我数据库被锁定，但是pacman -S还能正常运作。然后解决方法如下:
+1rm /var/lib/pacman/db.lck
+记得加root权限。执行完这条命令后再pacman -Syu就可以了。这条命令看上去是删掉pacman的数据库锁文件。那么，本篇完。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-20</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/20/%E8%A7%A3%E5%86%B3pacman%E9%94%81%E5%AE%9A%E9%97%AE%E9%A2%98/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/20/%E8%A7%A3%E5%86%B3make%E6%97%B6%E7%BC%BA%E5%B0%91build%E7%9B%AE%E5%BD%95/">
         解决make时提示缺少“/lib/modules/5.9.14-arch1-1/build”
       </a>
@@ -821,7 +969,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(183)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(185)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -834,11 +982,6 @@
             ><div class='name'>Anaconda</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box child"
-            title="/categories/blog/Arch/" href="/categories/blog/Arch/"
-            id="categoriesblogArch"
-            ><div class='name'>Arch</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
             title="/categories/blog/C/" href="/categories/blog/C/"
             id="categoriesblogC"
             ><div class='name'>C</div><div class='badge'>(8)</div></a></li>
@@ -846,12 +989,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
             id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(26)</div></a></li>
+            ><div class='name'>Cpp</div><div class='badge'>(27)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
             id="categoriesblogCppQt"
-            ><div class='name'>Qt</div><div class='badge'>(18)</div></a></li>
+            ><div class='name'>Qt</div><div class='badge'>(19)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"
@@ -896,7 +1039,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(37)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(40)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/git/" href="/categories/blog/git/"
