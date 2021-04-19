@@ -4,6 +4,71 @@
   
     
     <entry>
+      <title>Arch Linux安装并使用elasticsearch</title>
+      <link href="2021/04/19/%E5%AE%89%E8%A3%85%E5%B9%B6%E4%BD%BF%E7%94%A8elastaticsearch/"/>
+      <url>2021/04/19/%E5%AE%89%E8%A3%85%E5%B9%B6%E4%BD%BF%E7%94%A8elastaticsearch/</url>
+      
+        <content type="html"><![CDATA[<p>很遗憾，这次我们并不能使用万能的pacman了，因为无论是elasticsearch还是kibana，使用pacman安装后都无法运行。<br>安装参考自<a href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/running-elasticsearch.html">安装并运行Elasticsearch</a>。<br>如果想要详细的安装过程，请看<a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.6/_installation.html">Installation</a>。虽然这是篇英文文档，不过通篇易懂，对于java和elasticsearch一脸懵的朋友可以看看这个。<br>首先要有一个较新版本的java，这里我用的是extra仓库的jdk-openjdk和jre-openjdk。<br>另外似乎想要运行elasticsearch似乎需要配置JAVA_HOME，但是到底需要不需要我并不清楚，因为我已经配好了…我之前的博文里有写过如何配置JAVA_HOME，如果读者使用elasticsearch的时候需要配置JAVA_HOME，那么可以参考我之前写的博客。<br>那么开始安装。</p><h1 id="获取最新版本的Elasticsearch"><a href="#获取最新版本的Elasticsearch" class="headerlink" title="获取最新版本的Elasticsearch"></a>获取最新版本的Elasticsearch</h1><p>第一步: 下载<a href="https://www.elastic.co/cn/downloads/elasticsearch">最新版Elasticsearch</a>。<br>第二步，解压:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf elasticsearch.tar.gz</span><br></pre></td></tr></table></figure><p>执行完上面那条命令，应该会解压出一个elasticsearch带着版本号的文件夹。<br>然后执行以下命令就可以运行elasticsearch了:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd elasticsearch文件夹/bin</span><br><span class="line">./elasticsearch</span><br></pre></td></tr></table></figure><p>如果跑起来了，那么大概是成功了。如果跑着跑着突然停了，那么可能发生了一些意外事故。。。然而博主由于不是Java崽，无法对那些错误进行解答，所以还请自行Google。<br>执行下面这条命令检验是否成功:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl &#x27;http://localhost:9200/?pretty&#x27;</span><br></pre></td></tr></table></figure><p>只要响应的内容不是Error就算成功。</p><h1 id="Sense"><a href="#Sense" class="headerlink" title="Sense"></a>Sense</h1><p>官方文档里写了可以安装Sense，但是这里我们不安装Sense，若要问我为什么，因为elasticsearch的官方文档似乎年久失修了。不过我们有替代方案。</p><h2 id="安装kibana"><a href="#安装kibana" class="headerlink" title="安装kibana"></a>安装kibana</h2><p>kibana依然不能从pacman安装，因为它和elasticsearch一样会报错。<br>kibana的官方文档:<a href="https://www.elastic.co/guide/en/kibana/4.6/index.html">Kibana(英文)</a>。<br>首先下载kibana的软件包:<a href="https://www.elastic.co/cn/downloads/kibana">Kibana</a>。<br>然后执行以下命令解压:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf kibana-版本号.tar.gz</span><br></pre></td></tr></table></figure><p>然后执行以下命令运行kibana:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd kibana文件夹/bin</span><br><span class="line">./kibana</span><br></pre></td></tr></table></figure><p>服务能跑起来不挂就算成功。</p><h2 id="Sense的替代方案"><a href="#Sense的替代方案" class="headerlink" title="Sense的替代方案"></a>Sense的替代方案</h2><p>官方文档里说的这条安装Sense的命令已经行不通了:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/kibana plugin --install elastic/sense</span><br></pre></td></tr></table></figure><p>输入这条命令会提示你已经没有plugin这条命令啦！好耶！<br>也许你会瞄一眼bin文件夹，发现里面有一个叫做kibana-plugin的可执行文件，但是我尝试用这个可执行文件安装Sense依然没有成功。<br>这时候我看到了Stackoverlow上的一篇帖子:<a href="https://stackoverflow.com/questions/40725668/no-valid-url-specified-when-trying-to-install-kibanas-sense-plugin">“No valid url specified” when trying to install Kibana’s Sense plugin</a>。<br>按照里面MKaz老哥的说法，Sense插件不是必要的，可以通过kibana的dev tools来代替。运行kibana服务后，访问”<a href="http://localhost:5601/app/dev/_tools#/console&quot;%EF%BC%8C%E8%BF%99%E9%87%8C%E5%92%8CSense%E7%9A%84%E5%8A%9F%E8%83%BD%E4%B9%9F%E5%B7%AE%E4%B8%8D%E5%A4%9A%E3%80%82">http://localhost:5601/app/dev\_tools#/console&quot;，这里和Sense的功能也差不多。</a></p><p>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> arch </category>
+          
+          <category> elasticsearch </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决elasticsearch{error:Content-Type header [application/x-www-form-urlencoded] is not supported</title>
+      <link href="2021/04/19/elasticsearch_jsonheader/"/>
+      <url>2021/04/19/elasticsearch_jsonheader/</url>
+      
+        <content type="html"><![CDATA[<p>今天在跟着elasticsearch官方文档学到”交互”时，出现了个错误，curl命令如下:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl -XGET &#x27;http://localhost:9200/_count?pretty&#x27; -d &#x27;</span><br><span class="line">&#123;</span><br><span class="line">    &quot;query&quot;: &#123;</span><br><span class="line">        &quot;match_all&quot;: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x27;</span><br></pre></td></tr></table></figure><p>结果我这里返回了个这:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;error&quot; : &quot;Content-Type header [application/x-www-form-urlencoded] is not supported&quot;,</span><br><span class="line">  &quot;status&quot; : 406</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>那么如何解决呢？方法很简单，指定Content-Type为json就可以了，那么命令应该写:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl -H&quot;Content-Type:application/json&quot; -XGET &#x27;http://localhost:9200/_count?pretty&#x27; -d &#x27; </span><br><span class="line">&#123;</span><br><span class="line">    &quot;query&quot;: &#123;</span><br><span class="line">        &quot;match_all&quot;: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x27;</span><br></pre></td></tr></table></figure><p>elasticsearch成功给出反馈:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;count&quot; : 38,</span><br><span class="line">  &quot;_shards&quot; : &#123;</span><br><span class="line">    &quot;total&quot; : 6,</span><br><span class="line">    &quot;successful&quot; : 6,</span><br><span class="line">    &quot;skipped&quot; : 0,</span><br><span class="line">    &quot;failed&quot; : 0</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>不得不吐槽一下，官方文档都能写错(有可能是之前的版本不识别Content-Type，后来软件更新了文档没有更新吧)。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> elasticsearch </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决adb no permissions</title>
+      <link href="2021/04/15/adb_no_permissions/"/>
+      <url>2021/04/15/adb_no_permissions/</url>
+      
+        <content type="html"><![CDATA[<p>用adb连接过一次手机后，重启再用adb devices连接，提示: no permissions;<br>解决这个问题的方法很简单:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adb kill-server</span><br><span class="line">sudo adb start-server</span><br></pre></td></tr></table></figure><p>(这个sudo我也不知道是否有必要加，我用的时候是加sudo的，不知道不加sudo能否成功执行该命令)<br>然后再使用adb devices就可以又连接上手机了。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> 乱七八糟 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>arch配置JAVA HOME</title>
       <link href="2021/04/14/arch%E9%85%8D%E7%BD%AEJAVA_HOME/"/>
       <url>2021/04/14/arch%E9%85%8D%E7%BD%AEJAVA_HOME/</url>

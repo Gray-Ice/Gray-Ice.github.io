@@ -386,6 +386,147 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/04/08/QtQBuffer/">
+        QtQBuffer
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        QBuffer可以在内存中开辟一块空间用来存储临时数据，QBuffer继承自QIODevice。这个比较好理解，直接看代码吧(记得包含QBuffer头文件):
+12345678910111213141516// 创建QBuffer对象QBuffer membuf;// 设置打开模式为只写if(membuf.open(QIODevice::WriteOnly))&#123;    // 写入文...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-04-08</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/04/08/QtQBuffer/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/04/08/QtQTextStream/">
+        QtQTextStream
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        QTextStream是一个文本流，用法如下:
+1234567891011// 指定文件名QFile qf(&quot;../new.txt&quot;);// 设置以只写方式打开文件，如果打开成功则执行if中的内容if(qf.open(QFile::WriteOnly))&#123;    QTextStream stream;    stream.setDevice(&amp;qf); ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-04-08</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/04/08/QtQTextStream/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/04/07/IEEE%E6%B5%AE%E7%82%B9%E6%95%B0/">
+        IEEE浮点数
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        本篇博文的内容参考自CSAPP第三版。
+IEEE浮点数大致概念IEEE浮点标准用V = (-1)s * M * 2E 的形式来表示一个数。符号s决定这数是负数(s=1)还是正数(s=0)，而对于数值0的符号位解释作为特殊情况处理。尾数M是一个二进制小数。阶码E的作用是对浮点数加权，这个权重是2的E次幂(可能是负数)。浮点数的位表示划分为3个字段，分别对这些值进行编码:一个单独的符号位s直接编...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-04-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/C/">C</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/04/07/IEEE%E6%B5%AE%E7%82%B9%E6%95%B0/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/04/07/VSCode%E4%B8%AD%E4%BD%BF%E7%94%A8QQ/">
         VSCode中使用QQ
       </a>
@@ -525,7 +666,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(185)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(188)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -595,7 +736,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(40)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(41)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/blog/elasticsearch/" href="/categories/blog/elasticsearch/"
+            id="categoriesblogelasticsearch"
+            ><div class='name'>elasticsearch</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/git/" href="/categories/blog/git/"
@@ -620,7 +766,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
             id="categoriesblogE4B9B1E4B883E585ABE7B39F"
-            ><div class='name'>乱七八糟</div><div class='badge'>(3)</div></a></li>
+            ><div class='name'>乱七八糟</div><div class='badge'>(4)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E5%89%8D%E7%AB%AF/" href="/categories/blog/%E5%89%8D%E7%AB%AF/"

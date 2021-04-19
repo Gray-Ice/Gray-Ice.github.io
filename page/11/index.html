@@ -387,6 +387,153 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/Linux%E6%9F%A5%E7%9C%8B%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84/">
+        Linux下查看文件安装路径
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        使用whereis binaryfile来查看文件路径。如:
+1whereis pacman
+输出:
+1pacman: /usr/bin/pacman /etc/pacman.d /etc/pacman.conf /usr/share/pacman /usr/share/man/man8/pacman.8.gz /usr/share/man/man6/pacman.6.gz
+之前就觉得应该有...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Linux%E6%9F%A5%E7%9C%8B%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/Linux%E7%A3%81%E5%8A%9B%E4%B8%8B%E8%BD%BD/">
+        linux磁力下载器
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这是一个名叫aria2的磁力下载器，可以直接使用pacman安装:
+1pacman -S aria2
+使用方法也很简单，直接在终端输入:aria2c 链接即可，默认会下载到当前终端所在的目录(如当前目录是/home/username/download，那么文件就会下载到/home/username/download文件夹下)。那么本篇完。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Linux%E7%A3%81%E5%8A%9B%E4%B8%8B%E8%BD%BD/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/linux%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip/">
+        Linux设置静态ip
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        使用NetworkManager的nmtui图形化工具，在命令行输入:
+1nmtui
+以打开nmtui界面。注意，使用此命令需安装NetworkManager。进入界面后选择”编辑连接”，选择你要更改的网络，用键盘选择右边的”编辑”选项。然后会跳转到编辑页面，在ipv4那里(我需要设置的是ipv4的静态ip)将”自动”调整为”手动”，打开”显示”，输入静态ip,确认，退出。使用&lt;fon...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/linux%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/Linux%E5%91%BD%E4%BB%A4/">
         Dec 31, 2020
       </a>
@@ -709,151 +856,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Django%E8%AE%BF%E9%97%AE%E5%9B%BE%E7%89%87/">
-        Django展示图片
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        想要通过访问如同127.0.0.1:8000/static/Tree.png的形式来访问在Django目录下的静态文件，首先需要在Django目录下创建一个static文件夹，该文件夹需与manage.py文件同级。然后编辑settings.py，在末尾加上:
-12345STATIC_URL = &#x27;/static/&#x27;STATICFILES_DIRS = [    os.p...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Django%E8%AE%BF%E9%97%AE%E5%9B%BE%E7%89%87/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Django%E8%AF%A2%E9%97%AE%E6%98%AF%E5%90%A6%E5%AF%BC%E5%85%A5mysql/">
-        关于Django询问是否已经导入mysql
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        今天新开了个Django项目，创建好数据库模型后输入:
-1python manage.py makemigrations appname
-结果提示错误:
-12django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.Did you install mysqlclient?
-解决方法:
-1.首先，安装py...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Django%E8%AF%A2%E9%97%AE%E6%98%AF%E5%90%A6%E5%AF%BC%E5%85%A5mysql/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Arch%E5%AE%89%E8%A3%85%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/">
-        Arch安装我的世界hmcl
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        直接yaourt -S hmcl安装包，安装好后输入hmcl即可。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Arch%E5%AE%89%E8%A3%85%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -961,7 +963,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(185)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(188)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1031,7 +1033,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(40)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(41)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/blog/elasticsearch/" href="/categories/blog/elasticsearch/"
+            id="categoriesblogelasticsearch"
+            ><div class='name'>elasticsearch</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/git/" href="/categories/blog/git/"
@@ -1056,7 +1063,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
             id="categoriesblogE4B9B1E4B883E585ABE7B39F"
-            ><div class='name'>乱七八糟</div><div class='badge'>(3)</div></a></li>
+            ><div class='name'>乱七八糟</div><div class='badge'>(4)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E5%89%8D%E7%AB%AF/" href="/categories/blog/%E5%89%8D%E7%AB%AF/"

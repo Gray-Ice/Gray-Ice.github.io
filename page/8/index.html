@@ -387,6 +387,143 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/%E6%B7%BB%E5%8A%A0%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/">
+        添加商品评论
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>首先先建一张表，该表拥有四个字段，其中有三个整型字段: id, gid(商品id), uid(用户id)。有一个字符串变量: content，用来存储评论。</p>
+<p>那么首先
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/%E6%B7%BB%E5%8A%A0%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/%E7%BB%84%E6%93%8D%E4%BD%9C/">
+        组操作
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>摘抄自<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Users_and_groups_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">Arch Wiki Users and groups</a>。<br>在/etc/group文件存储了系统中用户组的信息。<br>使用groups命令查看用户所在组的名称:</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/%E7%BB%84%E6%93%8D%E4%BD%9C/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/%E8%AE%BE%E7%BD%AE%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/">
+        设置商品评论频率
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        本方法是通过ip来进行对评论频率的掌控。
+首先，获取评论用户的ip:
+1234if &#x27;HTTP_X_FORWARDED_FOR&#x27; in request.META:    ip = request.META.get(&#x27;HTTP_X_FORWARDED_FOR&#x27;)else:    ip = request.META.get(&#x27;REMOTE_ADD...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/%E8%AE%BE%E7%BD%AE%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B/">
         Python进程线程
       </a>
@@ -708,150 +845,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/win10+archlinux/">
-        win10+arch+BIOS+MBR双系统安装
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>本篇博客来讲win10 + arch linux双系统安装。这里博主用的是legacy，磁盘为MBR。</p>
-<p>本来本篇博客应该在昨天就发出来的，但是我装好arch的时候发现自己一不小心把win10的引导项覆盖了。。。刚弄好引导项我就来发博客了。</p>
-<p>那么首先，你当然得有一个镜像啦，这里是arch官网的<a target="_blank" rel="noopener" href="https://www.archlinux.org/download/">download页面</a>。下载好镜像后，需要制作镜像，这里我使用的是ventoy(就是之前我博客里提到过的超好用的工具)制作的U盘。然后在磁盘上弄出一块未分配空间，建议大于50G，我分出来了150G。</p>
-<p>那么安装教程看这里: <a href="[https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)](https://wiki.archlinux.org/index.php/Installation_guide_(简体中文))">Installation guide</a>。这个是官方的教程，讲的挺好的，本篇博客为一些没有经验的朋友来讲一下部分需要英文阅读的地方以及一些令人疑惑的地方，您应当主要参考官方文档，在部分感到疑惑的地方来看本篇博客。</p>
-<h1 id="1-live-CD连接无线网络"><a href="#1-live-CD连接无线网络" class="headerlink" title="1.live CD连接无线网络"></a>1.live CD连接无线网络</h1><p>由于我是使用的无线网络，所以在进入Live CD后突然发现: 不对啊，我没有联网！那么怎么解决呢？</p>
-<p>输入:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wifi-menu</span><br></pre></td></tr></table></figure>
-<p>会弹出无线网络选择页面，在这里选择网络名以及
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/win10+archlinux/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/wineTim%E8%AE%BE%E7%BD%AE%E4%B8%AD%E6%96%87/">
-        wine TIM Wechat输入中文
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        转自manjaro/arch 解决wine 无法输入中文我使用的fcitx。找到:/opt/deepinwine/apps/Deepin-TIM/run.sh和/opt/deepinwine/apps/Deepin-WeChat/run.sh，在这两个文件最前面加入以下三行代码:
-123export XMODIFIERS&#x3D;&quot;@im&#x3D;fcitx&quot;expo...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/wineTim%E8%AE%BE%E7%BD%AE%E4%B8%AD%E6%96%87/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/%E4%BD%BFdeepinQQ%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87/">
-        使deepinQQ显示图片
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>由于我之前一直在使用qq-linux,所以一直没有研究这个问题。然而最近QQ老是抽风，我每滚一次，它就扫码秒退一次…无奈之下，还是摸起了deepin的wineQQ。<br>安装我就不说了哈，这篇博客解决的是无法加载图片的问题。<br>  首先，禁用ipv6，摘抄自<a target="_blank" rel="noopener" href="https://blog.csdn.net/u012320459/article/details/46508399">Arch下关闭ipv6的方法</a>。<br>输入以下命令:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%sudo touch /etc/sysctl.d/ipv6.conf</span><br><span class="line">%sudo vim !$</span><br></pre></td></tr></table></figure>
-<p>然后写入以下内容:</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/%E4%BD%BFdeepinQQ%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -959,7 +952,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(185)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(188)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1029,7 +1022,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(40)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(41)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/blog/elasticsearch/" href="/categories/blog/elasticsearch/"
+            id="categoriesblogelasticsearch"
+            ><div class='name'>elasticsearch</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/git/" href="/categories/blog/git/"
@@ -1054,7 +1052,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
             id="categoriesblogE4B9B1E4B883E585ABE7B39F"
-            ><div class='name'>乱七八糟</div><div class='badge'>(3)</div></a></li>
+            ><div class='name'>乱七八糟</div><div class='badge'>(4)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E5%89%8D%E7%AB%AF/" href="/categories/blog/%E5%89%8D%E7%AB%AF/"

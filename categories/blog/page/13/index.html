@@ -388,6 +388,154 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/archlinux%E5%AE%89%E8%A3%85redis/">
+        Arch安装使用Redis
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        首先，使用pacman安装redis:
+1sudo pacman -S redis
+然后，输入:
+1systemctl enable redis.service
+说实话我不知道这句话有什么用，从作用上来看应该是开机启动redis服务，但是就算这么设置了，redis服务也得自己手动开启。。。在终端输入:
+1redis-server
+开启redis server，然后输入redis-cli就可以...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/archlinux%E5%AE%89%E8%A3%85redis/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/arch%E4%BD%BF%E7%94%A8vncserver/">
+        使用VNCServer
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        本次使用的是REALVNC SERVER，目的在于实现局域网内开启一个只能被观看屏幕不能被控制的服务端。
+下载VNCServer访问RealVNC官网:VNC Server,选择Linux，在下面的选项里选择Gerneric script x86或x64,自己决定。下载完成之后解压缩:
+1tar -zxvf VNC*.tar.gz
+安装VNCServercd进解压后的文件夹，终端输入:
+1s...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/arch%E4%BD%BF%E7%94%A8vncserver/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/arch%E5%AE%89%E8%A3%85mongoDB/">
+        ArchLinux安装mongoDB
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        安装的过程有点麻烦(没法直接pacman了)，因为官方软件仓库里没有这个包了(详情还请看Arch Wiki)，所以这里我们得使用AUR了。访问ArchLinux安装MongoDB，在”安装”标题下选择你想要安装的软件包，这里我选择的是mongodb-bin软件包，使用的git下载，速度还挺快的。那么当软件包clone到本地后，你可以看到文件夹下有一个PKGBUILD文件，打开终端，输入:``...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/arch%E5%AE%89%E8%A3%85mongoDB/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/arch%E5%AE%89%E8%A3%85powerline/">
         Arch下bash安装powerline
       </a>
@@ -721,151 +869,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/18/vim%E4%BB%A5%E6%8C%87%E5%AE%9A%E7%BC%96%E7%A0%81%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/">
-        vim以指定编码打开文件
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        今天用vim打开文件时遇到了些问题，我从淘宝上买的网卡对应的电子文档用vim打开乱码了，我看到文件名是.txt，盲猜该文件是用windows的记事本编辑的，那么既然乱码的话，其编码应该是GBK。于是百度一番，找到了vim用指定编码打开文件的命令，这里先放上我借鉴的博客的链接: VIM如何以指定编码打开或加载文件。
-那么下面是两种设置编码的方式(其实用到的命令都是同一条)。在用vim打开文件后...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/18/vim%E4%BB%A5%E6%8C%87%E5%AE%9A%E7%BC%96%E7%A0%81%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/11/nvim%E5%AE%89%E8%A3%85c++%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8/">
-        coc_nvim安装c++代码补全
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        之前安装的C语言代码补全自从我开始学CPP后就不太灵光的样子，而且我忘记COC插件列表的网址是什么了，所以这里我又百度到了一篇安装C++的博客。
-以下内容借鉴自VIM 插件之 coc.nvim，感谢博主分享知识。
-那么首先要确保你安装了clang，下面是Arch Linux下安装clang的命令:
-1pacman -S clang
-博主原文中说如果没有安装clang直接装COC的CPP扩展会...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/11/nvim%E5%AE%89%E8%A3%85c++%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/11/%E8%A7%A3%E5%86%B3%E5%8D%A1sddm%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2/">
-        解决卡sddm登陆界面
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        记忆中我是发过这篇博客的，但是当交流群中的群友遇到这个问题的时候我在博客里找居然没找到。。。也许是我管理博客的时候一不小心漏了几篇文章吧。既然没有，那我就重新写一遍了。
-为了精准对接问题，我再来描述一下问题吧，Arch Linux在安装sddm后，可以进入sddm界面，但是输入完帐号密码后(这两者都输对了)按回车，并没有出现预想中的进入桌面而是又跳回了sddm。
-这件事与你的用户有关。因为s...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/11/%E8%A7%A3%E5%86%B3%E5%8D%A1sddm%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -975,7 +978,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(185)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(188)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1045,7 +1048,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(40)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(41)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/blog/elasticsearch/" href="/categories/blog/elasticsearch/"
+            id="categoriesblogelasticsearch"
+            ><div class='name'>elasticsearch</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/git/" href="/categories/blog/git/"
@@ -1070,7 +1078,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
             id="categoriesblogE4B9B1E4B883E585ABE7B39F"
-            ><div class='name'>乱七八糟</div><div class='badge'>(3)</div></a></li>
+            ><div class='name'>乱七八糟</div><div class='badge'>(4)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E5%89%8D%E7%AB%AF/" href="/categories/blog/%E5%89%8D%E7%AB%AF/"
