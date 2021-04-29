@@ -387,6 +387,101 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/Linux%E4%BD%BF%E7%94%A8v2raya%E4%BB%A3%E7%90%86/">
+        Linux使用v2raya代理
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        由于博主是小白，配置好了Qv2ray之后能够测试延迟但是上不了网，在百般百度无果的情况下，偶然得知还有这么一款开箱即用的v2ray图形化软件。那么话不多说，开始安装。v2rayA是无法通过pacman获取的，所以要从github上下载它，在Releases中下载对应的包，一番解压之后可以得到两个文件夹:etc文件夹和usr文件夹，打开可以看到，etc文件夹中有一个systemd文件夹，usr...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Linux%E4%BD%BF%E7%94%A8v2raya%E4%BB%A3%E7%90%86/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/Linux%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/">
+        Linux下的性能检测工具
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这是一个叫做htop的工具，我看着还挺好用的，今天就来记录一波。首先，安装软件包:
+1pacman -S htop
+在终端输入htop来使用它。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Linux%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/Linux%E6%9F%A5%E7%9C%8B%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84/">
         Linux下查看文件安装路径
       </a>
@@ -761,101 +856,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Django%20models%E6%8E%92%E5%BA%8F/">
-        Django Models排序
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        对Django的model排序:
-1goods = Goods.objects.all().order_by(&#x27;-id&#x27;)
-该命令的意思是根据id字段进行反向排序。
-如果有多个属性，可以使用:
-1goods = Goods.objects.all().order_by(&#x27;-id&#x27;, &#x27;create_time&#x27;)
-该命令的意思是先根据...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Django%20models%E6%8E%92%E5%BA%8F/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Django%E4%B8%AD%E9%97%B4%E4%BB%B6/">
-        Django中间件
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <h2 id="什么是中间件"><a href="#什么是中间件" class="headerlink" title="什么是中间件"></a>什么是中间件</h2><p>中间件就是在<strong>目标</strong>和<strong>结果</strong>之间进行的额外处理过程，在Django中就是<strong>request和response之间进行的处理</strong>，相对来说实现起来比较简单，但是要注意它是对全局有效的，可以在全局范围内改变输入和输出结果，因此需要谨慎使用，否则不仅会造成难以定位的错误，而且可能会影响整体性能。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Django%E4%B8%AD%E9%97%B4%E4%BB%B6/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -870,7 +870,7 @@
           </a>
         
         <p class="current">
-          11 / 20
+          11 / 21
         </p>
         
           <a class="next" rel="next" href="/page/12/">
@@ -963,7 +963,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(188)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(190)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1051,6 +1051,11 @@
             ><div class='name'>hugo</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child"
+            title="/categories/blog/life/" href="/categories/blog/life/"
+            id="categoriesbloglife"
+            ><div class='name'>life</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
             title="/categories/blog/vim/" href="/categories/blog/vim/"
             id="categoriesblogvim"
             ><div class='name'>vim</div><div class='badge'>(11)</div></a></li>
@@ -1068,7 +1073,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/%E5%89%8D%E7%AB%AF/" href="/categories/blog/%E5%89%8D%E7%AB%AF/"
             id="categoriesblogE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(2)</div></a></li>
+            ><div class='name'>前端</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"

@@ -4,6 +4,48 @@
   
     
     <entry>
+      <title>防止子元素浮动导致父元素变化</title>
+      <link href="2021/04/29/%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/"/>
+      <url>2021/04/29/%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/</url>
+      
+        <content type="html"><![CDATA[<p>因为浮动会导致元素脱离标准流，导致其父元素出现一些看上去比较异常的现象。所以这里是几种防止浮动导致父元素表现异常的方法。</p><h1 id="额外标签法"><a href="#额外标签法" class="headerlink" title="额外标签法"></a>额外标签法</h1><p>其实就是在容纳浮动的容器的最后添加一个具有clear属性的块级元素，如:</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;main_d&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;hd_box&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;ud_b hd_b&quot;</span>&gt;</span>Hi<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;ud_b hd_b&quot;</span>&gt;</span>Hi<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;ud_b hd_b&quot;</span>&gt;</span>Hi<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;ud_b hd_b&quot;</span>&gt;</span>Hi<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;clear:both;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>其中ud_b是加了左浮动的盒子。”hd_box”中的最后一个元素指定了”clear”属性，其作用是指定一个元素是否必须移动(清除浮动后)到在它之前的浮动元素下面。</p><h1 id="给父元素添加overflow属性"><a href="#给父元素添加overflow属性" class="headerlink" title="给父元素添加overflow属性"></a>给父元素添加overflow属性</h1><p>给父元素添加overflow属性，就拿上面的代码来说，在id “main_d”中添加一条”overflow:hidden”就好。<br>不过这个方法有个缺点，就是无法显示溢出部分。</p><h1 id="添加after伪类元素"><a href="#添加after伪类元素" class="headerlink" title="添加after伪类元素"></a>添加after伪类元素</h1><p>先定义一个类:</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span>&#123;</span><br><span class="line">    <span class="comment">/* IE6, 7 only */</span></span><br><span class="line">    *zoom: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>然后把”clearfix”这个类添加给父元素。<br>因为after是在使用该类的元素后面加一个内容，我们又把添加的这个内容设置成了block，即块元素，并对其添加了clear属性。所以这个方法其实相当于”额外标签法”。</p><h1 id="双伪元素清除"><a href="#双伪元素清除" class="headerlink" title="双伪元素清除"></a>双伪元素清除</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span>&#123;</span><br><span class="line">    <span class="comment">/* IE6, 7 only */</span></span><br><span class="line">    *zoom: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span>,</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这个方法和上面那个方法类似，但是你若问我为啥display是table而不是block，我只能回答你我也不知道为啥，但是block也是能用的。然而我看的教程里写的就是table,也没有解释为什么，所以我就只能当作”block在某些情况下也许有bug”处理。</p><p>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>郑州找工作经历</title>
+      <link href="2021/04/29/life6/"/>
+      <url>2021/04/29/life6/</url>
+      
+        <content type="html"><![CDATA[<p>前几天去郑州找工作去了，大概在郑州待了有4天，我就回家了。<span id="more"></span>一个是郑州那边的岗位比较少，我的目的是找python，但是郑州那边大部分python岗位都是少儿编程。另一个就是那边不要python应届生，或者就是要学过人工智能的，或者就是要经验的。当我把目光从python上移开，想找一下其他岗位时，我发现最低的学历要求也是大专。然而比较烦恼的是，我现在虽然是大专，但是只是在读，还是个函授的。很明显没有人会接受也确实没有人接受。<br>有一次我去面试，面试官也觉得很满意，但是当我说出我大专还没有毕业时，他当即表示他们只要毕业的。我无法判断他是否在委婉的拒绝我，毕竟聊的还算可以。反正就挺郁闷的。<br>之后我想找点其他工作，先去了一个公司，他们说要把我外派到宇通(就是提供郑州公交车的那个公司)，要我准备一下假简历，方便到宇通面试。但是我想了想，若是要造假的话，那我可去的地方可就太多了，也没必要去宇通。于是我就拒绝了。之后找了一个标注着”有师傅带”且面向中专的工作，结果到了地方一瞧，是个卖超市系统和pos机的…很不合我心意，于是我就又拒绝了。<br>搞来搞去，最后还是没有找到工作。<br>我是否仍要贯彻不说谎到底呢？这点答案似乎已经很明显了，但是我还是不想骗人，呵呵，有点顽固了。<br>目前来看就只有上全日制大专或者找工作这两条路了。不知道我是要去上全日制大专还是要去找工作，找工作也不一定能找到。<br>啧，难以选择。<br>另外我还发现自己搞错了一些事情，之前无论学什么都想要学精通，但是找工作似乎只要求“会就行”。有趣，那我也来一下博而不精吧。<br>目前来看继续钻研后端下去是个不明智的选择，所以我现在打算仔细学一下前端了。<br>如果不上全日制大专，那么我最近应该就要开始闭关了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> life </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Arch Linux安装并使用elasticsearch</title>
       <link href="2021/04/19/%E5%AE%89%E8%A3%85%E5%B9%B6%E4%BD%BF%E7%94%A8elastaticsearch/"/>
       <url>2021/04/19/%E5%AE%89%E8%A3%85%E5%B9%B6%E4%BD%BF%E7%94%A8elastaticsearch/</url>
