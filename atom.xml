@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-29T08:20:15.631Z</updated>
+  <updated>2021-04-30T10:34:22.363Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js间歇调用和超时调用</title>
+    <link href="http://example.com/2021/04/30/js%E9%97%B4%E6%AD%87%E5%92%8C%E8%B6%85%E6%97%B6%E8%B0%83%E7%94%A8/"/>
+    <id>http://example.com/2021/04/30/js%E9%97%B4%E6%AD%87%E5%92%8C%E8%B6%85%E6%97%B6%E8%B0%83%E7%94%A8/</id>
+    <published>2021-04-30T08:46:00.000Z</published>
+    <updated>2021-04-30T10:34:22.363Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="前端" scheme="http://example.com/categories/blog/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>防止子元素浮动导致父元素变化</title>
