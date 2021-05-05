@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-30T10:34:22.363Z</updated>
+  <updated>2021-05-05T11:36:44.449Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>看不见错误的gcc</title>
+    <link href="http://example.com/2021/05/05/%E7%9C%8B%E4%B8%8D%E8%A7%81%E9%94%99%E8%AF%AF%E7%9A%84gcc/"/>
+    <id>http://example.com/2021/05/05/%E7%9C%8B%E4%B8%8D%E8%A7%81%E9%94%99%E8%AF%AF%E7%9A%84gcc/</id>
+    <published>2021-05-04T16:00:00.000Z</published>
+    <updated>2021-05-05T11:36:44.449Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="C" scheme="http://example.com/categories/blog/C/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>js间歇调用和超时调用</title>
@@ -65,16 +87,14 @@
     <link href="http://example.com/2021/04/29/life6/"/>
     <id>http://example.com/2021/04/29/life6/</id>
     <published>2021-04-29T03:32:00.000Z</published>
-    <updated>2021-04-29T03:55:06.635Z</updated>
+    <updated>2021-05-05T11:28:07.583Z</updated>
     
     
     <summary type="html">&lt;p&gt;前几天去郑州找工作去了，大概在郑州待了有4天，我就回家了。</summary>
     
     
     
-    <category term="blog" scheme="http://example.com/categories/blog/"/>
-    
-    <category term="life" scheme="http://example.com/categories/blog/life/"/>
+    <category term="life" scheme="http://example.com/categories/life/"/>
     
     
   </entry>
