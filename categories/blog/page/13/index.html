@@ -388,6 +388,56 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/ArchLinux%E8%AE%BE%E7%BD%AEsudo/">
+        ArchLinux使用sudo
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Arch Linux刚安装好的时候是没有sudo命令的，需要自行安装，首先输入su命令以获取root权限，然后安装sudo:
+1pacman -S sudo
+想要查看具体的操作可以查看官方Wiki: Sudo。这里我只写下给用户添加sudo使用权限。安装了sudo之后，终端输入:
+1EDITOR=vim visudo
+这句话的意思是使用vim编辑sudo文件。这么做的原因是因为我输入visu...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/ArchLinux%E8%AE%BE%E7%BD%AEsudo/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/Arch%E4%B8%8B%E4%BD%BF%E7%94%A8deb%E5%8C%85/">
         arch使用deb包
       </a>
@@ -824,55 +874,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/ArchKeepTime/">
-        Arch Linux同步时间
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        由于我是Arch Linux + Windows双系统，所以在从arch切换到windows的时候或者从windows切换到arch的时候会造成时间不同步。有的时候明明是白天，时间面板上却显示22:00，虽然我也不太在意但是想看时间就要拿起手机确实不方便。于是我参照了Arch Wiki设置了一个开机自动同步时间。
-首先安装ntp软件包。
-1pacman -S ntp
-然后更改配置文件 /et...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/ArchKeepTime/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -982,7 +983,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(192)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(193)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1017,7 +1018,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/JavaScript/" href="/categories/blog/JavaScript/"
             id="categoriesblogJavaScript"
-            ><div class='name'>JavaScript</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>JavaScript</div><div class='badge'>(5)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Linux/" href="/categories/blog/Linux/"

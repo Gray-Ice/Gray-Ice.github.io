@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -21,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Category: blog - Gray-Ice</title>
+  <title>JS滚动到指定元素 - Gray-Ice</title>
   
 
   
@@ -329,7 +327,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  search' style="display: ;">
+        <div id="half" class='cover-wrapper post search' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -370,540 +368,202 @@
       <div class='body-wrapper' id="pjax-container">
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow blur article-type-post" id="post" itemscope itemprop="blogPost">
   
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
     
-    <h2 class="article-title" >
-      <a href="/2021/05/06/JS%E6%BB%9A%E5%8A%A8%E5%88%B0%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0/">
+      <h1 class="title">
         JS滚动到指定元素
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        这里用到了HTML5标准的scrollIntoView()方法。那么先看代码案例:
-12345678910111213141516171819202122232425262728293031323334353637383940&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charse...
-      
-    
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/JavaScript/">JavaScript</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2021-05-06</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：May 6, 2021</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/JavaScript/">JavaScript</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="JS滚动到指定元素" data-path="/2021/05/06/JS%E6%BB%9A%E5%8A%A8%E5%88%B0%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>这里用到了HTML5标准的scrollIntoView()方法。<br>那么先看代码案例:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Scroll Test<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;goto_fb()&quot;</span>&gt;</span>Go<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;f_box&quot;</span>&gt;</span></span><br><span class="line">        This is text for test.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> f_b = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&quot;f_box&quot;</span>)[<span class="number">0</span>];</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="comment">// 滚动到f_b的位置(f_b是类名为f_box的一个元素节点)</span></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">goto_fb</span>(<span class="params"></span>)</span></span></span><br><span class="line">    &#123;</span><br><span class="line"><span class="javascript">        f_b.scrollIntoView(&#123;<span class="attr">behavior</span>:<span class="string">&quot;smooth&quot;</span>&#125;);</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="comment">// 该函数的作用是生成100个p标签元素，方便展示滚动效果。</span></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">create_ps</span>(<span class="params"></span>)</span></span></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> str = <span class="string">&quot;&quot;</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++)</span></span><br><span class="line">        &#123;</span><br><span class="line"><span class="javascript">            str += <span class="string">&quot;&lt;p&gt;&quot;</span>+<span class="built_in">String</span>(i)+<span class="string">&quot;&lt;/p&gt;&quot;</span></span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> ps = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.body.insertBefore(ps, <span class="built_in">document</span>.getElementsByClassName(<span class="string">&quot;f_box&quot;</span>)[<span class="number">0</span>]);</span></span><br><span class="line">        ps.innerHTML = str;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="comment">// 生成100个p标签元素</span></span></span><br><span class="line">    create_ps();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>以上的代码展现的效果中，点击”Go”按钮即可触发滚动效果。因为我将behavior设置为了”smooth”，所以会有一段页面滚动的效果，如果将behavior设置成为”auto”，则会直接跳转到目的元素的位置。<br>那么这里是一些用法:<br>alignToTop: 这是一个布尔值。<br>当其为true时，窗口滚动后元素的顶部与视口顶部对齐。当其为false时，窗口滚动后元素的底部与视口底部对齐。<br>scrollIntoViewOptions是一个选项对象。<br>behavior: 定义过渡动画，可取的值为”smooth”和”auto”，默认为”auto”。<br>block: 定义垂直方向的对齐，可取的值为”start”, “center”, “end”和”nearest”，默认为”start”。<br>inline: 定义水平方向的对齐, 可取的值为”start”, “center”, “end”和”nearest”，默认为”nearest”。<br>alignToTop和scrollIntoViewOptions一起用:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f_b.scrollIntoView(<span class="literal">false</span>, &#123;<span class="attr">behavior</span>:<span class="string">&quot;auto&quot;</span>&#125;);</span><br></pre></td></tr></table></figure>
+<p>那么本篇完。</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2021/05/06/JS%E6%BB%9A%E5%8A%A8%E5%88%B0%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0/'>
-            Read More
-          </a>
-        </div>
+      
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-06T16:07:12+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：May 6, 2021</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/06/JavaScriptDOM%E6%93%8D%E4%BD%9C/">
-        JavaScriptDOM节点操作
-      </a>
-    </h2>
-  
-  <div class='md'>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        创造节点document.createElement();  创建一个元素节点，返回该元素节点。类似的还有createTextNode等，这里就不写了。
-插入节点Node.appendChild(Node);  插入一个子节点，该子节点成为该节点的lastChild。Node.insertBefore(newNode, someNode);  参数newNode为要插入的节点，someNod...
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/05/06/JS%E6%BB%9A%E5%8A%A8%E5%88%B0%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0/&title=JS滚动到指定元素 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/05/06/JS%E6%BB%9A%E5%8A%A8%E5%88%B0%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0/&title=JS滚动到指定元素 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/05/06/JS%E6%BB%9A%E5%8A%A8%E5%88%B0%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0/&title=JS滚动到指定元素 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
       
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/JavaScript/">JavaScript</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/06/JavaScriptDOM%E6%93%8D%E4%BD%9C/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
 </div>
 
-          </div>
+
+
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/05/%E7%9C%8B%E4%B8%8D%E8%A7%81%E9%94%99%E8%AF%AF%E7%9A%84gcc/">
-        看不见错误的gcc
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        提示：本篇文章只是娱乐，请不要嘲笑博主的nt操作。你有没有过这样的经历，用gcc编译时，出现一大堆的警告，搞得你心态炸裂，再也不想看到红红的报错。那么解决方法来啦！博主刚做了个脚本，可以让你看不见这些烦人的警告。
-123456val=$(gcc -Wall -Werror -Wextra -pedantic &quot;test.c&quot; 2&gt; /dev/null)if [ $?...
-      
-    
+    </div>
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/C/">C</a>
-        
-      </div>
+  
+
+  
+    <div class="prev-next">
       
-        <div>
-          <a class='readmore' href='/2021/05/05/%E7%9C%8B%E4%B8%8D%E8%A7%81%E9%94%99%E8%AF%AF%E7%9A%84gcc/'>
-            Read More
-          </a>
-        </div>
+      
+        <a class='next' href='/2021/05/06/JavaScriptDOM%E6%93%8D%E4%BD%9C/'>
+          <p class='title'>JavaScriptDOM节点操作<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>创造节点document.createElement();  创建一个元素节点，返回该元素节点。类似的还有createTextNode等，这里就不写了。
+插入节点Node.appendChild...</p>
+        </a>
       
     </div>
   
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/04/30/js%E9%97%B4%E6%AD%87%E5%92%8C%E8%B6%85%E6%97%B6%E8%B0%83%E7%94%A8/">
-        js间歇调用和超时调用
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        我现在想单独创建一个js分类了。。。咳咳，我们先来说间歇调用和超时调用的区别。间歇调用就是设置之后会会持续不断的触发超时，每次超时调用一次; 而超时调用是设置之后只会在第一次超时的时候调用。
-超时调用以下代码是超时调用:
-123456// 定义超时后要调用的函数function sayTimeOut()&#123;    console.log(&quot;Time Out!!&quot;)...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-04-30</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/JavaScript/">JavaScript</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/04/30/js%E9%97%B4%E6%AD%87%E5%92%8C%E8%B6%85%E6%97%B6%E8%B0%83%E7%94%A8/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/04/29/%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
-        防止子元素浮动导致父元素变化
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        因为浮动会导致元素脱离标准流，导致其父元素出现一些看上去比较异常的现象。所以这里是几种防止浮动导致父元素表现异常的方法。
-额外标签法其实就是在容纳浮动的容器的最后添加一个具有clear属性的块级元素，如:
-123456789&lt;div id=&quot;main_d&quot;&gt;    &lt;div id=&quot;hd_box&quot;&gt;        &lt;div...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-04-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/%E5%89%8D%E7%AB%AF/">前端</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/04/29/%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/04/19/%E5%AE%89%E8%A3%85%E5%B9%B6%E4%BD%BF%E7%94%A8elastaticsearch/">
-        Arch Linux安装并使用elasticsearch
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        很遗憾，这次我们并不能使用万能的pacman了，因为无论是elasticsearch还是kibana，使用pacman安装后都无法运行。安装参考自安装并运行Elasticsearch。如果想要详细的安装过程，请看Installation。虽然这是篇英文文档，不过通篇易懂，对于java和elasticsearch一脸懵的朋友可以看看这个。首先要有一个较新版本的java，这里我用的是extra仓...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-04-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a><span class="sep"></span><a class="category-link" href="/categories/blog/elasticsearch/">elasticsearch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/04/19/%E5%AE%89%E8%A3%85%E5%B9%B6%E4%BD%BF%E7%94%A8elastaticsearch/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/04/19/elasticsearch_jsonheader/">
-        解决elasticsearch{error:Content-Type header [application/x-www-form-urlencoded] is not supported
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        今天在跟着elasticsearch官方文档学到”交互”时，出现了个错误，curl命令如下:
-1234567curl -XGET &#x27;http://localhost:9200/_count?pretty&#x27; -d &#x27;&#123;    &quot;query&quot;: &#123;        &quot;match_all&quot;: &#123;&#1...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-04-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/elasticsearch/">elasticsearch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/04/19/elasticsearch_jsonheader/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/04/15/adb_no_permissions/">
-        解决adb no permissions
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        用adb连接过一次手机后，重启再用adb devices连接，提示: no permissions;解决这个问题的方法很简单:
-12adb kill-serversudo adb start-server
-(这个sudo我也不知道是否有必要加，我用的时候是加sudo的，不知道不加sudo能否成功执行该命令)然后再使用adb devices就可以又连接上手机了。本篇完。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-04-15</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/">乱七八糟</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/04/15/adb_no_permissions/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/04/14/arch%E9%85%8D%E7%BD%AEJAVA_HOME/">
-        arch配置JAVA HOME
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        博主从未学过Java，对java一窍不通，并且不知道JAVA_HOME下应该包含什么，只知道配置好了之后appium不再报缺少JAVA_HOME的错。所以本文注定不会讲的详细，甚至可能会有错误，慎读。首先安装jdk-openjdk:
-1pacman -S jdk-openjdk
-然后安装两个公共包:
-1pacman -S java-runtime-common java-environmen...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-04-14</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/04/14/arch%E9%85%8D%E7%BD%AEJAVA_HOME/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/04/13/QtQUdpSocket/">
-        使用QUdpSocket
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        先看效果图:使用QUdpSocket需要在项目的.pro文件里加上:
-1QT += network
-QUdpSocket通信的步骤如下: 绑定端口，收消息/发消息。那么看代码:
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-04-13</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/04/13/QtQUdpSocket/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 20
-        </p>
-        
-          <a class="next" rel="next" href="/categories/blog/page/2/">
-            <section class="post next white-box shadow blur">
-              &nbsp;Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
+</article>
 
 
-    
   
+
+  <article class="post white-box reveal shadow blur" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="gitalk-container"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -911,246 +571,14 @@ QUdpSocket通信的步骤如下: 绑定端口，收消息/发消息。那么看�
     
     
 
-<section class="widget blogger shadow blur desktop mobile">
-  <div class='content'>
-    
-    
-      <div class='text'>
-        
-          <h2>Gray-Ice</h2>
-        
-        
-          <p>一位好奇心十足的开发者。</p>
 
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Gray-Ice/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow blur desktop">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/blog/" href="/categories/blog/"
-            id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(193)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/30days/" href="/categories/blog/30days/"
-            id="categoriesblog30days"
-            ><div class='name'>30days</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Anaconda/" href="/categories/blog/Anaconda/"
-            id="categoriesblogAnaconda"
-            ><div class='name'>Anaconda</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/C/" href="/categories/blog/C/"
-            id="categoriesblogC"
-            ><div class='name'>C</div><div class='badge'>(9)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
-            id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(27)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
-            id="categoriesblogCppQt"
-            ><div class='name'>Qt</div><div class='badge'>(19)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"
-            id="categoriesblogDeepin"
-            ><div class='name'>Deepin</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/JavaScript/" href="/categories/blog/JavaScript/"
-            id="categoriesblogJavaScript"
-            ><div class='name'>JavaScript</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Linux/" href="/categories/blog/Linux/"
-            id="categoriesblogLinux"
-            ><div class='name'>Linux</div><div class='badge'>(18)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/" href="/categories/blog/Python/"
-            id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(47)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"
-            id="categoriesblogPythonPyQt5"
-            ><div class='name'>PyQt5</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/flask/" href="/categories/blog/Python/flask/"
-            id="categoriesblogPythonflask"
-            ><div class='name'>flask</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            id="categoriesblogPythonE695B0E68DAEE58886E69E90"
-            ><div class='name'>数据分析</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Socket/" href="/categories/blog/Socket/"
-            id="categoriesblogSocket"
-            ><div class='name'>Socket</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Termux/" href="/categories/blog/Termux/"
-            id="categoriesblogTermux"
-            ><div class='name'>Termux</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/arch/" href="/categories/blog/arch/"
-            id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(41)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/elasticsearch/" href="/categories/blog/elasticsearch/"
-            id="categoriesblogelasticsearch"
-            ><div class='name'>elasticsearch</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/git/" href="/categories/blog/git/"
-            id="categoriesbloggit"
-            ><div class='name'>git</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/hugo/" href="/categories/blog/hugo/"
-            id="categoriesbloghugo"
-            ><div class='name'>hugo</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/vim/" href="/categories/blog/vim/"
-            id="categoriesblogvim"
-            ><div class='name'>vim</div><div class='badge'>(11)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/vue/" href="/categories/blog/vue/"
-            id="categoriesblogvue"
-            ><div class='name'>vue</div><div class='badge'>(17)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
-            id="categoriesblogE4B9B1E4B883E585ABE7B39F"
-            ><div class='name'>乱七八糟</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E5%89%8D%E7%AB%AF/" href="/categories/blog/%E5%89%8D%E7%AB%AF/"
-            id="categoriesblogE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"
-            id="categoriesblogE69C8DE58AA1E599A8"
-            ><div class='name'>服务器</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/friendlink/" href="/categories/friendlink/"
-            id="categoriesfriendlink"
-            ><div class='name'>friendlink</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/life/" href="/categories/life/"
-            id="categorieslife"
-            ><div class='name'>life</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/resume/" href="/categories/resume/"
-            id="categoriesresume"
-            ><div class='name'>resume</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/" href="/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/"
-            id="categoriesE58D9AE5AEA2E697A5E5BF97"
-            ><div class='name'>博客日志</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow blur desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/30days/" style="font-size: 15.11px; color: #919191">30days</a> <a href="/tags/Anaconda/" style="font-size: 14px; color: #999">Anaconda</a> <a href="/tags/Arch/" style="font-size: 24px; color: #555">Arch</a> <a href="/tags/Deepin/" style="font-size: 16.22px; color: #8a8a8a">Deepin</a> <a href="/tags/Django/" style="font-size: 21.78px; color: #646464">Django</a> <a href="/tags/Docker/" style="font-size: 15.11px; color: #919191">Docker</a> <a href="/tags/Flask/" style="font-size: 15.11px; color: #919191">Flask</a> <a href="/tags/Linux%E5%91%BD%E4%BB%A4/" style="font-size: 16.22px; color: #8a8a8a">Linux命令</a> <a href="/tags/PIL/" style="font-size: 17.33px; color: #828282">PIL</a> <a href="/tags/PyQt5/" style="font-size: 14px; color: #999">PyQt5</a> <a href="/tags/Socket/" style="font-size: 14px; color: #999">Socket</a> <a href="/tags/Vue/" style="font-size: 22.89px; color: #5d5d5d">Vue</a> <a href="/tags/Wine/" style="font-size: 14px; color: #999">Wine</a> <a href="/tags/bluetooth/" style="font-size: 14px; color: #999">bluetooth</a> <a href="/tags/cv2/" style="font-size: 14px; color: #999">cv2</a> <a href="/tags/git/" style="font-size: 18.44px; color: #7b7b7b">git</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/hugo/" style="font-size: 15.11px; color: #919191">hugo</a> <a href="/tags/jwt/" style="font-size: 16.22px; color: #8a8a8a">jwt</a> <a href="/tags/matplotlib/" style="font-size: 15.11px; color: #919191">matplotlib</a> <a href="/tags/nask/" style="font-size: 14px; color: #999">nask</a> <a href="/tags/pip/" style="font-size: 14px; color: #999">pip</a> <a href="/tags/redis/" style="font-size: 14px; color: #999">redis</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/ventoy/" style="font-size: 14px; color: #999">ventoy</a> <a href="/tags/vim/" style="font-size: 20.67px; color: #6c6c6c">vim</a> <a href="/tags/zsh/" style="font-size: 14px; color: #999">zsh</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/" style="font-size: 14px; color: #999">上传文件</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E6%9D%A1/" style="font-size: 14px; color: #999">上传进度条</a> <a href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/" style="font-size: 14px; color: #999">中间件</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 15.11px; color: #919191">代理</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/" style="font-size: 14px; color: #999">关键字查询</a> <a href="/tags/%E5%88%86%E9%A1%B5/" style="font-size: 14px; color: #999">分页</a> <a href="/tags/%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/" style="font-size: 14px; color: #999">压缩图片</a> <a href="/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/" style="font-size: 14px; color: #999">又拍云</a> <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/" style="font-size: 15.11px; color: #919191">双系统</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E7%9B%98/" style="font-size: 14px; color: #999">启动盘</a> <a href="/tags/%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/" style="font-size: 14px; color: #999">商品评论</a> <a href="/tags/%E5%9B%BD%E9%99%85%E5%8C%96/" style="font-size: 14px; color: #999">国际化</a> <a href="/tags/%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90/" style="font-size: 14px; color: #999">图片合成</a> <a href="/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" style="font-size: 15.11px; color: #919191">对象存储</a> <a href="/tags/%E5%BE%AE%E5%8D%9A%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">微博第三方登录</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">性能检测工具</a> <a href="/tags/%E6%8A%98%E7%BA%BF%E5%9B%BE/" style="font-size: 14px; color: #999">折线图</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 15.11px; color: #919191">服务器</a> <a href="/tags/%E6%B0%B4%E5%8D%B0/" style="font-size: 14px; color: #999">水印</a> <a href="/tags/%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81/" style="font-size: 15.11px; color: #919191">滑块验证</a> <a href="/tags/%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81/" style="font-size: 14px; color: #999">生成图片验证码</a> <a href="/tags/%E7%94%BB%E4%B8%AD%E7%94%BB/" style="font-size: 14px; color: #999">画中画</a> <a href="/tags/%E7%99%BD%E5%A4%A9%E9%BB%91%E5%A4%9C%E6%A8%A1%E5%BC%8F/" style="font-size: 14px; color: #999">白天黑夜模式</a> <a href="/tags/%E7%99%BE%E5%BA%A6%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">百度文字识别</a> <a href="/tags/%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/" style="font-size: 14px; color: #999">评论频率</a> <a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 19.56px; color: #737373">踩坑</a> <a href="/tags/%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">钉钉第三方登录</a>
-    </div>
-  </section>
 
 
   
 
 
 </aside>
+
 
 
         
@@ -1160,8 +588,8 @@ QUdpSocket通信的步骤如下: 绑定端口，收消息/发消息。那么看�
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="JS滚动到指定元素";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

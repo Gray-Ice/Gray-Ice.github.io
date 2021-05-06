@@ -444,7 +444,9 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">button_dom.classList.add(<span class="string">&quot;using_btn&quot;</span>);</span><br></pre></td></tr></table></figure>
 <p>这段代码会给button_dom添加一个using_btn的类。<br>remove是删除类名，如:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">button_dom.classList.remove(<span class="string">&#x27;using_btn&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<p>这段代码会删除掉button_dom的using_btn类。</p>
+<p>这段代码会删除掉button_dom的using_btn类。<br>(2021/05/06更新) 还有几个方法也很有用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">classList.contains(value);  返回布尔值，表示给定的value是否已经存在。</span><br><span class="line">toggle(value);  如果类名中已经存在指定的value，则删除；如果不存在，则添加。</span><br></pre></td></tr></table></figure>
+
 <p>那么本篇完。前端真香.jpg。</p>
 
   
@@ -465,7 +467,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-06T10:48:17+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-06T10:58:26+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：May 6, 2021</p>
