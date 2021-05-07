@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-06T08:07:12.564Z</updated>
+  <updated>2021-05-07T02:46:55.588Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML事件处理</title>
+    <link href="http://example.com/2021/05/07/HTML%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/"/>
+    <id>http://example.com/2021/05/07/HTML%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/</id>
+    <published>2021-05-07T02:28:00.000Z</published>
+    <updated>2021-05-07T02:46:55.588Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这里只讲如何获取触发的是什么事件以及获取触发该事件的节点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="JavaScript" scheme="http://example.com/categories/blog/JavaScript/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>JS滚动到指定元素</title>

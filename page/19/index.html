@@ -387,6 +387,58 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/07/14/Arch%E8%BF%9E%E6%8E%A5%E8%93%9D%E7%89%99/">
+        Arch连接蓝牙
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>本博客部分内容借鉴于:<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/19d88ecf4f5e">解决Linux无法连接蓝牙耳机Bose QuietComfort 35(QC35)的问题-漫月者</a>，感谢博主的分享！</p>
+<p>首先，安装蓝牙模块，参照Arch Wiki:<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Bluetooth_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">Bluetooth</a>。<br>安装bluez和bluez-utils:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S bluez</span><br></pre></td></tr></table></figure>
+<p>加载模块:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">modprobe bluetooth</span><br></pre></td></tr></table></figure>
+<p>设置开机启动:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable bluetooth.service</span><br></pre></td></tr></table></figure>
+<p>开启服务:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start bluetooth.service</span><br></pre></td></tr></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-07-14</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/07/14/Arch%E8%BF%9E%E6%8E%A5%E8%93%9D%E7%89%99/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/07/13/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/">
         我的常用工具
       </a>
@@ -789,50 +841,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/04/28/%E4%BD%BF%E7%94%A8%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/">
-        使用钉钉、微博第三方登录
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>钉钉的第三方登录，乍一看开发文档觉得没什么，然而越往下进行越觉得棘手，
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-04-28</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/04/28/%E4%BD%BF%E7%94%A8%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -940,7 +948,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(193)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(194)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -975,7 +983,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/JavaScript/" href="/categories/blog/JavaScript/"
             id="categoriesblogJavaScript"
-            ><div class='name'>JavaScript</div><div class='badge'>(5)</div></a></li>
+            ><div class='name'>JavaScript</div><div class='badge'>(6)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Linux/" href="/categories/blog/Linux/"
