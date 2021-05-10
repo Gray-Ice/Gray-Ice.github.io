@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -21,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Category: blog - Gray-Ice</title>
+  <title>JS添加右键菜单 - Gray-Ice</title>
   
 
   
@@ -329,7 +327,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  search' style="display: ;">
+        <div id="half" class='cover-wrapper post search' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -370,536 +368,204 @@
       <div class='body-wrapper' id="pjax-container">
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow blur article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
     
-      
+      <h1 class="title">
+        JS添加右键菜单
+      </h1>
+      <div class='new-meta-box'>
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/change_keyword/">
-        替换关键词
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>今天闲着无聊(其实就是不想写web)，突然想到之前写博客时分类大小写搞错了找文件的艰辛，就决心写一个能够在当前目录下改变指定文件类型中关键字的脚本。那么先说一下思路吧。</p>
-<p>先获取当前目录下的所有文件名称，然后根据文件名来判断是否更改，并且在更改前将将要被更改的文件存进一个文件夹(其实就是备份啦)，之后替换关键词即可。</p>
-<p>那么下面是代码:
-    
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/JavaScript/">JavaScript</a><span class="sep"></span><a class="category-link" href="/categories/blog/%E5%89%8D%E7%AB%AF/">前端</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2020-12-31</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：May 10, 2021</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="JS添加右键菜单" data-path="/2021/05/10/JS%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>先看效果图(我没有做美化，简陋了亿点点)。<br><img src="https://gray-bed.oss-cn-hongkong.aliyuncs.com/jsRightMenu.gif" class="lazyload" data-srcset="https://gray-bed.oss-cn-hongkong.aliyuncs.com/jsRightMenu.gif" srcset="data:image/png;base64,666"/><br>然后我先讲解一下大概的逻辑: 在用户右键时，获取其右键的位置，然后在用户右键的位置展示出右键菜单。在用户左键时，关闭右键菜单。<br>在用户右键的位置展示出右键菜单这一步很简单，只需要添加一个绝对定位的盒子，然后将这个盒子移动到右键的位置即可。<br>那么请看代码:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./test.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这是js代码:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="comment">// 创建右键菜单盒子</span></span><br><span class="line"><span class="keyword">let</span> rightMenuDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line"><span class="comment">// 计数，用于关闭右键菜单</span></span><br><span class="line"><span class="keyword">let</span> rightMenuCount = <span class="number">0</span>;</span><br><span class="line"><span class="comment">// 设置右键菜单样式</span></span><br><span class="line">rightMenuDiv.style.backgroundColor = <span class="string">&quot;red&quot;</span>;</span><br><span class="line">rightMenuDiv.style.position = <span class="string">&quot;absolute&quot;</span>;</span><br><span class="line"><span class="comment">// 防止点击右键菜单中的内容的时候冒泡，导致关闭右键菜单</span></span><br><span class="line">rightMenuDiv.addEventListener(<span class="string">&quot;mousedown&quot;</span>, <span class="function">(<span class="params">event</span>)=&gt;</span>&#123;event.stopPropagation();&#125;)</span><br><span class="line"><span class="comment">// 给右键菜单添加内容(子节点)</span></span><br><span class="line"><span class="keyword">let</span> rightMenuChildLink = <span class="built_in">document</span>.createElement(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">rightMenuChildLink.appendChild(<span class="built_in">document</span>.createTextNode(<span class="string">&quot;www.gray-ice.com&quot;</span>));</span><br><span class="line">rightMenuChildLink.setAttribute(<span class="string">&quot;href&quot;</span>, <span class="string">&quot;https://www.gray-ice.com&quot;</span>);</span><br><span class="line">rightMenuDiv.appendChild(rightMenuChildLink);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 展示右键菜单</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showRightMenu</span>(<span class="params">x, y</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 因为右键菜单有postion: absolute属性，已经脱标了，只要父元素没有定位，添加到哪都行，我这里是随便添加到底部了。</span></span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(rightMenuDiv);</span><br><span class="line">    <span class="comment">// 调整右键菜单的位置，将其至于当前鼠标所在的位置上。</span></span><br><span class="line">    rightMenuDiv.style.left = <span class="built_in">String</span>(x) + <span class="string">&quot;px&quot;</span>;</span><br><span class="line">    rightMenuDiv.style.top = <span class="built_in">String</span>(y) + <span class="string">&quot;px&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 这里利用了事件冒泡，无论在哪个节点上点击的右键，最终都会冒泡到document上</span></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">&quot;contextmenu&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event);</span><br><span class="line">    <span class="comment">// 避免触发浏览器的右键菜单</span></span><br><span class="line">    event.preventDefault();</span><br><span class="line">    <span class="comment">// 显示自定义的右键菜单</span></span><br><span class="line">    showRightMenu(event.pageX, event.pageY);</span><br><span class="line">    <span class="comment">// 将当前右键菜单的状态设置为 打开</span></span><br><span class="line">    rightMenuCount = <span class="number">1</span>;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 关闭右键菜单</span></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">&quot;mousedown&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 如果右键菜单当前是打开状态</span></span><br><span class="line">    <span class="keyword">if</span>(rightMenuCount)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 如果按下的是主键</span></span><br><span class="line">        <span class="keyword">if</span>(event.button === <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 从body上移除右键菜单</span></span><br><span class="line">            <span class="built_in">document</span>.body.removeChild(rightMenuDiv);</span><br><span class="line">            <span class="comment">// 将右键菜单的状态设置为关闭</span></span><br><span class="line">            rightMenuCount = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建100个p标签，用来测试页面高度变化是否会影响右键菜单的行为</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">create100P</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">let</span> str = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        str += <span class="string">`&lt;p&gt;<span class="subst">$&#123;i&#125;</span>&lt;/p&gt;\n`</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> ps = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(ps);</span><br><span class="line">    ps.innerHTML = str;</span><br><span class="line">&#125;</span><br><span class="line">create100P();</span><br></pre></td></tr></table></figure>
+<p>就是这样。<br>本篇完。</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2020/12/31/change_keyword/'>
-            Read More
-          </a>
-        </div>
+      
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-10T14:44:47+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：May 10, 2021</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/day01%E7%9A%84%E4%B8%93%E9%97%A8%E6%9C%AF%E8%AF%AD/">
-        day01的专门术语
-      </a>
-    </h2>
-  
-  <div class='md'>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        TAB=4    有的文本编辑器可以调整TAB键的宽度。请使用这种编译器的人将TAB键的宽度设定成4，这样源程序更容易读。
-FAT12格式    (FAT12 Format)用Windows或MS-DOS格式化出来的软盘就是这种格式，我们的helloos也采用了这种格式，其中容纳了我们开发的操作系统。这个格式兼容性好，在Windows上也能用，而且剩余的磁盘空间还可以用来保存自己喜欢的文件。...
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/05/10/JS%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/&title=JS添加右键菜单 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/05/10/JS%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/&title=JS添加右键菜单 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/05/10/JS%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/&title=JS添加右键菜单 - Gray-Ice&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
       
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/30days/">30days</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/day01%E7%9A%84%E4%B8%93%E9%97%A8%E6%9C%AF%E8%AF%AD/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
 </div>
 
-          </div>
+
+
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/ArchLinux%E8%AE%BE%E7%BD%AEsudo/">
-        ArchLinux使用sudo
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Arch Linux刚安装好的时候是没有sudo命令的，需要自行安装，首先输入su命令以获取root权限，然后安装sudo:
-1pacman -S sudo
-想要查看具体的操作可以查看官方Wiki: Sudo。这里我只写下给用户添加sudo使用权限。安装了sudo之后，终端输入:
-1EDITOR=vim visudo
-这句话的意思是使用vim编辑sudo文件。这么做的原因是因为我输入visu...
-      
-    
+    </div>
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
+  
+
+  
+    <div class="prev-next">
       
-        <div>
-          <a class='readmore' href='/2020/12/31/ArchLinux%E8%AE%BE%E7%BD%AEsudo/'>
-            Read More
-          </a>
-        </div>
+      
+        <a class='next' href='/2021/05/07/HTML%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/'>
+          <p class='title'>HTML事件处理<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>这里只讲如何获取触发的是什么事件以及获取触发该事件的节点。
+
+获取触发的事件类型:
+1&lt;button onmouseover=&quot;console.log(event.type)&q...</p>
+        </a>
       
     </div>
   
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Arch%E4%B8%8B%E4%BD%BF%E7%94%A8deb%E5%8C%85/">
-        arch使用deb包
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        先安装debtap包，然后执行:
-1sudo debtap -u
-如果你的网不好，执行这条命令会很费劲，而且有很大几率会失败。不过多尝试几次(博主失败了四五次才装上)似乎就会成功。安装好之后在含有.deb文件的目录下输入:
-1debtap package
-来转换包，转换的时候会有选项，记得选。转换好之后输入:
-1sudo pacman -U package
-之后就安装好啦。那么如何运行文件呢...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Arch%E4%B8%8B%E4%BD%BF%E7%94%A8deb%E5%8C%85/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Arch%E5%AE%89%E8%A3%85pip/">
-        Arch 安装pip及pip3
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Arch安装pip以及pip3十分的简单，只需要一条指令:
-1pacman -S python-pip
-说实话执行这条指令的时候我以为是安装的pip的，但是执行完之后我又执行了一遍pacman -S python-pip3，但是提示我未找到该Package,于是我就尝试着输入了一遍pip3，没想到竟然安装上了。。。。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Arch%E5%AE%89%E8%A3%85pip/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/Arch%E5%AE%89%E8%A3%85vncviewer/">
-        Arch安装VNCViewer
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        首先去VNC的官网下载文件VNC Viewer，这里我选择的是Standalone，下载之后会获得一个名字类似“VNC-Viewer-6.20.529-Linux-x86”的文件，这时我们需要使用:
-1chmod +x VNC*
-来给一个执行的权限，不然即使用root也无法跑起来程序。然后就可以通过:./VNC-Viewer*来执行程序了。就是这么简单。那么本篇完结。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/Arch%E5%AE%89%E8%A3%85vncviewer/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/arch_tkinter/">
-        archlinux下python3安装tkinter
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        借鉴自ArchLinux Python3 安装 tkinter。
-输入:
-1sudo pacman -S tk
-即可安装tkinter。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/arch_tkinter/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/archlinux%E5%AE%89%E8%A3%85redis/">
-        Arch安装使用Redis
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        首先，使用pacman安装redis:
-1sudo pacman -S redis
-然后，输入:
-1systemctl enable redis.service
-说实话我不知道这句话有什么用，从作用上来看应该是开机启动redis服务，但是就算这么设置了，redis服务也得自己手动开启。。。在终端输入:
-1redis-server
-开启redis server，然后输入redis-cli就可以...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/archlinux%E5%AE%89%E8%A3%85redis/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/arch%E4%BD%BF%E7%94%A8vncserver/">
-        使用VNCServer
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        本次使用的是REALVNC SERVER，目的在于实现局域网内开启一个只能被观看屏幕不能被控制的服务端。
-下载VNCServer访问RealVNC官网:VNC Server,选择Linux，在下面的选项里选择Gerneric script x86或x64,自己决定。下载完成之后解压缩:
-1tar -zxvf VNC*.tar.gz
-安装VNCServercd进解压后的文件夹，终端输入:
-1s...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/arch%E4%BD%BF%E7%94%A8vncserver/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/arch%E5%AE%89%E8%A3%85mongoDB/">
-        ArchLinux安装mongoDB
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        安装的过程有点麻烦(没法直接pacman了)，因为官方软件仓库里没有这个包了(详情还请看Arch Wiki)，所以这里我们得使用AUR了。访问ArchLinux安装MongoDB，在”安装”标题下选择你想要安装的软件包，这里我选择的是mongodb-bin软件包，使用的git下载，速度还挺快的。那么当软件包clone到本地后，你可以看到文件夹下有一个PKGBUILD文件，打开终端，输入:``...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/arch%E5%AE%89%E8%A3%85mongoDB/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/categories/blog/page/12/">
-            <section class="post prev white-box shadow blur" >
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          13 / 20
-        </p>
-        
-          <a class="next" rel="next" href="/categories/blog/page/14/">
-            <section class="post next white-box shadow blur">
-              &nbsp;Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
+</article>
 
 
-    
   
+
+  <article class="post white-box reveal shadow blur" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="gitalk-container"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -907,246 +573,14 @@ FAT12格式    (FAT12 Format)用Windows或MS-DOS格式化出来的软盘就是�
     
     
 
-<section class="widget blogger shadow blur desktop mobile">
-  <div class='content'>
-    
-    
-      <div class='text'>
-        
-          <h2>Gray-Ice</h2>
-        
-        
-          <p>一位好奇心十足的开发者。</p>
 
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Gray-Ice/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow blur desktop">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/blog/" href="/categories/blog/"
-            id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(195)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/30days/" href="/categories/blog/30days/"
-            id="categoriesblog30days"
-            ><div class='name'>30days</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Anaconda/" href="/categories/blog/Anaconda/"
-            id="categoriesblogAnaconda"
-            ><div class='name'>Anaconda</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/C/" href="/categories/blog/C/"
-            id="categoriesblogC"
-            ><div class='name'>C</div><div class='badge'>(9)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Cpp/" href="/categories/blog/Cpp/"
-            id="categoriesblogCpp"
-            ><div class='name'>Cpp</div><div class='badge'>(27)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Cpp/Qt/" href="/categories/blog/Cpp/Qt/"
-            id="categoriesblogCppQt"
-            ><div class='name'>Qt</div><div class='badge'>(19)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Deepin/" href="/categories/blog/Deepin/"
-            id="categoriesblogDeepin"
-            ><div class='name'>Deepin</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/JavaScript/" href="/categories/blog/JavaScript/"
-            id="categoriesblogJavaScript"
-            ><div class='name'>JavaScript</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Linux/" href="/categories/blog/Linux/"
-            id="categoriesblogLinux"
-            ><div class='name'>Linux</div><div class='badge'>(18)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/" href="/categories/blog/Python/"
-            id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(47)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"
-            id="categoriesblogPythonPyQt5"
-            ><div class='name'>PyQt5</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/flask/" href="/categories/blog/Python/flask/"
-            id="categoriesblogPythonflask"
-            ><div class='name'>flask</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/blog/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            id="categoriesblogPythonE695B0E68DAEE58886E69E90"
-            ><div class='name'>数据分析</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Socket/" href="/categories/blog/Socket/"
-            id="categoriesblogSocket"
-            ><div class='name'>Socket</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/Termux/" href="/categories/blog/Termux/"
-            id="categoriesblogTermux"
-            ><div class='name'>Termux</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/arch/" href="/categories/blog/arch/"
-            id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(41)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/elasticsearch/" href="/categories/blog/elasticsearch/"
-            id="categoriesblogelasticsearch"
-            ><div class='name'>elasticsearch</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/git/" href="/categories/blog/git/"
-            id="categoriesbloggit"
-            ><div class='name'>git</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/hugo/" href="/categories/blog/hugo/"
-            id="categoriesbloghugo"
-            ><div class='name'>hugo</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/vim/" href="/categories/blog/vim/"
-            id="categoriesblogvim"
-            ><div class='name'>vim</div><div class='badge'>(11)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/vue/" href="/categories/blog/vue/"
-            id="categoriesblogvue"
-            ><div class='name'>vue</div><div class='badge'>(17)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
-            id="categoriesblogE4B9B1E4B883E585ABE7B39F"
-            ><div class='name'>乱七八糟</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E5%89%8D%E7%AB%AF/" href="/categories/blog/%E5%89%8D%E7%AB%AF/"
-            id="categoriesblogE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"
-            id="categoriesblogE69C8DE58AA1E599A8"
-            ><div class='name'>服务器</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/friendlink/" href="/categories/friendlink/"
-            id="categoriesfriendlink"
-            ><div class='name'>friendlink</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/life/" href="/categories/life/"
-            id="categorieslife"
-            ><div class='name'>life</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/resume/" href="/categories/resume/"
-            id="categoriesresume"
-            ><div class='name'>resume</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/" href="/categories/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/"
-            id="categoriesE58D9AE5AEA2E697A5E5BF97"
-            ><div class='name'>博客日志</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow blur desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/30days/" style="font-size: 15.11px; color: #919191">30days</a> <a href="/tags/Anaconda/" style="font-size: 14px; color: #999">Anaconda</a> <a href="/tags/Arch/" style="font-size: 24px; color: #555">Arch</a> <a href="/tags/Deepin/" style="font-size: 16.22px; color: #8a8a8a">Deepin</a> <a href="/tags/Django/" style="font-size: 21.78px; color: #646464">Django</a> <a href="/tags/Docker/" style="font-size: 15.11px; color: #919191">Docker</a> <a href="/tags/Flask/" style="font-size: 15.11px; color: #919191">Flask</a> <a href="/tags/Linux%E5%91%BD%E4%BB%A4/" style="font-size: 16.22px; color: #8a8a8a">Linux命令</a> <a href="/tags/PIL/" style="font-size: 17.33px; color: #828282">PIL</a> <a href="/tags/PyQt5/" style="font-size: 14px; color: #999">PyQt5</a> <a href="/tags/Socket/" style="font-size: 14px; color: #999">Socket</a> <a href="/tags/Vue/" style="font-size: 22.89px; color: #5d5d5d">Vue</a> <a href="/tags/Wine/" style="font-size: 14px; color: #999">Wine</a> <a href="/tags/bluetooth/" style="font-size: 14px; color: #999">bluetooth</a> <a href="/tags/cv2/" style="font-size: 14px; color: #999">cv2</a> <a href="/tags/git/" style="font-size: 18.44px; color: #7b7b7b">git</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/hugo/" style="font-size: 15.11px; color: #919191">hugo</a> <a href="/tags/jwt/" style="font-size: 16.22px; color: #8a8a8a">jwt</a> <a href="/tags/matplotlib/" style="font-size: 15.11px; color: #919191">matplotlib</a> <a href="/tags/nask/" style="font-size: 14px; color: #999">nask</a> <a href="/tags/pip/" style="font-size: 14px; color: #999">pip</a> <a href="/tags/redis/" style="font-size: 14px; color: #999">redis</a> <a href="/tags/selenium/" style="font-size: 14px; color: #999">selenium</a> <a href="/tags/ventoy/" style="font-size: 14px; color: #999">ventoy</a> <a href="/tags/vim/" style="font-size: 20.67px; color: #6c6c6c">vim</a> <a href="/tags/zsh/" style="font-size: 14px; color: #999">zsh</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/" style="font-size: 14px; color: #999">上传文件</a> <a href="/tags/%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E6%9D%A1/" style="font-size: 14px; color: #999">上传进度条</a> <a href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/" style="font-size: 14px; color: #999">中间件</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 15.11px; color: #919191">代理</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/" style="font-size: 14px; color: #999">关键字查询</a> <a href="/tags/%E5%88%86%E9%A1%B5/" style="font-size: 14px; color: #999">分页</a> <a href="/tags/%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/" style="font-size: 14px; color: #999">压缩图片</a> <a href="/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/" style="font-size: 14px; color: #999">又拍云</a> <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/" style="font-size: 15.11px; color: #919191">双系统</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E7%9B%98/" style="font-size: 14px; color: #999">启动盘</a> <a href="/tags/%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/" style="font-size: 14px; color: #999">商品评论</a> <a href="/tags/%E5%9B%BD%E9%99%85%E5%8C%96/" style="font-size: 14px; color: #999">国际化</a> <a href="/tags/%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90/" style="font-size: 14px; color: #999">图片合成</a> <a href="/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" style="font-size: 15.11px; color: #919191">对象存储</a> <a href="/tags/%E5%BE%AE%E5%8D%9A%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">微博第三方登录</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">性能检测工具</a> <a href="/tags/%E6%8A%98%E7%BA%BF%E5%9B%BE/" style="font-size: 14px; color: #999">折线图</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 15.11px; color: #919191">服务器</a> <a href="/tags/%E6%B0%B4%E5%8D%B0/" style="font-size: 14px; color: #999">水印</a> <a href="/tags/%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81/" style="font-size: 15.11px; color: #919191">滑块验证</a> <a href="/tags/%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81/" style="font-size: 14px; color: #999">生成图片验证码</a> <a href="/tags/%E7%94%BB%E4%B8%AD%E7%94%BB/" style="font-size: 14px; color: #999">画中画</a> <a href="/tags/%E7%99%BD%E5%A4%A9%E9%BB%91%E5%A4%9C%E6%A8%A1%E5%BC%8F/" style="font-size: 14px; color: #999">白天黑夜模式</a> <a href="/tags/%E7%99%BE%E5%BA%A6%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">百度文字识别</a> <a href="/tags/%E8%AF%84%E8%AE%BA%E9%A2%91%E7%8E%87/" style="font-size: 14px; color: #999">评论频率</a> <a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 19.56px; color: #737373">踩坑</a> <a href="/tags/%E9%92%89%E9%92%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/" style="font-size: 14px; color: #999">钉钉第三方登录</a>
-    </div>
-  </section>
 
 
   
 
 
 </aside>
+
 
 
         
@@ -1156,8 +590,8 @@ FAT12格式    (FAT12 Format)用Windows或MS-DOS格式化出来的软盘就是�
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="JS添加右键菜单";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
