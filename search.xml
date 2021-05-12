@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Canvas绘制2D图形</title>
+      <link href="2021/05/12/canvas2d/"/>
+      <url>2021/05/12/canvas2d/</url>
+      
+        <content type="html"><![CDATA[<p>我先把整体需要明白的内容都放在最上面这一行。<br>创建canvas元素至少要设置宽和高。<br>2D绘图上下文提供了绘制方法，包括矩形，弧形和路径。2D上下文的坐标原点(0, 0)在canvas元素的左上角。所有坐标值都相对于该点计算。因为x坐标向右增长，y坐标向下增长。默认情况下，width和height表示两个方向上像素的最大值。<br>fill和stroke是两种绘图的方式，可以简单理解为fill为填充绘图，stroke为描边绘图。<br>那么下面是一些常用的方法。<br>canvas.getContext(contextId, options);  这个方法十分的重要，其作用是获取上下文。在2d绘图中参数一般只填写”2d”，如:canvas.getContext(“2d”);<br>canvas.toDataURL(MIMEType);  这个方法用于导出canvas元素上的图像。这个方法接受一个参数: 要生成图像的MIME类型(与用来创建图形的上下文无关)。<br>context.fillStyle = “Style”;  context为canvas.getContext(“2d”)得到的返回值。这个属性用于设置fill的样式。样式可以是CSS支持的任意格式: 名称，十六进制代码，rgb，rgba，hsl或hsla。如:canvas.fillStyle = “#ffffff”或canvas.fillStyle = “rgb(255, 255, 255)”<br>context.strokeStyle = “Style”;  这个属性用于设置stroke的样式。其与fillStyle一样，也支持CSS的任意格式。</p><h2 id="绘制矩形"><a href="#绘制矩形" class="headerlink" title="绘制矩形"></a>绘制矩形</h2><p>context.fillRect(x, y, width, height);  这个方法用于绘制fill矩形。从(x, y)坐标点开始，绘制一个宽width，高height的矩形。<br>context.strokeRect(x, y, width, height);  这个方法用于绘制stroke矩形。从(x, y)坐标点开始，绘制一个宽width，高height的矩形。<br>context.clearRect(x, y, width, height);  这个方法用于擦除一片矩形区域，从(x, y)坐标点开始， 擦除一片宽width, 高height的矩形空间。<br>context.lineWidth = width;  这个属性用于控制描边宽度，它可以是任意整数值。</p><h2 id="绘制路径"><a href="#绘制路径" class="headerlink" title="绘制路径"></a>绘制路径</h2><p>context.beginPath();  这个方法表示要开始绘制新路径，在开始绘制路径之前必须要调用这个方法。<br>context.fill();  用fill的形式绘制路径。<br>context.stroke();  用stroke的形式绘制路径。<br>context.arc(x, y, radius, startAngle, endAngle, counterclockwise);  这个方法用于绘制弧线。它以(x, y)为圆心，以radius为半径，以startAngle为起始角度，以endAngle为结束角度绘制一条弧线。couterclockwise接受一个布尔值，表示是顺时针绘制还是逆时针绘制。默认为顺时针。<br>context.arcTo(x1, y1, x2, y2, radius);  以给定半径radius，经由(x1, y1)绘制一条从上到(x2, y2)的弧线。<br>context.bezierCurveTo(c1x, c1y, c2x, c2y, x, y);  以(c1x, c1y)和(c2x, c2y)为控制点，绘制一条从上一点到(x, y)的弧线(三次贝赛尔曲线)。<br>context.lineTo(x, y);  绘制一条从上一点到(x, y)的直线。<br>context.moveTo(x, y);  不绘制线条，只把绘制光标移动到(x, y)。<br>context.quadraticCurveTo(cx, cy, x, y);  以(cx, cy)为控制点，绘制一条从上一点到(x, y)的弧线(二次贝赛尔曲线)。<br>context.rect(x, y, width, height);  以给定宽度和高度在坐标点(x, y)绘制一个矩形。这个方法与strokeRect()和fillRect()的区别在于，它创建的是一条路径，而不是独立的图形。<br>context.closePath();  绘制一条返回起点的线。<br>context.isPointInPath(x, y);  这个方法用于确定指定的点是否在路径上，可以在关闭路径前随时调用。<br>context.clip()  基于已有路径创建一个新剪切区域。</p><h2 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h2><p>context.fillText(String, x, y, maxWidth);  绘制fill样式的文本，将其绘制在坐标点(x, y)。maxWidth为最大宽度。<br>context.strokeText(String, x, y, maxWidth);  绘制stroke样式的文本，将其绘制在坐标点(x, y)。maxWidth为最大宽度。<br>context.font = “Style”;  以CSS语法指定的字体样式，大小，字体族等，比如”10px Arial”。<br>context.textAlign = “start | end | left | right | center”;  指定文本的对其方式。如果该属性的值是”start”，那么x坐标在从左到右书写的语言中表示文本的左侧坐标，而end会让x坐标在从左到右书写的语言中表示文本的右侧坐标。<br>context.textBaseline = “top | hanging | middle | alphabetic | ideographic | bottom”;  指定文本的基线。设置”top”意味着y轴表示文本顶部，”bottom”表示文本底部。<br>context.measureText(String);  该方法使用font, textAlign和textBaseline属性当前的值计算绘制指定文本后的大小。 </p><h2 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h2><p>context.rotate(angle);  围绕原点把图像旋转angle弧度。<br>context.scale(scaleX, scaleY);  通过在x轴乘以scaleX，在y轴乘以scaleY来缩放图像。scaleX和scaleY的默认值都是1.0。<br>context.translate(x, y);  把原点移动到(x, y)。执行这个操作后，坐标(0, 0)就会变成(x, y)。<br>context.transform(m1_1, m1_2, m2_1, m2_2, dx, dy);  通过矩阵乘法直接修改矩阵。<br>context.save();  保存当前属性和变换状态到暂存栈。<br>context.restore();  从暂存栈中取出并恢复之前保存的设置。</p><h2 id="绘制图像"><a href="#绘制图像" class="headerlink" title="绘制图像"></a>绘制图像</h2><p>img参数可以是HTML的img元素，也可以是另一个canvas元素。<br>另外有时候会出现img为HTML的img元素时，没有绘制出来图片的情况。出现这个问题的原因是这样的: 图片还没有加载到img元素，canvas就把这个元素给画上去了，所以画了个寂寞。。。这种情况下只需要等img加载完成后再绘制图片就好了，比如使用img.onload等方式来等待其加载完成。<br>context.drawImage(img, x, y);  将img绘制到(x, y)。<br>context.drawImage(img, x, y, width, height);  将img绘制到(x, y)，其宽度为width，高度为height。<br>context.drawImage(img, sourceX, sourceY, sourceWidth, sourceHeight, targetX, targetY, targetWidth, targetHeight);  从img的(sourceX, sourceY)开始，截取宽sourceWidth，高sourceHeight大小的矩形，将其绘制到(targetX, targetY)，其宽度为targetWidth，高度为targetHeight。</p><p>未完待续。。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JS添加右键菜单</title>
       <link href="2021/05/10/JS%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/"/>
       <url>2021/05/10/JS%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/</url>
