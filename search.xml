@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>XHR</title>
+      <link href="2021/05/17/XHR/"/>
+      <url>2021/05/17/XHR/</url>
+      
+        <content type="html"><![CDATA[<p>提示: 本篇博文内容全部取自红宝书，博主只是记录一下使用方法，以下博文中的内容几乎全部都可以在红宝书中找到。<br>所有现代浏览器都通过XMLHttpRequest构造函数原生支持XHR对象:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br></pre></td></tr></table></figure><p>使用XHR对象首先要调用open()方法，这个方法接收三个参数: 请求类型(“get”, “post”等)，请求URL，以及表示请求是否异步的布尔值(值为true则异步，为false则同步)。下面是一个例子:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(<span class="string">&quot;get&quot;</span>, <span class="string">&quot;127.0.0.1:8000/index&quot;</span>, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure><p>这行代码就可以向”127.0.0.1:8000/index”发送一个同步的GET请求。但是不要急，仅仅调用open()并不会立即发起请求，它只是为发送请求做准备。<br>只能访问同源URL，也就是域名相同，端口相同，协议相同。如果请求的URL与发送请求的页面在任何方面有所不同，则会抛出安全错误。</p><p>要发送定义好的请求，必须像下面这样调用send()方法。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(<span class="string">&quot;get&quot;</span>, <span class="string">&quot;http://127.0.0.1:8000/api/test&quot;</span>, <span class="literal">false</span>);</span><br><span class="line">xhr.send(<span class="literal">null</span>);</span><br></pre></td></tr></table></figure><p>send()方法接收一个参数，是作为请求体发送的数据。如果不需要发送请求体，则必须传null，因为这个参数在某些浏览器中是必需的。调用send()之后，请求就会发送到服务器。</p><p>因为这个请求是同步的，所以JavaScript代码会等待服务器响应之后再继续执行。收到响应后，XHR对象的以下属性会被填充上数据:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">responseText:  作为响应体返回的文本</span><br><span class="line">responseXML:  如果响应的内容类型是<span class="string">&quot;text/xml&quot;</span>或<span class="string">&quot;application/xml&quot;</span>，那就是包含响应数据的XML DOM文档。</span><br><span class="line">status:  响应的HTTP状态。</span><br><span class="line">statusText:  响应的HTTP状态描述</span><br></pre></td></tr></table></figure><p>一般来说，status为2xx表示成功，此时responseText或responseXML(如果内容类型正确)属性中会有内容。<br>statusText在跨浏览器的情况下不可靠，一般不建议使用。<br>responseXML对于非XML数据是null。<br>XHR对象有一个readyState属性，表示当前处在请求/响应过程的哪个阶段。<br>这个属性有如下可能的值:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>:  未初始化(Uninitialized)。尚未调用open()方法。</span><br><span class="line"><span class="number">1</span>:  已打开(Open)。已调用open()方法，尚未调用send()方法。</span><br><span class="line"><span class="number">2</span>:  已发送(Sent)。已调用send()方法，尚未收到响应。</span><br><span class="line"><span class="number">3</span>:  接收中(Receiving)。已经收到部分响应。</span><br><span class="line"><span class="number">4</span>:  完成(Complete)。已经收到所有响应，可以使用了。</span><br></pre></td></tr></table></figure><p>每次readyState从一个值变成另一个值，都会触发readystatechange事件，可以借此机会检查readyState的值。为保证跨浏览器兼容，onreadystatechange事件处理程序应该在调用open()之前赋值。</p><p>在收到响应之前如果想取消异步请求，可以调用abort()方法:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.abort();</span><br></pre></td></tr></table></figure><p>调用这个方法后，XHR对象会停止触发事件，并阻止访问这个对象上任何与响应相关的属性。中断请求后，应该取消对XHR对象的引用。由于内存问题，不推荐重用XHR对象。</p><p>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Canvas绘制2D图形</title>
       <link href="2021/05/12/canvas2d/"/>
       <url>2021/05/12/canvas2d/</url>

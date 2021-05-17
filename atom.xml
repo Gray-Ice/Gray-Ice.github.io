@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-14T07:14:26.079Z</updated>
+  <updated>2021-05-17T03:45:55.369Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>XHR</title>
+    <link href="http://example.com/2021/05/17/XHR/"/>
+    <id>http://example.com/2021/05/17/XHR/</id>
+    <published>2021-05-17T02:51:00.000Z</published>
+    <updated>2021-05-17T03:45:55.369Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="JavaScript" scheme="http://example.com/categories/blog/JavaScript/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Canvas绘制2D图形</title>
