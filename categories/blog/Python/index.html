@@ -412,6 +412,53 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/05/18/xpath%E8%8E%B7%E5%8F%96%E5%A4%9A%E4%B8%AAclass%E5%B1%9E%E6%80%A7/">
+        xpath获取多个class属性
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        参考自Xpath里如何定义包含一个或多个class属性。如果某个元素具有多个class属性，那么使用以下代码无法获取到该元素:
+1234# 元素: &lt;div class=&quot;a b&quot;&gt;111&lt;/a&gt;tree.xpath(&quot;//div[@class=&#x27;a b&#x27;]&quot;)# 这样也不行tree.xpath(&quot;...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-05-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/05/18/xpath%E8%8E%B7%E5%8F%96%E5%A4%9A%E4%B8%AAclass%E5%B1%9E%E6%80%A7/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/03/20/requests%E8%AF%B7%E6%B1%82ssl%E6%8A%A5%E9%94%99/">
         requests报错SSLError
       </a>
@@ -825,54 +872,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/31/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/">
-        多关键字查询
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>这里说的关键字查询，是要实现输入 fire water这两个词，然后后台将这两个词进行模糊查询。</p>
-<p>Vue部分，用户在搜索框输入需要查询的内容后，前端将用户输入的内容进行判断，如果有空格，那么根据空格将字符串分开；如果没有空格，那么无需分开。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// indexOF方法找到目标返回1，找不到目标返回-1, text是用户输入的数据</span></span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">this</span>.text.indexOf(<span class="string">&#x27; &#x27;</span>) !== -<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="comment">// 将数据分开, 此方法返回的是一个对象而不是列表</span></span><br><span class="line">        <span class="built_in">this</span>.text = <span class="built_in">this</span>.text.split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    <span class="comment">// 将数据转化，转化之后数据形如:[&quot;1&quot;, &quot;2&quot;]</span></span><br><span class="line">        <span class="built_in">this</span>.text = <span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.text)</span><br><span class="line">      &#125;</span><br><span class="line"><span class="comment">// 获取后台数据</span></span><br><span class="line">      <span class="built_in">this</span>.get_goods();</span><br></pre></td></tr></table></figure>
-<p>前端的处理就这么简单，那么到后台了:</p>
-<p>首先，获取参数:
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/31/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -976,7 +975,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(197)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(198)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1021,7 +1020,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/Python/" href="/categories/blog/Python/"
             id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(47)</div></a></li>
+            ><div class='name'>Python</div><div class='badge'>(48)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"

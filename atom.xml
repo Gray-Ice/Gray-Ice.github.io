@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-17T03:45:55.369Z</updated>
+  <updated>2021-05-18T07:59:54.819Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>xpath获取多个class属性</title>
+    <link href="http://example.com/2021/05/18/xpath%E8%8E%B7%E5%8F%96%E5%A4%9A%E4%B8%AAclass%E5%B1%9E%E6%80%A7/"/>
+    <id>http://example.com/2021/05/18/xpath%E8%8E%B7%E5%8F%96%E5%A4%9A%E4%B8%AAclass%E5%B1%9E%E6%80%A7/</id>
+    <published>2021-05-18T07:56:00.000Z</published>
+    <updated>2021-05-18T07:59:54.819Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>XHR</title>
