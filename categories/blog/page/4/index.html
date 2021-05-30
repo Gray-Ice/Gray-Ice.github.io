@@ -388,6 +388,103 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/03/28/Qt%E8%AE%BE%E7%BD%AE%E7%A8%8B%E5%BA%8F%E8%BE%B9%E6%A1%86%E5%92%8C%E7%AA%97%E5%8F%A3%E9%80%8F%E6%98%8E/">
+        Qt设置无边框和窗口透明
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        setWindowFlag(Qt::FramelessWindowHint);可以设置无边框。然后看看设置无边框的效果。setAttribute(Qt::WA_TranslucentBackground);可以设置窗口背景透明，效果图如下:我看帮助文档上说如果想要在Windows上使用这个选项，你得先把无边框设置了才行。
+然后看看这两者一起使用的效果:
+十分漂亮。(然而并没有什么用)本篇完。
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-28</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/28/Qt%E8%AE%BE%E7%BD%AE%E7%A8%8B%E5%BA%8F%E8%BE%B9%E6%A1%86%E5%92%8C%E7%AA%97%E5%8F%A3%E9%80%8F%E6%98%8E/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/27/Qt%E4%BA%8B%E4%BB%B6%E8%BF%87%E6%BB%A4%E5%99%A8/">
+        Qt事件过滤器
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        今天我的截图工具Peek坏了，似乎是ffmpeg的锅。所以今天没有GIF演示了，我会把GIF可以表达的内容全部换成终端表达。
+先看代码:
+123456789101112131415161718192021222324252627282930313233343536373839404142434445// widget.hclass Widget : public QWidget&#123; ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-27</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/27/Qt%E4%BA%8B%E4%BB%B6%E8%BF%87%E6%BB%A4%E5%99%A8/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/03/27/Qt%E7%BB%98%E5%9B%BE/">
         Qt绘图
       </a>
@@ -761,100 +858,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/23/Qt%E5%88%9B%E5%BB%BA%E8%8F%9C%E5%8D%95%E6%A0%8F/">
-        Qt创建菜单栏
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Qt创建菜单栏本篇博文讲菜单栏的创建以及添加子菜单和选项(我也不知道这个翻译成什么好，请原谅野生自学者的学识浅薄)。先说下我的开发环境，我的操作系统是Arch Linux，使用的桌面是KDE，Qt版本是5.9.9。那么首先是创建菜单，这里我们需要一个继承了QMainWindow类的类，这里我是用Qt Creator创建的QMainWindow项目。那么这是我用Qt Creator创建的项目的...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/23/Qt%E5%88%9B%E5%BB%BA%E8%8F%9C%E5%8D%95%E6%A0%8F/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/23/QT%E8%87%AA%E5%8A%A8%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/">
-        QT自动内存回收
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        本博文并不会讲的很全，因为博主也是刚知道还有这么回事。在Qt中，QObject是顶层对象，当Qt程序关闭的时候，QOject对象会被自动释放掉。而因为QObject是顶层对象，所以其所有派生类在Qt程序关闭的时候都会被自动释放掉。 –这段话是我从别人的博客里抄来的。
-实际的应用中，在一个动态分配的类指定了父对象后，其会被自动释放掉。但是如果没有指定父对象，则其不会被释放。
-举个例子，我定义一...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/23/QT%E8%87%AA%E5%8A%A8%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -869,7 +872,7 @@
           </a>
         
         <p class="current">
-          4 / 20
+          4 / 21
         </p>
         
           <a class="next" rel="next" href="/categories/blog/page/5/">
@@ -964,7 +967,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(199)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(201)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1004,12 +1007,12 @@
           <li><a class="flat-box child"
             title="/categories/blog/Linux/" href="/categories/blog/Linux/"
             id="categoriesblogLinux"
-            ><div class='name'>Linux</div><div class='badge'>(18)</div></a></li>
+            ><div class='name'>Linux</div><div class='badge'>(19)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/" href="/categories/blog/Python/"
             id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(48)</div></a></li>
+            ><div class='name'>Python</div><div class='badge'>(49)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"
@@ -1039,7 +1042,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/arch/" href="/categories/blog/arch/"
             id="categoriesblogarch"
-            ><div class='name'>arch</div><div class='badge'>(41)</div></a></li>
+            ><div class='name'>arch</div><div class='badge'>(42)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/elasticsearch/" href="/categories/blog/elasticsearch/"
