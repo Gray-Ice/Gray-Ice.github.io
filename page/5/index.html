@@ -387,6 +387,149 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/03/26/Qt%E6%8E%A7%E4%BB%B6%E8%AE%BE%E7%BD%AE%E9%BB%98%E8%AE%A4%E8%BF%BD%E8%B8%AA%E9%BC%A0%E6%A0%87/">
+        Qt控件设置默认追踪鼠标
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        先来看一下只使用mouseMoveEvent()而不设置默认追踪鼠标的效果。我的mouseMoveEvent是这么写的:
+1234567void MyLabel::mouseMoveEvent(QMouseEvent *ev)&#123;    int x = ev-&gt;x();    int y = ev-&gt;y();    QString qs = QString(&quot;&...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-26</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/26/Qt%E6%8E%A7%E4%BB%B6%E8%AE%BE%E7%BD%AE%E9%BB%98%E8%AE%A4%E8%BF%BD%E8%B8%AA%E9%BC%A0%E6%A0%87/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/24/QtQTimer/">
+        QtQtimer的使用
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        建议直接看这篇文章:QTimer - 计时器类。今天做秒表的时候用到了QTimer，这是一个可以计时的类。那么直接说使用吧:想要用这个类需要导入QTimer库，下面是代码:
+123456#include &lt;QTimer&gt;QTimer* qtmer_p = new QTimer(this);  // 创建一个QTimer类qtmer_p -&gt; setInterval(1000...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-24</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/24/QtQTimer/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/24/linux%E4%B8%8B%E5%BD%95gif%E8%BD%AF%E4%BB%B6/">
+        linux下录制gif软件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这是一个叫做peek的软件，其功能不仅仅限于录制GIF。安装:
+1pamcan -S peek
+使用: 在命令行输入peek并回车，即可打开peek。peek是一个窗口，其中心是透明的，且鼠标可以穿透其中心(这么看来与其说是透明不如说是什么都没有比较恰当)。其中心中的所有内容都会在你按下录制按钮后被录制。录制完成后点击停止即可。如果嫌默认的窗口太小，可以用鼠标把窗口拉的大一些。
+这样我写Qt...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-24</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/24/linux%E4%B8%8B%E5%BD%95gif%E8%BD%AF%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/03/23/Qt%E5%88%9B%E5%BB%BA%E5%B7%A5%E5%85%B7%E6%A0%8F/">
         Qt创建工具栏
       </a>
@@ -709,146 +852,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/19/%E5%8E%9F%E7%94%9Fjs%E5%A2%9E%E5%88%A0class/">
-        原生js增删class
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        今天是沉迷前端无法自拔的一天…那么本篇文章要说的是js增删class。参考自原生js增加或者删除class。并在MDN上查到了文档:Element.classList。Html5增加了classList，MDN上是这么写的:Element.classList 是一个只读属性，返回一个元素的类属性的实时 DOMTokenList 集合。语法:
-1const elementClasses = e...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/JavaScript/">JavaScript</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/19/%E5%8E%9F%E7%94%9Fjs%E5%A2%9E%E5%88%A0class/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/19/vue_cli%E5%85%B3%E9%97%ADeslint/">
-        vue-cli删除eslint
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        多亏这个了vue.js - 如何在vue cli 3生成的项目中完成删除eslint的操作？。Eslint有的时候会让人感到十分烦人，比如你在index.html导入了js，到组件上用的时候Eslint偏偏说你没定义，所以这篇博客记录怎么删除eslint。在package.json中找到所有和eslint有关的东西，删除掉，然后运行npm i。然后重启项目，就没有eslint来打扰你了。本篇...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/19/vue_cli%E5%85%B3%E9%97%ADeslint/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/19/vue_cli%E4%BD%BF%E7%94%A8layui/">
-        vue-cli使用layui
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        先clone下来layui，github地址:layui。然后把layui/src下的全部文件复制到vue项目的public文件夹下，之后在index.html中引入css和js文件:
-12&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/layui.css&quot;&gt;&lt;script type=&quot;text/jav...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/19/vue_cli%E4%BD%BF%E7%94%A8layui/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -956,7 +959,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(201)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(204)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1001,7 +1004,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/Python/" href="/categories/blog/Python/"
             id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(49)</div></a></li>
+            ><div class='name'>Python</div><div class='badge'>(50)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"
@@ -1056,7 +1059,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/vue/" href="/categories/blog/vue/"
             id="categoriesblogvue"
-            ><div class='name'>vue</div><div class='badge'>(17)</div></a></li>
+            ><div class='name'>vue</div><div class='badge'>(19)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"

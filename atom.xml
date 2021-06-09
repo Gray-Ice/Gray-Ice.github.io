@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-30T12:34:41.465Z</updated>
+  <updated>2021-06-09T08:04:48.174Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,72 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue注册全局axios</title>
+    <link href="http://example.com/2021/06/09/vue%E6%B3%A8%E5%86%8C%E5%85%A8%E5%B1%80axios/"/>
+    <id>http://example.com/2021/06/09/vue%E6%B3%A8%E5%86%8C%E5%85%A8%E5%B1%80axios/</id>
+    <published>2021-06-09T07:59:00.000Z</published>
+    <updated>2021-06-09T08:04:48.174Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>解决vue有间隙</title>
+    <link href="http://example.com/2021/06/09/%E8%A7%A3%E5%86%B3vue%E6%9C%89%E9%97%B4%E9%9A%99/"/>
+    <id>http://example.com/2021/06/09/%E8%A7%A3%E5%86%B3vue%E6%9C%89%E9%97%B4%E9%9A%99/</id>
+    <published>2021-06-09T07:55:00.000Z</published>
+    <updated>2021-06-09T07:58:34.841Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="vue" scheme="http://example.com/categories/blog/vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Python3 日志</title>
+    <link href="http://example.com/2021/06/07/Python3%E6%97%A5%E5%BF%97/"/>
+    <id>http://example.com/2021/06/07/Python3%E6%97%A5%E5%BF%97/</id>
+    <published>2021-06-07T10:39:00.000Z</published>
+    <updated>2021-06-07T12:17:28.064Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="blog" scheme="http://example.com/categories/blog/"/>
+    
+    <category term="Python" scheme="http://example.com/categories/blog/Python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>pymysql查询字符串日期</title>

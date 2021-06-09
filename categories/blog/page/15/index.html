@@ -388,6 +388,156 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/Anaconda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/">
+        Anaconda创建虚拟环境
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>使用Anaconda创建虚拟环境:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n your_env_name python=X.X（2.7、3.6等)</span><br></pre></td></tr></table></figure>
+
+<p>查看当前安装了哪些虚拟环境:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env list</span><br></pre></td></tr></table></figure>
+<p>查看安装了哪些包:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda list</span><br></pre></td></tr></table></figure>
+<p> 使用以下命令激活虚拟环境:
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Anaconda/">Anaconda</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/Anaconda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/ArchKeepTime/">
+        Arch Linux同步时间
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        由于我是Arch Linux + Windows双系统，所以在从arch切换到windows的时候或者从windows切换到arch的时候会造成时间不同步。有的时候明明是白天，时间面板上却显示22:00，虽然我也不太在意但是想看时间就要拿起手机确实不方便。于是我参照了Arch Wiki设置了一个开机自动同步时间。
+首先安装ntp软件包。
+1pacman -S ntp
+然后更改配置文件 /et...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/ArchKeepTime/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2020/12/31/archInstallMusicPlayer/">
+        arch安装audacious音乐播放器
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        安装音乐播放器:
+1pacman -S audacious
+这样就安装好了，右击桌面(我使用的xfce),然后选择Create Lanucher，在第一行输入:audacious，会出现一个提示，点击提示就会自动补充下面几行。然后选择Create就创建好桌面打开方式了。然后可以安装一个歌词插件:
+1pacman -S osdlyrics
+安装完成之后可以在桌面创建快捷方式，创建方式同auda...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/archInstallMusicPlayer/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/Arch%20Linux%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/">
         Arch Linux xfce4主题美化
       </a>
@@ -716,149 +866,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/12/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8scrcpy/">
-        Linux下使用scrcpy控制你的手机
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        博主现在正沉浸在舒爽之中~~~
-下面是使用的截图:
-那么先放出参考博客的链接:使用scrcpy控制你的手机–DarkSun。感谢博主分享经验，也感谢scrcpy的开发者开发如此好用的软件。
-参考的博客中一共需要安装两个包:android-tools和scrcpy，ArchLinux直接pacman即可，其他发行版我也不知道咋装，我在这里奉上scrcpy的项目地址:Scrcpy。
-那么安装好这...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-12</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/12/Linux%E4%B8%8B%E4%BD%BF%E7%94%A8scrcpy/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/10/C%E8%AF%AD%E8%A8%80%E4%BD%8D%E6%93%8D%E4%BD%9C/">
-        C语言位操作
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>前几天和朋友上了几天网，前进的脚步有点缓了，今日再次开始充实自我。因为K&amp;R上讲的过于简洁，所以我转而参考C Primer Plus。因为C Primer Plus上讲的很详细，所以我这里只写几个实例。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-10</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/C/">C</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/10/C%E8%AF%AD%E8%A8%80%E4%BD%8D%E6%93%8D%E4%BD%9C/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/10/07/kde%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF/">
-        KDE更改默认终端为deepin_terminal
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        最近怎么看Konsole怎么觉得难看，再看看群里时不时晒桌面的群友们，基本都是人手一个Deepin-Terminal，漂亮的看的我都眼红了。那么今天，咱就来装一个Deepin-Terminal。
-这个包官方仓库里就有，所以这里我们直接:
-1sudo pacman -S deepin-terminal-old
-也许大家注意到了这里有个old的后缀，这是为什么呢？其实仓库里有两个deepin-t...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-10-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/10/07/kde%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -968,7 +975,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(201)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(204)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1013,7 +1020,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/Python/" href="/categories/blog/Python/"
             id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(49)</div></a></li>
+            ><div class='name'>Python</div><div class='badge'>(50)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"
@@ -1068,7 +1075,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/vue/" href="/categories/blog/vue/"
             id="categoriesblogvue"
-            ><div class='name'>vue</div><div class='badge'>(17)</div></a></li>
+            ><div class='name'>vue</div><div class='badge'>(19)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"

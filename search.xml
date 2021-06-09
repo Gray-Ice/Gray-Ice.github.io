@@ -4,6 +4,69 @@
   
     
     <entry>
+      <title>vue注册全局axios</title>
+      <link href="2021/06/09/vue%E6%B3%A8%E5%86%8C%E5%85%A8%E5%B1%80axios/"/>
+      <url>2021/06/09/vue%E6%B3%A8%E5%86%8C%E5%85%A8%E5%B1%80axios/</url>
+      
+        <content type="html"><![CDATA[<p>详情请看<a href="http://www.axios-js.com/zh-cn/docs/vue-axios.html">axios中文网</a>。<br>首先安装这俩模块:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install axios --save</span><br><span class="line">npm install vue-axios --save</span><br></pre></td></tr></table></figure><p>然后在main里加入如下代码:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#39;vue&#39;</span><br><span class="line">import axios from &#39;axios&#39;</span><br><span class="line">import VueAxios from &#39;vue-axios&#39;</span><br><span class="line"></span><br><span class="line">Vue.use(VueAxios, axios)</span><br></pre></td></tr></table></figure><p>注意import的顺序。<br>之后就可以在.vue文件中引用axios了:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this.axios(&#123;</span><br><span class="line">    url: &#39;127.0.0.1:8000&#39;,</span><br><span class="line">    method: &#39;get&#39;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决vue有间隙</title>
+      <link href="2021/06/09/%E8%A7%A3%E5%86%B3vue%E6%9C%89%E9%97%B4%E9%9A%99/"/>
+      <url>2021/06/09/%E8%A7%A3%E5%86%B3vue%E6%9C%89%E9%97%B4%E9%9A%99/</url>
+      
+        <content type="html"><![CDATA[<p>当你新建一个vue-cli项目时，你可能会发现id为app的盒子左侧和上侧有间隙。解决这个问题的方法如下:打开vue/public/index.html，在head里面加入这样一块代码:</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">body</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>然后就可以去掉app盒子与body之间的间隙了。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python3 日志</title>
+      <link href="2021/06/07/Python3%E6%97%A5%E5%BF%97/"/>
+      <url>2021/06/07/Python3%E6%97%A5%E5%BF%97/</url>
+      
+        <content type="html"><![CDATA[<p>本篇博文主要是为了方便博主再次使用python3 logging模块时能够快速上手，故此讲解的不会很详细。若是第一次接触这个模块，建议看这些内容: <a href="https://docs.python.org/zh-cn/3/howto/logging.html">日志 HOWTO</a>, <a href="https://www.jianshu.com/p/84f8d1910085">python3 logging模块使用说明</a>, 第一个链接是文档，可以快速入门，第二个链接是某位博主写的博客，质量不错。</p><p>那么接下来就开始讲解logging模块的使用。</p><p>日志等级分为4个等级，CRITICAL, ERROR, WARNING, INFO, DEBUG。简单的使用方法如下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import logging</span><br><span class="line"></span><br><span class="line">logging.info(&quot;Info&quot;)</span><br><span class="line">logging.warning(&quot;warning&quot;)</span><br><span class="line">logging.error(&quot;error&quot;)</span><br><span class="line">logging.critical(&quot;critical&quot;)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>输出如下:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/home/fire/PyVenv/web_env/bin/python3.9 /home/fire/work_project/test.py</span><br><span class="line">WARNING:root:warning</span><br><span class="line">ERROR:root:error</span><br><span class="line">CRITICAL:root:critical</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>可以看到，info的内容并没有输出出来，这是因为被称为”日志级别”的东西限制了info的输出。日志级别是有等级的，默认日志级别是warning，因为info的级别小于warning，所以就没有输出出来。日志级别等级: CRITICAL &gt; ERROR &gt; WARNING &gt; INFO &gt; DEBUG。</p><p>好，基础知识已经讲完了，那么下面我们来实现一个根据文件大小自动截断日志的功能:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import logging</span><br><span class="line">from logging import handlers</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># ulog: 用于记录用户的日志</span><br><span class="line"># getLogger返回一个Logger对象，关于日志的操作通过它来执行</span><br><span class="line">ulog &#x3D; logging.getLogger(&quot;root.user&quot;)</span><br><span class="line"># 设置日志级别</span><br><span class="line">ulog.setLevel(logging.INFO)</span><br><span class="line"></span><br><span class="line"># 配置ulog</span><br><span class="line"># 可以把handler看成一个工具，它可以改变Logger对象的行为</span><br><span class="line"># handler有很多种，这里使用的当文件大小达到限制后就自动截断日志并生成新的文件的handler</span><br><span class="line"># 文件名: user.log, 打开方式: a, 最大字节数: 1024 * 1024 Bytes, 日志根据时间依次存放在user.log.1, user.log.2, user.log.3。</span><br><span class="line">uhandler &#x3D; handlers.RotatingFileHandler(filename&#x3D;&quot;user.log&quot;, mode&#x3D;&#39;a&#39;, maxBytes&#x3D;1024 * 1024, backupCount&#x3D;3)</span><br><span class="line"># 设置日志的格式，详细内容建议参考文档</span><br><span class="line">uformat &#x3D; logging.Formatter(fmt&#x3D;&quot;%(asctime)s %(levelname)s %(filename)s %(funcName)s：line %(lineno)d %(message)s&quot;, datefmt&#x3D;&#39;%Y-%m-%d %H:%M:%S&#39;)</span><br><span class="line"># 设置handler的格式</span><br><span class="line">uhandler.setFormatter(uformat)</span><br><span class="line"># 添加handler</span><br><span class="line">ulog.addHandler(uhandler)</span><br><span class="line"></span><br><span class="line">ulog.info(&quot;Hey!&quot;)</span><br><span class="line">ulog.info(&quot;Hello, %s.&quot;, &quot;Jack&quot;)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>执行上面的程序，结果如下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2021-06-07 20:12:15 INFO test.py &lt;module&gt;：line 45 Hey!</span><br><span class="line">2021-06-07 20:12:15 INFO test.py &lt;module&gt;：line 46 Hello, Jack.</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>关于backupCount这个参数，也许你会感到一脸懵，所以我贴心的复制了一份RotatingFileHandler的注释:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RotatingFileHandler</span>(<span class="params">BaseRotatingHandler</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    Handler for logging to a set of files, which switches from one file</span></span><br><span class="line"><span class="string">    to the next when the current file reaches a certain size.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, filename, mode=<span class="string">&#x27;a&#x27;</span>, maxBytes=<span class="number">0</span>, backupCount=<span class="number">0</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">                 encoding=<span class="literal">None</span>, delay=<span class="literal">False</span>, errors=<span class="literal">None</span></span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Open the specified file and use it as the stream for logging.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        By default, the file grows indefinitely. You can specify particular</span></span><br><span class="line"><span class="string">        values of maxBytes and backupCount to allow the file to rollover at</span></span><br><span class="line"><span class="string">        a predetermined size.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Rollover occurs whenever the current log file is nearly maxBytes in</span></span><br><span class="line"><span class="string">        length. If backupCount is &gt;= 1, the system will successively create</span></span><br><span class="line"><span class="string">        new files with the same pathname as the base file, but with extensions</span></span><br><span class="line"><span class="string">        &quot;.1&quot;, &quot;.2&quot; etc. appended to it. For example, with a backupCount of 5</span></span><br><span class="line"><span class="string">        and a base file name of &quot;app.log&quot;, you would get &quot;app.log&quot;,</span></span><br><span class="line"><span class="string">        &quot;app.log.1&quot;, &quot;app.log.2&quot;, ... through to &quot;app.log.5&quot;. The file being</span></span><br><span class="line"><span class="string">        written to is always &quot;app.log&quot; - when it gets filled up, it is closed</span></span><br><span class="line"><span class="string">        and renamed to &quot;app.log.1&quot;, and if files &quot;app.log.1&quot;, &quot;app.log.2&quot; etc.</span></span><br><span class="line"><span class="string">        exist, then they are renamed to &quot;app.log.2&quot;, &quot;app.log.3&quot; etc.</span></span><br><span class="line"><span class="string">        respectively.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        If maxBytes is zero, rollover never occurs.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>pymysql查询字符串日期</title>
       <link href="2021/05/30/pymysql%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%97%A5%E6%9C%9F/"/>
       <url>2021/05/30/pymysql%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%97%A5%E6%9C%9F/</url>

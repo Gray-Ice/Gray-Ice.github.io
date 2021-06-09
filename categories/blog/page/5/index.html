@@ -388,6 +388,149 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/03/24/QtQTimer/">
+        QtQtimer的使用
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        建议直接看这篇文章:QTimer - 计时器类。今天做秒表的时候用到了QTimer，这是一个可以计时的类。那么直接说使用吧:想要用这个类需要导入QTimer库，下面是代码:
+123456#include &lt;QTimer&gt;QTimer* qtmer_p = new QTimer(this);  // 创建一个QTimer类qtmer_p -&gt; setInterval(1000...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-24</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/24/QtQTimer/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/24/linux%E4%B8%8B%E5%BD%95gif%E8%BD%AF%E4%BB%B6/">
+        linux下录制gif软件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        这是一个叫做peek的软件，其功能不仅仅限于录制GIF。安装:
+1pamcan -S peek
+使用: 在命令行输入peek并回车，即可打开peek。peek是一个窗口，其中心是透明的，且鼠标可以穿透其中心(这么看来与其说是透明不如说是什么都没有比较恰当)。其中心中的所有内容都会在你按下录制按钮后被录制。录制完成后点击停止即可。如果嫌默认的窗口太小，可以用鼠标把窗口拉的大一些。
+这样我写Qt...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-24</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/24/linux%E4%B8%8B%E5%BD%95gif%E8%BD%AF%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/23/Qt%E5%88%9B%E5%BB%BA%E5%B7%A5%E5%85%B7%E6%A0%8F/">
+        Qt创建工具栏
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        书接前文(不知道前文是什么的可以在我博客的搜索框里搜索”Qt创建菜单栏”)，这次我们来创建工具栏，代码还用上文的代码。在本文中我只改变mainwindow.cpp这一个文件。那么先看代码吧:
+1234567891011121314151617181920212223242526#include &quot;mainwindow.h&quot;#include &lt;QMenuBar&gt;...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-23</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/23/Qt%E5%88%9B%E5%BB%BA%E5%B7%A5%E5%85%B7%E6%A0%8F/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/03/23/Qt%E5%88%9B%E5%BB%BA%E8%8F%9C%E5%8D%95%E6%A0%8F/">
         Qt创建菜单栏
       </a>
@@ -710,147 +853,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/19/vue_cli%E5%85%B3%E9%97%ADeslint/">
-        vue-cli删除eslint
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        多亏这个了vue.js - 如何在vue cli 3生成的项目中完成删除eslint的操作？。Eslint有的时候会让人感到十分烦人，比如你在index.html导入了js，到组件上用的时候Eslint偏偏说你没定义，所以这篇博客记录怎么删除eslint。在package.json中找到所有和eslint有关的东西，删除掉，然后运行npm i。然后重启项目，就没有eslint来打扰你了。本篇...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/19/vue_cli%E5%85%B3%E9%97%ADeslint/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/19/vue_cli%E4%BD%BF%E7%94%A8layui/">
-        vue-cli使用layui
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        先clone下来layui，github地址:layui。然后把layui/src下的全部文件复制到vue项目的public文件夹下，之后在index.html中引入css和js文件:
-12&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/layui.css&quot;&gt;&lt;script type=&quot;text/jav...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/19/vue_cli%E4%BD%BF%E7%94%A8layui/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/17/flask%E9%99%90%E5%88%B6%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0/">
-        Flask限制访问次数
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        今天访问网站的时候发现访问的过于频繁被人限制访问次数了，于是我决定自己也玩玩限制次数。其实直接拿Redis实现就好，不过这里我就不用redis了，我用的是flask-limiter。文档在这里: FlaskLimiter。如果不想读英语的话，可以看一下这位博主写的Flask-Limit使用详细说明，很不错。
-我这里就只写简单的应用了。
-1234567891011121314151617181...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-17</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/flask/">flask</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/17/flask%E9%99%90%E5%88%B6%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -960,7 +962,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(201)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(204)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1005,7 +1007,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/Python/" href="/categories/blog/Python/"
             id="categoriesblogPython"
-            ><div class='name'>Python</div><div class='badge'>(49)</div></a></li>
+            ><div class='name'>Python</div><div class='badge'>(50)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Python/PyQt5/" href="/categories/blog/Python/PyQt5/"
@@ -1060,7 +1062,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/vue/" href="/categories/blog/vue/"
             id="categoriesblogvue"
-            ><div class='name'>vue</div><div class='badge'>(17)</div></a></li>
+            ><div class='name'>vue</div><div class='badge'>(19)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/" href="/categories/blog/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"
