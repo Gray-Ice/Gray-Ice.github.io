@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>elementui表格重新渲染</title>
+      <link href="2021/06/11/elementui%E8%A1%A8%E6%A0%BC%E9%87%8D%E6%96%B0%E6%B8%B2%E6%9F%93/"/>
+      <url>2021/06/11/elementui%E8%A1%A8%E6%A0%BC%E9%87%8D%E6%96%B0%E6%B8%B2%E6%9F%93/</url>
+      
+        <content type="html"><![CDATA[<p>参考自<a href="https://segmentfault.com/q/1010000020434235">表格渲染异常</a>。<br>element UI中的表格在data更改之后其中的内容不会自动重新渲染，所以我们需要手动让它渲染。</p><p>vue中el-table代码如下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table</span><br><span class="line">  :data&#x3D;&quot;pro_data&quot;</span><br><span class="line">  v-if&#x3D;&quot;showTable&quot;</span><br><span class="line">&gt;</span><br><span class="line">&lt;el-table-column prop&#x3D;&quot;&quot; label&#x3D;&quot;操作&quot;&gt;</span><br><span class="line">  &lt;template slot-scope&#x3D;&quot;scope&quot;&gt;</span><br><span class="line">    &lt;el-button type&#x3D;&quot;primary&quot; plain v-show&#x3D;&quot;scope.act &#x3D;&#x3D;&#x3D; 0&quot;&gt;运行&lt;&#x2F;el-button&gt;</span><br><span class="line">    &lt;el-button type&#x3D;&quot;danger&quot; plain v-show&#x3D;&quot;scope.act &#x3D;&#x3D;&#x3D; 1&quot;&gt;暂停&lt;&#x2F;el-button&gt;</span><br><span class="line">  &lt;&#x2F;template&gt;</span><br><span class="line">&lt;&#x2F;el-table-column&gt;</span><br><span class="line">&lt;&#x2F;el-table&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>刷新表格的代码:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">refreshTable:function()</span><br><span class="line">&#123;</span><br><span class="line">  let that &#x3D; this;</span><br><span class="line">  that.showTable &#x3D; false;</span><br><span class="line">  that.$nextTick(()&#x3D;&gt;that.showTable &#x3D; true);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>只要调用refreshTable函数，就可以重新渲染表格了。<br>本篇完。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue注册全局axios</title>
       <link href="2021/06/09/vue%E6%B3%A8%E5%86%8C%E5%85%A8%E5%B1%80axios/"/>
       <url>2021/06/09/vue%E6%B3%A8%E5%86%8C%E5%85%A8%E5%B1%80axios/</url>
