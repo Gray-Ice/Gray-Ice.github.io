@@ -387,6 +387,57 @@
   
     
     <h2 class="article-title" >
+      <a href="/2021/03/26/Qt%E8%AE%A1%E6%97%B6%E5%99%A8%E4%BA%8B%E4%BB%B6/">
+        Qt计时器事件
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        不多说，直入主题。想要启用计时器事件，自然需要先在头文件里定义了:
+12protected:    void timerEvent(QTimerEvent *e);
+可以通过在构造函数里调用startTimer来根据设置的触发时间来触发计时器事件:
+1startTimer(1000);  // 单位毫秒
+比如这里我设置的就是每隔一秒触发一次。不过，一个类可以设置多个计时器，如:
+12star...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-26</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/">Cpp</a><span class="sep"></span><a class="category-link" href="/categories/blog/Cpp/Qt/">Qt</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/26/Qt%E8%AE%A1%E6%97%B6%E5%99%A8%E4%BA%8B%E4%BB%B6/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2021/03/26/QtQWidget%E8%A7%A6%E5%8F%91%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/">
         QtQwidget触发键盘事件
       </a>
@@ -806,53 +857,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/21/vue%E7%BB%84%E4%BB%B6%E5%AF%BC%E5%85%A5js%E6%96%87%E4%BB%B6%E5%87%BD%E6%95%B0/">
-        vue组件导入js文件中的函数
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        可能这个问题对于前端的朋友们来说很简单，但是对于我这个半吊子前端来说着实有点难度，所以我就记录下来了。我有一个名为dev_helper.js的文件，里面定义了一个函数:
-123456789101112131415161718192021222324252627282930import axios from &#x27;axios&#x27;export function CheckToken...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vue/">vue</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/21/vue%E7%BB%84%E4%BB%B6%E5%AF%BC%E5%85%A5js%E6%96%87%E4%BB%B6%E5%87%BD%E6%95%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -960,7 +964,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(205)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(206)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -995,7 +999,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/JavaScript/" href="/categories/blog/JavaScript/"
             id="categoriesblogJavaScript"
-            ><div class='name'>JavaScript</div><div class='badge'>(9)</div></a></li>
+            ><div class='name'>JavaScript</div><div class='badge'>(10)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/Linux/" href="/categories/blog/Linux/"
