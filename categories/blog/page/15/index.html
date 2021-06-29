@@ -388,6 +388,58 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/12/31/archlinux%E5%AE%89%E8%A3%85redis/">
+        Arch安装使用Redis
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        首先，使用pacman安装redis:
+1sudo pacman -S redis
+然后，输入:
+1systemctl enable redis.service
+说实话我不知道这句话有什么用，从作用上来看应该是开机启动redis服务，但是就算这么设置了，redis服务也得自己手动开启。。。在终端输入:
+1redis-server
+开启redis server，然后输入redis-cli就可以...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/arch/">arch</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/12/31/archlinux%E5%AE%89%E8%A3%85redis/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/12/31/arch%E4%BD%BF%E7%94%A8vncserver/">
         使用VNCServer
       </a>
@@ -817,53 +869,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/12/18/vim%E4%BB%A5%E6%8C%87%E5%AE%9A%E7%BC%96%E7%A0%81%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/">
-        vim以指定编码打开文件
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        今天用vim打开文件时遇到了些问题，我从淘宝上买的网卡对应的电子文档用vim打开乱码了，我看到文件名是.txt，盲猜该文件是用windows的记事本编辑的，那么既然乱码的话，其编码应该是GBK。于是百度一番，找到了vim用指定编码打开文件的命令，这里先放上我借鉴的博客的链接: VIM如何以指定编码打开或加载文件。
-那么下面是两种设置编码的方式(其实用到的命令都是同一条)。在用vim打开文件后...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/vim/">vim</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/12/18/vim%E4%BB%A5%E6%8C%87%E5%AE%9A%E7%BC%96%E7%A0%81%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -973,7 +978,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(207)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(208)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1083,7 +1088,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/%E5%89%8D%E7%AB%AF/" href="/categories/blog/%E5%89%8D%E7%AB%AF/"
             id="categoriesblogE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>前端</div><div class='badge'>(5)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"
