@@ -388,6 +388,54 @@
   
     
     <h2 class="article-title" >
+      <a href="/2020/08/05/Qv2ray%E5%8A%A0Chromium%E4%BB%A3%E7%90%86/">
+        Linux下使用Qv2ray实现HTTP代理Chromium
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        首先，你需要有一个Qv2ray,并且配置好V2ray核心等，这里就不再说了，具体流程请看文档: Qv2ray。
+连接上节点后，点击Qv2ray中的”首选项”，点击”入站设置”，看好监听地址和HTTP设置，然后创建启动器，比如我的监听地址是127.0.0.1,HTTP端口是8888，那么创建的启动器中命令应该填:
+1chromium --proxy-server=&quot;http://12...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-08-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Linux/">Linux</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2020/08/05/Qv2ray%E5%8A%A0Chromium%E4%BB%A3%E7%90%86/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow blur">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/2020/07/30/pymysql%E6%9F%A5%E8%AF%A2/">
         pymysql查询
       </a>
@@ -803,55 +851,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow blur">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/07/16/DjangoJWt%E8%A3%85%E9%A5%B0%E5%99%A8/">
-        DjangoJWt解密装饰器
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        首先，安装pyjwt模块:
-1pip3 install pyjwt
-然后写出装饰器函数:
-1234567891011121314151617181920212223# jwt验证def jwt_isvalid(func):    def inner(request, *args, **kwargs):        # 获取token        token = request.GET.g...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-07-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/blog/">blog</a><span class="sep"></span><a class="category-link" href="/categories/blog/Python/">Python</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/07/16/DjangoJWt%E8%A3%85%E9%A5%B0%E5%99%A8/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -961,7 +960,7 @@
           <li><a class="flat-box"
             title="/categories/blog/" href="/categories/blog/"
             id="categoriesblog"
-            ><div class='name'>blog</div><div class='badge'>(209)</div></a></li>
+            ><div class='name'>blog</div><div class='badge'>(210)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/30days/" href="/categories/blog/30days/"
@@ -1071,7 +1070,7 @@
           <li><a class="flat-box child"
             title="/categories/blog/%E5%89%8D%E7%AB%AF/" href="/categories/blog/%E5%89%8D%E7%AB%AF/"
             id="categoriesblogE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(6)</div></a></li>
+            ><div class='name'>前端</div><div class='badge'>(7)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/" href="/categories/blog/%E6%9C%8D%E5%8A%A1%E5%99%A8/"
